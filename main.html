@@ -241,7 +241,9 @@
         
         
         function deleteLastPoint(){
+            var path = poly.getPath();
             
+            path.pop();
         }
         
         function setMapOnAll(map) {
