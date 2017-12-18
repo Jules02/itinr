@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+      <meta charset="utf-8" />
+      <title>Calcul de parcours</title>
+      <link rel=stylesheet href="main_style.css" />
+  </head>
+    
+    
+  <body>
+    <div id="map"></div>
+    <div id="textDiv"></div>
+      
+    <script>
+        
+        
+    
+        var poly;
+        var map;
+        var geoPos;
+        var directionsDisplay;
+        var directionsService;
+
+
+        function initMap() {
+            var directionsService = new google.maps.DirectionsService();
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    geoPos = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    };
+
+                    map.setCenter(geoPos);
+                    
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              });
+                
+            } else {
+              // Browser doesn't support Geolocation
+              handleLocationError(false, infoWindow, map.getCenter());
+            }
+            
+            map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map
+              zoom: 14,   //Définie le zoom par défaut 
+              draggableCursor: "crosshair"
+            });
+
+            poly = new google.maps.Polyline({   //créé déjà la polyline
+                strokeColor: '#3BA14C',
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            poly.setMap(map);   //on attache l'objet polyline à notre map
+
+            //listener qui va écouter l'événement click et lui donner en argument la fonction à executer
+            map.addListener('click', addLatLng);
+            map.addListener('rightclick', addLatLngRoute);
+            
+            
+            
+            var input = document.getElementById('pac-input');
+            var searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+            
+            
+            var deleteAllButton = document.getElementById('deleteAllButton');
+            map.controls[google.maps.ControlPosition.BOTTOM].push(deleteAllButton);
+            
+            var deleteLastButton = document.getElementById('deleteLastButton');
+            map.controls[google.maps.ControlPosition.BOTTOM].push(deleteLastButton);
+            
+            var closeLoopButton = document.getElementById('closeLoopButton');
+            map.controls[google.maps.ControlPosition.BOTTOM].push(closeLoopButton);
+            
+            
+            var centerMap = document.getElementById('centerMap');
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(centerMap);
+            
+            
+            
+            map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+            });
+            
+            searchBox.addListener('places_changed', function() {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+
+                var bounds = new google.maps.LatLngBounds();
+
+                places.forEach(function(place) {
+                    if (!place.geometry) {
+                      console.log("Le lieu ne retourne rien");
+                      return;
+                    }
+
+
+
+                    if (place.geometry.viewport) {
+                      // Only geocodes have viewport.
+                      bounds.union(place.geometry.viewport);
+                    } else {
+                      bounds.extend(place.geometry.location);
+                    }
+                });
+
+
+                map.fitBounds(bounds);
+            });
+            
+            
+        }                                     //****Init****//  
+        
+        var markerStart = 'marker';   //icone de marqueur de début
+        var markerVide = 'empty.png';
+        
+        var firstPoint;
+        var lastPoint;
+        var marker;
+        var markers = [];
+        var firstMarker;
+        var distanceKm;
+        var distanceArrondie;
+
+          // Fonction qui sera executée lors de l'écoute de l'événement juste au dessus
+        function addLatLng(event) {
+            var path = poly.getPath();
+
+            //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
+            path.push(event.latLng);
+
+            //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
+            if (path.getLength() === 1) {
+                marker = new google.maps.Marker({
+                  position: event.latLng,
+                  title: '#' + path.getLength(),    //path.getLength est le nombre de notre point
+                  map: map,
+                  icon: markerStart          //le marqueur aura notre image de drapeau
+                });
+                
+                firstPoint = event.latLng;
+                
+                firstMarker = marker;
+            }
+            else{
+                marker = new google.maps.Marker({
+                  position: event.latLng,
+                  title: '#' + path.getLength(),
+                  map: map,
+                  icon: markerVide
+                });
+                
+                poly.setMap(map);
+                
+                markers.push(marker);
+                
+                lastPoint = event.latLng;
+                
+                var path = poly.getPath();
+                
+                var distance = google.maps.geometry.spherical.computeLength(path.getArray());   //calcule la distance du parcours en comptant tout les points
+                distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près    
+                distanceKm = Math.round(distanceArrondie/1000);
+            }
+    
+            var div = document.getElementById("textDiv");  
+            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){
+                div.textContent = "Vous n'avez placé qu'un seul marqueur"
+            } else {
+                div.textContent = "Il y a " + distanceArrondie + " mètres et " + distanceKm + " kilomètres entre le premier et le dernier point"; 
+            }
+            var text = div.textContent;
+        
+        }
+        
+        
+        
+        
+        function addLatLngRoute(event){
+            
+
+            
+            newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
+            
+            calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint);
+            
+            var path = poly.getPath();
+
+            //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
+            path.push(newPoint);
+        }
+        
+        
+        function calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint) {
+            //var directionsDisplay = new google.maps.DirectionRenderer();
+                        
+            directionsDisplay.setMap(map);
+            
+            var travelMode = 'WALKING';
+            var request = {
+                origin: lastPoint,
+                destination: newPoint,
+                travelMode: google.maps.TravelMode[travelMode]
+            };
+            
+            directionsService.route(request, function(response, status) {
+                    if (status == 'OK') {
+                        directionsDisplay.setDirections(response);
+                    } else {
+                        alert('ERROR');
+                    }
+                }
+            )
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Erreur: Le service de Géolocalisation a echoué.' :
+                'Erreur: Votre naviguateur ne support pas la Géolocalisation.');
+        }
+        
+        
+        
+        
+        
+        function deleteLastPoint(){
+            
+        }
+        
+        function setMapOnAll(map) {
+            for (var i = 0; i < markers.length; i++) {
+              markers[i].setMap(map);
+            }
+        } 
+        
+        function deletePoints(){
+            firstMarker.setMap(null);
+            setMapOnAll(null);
+            markers = [];
+            poly.setMap(null);
+            
+            var div = document.getElementById("textDiv");  
+            div.textContent = "Vous n'avez pas placé de marqueur";
+            
+            distanceArrondie = 0;
+            distanceKm = 0;
+            
+            
+            poly = new google.maps.Polyline({   //créé déjà la polyline
+                strokeColor: '#3BA14C',
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            poly.setMap(map);
+        }
+        
+        
+        function fermerBoucle(){
+            calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, firstPoint);
+        }
+        
+        
+        
+        function centerMap(){
+            map.setCenter(geoPos);
+        }
+        
+        
+        
+        
+    </script>
+      
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&libraries=places&callback=initMap">
+    </script>
+      
+      <form>
+          <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
+          <button type="button" id="centerMap" name="bouton4" onclick="centerMap()" title="Centrez la carte sur votre localisation"><img src="gps.png" alt="Localisez vous"/></button>
+          
+          
+          <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points" onclick="deletePoints()">
+          <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point" onclick="deleteLastPoint()">
+          <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ" onclick="fermerBoucle()">
+          
+      </form>
+      
+  </body>
+    
+</html>
