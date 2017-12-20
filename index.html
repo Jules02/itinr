@@ -9,6 +9,9 @@
     
     
   <body>
+    <div id="loading">
+        <img id="loading-image" src="img/loader.gif" alt="Loading..." />
+    </div>
     <div id="map"></div>
     <div id="textDiv"></div>   <!-- Zone de texte de la distance en bas -->
       
@@ -27,6 +30,13 @@
       
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&libraries=places&callback=initMap">
+    </script>
+      
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(window).load(function() {
+            $('#loading').hide();
+        });
     </script>
       
   </body>

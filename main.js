@@ -6,7 +6,7 @@ var geoPos;
 function initMap() {
     //on veut centrer la carte sur notre position si la geolocalisation est activée
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {   //recupère notre position
+        navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
             geoPos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
@@ -24,8 +24,8 @@ function initMap() {
     }
             
     map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
-      zoom: 14,   //Définie le zoom par défaut 
-      draggableCursor: "crosshair"   //on a une croix comme curseur
+        zoom: 14,   //Définie le zoom par défaut 
+        draggableCursor: "crosshair"   //on a une croix comme curseur
     });
 
     poly = new google.maps.Polyline({   //créé déjà la polyline
@@ -73,8 +73,8 @@ function initMap() {
     searchBox.addListener('places_changed', function() {
         var places = searchBox.getPlaces();
 
-        if (places.length == 0) {
-                    return;
+        if (places.length === 0) {
+            return;
         }
 
         var bounds = new google.maps.LatLngBounds();
@@ -148,8 +148,6 @@ function addLatLng(event) {
                 
         lastPoint = event.latLng;
                 
-        var path = poly.getPath();
-                
         var distance = google.maps.geometry.spherical.computeLength(path.getArray());   //calcule la distance du parcours en comptant tout les points
         distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près    
         distanceKm = Math.round(distanceArrondie/1000);
@@ -207,6 +205,47 @@ function addLatLngRoute(event){
 
     //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
     path.push(newPoint);
+    
+    //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
+    if (path.getLength() === 1) {
+        marker = new google.maps.Marker({
+            position: event.latLng,
+            title: '#' + path.getLength(),    //path.getLength est le nombre de notre point
+            map: map,
+            icon: markerStart          //le marqueur aura notre image de drapeau
+        });
+                
+        firstPoint = event.latLng;
+                
+        firstMarker = marker;
+    }
+    else{     //sinon cela veut dire que ce n'est pas le premier marqueur et on ne lui donne pas de skin (empty.png)
+        marker = new google.maps.Marker({
+            position: event.latLng,
+            title: '#' + path.getLength(),
+            map: map,
+            icon: markerVide
+        });
+                
+        poly.setMap(map);  //on affiche la polyline sur la map
+                
+        markers.push(marker);   //on met notre tout nouveau marker dans le tableau markers
+                
+        lastPoint = event.latLng;
+                
+        var distance = google.maps.geometry.spherical.computeLength(path.getArray());   //calcule la distance du parcours en comptant tout les points
+        distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près    
+        distanceKm = Math.round(distanceArrondie/1000);
+    }
+    
+    
+    var div = document.getElementById("textDiv");    //recupere la div textDiv
+    if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
+        div.textContent = "Vous n'avez placé qu'un seul marqueur"
+    } else {
+        div.textContent = "Il y a " + distanceArrondie + " mètres et " + distanceKm + " kilomètres entre le premier et le dernier" 
+        //on affiche la distance arrondie et au km dans la div textDiv
+    }
 }
         
         
