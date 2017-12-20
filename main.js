@@ -1,13 +1,9 @@
 var poly;
 var map;
 var geoPos;
-var directionsDisplay;
-var directionsService;
 
 
 function initMap() {
-    var directionsService = new google.maps.DirectionsService();
-    
     //on veut centrer la carte sur notre position si la geolocalisation est activée
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {   //recupère notre position
@@ -167,25 +163,18 @@ function addLatLng(event) {
         //on affiche la distance arrondie et au km dans la div textDiv
     }
 }
-        
-        
-        
-//lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)        
-function addLatLngRoute(event){   
-            
-    newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
-            
-    calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint);  //fonction qui calcule et affiche l'itinéraire
-            
-    var path = poly.getPath();
 
-    //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
-    path.push(newPoint);
-}
-        
-        
+
+
+
+var directionsService;
+var directionsDisplay;
+
+
 function calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint) {
-    var directionsDisplay = new google.maps.DirectionRenderer();    //**BUG** c'est ce qui casse cette fonction: apparement DirectionRenderer n'est pas un service
+    
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
                         
     directionsDisplay.setMap(map);   //afficher l'itinéraire sur la carte
             
@@ -204,6 +193,20 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoin
             }
         }
     )
+}
+
+        
+//lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)        
+function addLatLngRoute(event){   
+            
+    newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
+            
+    calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint);  //fonction qui calcule et affiche l'itinéraire
+            
+    var path = poly.getPath();
+
+    //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
+    path.push(newPoint);
 }
         
         
