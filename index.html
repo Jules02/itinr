@@ -23,6 +23,13 @@
         <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points" onclick="deletePoints()">
         <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point" onclick="deleteLastPoint()">
         <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ" onclick="fermerBoucle()">
+
+        <select name="modeSuivi" id="selectModeSuivi">
+            <option value="DRIVING" selected disabled=true>Mode de suivi des routes:</option>
+            <option value="BICYCLING" title="Les itinéraires essayerons au maximum de passer par des pistes cyclables">Vélo</option>
+            <option value="WALKING" title="Privilégie les voies piétonnes et les rues avec trottoir">Marche et course à pied</option>
+            <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
+        </select>
           
     </form>
       

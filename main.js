@@ -60,6 +60,10 @@ function initMap() {
             
     var centerMap = document.getElementById('centerMap');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(centerMap);
+    
+    
+    var selectModeSuivi = document.getElementById('selectModeSuivi');
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(selectModeSuivi);
             
             
     
@@ -171,12 +175,22 @@ var directionsDisplay;
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoint, newPoint) {
     
+    var rendererOptions= {
+        polylineOptions: {strokeColor:'#3BA14C'},
+        suppressMarkers: true
+    };
+    
     var directionsService = new google.maps.DirectionsService();
-    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
                         
     directionsDisplay.setMap(map);   //afficher l'itinéraire sur la carte
-            
-    var travelMode = 'WALKING';   //ici on met que le mode de transport est la marche mais in pourra plus tard laisser à l'utilisateur de choisir le mode
+    
+    var selectModeSuivi = document.getElementById('selectModeSuivi');
+    //selectModeSuivi.addEventListener('change', function() {
+        //alert(selectModeSuivi.options[selectModeSuivi.selectedIndex].innerHTML);
+    //})
+    
+    var travelMode = selectModeSuivi.options[selectModeSuivi.selectedIndex].value;   //ici on met que le mode de transport est la marche mais in pourra plus tard laisser à l'utilisateur de choisir le mode
     var request = {
         origin: lastPoint,
         destination: newPoint,
@@ -204,7 +218,7 @@ function addLatLngRoute(event){
     var path = poly.getPath();
 
     //Rajoute les coord de notre clic dans le tableau path qui contient les coord du chemin
-    path.push(newPoint);
+    //path.push(newPoint);
     
     //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
     if (path.getLength() === 1) {
