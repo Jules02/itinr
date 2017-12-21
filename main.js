@@ -2,6 +2,18 @@ var poly;
 var map;
 var geoPos;
 
+var markerStart = 'img/marker.png';   //icone de marqueur de début
+var markerVide = 'img/empty.png';   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
+        
+var firstPoint;    //premier point à qui l'on donnera un skin différent (marqueur vert)
+var lastPoint;    //dernier point à avoir été placé (dernieres coords, pas dernier marqueur)
+var marker;
+var markers = [];    //array contenant l'ensemble des marqueurs
+var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
+var distanceKm;     //distance en km
+var distanceArrondie;
+
+
 
 function initMap() {
     //on veut centrer la carte sur notre position si la geolocalisation est activée
@@ -97,24 +109,22 @@ function initMap() {
         });
 
         map.fitBounds(bounds);
+    }); 
+    
+    google.maps.event.addListener( map, 'maptypeid_changed', function(){
+        var mapType = map.getMapTypeId();
+    
+        if (mapType == 'hybrid'){
+            poly.setOptions({strokeColor: '#FFFFFF'});
+            firstMarker.setOptions({icon: 'img/marker_white.png'});
+        } else {
+            poly.setOptions({strokeColor: '#3BA14C'});
+            firstMarker.setOptions({icon: 'img/marker.png'});
+        }
     });
-            
-            
-}                                     // Fin initMap  
+}       // Fin initMap  
         
 
-
-
-var markerStart = 'img/marker.png';   //icone de marqueur de début
-var markerVide = 'img/empty.png';   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
-        
-var firstPoint;    //premier point à qui l'on donnera un skin différent (marqueur vert)
-var lastPoint;    //dernier point à avoir été placé (dernieres coords, pas dernier marqueur)
-var marker;
-var markers = [];    //array contenant l'ensemble des marqueurs
-var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
-var distanceKm;     //distance en km
-var distanceArrondie;
 
 
 
@@ -201,7 +211,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, lastPoin
             if (status == 'OK') {                              //s'il n'y a aucun problème avec l'itinéraire
                 directionsDisplay.setDirections(response);   
             } else {
-                alert('ERROR');
+                alert("Il n'y a pas de chemin pour aller à cet endroit");
             }
         }
     )
