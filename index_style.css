@@ -1,12 +1,29 @@
 body{
     margin: 0;
     padding: 0;
+    
+    height: 100%;
+    
+    font-family: 'Source Sans Pro';
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+
 
 #loading {
    width: 100%;
    height: 100%;
-   top: 0;
+   top: 80px;
+   bottom: 143px;
    left: 0;
    position: fixed;
    display: block;
@@ -24,8 +41,14 @@ body{
 }
 
 #map {
-    height: 580px;
+    height: 500px;
     width: 100%;
+    
+    position: relative;
+}
+
+.map-bottom{
+    position: relative;
 }
         
 #textDiv {
@@ -33,7 +56,10 @@ body{
     font-size: 20px;
     font-family: Roboto;
     
-    padding-top: 25px;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
 }
 
 #selectModeSuivi{
@@ -85,6 +111,29 @@ body{
     font-family: Roboto;
 }
 
+.saveButton{
+    margin-right: 14px;
+    
+    padding: 0;
+    
+    font-family: Roboto;
+    font-size: 17px;
+    
+    background-color: #fff;   
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px -1px;
+    
+    width: 25px;
+    height: 250px;
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
 
 #centerMap{
     background-color: white;
@@ -123,4 +172,106 @@ body{
 
 .bottomButton:hover{
     cursor: pointer;
+}
+
+.boutonMenuLateralStyle{
+    width: 20px;
+    height: 30px;
+    
+    padding: 0;
+    
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+    
+    top: 48% !important;
+}
+
+.boutonMenuLateralStyle img{
+    padding-left: 3px;
+    padding-top: 3px;
+}
+
+#menuGauche-message{
+    text-align: center;
+    
+    margin-top: 100px;
+}
+
+#menuGauche{
+    display: none;
+    
+    width: 400px;
+    margin-top: 80px;
+    
+    background-color: #fff;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mapFilter{
+    display: none;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#menuGauche-interieur{
+    display: none;
+    height: 100%;
+}
+
+
+
+#boutonMenuLateralFermer{
+    position: absolute;
+    top: 48%;
+    right: 10px;
+}
+
+.menuGauche-partie{
+    height: 20%;
+}
+
+.menuGauche-partie-texte{
+    margin: 0;
+}
+
+.menuGauche-partie-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100%;
+    
+    margin-top: -3px;
+}
+
+.menuGauche-partie-temps-sport{
+    max-width: 200px;
+    
+    margin-left: 50px;
+    
+    text-align: center;
+}
+
+.sepa-container{
+    display: flex;
+    justify-content: center;
+    
+    height: 3px;
+    width: 100%;
+}
+
+.menuGauche-sepa{
+    width: 50%;
+    
+    background-color: #3ba14c;
 }
