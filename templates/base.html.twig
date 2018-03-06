@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} | Movee{% endblock %}</title>
+    <link rel="stylesheet" href=" {{ asset('build/layout.css') }}">
     <link rel="stylesheet" href=" {% block stylesheets %}{% endblock %}">
 </head>
 <body>
-{# {{ include("autre/includes/header.html.twig") }} #}
+
+    <header class="header">
+        <a href="index.php"><div class="header-logo"><p class="header-logo-txt">Logo</p></div></a> <!-- à remplacer par l'img du logo -->
+        <a href="index.php"><h1 class="header-title">Movee</h1></a>
+
+        <div class="header-navbar">
+            <ul class="nav_onglets">
+                <li class="nav-item"><a href="index.php">Concepteur d'itinéraires</a></li>
+                <li class="nav-item"><a href="#">Trouver un itinéraire</a></li>
+                <li class="nav-item nav-item-plus" id="plus">
+                    <a>Plus <img src="includes/img/caretdown.png" alt="Déroulant" class="nav-item-plus-deroulant" id="caret"/></a>
+                </li>
+            </ul>
+            <div class="sub-nav" id="accordeon">
+                <ul class="sub-nav-ul">
+                    <li class="sub-nav-item"><a href="contact.php">Contact</a></li>
+                    <li class="sub-nav-item"><a href="aide.php">Aide</a></li>
+                    <li class="sub-nav-item"><a href="apropos.php">À propos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-account">
+            <button class="header-account-signup btn-account">Inscription</button>
+            <button class="header-account-signin btn-account">Connexion</button>
+        </div>
+    </header>
+
 {% block body %}{% endblock %}
 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contentrs">
+                <ul class="footer-rs">
+                    <li class="footer-rs-li"><a href="https://facebook.com"><img src="img/005-facebook.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://twitter.com"><img src="img/004-twitter.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://instagram.com"><img src="img/001-instagram.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://snapchat.com"><img src="img/003-snapchat.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://youtube.com"><img src="img/002-youtube.png" alt="Icône réseau social"></a></li>
+                </ul>
+            </div>
+            <div class="footer-contentseparation"></div>
+            <p class="footer-author">Site réalisé par Jules DUPONT</p>
+            <p class="footer-date">2018</p>
+        </div>
+    </footer>
 
-
-{% block javascripts %}<script src=" {{ asset('build/js/app.js') }} "></script>{% endblock %}
+{% block javascripts %}{% endblock %}
+<script src="{{ asset('build/header.js') }}"></script>
 </body>
 </html>

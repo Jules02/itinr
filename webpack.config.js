@@ -11,8 +11,15 @@ Encore
     // .enableVersioning(Encore.isProduction())
 
     // uncomment to define the assets of the project
-    .addEntry('js/app', './assets/js/app.js')
-    .addStyleEntry('css/apropos', './assets/css/apropos_style.css')
+    .addEntry('layout', [
+        './assets/js/layout.js',
+        './assets/css/layout_style.css'
+    ])
+    .addEntry('concepteur', [
+        './assets/js/main.js',
+        './assets/css/concepteur_style.css'
+    ])
+    .addEntry('mousetrap', './assets/js/mousetrap.js')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

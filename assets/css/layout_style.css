@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+
+    font-family: 'Source Sans Pro';
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.header{
+    width: 100%;
+    height: 80px;
+
+    margin: 0;
+    padding: 0;
+
+    background: #228A31;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 30;
+}
+
+.header-logo{
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid white;
+
+    margin-left: 30px;
+}
+
+.header-logo-txt{
+    color: white;
+    text-align: center;
+}
+
+.header-title{
+    font-family: 'LeagueSpartan';
+    color: white;
+    font-size: 34px;
+
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.header-account{
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    right: 25px;
+
+}
+
+.btn-account{
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+    background: #228A31;
+    border: 1px solid white;
+    border-radius: 2px;
+
+    padding: 10px 45px;
+    margin: 30px;
+}
+
+.btn-account:hover{
+    -webkit- transition: -webkit- all 0.3s ease-in-out;
+    -moz- transition: -moz- all 0.3s ease-in-out;
+    -o- transition: -o- all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    color: #228A31;
+
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(237,255,240,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%,rgba(237,255,240,1) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 0%,rgba(237,255,240,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edfff0',GradientType=1 );
+}
+
+.header-account-signup{
+    margin-right: 0px;
+}
+
+
+
+
+
+
+.nav_onglets{                    /*barre de navigation*/
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item{                                         /*effet de grossissement des onglets de la barre de navigation*/
+    padding: 0 0 0 75px;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: width .3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    -webkit- transition: -webkit- all 0.3s ease-in-out;
+    -moz- transition: -moz- all 0.3s ease-in-out;
+    -o- transition: -o- all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-nav{
+    display: none;
+
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    background-color: #3ba14c;
+
+    width: 100%;
+}
+
+.sub-nav-ul{
+    display: flex;
+    justify-content: center;
+
+    list-style: none none;
+    white-space: nowrap;
+
+    margin: 0;
+    padding: 0;
+}
+
+.sub-nav-ul li{
+    padding: 15px 150px;
+    font-weight: 300;
+    color: white;
+}
+
+.nav-item-plus-deroulant{
+    opacity: 0.8;
+}
+
+.sub-nav-ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: width .3s;
+}
+
+.sub-nav-ul li:hover::after {
+    width: 100%;
+    -webkit- transition: -webkit- all 0.3s ease-in-out;
+    -moz- transition: -moz- all 0.3s ease-in-out;
+    -o- transition: -o- all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1225px){
+    .nav_onglets{
+        font-size: 14px;
+    }
+}
+
+
+
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.footer-contentrs{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-rs{
+    list-style-type: none;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-rs li{
+    margin: 0 10px;
+}
+
+.footer-contentseparation{
+    width: 100px;
+    height: 5px;
+
+    margin-top: 20px;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #228A31;
+}
+
+.footer-date{
+    font-weight: 300;
+
+    margin-top: -10px;
+}
