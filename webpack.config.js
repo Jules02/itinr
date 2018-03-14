@@ -20,6 +20,7 @@ Encore
         './assets/css/concepteur_style.css'
     ])
     .addEntry('mousetrap', './assets/js/mousetrap.js')
+    .addEntry('share', './assets/img/share.png')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

@@ -5,6 +5,10 @@
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
 
 {% block body %}
+    <div id="loading">
+        <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+    </div>
+
     <div id="map" oncontextmenu="return false"></div>
 
     <div id="mapFilter"></div>
@@ -13,7 +17,7 @@
 
     <form>    <!-- Contrôles présents sur la carte-->
         <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
-        <button type="button" id="centerMap" name="bouton4" onclick="centerMap()" title="Centrez la carte sur votre localisation"><img src="{{ asset('build/css/img/gps.png') }}" alt="Localisez vous"/></button>
+        <button type="button" id="centerMap" name="bouton4" onclick="centerMap()" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
 
 
         <div class="map-bottom">
@@ -24,9 +28,9 @@
         </div>
 
         <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
-            <img src='{{ asset('build/css/img/share.png') }}' alt='Icône sauvegarder' class="saveImgHover">
+            <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
         </button>
-        <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('build/css/img/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+        <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
         <div id="menuGauche">
             <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
 
@@ -43,7 +47,7 @@
                 <div class="menuGauche-partie">
                     <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                     <div class="menuGauche-partie-container">
-                        <img src="{{ asset('build/css/img/sports-menugauche/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
+                        <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
                         <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
                     </div>
                 </div>
@@ -51,7 +55,7 @@
                 <div class="menuGauche-partie">
                     <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                     <div class="menuGauche-partie-container">
-                        <img src="{{ asset('build/css/img/sports-menugauche/marche.png') }}" alt="Icône footing" class="menuGauche-img">
+                        <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
                         <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
                     </div>
                 </div>
@@ -59,7 +63,7 @@
                 <div class="menuGauche-partie">
                     <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                     <div class="menuGauche-partie-container">
-                        <img src="{{ asset('build/css/img/sports-menugauche/footing.png') }}" alt="Icône marche" class="menuGauche-img">
+                        <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
                         <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
                     </div>
                 </div>
@@ -78,8 +82,16 @@
 {% endblock %}
 
 
+
 {% block javascripts %}
     {#<script src=" {{ asset('build/js/main.js') }} "></script>#}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(window).load(function() {
+            $('#loading').hide();
+        });
+    </script>
+
     <script>
         var globalPoly;
         var poly;
@@ -89,8 +101,8 @@
         var map;
         var geoPos;
 
-        var markerStart = 'img/marker.png';   //icone de marqueur de début
-        var markerVide = 'img/empty.png';   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
+        var markerStart = "{{ asset('images/marker.png') }}";   //icone de marqueur de début
+        var markerVide = "{{ asset('images/empty.png') }}";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
         var firstPoint;    //premier point à qui l'on donnera un skin différent (marqueur vert)
         var lastPoint;    //dernier point à avoir été placé (dernieres coords, pas dernier marqueur)
@@ -235,10 +247,10 @@
 
                 if (mapType == 'hybrid'){
                     globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: 'img/marker_white.png'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
                 } else {
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: 'img/marker.png'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
                 }
             });
         }
