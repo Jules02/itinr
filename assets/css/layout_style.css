@@ -132,9 +132,9 @@ button{
 
 .nav-item:hover::after {
     width: 100%;
-    -webkit- transition: -webkit- all 0.3s ease-in-out;
-    -moz- transition: -moz- all 0.3s ease-in-out;
-    -o- transition: -o- all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -148,6 +148,11 @@ button{
     background-color: #3ba14c;
 
     width: 100%;
+
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
 }
 
 .sub-nav-ul{
@@ -167,7 +172,31 @@ button{
     color: white;
 }
 
-.nav-item-plus-deroulant{
+.caretdown{
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -o-transition: ease-in-out .5s;
+    transition: ease-in-out .5s;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+
+    opacity: 0.8;
+}
+
+.caretup{
+    -webkit-transition: ease-in-out .9s;
+    -moz-transition: all .9s;
+    -o-transition: all .9s;
+    transition: all .9s;
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
     opacity: 0.8;
 }
 
