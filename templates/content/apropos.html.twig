@@ -5,6 +5,23 @@
 {% block stylesheets %}{{ asset('build/css/apropos.css') }}{% endblock %}
 
 {% block body %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Path</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for path in paths %}
+        <tr>
+            <td>{{ path.id }}</td>
+            <td>{{ path.path }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
     <div class="container">
 
         <h1 class="title">Apprenez-en plus sur Movee</h1>

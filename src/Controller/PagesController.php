@@ -8,12 +8,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Path;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
-class PagesController
+class PagesController extends Controller
 {
 
     /**
@@ -39,8 +41,10 @@ class PagesController
      * @param Environment $twig
      * @return Response
      */
-    public function apropos (Environment $twig) {
-        return new Response($twig->render('content/apropos.html.twig'));
+    public function apropos (RegistryInterface $doctrine) {
+        $paths = $doctrine->getRepository(Path::class)->findAll();
+
+        return $this->render('content/apropos.html.twig', compact('paths'));
     }
 
     /**
@@ -49,6 +53,8 @@ class PagesController
      * @return Response
      */
     public function chercher (Environment $twig) {
+        $em = $this->getDoctrine()->getManager();
+
         return new Response($twig->render('content/chercher.html.twig'));
     }
 
