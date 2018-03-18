@@ -79,6 +79,10 @@
             <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
         </select>
     </form>
+
+    <button onclick="showArray()">Montrer le tableau</button>
+    <button onclick="showPath()">Afficher ancien parcours</button>
+    <p>{{ path.path }}</p>
 {% endblock %}
 
 
@@ -256,6 +260,7 @@
             });
         }
         /************* FIN INITMAP *************/
+
 
 
 
@@ -650,6 +655,13 @@
         }
 
 
+
+
+        function showArray(){
+            alert(pathArray);
+        }
+
+
         /***** RACCOURCIS CLAVIER ********/
         Mousetrap.bind(['ctrl+z'], function() {
             deleteLastPoint();
@@ -680,6 +692,6 @@
         });
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&libraries=places&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry,places&callback=initMap">
     </script>
 {% endblock %}

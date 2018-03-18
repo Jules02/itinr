@@ -17,13 +17,14 @@ class Path
     private $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string")
      */
-    private $path;
+    private $path = [];
 
     /**
      * @return mixed
      */
+
     public function getId()
     {
         return $this->id;
@@ -52,6 +53,7 @@ class Path
     {
         $this->path = $path;
     }
+
 
 
 }

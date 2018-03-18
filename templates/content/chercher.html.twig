@@ -1,5 +1,132 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Chercher{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
+
 {% block body %}
-    <p>Chercher</p>
+<div id="loading">
+    <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+</div>
+
+<div id="map" oncontextmenu="return false"></div>
+
+<div id="mapFilter"></div>
+
+<p>{{ path.path }}</p>
+{% endblock %}
+
+{% block javascripts %}
+    {#<script src=" {{ asset('build/js/main.js') }} "></script>#}
+    <script src=" {{ asset('build/mousetrap.js') }} "></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(window).load(function() {
+            $('#loading').hide();
+        });
+    </script>
+
+    <script>
+        var globalPoly;
+
+        var map;
+        var geoPos;
+
+
+
+
+        function initMap() {
+            var mapDiv = document.getElementById("map");
+            //je récupére mon element avec l'id map
+            var windowHeight = window.innerHeight;
+            //je prend la hauteur de la fenêtre
+            var tailleVoulu = (windowHeight - 80) + 'px';
+            //je calcule pour que ma map fasse hauteur de la fenêtre moins le header
+            mapDiv.style.height = tailleVoulu;
+            //c'est comme si je fais en CSS: 'height: tailleVoulu;'
+
+            //on veut centrer la carte sur notre position si la geolocalisation est activée
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
+                    geoPos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    map.setCenter(geoPos);   //centre la carte
+
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+
+            } else {
+                // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+
+
+            var ancienPath ='{{ path.path }}';
+
+            var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
+
+            map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
+                zoom: 14,   //Définie le zoom par défaut
+            });
+
+            globalPoly = new google.maps.Polyline({   //créé déjà la polyline
+                path: ancienPathDesencode,
+                strokeColor: '#3BA14C',
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            globalPoly.setMap(map);   //on attache l'objet polyline à notre map
+
+
+            google.maps.event.addListener( map, 'maptypeid_changed', function(){
+                var mapType = map.getMapTypeId();
+
+                if (mapType == 'hybrid'){
+                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
+                } else {
+                    globalPoly.setOptions({strokeColor: '#3BA14C'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+                }
+            });
+        }
+        /************* FIN INITMAP *************/
+
+
+        /***** RACCOURCIS CLAVIER ********/
+        Mousetrap.bind(['ctrl+z'], function() {
+            deleteLastPoint();
+        });
+
+
+
+
+        //zoom/dezoom avec Ctrl Alt +/- ou Ctrl +/-
+        var zoom = 14;
+
+        Mousetrap.bind(['ctrl+alt++', 'ctrl++'], function() {
+            if(zoom <= 23){
+                zoom++;
+                map.setZoom(zoom);
+            }else{
+                alert('Impossible de zoomer davantage');
+            }
+        });
+
+        Mousetrap.bind(['ctrl+alt+-', 'ctrl+-'], function() {
+            if(zoom >= 1){
+                zoom--;
+                map.setZoom(zoom);
+            }else{
+                alert('Impossible de dézoomer davantage');
+            }
+        });
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&callback=initMap">
+    </script>
 {% endblock %}

@@ -9,13 +9,16 @@
 namespace App\Controller;
 
 use App\Entity\Path;
+use App\Form\PathType;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
-class PagesController extends Controller
+class PagesController
 {
 
     /**
@@ -32,8 +35,12 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function concepteur (Environment $twig) {
-        return new Response($twig->render('content/concepteur.html.twig'));
+    public function concepteur (Environment $twig, RegistryInterface $doctrine) {
+        $path = $doctrine->getRepository(Path::class)->find(1);
+
+        return new Response($twig->render('content/concepteur.html.twig', [
+            'path' => $path
+        ]));
     }
 
     /**
@@ -41,10 +48,20 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function apropos (RegistryInterface $doctrine) {
+    public function apropos (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
         $paths = $doctrine->getRepository(Path::class)->findAll();
+        $form = $formFactory->createBuilder(PathType::class, $paths[0])->getForm();
 
-        return $this->render('content/apropos.html.twig', compact('paths'));
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $doctrine->getEntityManager()->flush();
+        }
+
+        return new Response($twig->render('content/apropos.html.twig', [
+            'paths' => $paths,
+            'form' => $form->createView()
+        ]));
     }
 
     /**
@@ -52,10 +69,12 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function chercher (Environment $twig) {
-        $em = $this->getDoctrine()->getManager();
+    public function chercher (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
+        $path = $doctrine->getRepository(Path::class)->find(1);
 
-        return new Response($twig->render('content/chercher.html.twig'));
+        return new Response($twig->render('content/chercher.html.twig', [
+            'path' => $path
+        ]));
     }
 
     /**

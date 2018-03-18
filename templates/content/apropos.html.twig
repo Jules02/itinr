@@ -5,6 +5,11 @@
 {% block stylesheets %}{{ asset('build/css/apropos.css') }}{% endblock %}
 
 {% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button>Envoyer</button>
+    {{ form_end(form) }}
+
     <table class="table table-striped">
         <thead>
         <tr>
