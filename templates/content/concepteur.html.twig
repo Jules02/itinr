@@ -17,14 +17,14 @@
 
     <form>    <!-- Contrôles présents sur la carte-->
         <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
-        <button type="button" id="centerMap" name="bouton4" onclick="centerMap()" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
+        <button type="button" id="centerMap" name="bouton4" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
 
 
         <div class="map-bottom">
             <div id="textDiv"></div>
-            <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points" onclick="deletePoints()">
-            <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point" onclick="deleteLastPoint()">
-            <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ" onclick="fermerBoucle()">
+            <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points">
+            <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point">
+            <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
         </div>
 
         <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
@@ -79,10 +79,6 @@
             <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
         </select>
     </form>
-
-    <button onclick="showArray()">Montrer le tableau</button>
-    <button onclick="showPath()">Afficher ancien parcours</button>
-    <p>{{ path.path }}</p>
 {% endblock %}
 
 
@@ -345,11 +341,6 @@
 
             var monPath = globalPoly.getPath();
 
-            var rendererOptions= {
-                polylineOptions: {strokeColor:'#3BA14C'},
-                suppressMarkers: true
-            };
-
             var directionsService = new google.maps.DirectionsService();
 
             var selectModeSuivi = document.getElementById('selectModeSuivi');
@@ -569,7 +560,7 @@
 
         //Fonctions des contrôles
 
-        function deleteLastPoint(){
+        $('#deleteLastButton').click(function() {
             var monPath = globalPoly.getPath();
 
             monPath.pop();   //on supprime le dernier élément du tableau path
@@ -594,9 +585,9 @@
             updateRouteLength();
 
             updateTempsGlobal(distanceKmFloat);
-        }
+        });
 
-        function deletePoints(){
+        $('#deleteAllButton').click(function() {
             firstMarker.setMap(null);
             setMapOnAll(null);
             markers = [];
@@ -627,15 +618,15 @@
 
             var menuGaucheMessage = document.getElementById("menuGauche-message");
             menuGaucheMessage.style.display = "block";
-        }
+        });
 
-        function fermerBoucle(){
+        $('#closeLoopButton').click(function() {
             calculateRoute(directionsService, lastPoint, firstPoint);
-        }
+        });
 
-        function centerMap(){   //on recentre la carte sur notre localisation (si on l'a autorisé)
+        $('#centerMap').click(function() {
             map.setCenter(geoPos);
-        }
+        });
 
 
 
@@ -647,19 +638,35 @@
         menuGaucheBouton.onclick = function() {
             menuGauche.style.display = "block";
             mapFilter.style.display = "block";
-        }
+        };
 
         mapFilter.onclick = function() {
             menuGauche.style.display = "none";
             mapFilter.style.display = "none";
-        }
+        };
+
+
+        $('#savePath').click(function() {
+            var monPath = globalPoly.getPath();
+            var encodeString = google.maps.geometry.encoding.encodePath(monPath);
+
+            $.ajax('{{ path('savePath') }}', {
+                type: "POST",
+                data: {
+                    pathString: encodeString
+                },
+                success: function(data) {
+                },
+                error: function() {
+                    alert('Erreur. Rendez vous sur la page Aide ou contactez nous');
+                }
+            });
+            return false; // this stops normal button behaviour from executing;
+        });
 
 
 
 
-        function showArray(){
-            alert(pathArray);
-        }
 
 
         /***** RACCOURCIS CLAVIER ********/

@@ -49,7 +49,7 @@ class PagesController
      * @return Response
      */
     public function apropos (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
-        $paths = $doctrine->getRepository(Path::class)->findAll();
+        $paths = $doctrine->getRepository(Path::class)->find(21);
         $form = $formFactory->createBuilder(PathType::class, $paths[0])->getForm();
 
         $form->handleRequest($request);
@@ -70,7 +70,7 @@ class PagesController
      * @return Response
      */
     public function chercher (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
-        $path = $doctrine->getRepository(Path::class)->find(1);
+        $path = $doctrine->getRepository(Path::class)->find(25);
 
         return new Response($twig->render('content/chercher.html.twig', [
             'path' => $path

@@ -12,8 +12,6 @@
 <div id="map" oncontextmenu="return false"></div>
 
 <div id="mapFilter"></div>
-
-<p>{{ path.path }}</p>
 {% endblock %}
 
 {% block javascripts %}
@@ -31,6 +29,9 @@
 
         var map;
         var geoPos;
+
+        var markerStart = "{{ asset('images/marker.png') }}";   //icone de marqueur de début
+        var markerEnd = "{{ asset('images/empty.png') }}";
 
 
 
@@ -67,10 +68,12 @@
 
             var ancienPath ='{{ path.path }}';
 
+            alert(ancienPath);
+
             var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
-                zoom: 14,   //Définie le zoom par défaut
+                zoom: 14  //Définie le zoom par défaut
             });
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
@@ -92,6 +95,22 @@
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
                     firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
                 }
+            });
+
+            var premierMarker = ancienPathDesencode[0];
+            marker = new google.maps.Marker({
+                position: premierMarker,
+                title: 'Premier marqueur',
+                map: map,
+                icon: markerStart
+            });
+
+            var dernierMarker = ancienPathDesencode[ancienPathDesencode.length - 1];
+            marker = new google.maps.Marker({
+                position: dernierMarker,
+                title: 'Dernier marqueur',
+                map: map,
+                icon: markerEnd
             });
         }
         /************* FIN INITMAP *************/
