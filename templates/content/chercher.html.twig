@@ -68,8 +68,6 @@
 
             var ancienPath ='{{ path.path }}';
 
-            alert(ancienPath);
-
             var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map

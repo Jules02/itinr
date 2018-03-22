@@ -65,12 +65,12 @@ class PagesController
     }
 
     /**
-     * @Route("/chercher")
+     * @Route("/chercher/{id}")
      * @param Environment $twig
      * @return Response
      */
-    public function chercher (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
-        $path = $doctrine->getRepository(Path::class)->find(25);
+    public function chercher (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
+        $path = $doctrine->getRepository(Path::class)->find($id);
 
         return new Response($twig->render('content/chercher.html.twig', [
             'path' => $path
