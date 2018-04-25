@@ -30,6 +30,12 @@ class User implements UserInterface, \Serializable
      *
      * @ORM\Column(type="string")
      * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 20,
+     *      minMessage = "Votre nom doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre nom ne doit pas faire plus de {{ limit }} caractères"
+     * )
      */
     private $fullName;
 
@@ -38,6 +44,12 @@ class User implements UserInterface, \Serializable
      *
      * @ORM\Column(type="string", unique=true)
      * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 20,
+     *      minMessage = "Votre nom d'utilisateur doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre nom d'utilisateur ne doit pas faire plus de {{ limit }} caractères"
+     * )
      */
     private $username;
 
@@ -46,13 +58,20 @@ class User implements UserInterface, \Serializable
      *
      * @ORM\Column(type="string", unique=true)
      * @Assert\NotBlank()
-     * @Assert\Email()
+     * @Assert\Email(
+     *     message = "Cet email n'est pas valide ou n'existe pas",
+     *     checkMX = true
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="string")
      * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     * @Assert\Image(
+     *     maxWidth = 1000,
+     *     maxHeight = 1000
+     * )
      */
     private $image;
 
@@ -65,6 +84,12 @@ class User implements UserInterface, \Serializable
      * @var string
      *
      * @ORM\Column(type="string", length=64)
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     *      minMessage = "Votre mot de passe doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre mot de passe ne doit pas faire plus de {{ limit }} caractères"
+     * )
      */
     private $password;
 

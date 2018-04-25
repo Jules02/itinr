@@ -39,8 +39,8 @@
             </div>
             {% else %}
                 <div class="header-account">
-                    <a class="header-account-signup btn-account" href="register">Inscription</a>
-                    <a class="header-account-signin btn-account" href="login">Connexion</a>
+                    <a class="header-account-signup btn-account" href="{{ path("user_registration") }}">Inscription</a>
+                    <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
                 </div>
         {% endif %}
     </header>
