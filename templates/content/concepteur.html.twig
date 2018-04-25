@@ -1,84 +1,102 @@
 {% extends 'base.html.twig' %}
 
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 {% block title %}Concepteur{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
 
+
 {% block body %}
-    <div id="loading">
-        <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
-    </div>
+        {% include 'flash_messages.html.twig' %}
 
-    <div id="map" oncontextmenu="return false"></div>
-
-    <div id="mapFilter"></div>
-
-    <!-- Zone de texte de la distance en bas -->
-
-    <form>    <!-- Contrôles présents sur la carte-->
-        <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
-        <button type="button" id="centerMap" name="bouton4" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
-
-
-        <div class="map-bottom">
-            <div id="textDiv"></div>
-            <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points">
-            <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point">
-            <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
+        <div id="loading">
+            <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
         </div>
 
-        <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
-            <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
-        </button>
-        <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
-        <div id="menuGauche">
-            <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
+        <div id="map" oncontextmenu="return false"></div>
 
-            <div id="menuGauche-interieur">
-                <div class="menuGauche-partie">
-                    <p class="menuGauche-partie-texte">Vitesse Moyenne</p>
-                </div>
+        <div id="mapFilter" class="mapFilter"></div>
 
-                <div class="menuGauche-partie">
-                    <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                    <p class="menuGauche-partie-texte">Temps nécessaire</p>
-                </div>
+        <!-- Zone de texte de la distance en bas -->
 
-                <div class="menuGauche-partie">
-                    <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                    <div class="menuGauche-partie-container">
-                        <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
-                        <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
-                    </div>
-                </div>
+           <!-- Contrôles présents sur la carte-->
+            <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
+            <button type="button" id="centerMap" name="bouton4" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
 
-                <div class="menuGauche-partie">
-                    <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                    <div class="menuGauche-partie-container">
-                        <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
-                        <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
-                    </div>
-                </div>
 
-                <div class="menuGauche-partie">
-                    <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                    <div class="menuGauche-partie-container">
-                        <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
-                        <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
-                    </div>
-                </div>
+            <div class="map-bottom">
+                <div id="textDiv"></div>
+                <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points">
+                <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point">
+                <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
             </div>
 
-            <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
-        </div>
+            <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+            <div id="menuGauche">
+                <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
 
-        <select name="modeSuivi" id="selectModeSuivi">
-            <option value="DRIVING" selected disabled=true>Mode de suivi des routes</option>
-            <option value="BICYCLING" title="Les itinéraires essayerons au maximum de passer par des pistes cyclables">Vélo</option>
-            <option value="WALKING" title="Privilégie les voies piétonnes et les rues avec trottoir">Marche et course à pied</option>
-            <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
-        </select>
-    </form>
+                <div id="menuGauche-interieur">
+                    <div class="menuGauche-partie">
+                        <p class="menuGauche-partie-texte">Vitesse Moyenne</p>
+                    </div>
+
+                    <div class="menuGauche-partie">
+                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                        <p class="menuGauche-partie-texte">Temps nécessaire</p>
+                    </div>
+
+                    <div class="menuGauche-partie">
+                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                        <div class="menuGauche-partie-container">
+                            <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
+                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="menuGauche-partie">
+                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                        <div class="menuGauche-partie-container">
+                            <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
+                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="menuGauche-partie">
+                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                        <div class="menuGauche-partie-container">
+                            <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
+                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
+            </div>
+
+            <select name="modeSuivi" id="selectModeSuivi">
+                <option value="DRIVING" selected disabled=true>Mode de suivi des routes</option>
+                <option value="BICYCLING" title="Les itinéraires essayerons au maximum de passer par des pistes cyclables">Vélo</option>
+                <option value="WALKING" title="Privilégie les voies piétonnes et les rues avec trottoir">Marche et course à pied</option>
+                <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
+            </select>
+
+            <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
+                <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
+            </button>
+            <div class="saveContainer" id="saveContainer">
+                <div class="formContainer">
+                    <div class="formPopUp" id="formPopUp">
+                        {{ form_start(form, {'method': 'POST'}) }}
+                        {{ form_widget(form) }}
+                        <input type="hidden" value="Caché" id="hiddenInput" name="path[path]"/>
+                        <button id="saveFormBtn">Envoyer</button>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+                <div id="mapFilterForm" class="mapFilter"></div>
+            </div>
+
 {% endblock %}
 
 
@@ -125,7 +143,8 @@
             //je récupére mon element avec l'id map
             var windowHeight = window.innerHeight;
             //je prend la hauteur de la fenêtre
-            var tailleVoulu = (windowHeight - 80) + 'px';
+            var tailleNb = windowHeight - 80;
+            var tailleVoulu = tailleNb + 'px';
             //je calcule pour que ma map fasse hauteur de la fenêtre moins le header
             mapDiv.style.height = tailleVoulu;
             //c'est comme si je fais en CSS: 'height: tailleVoulu;'
@@ -133,6 +152,12 @@
             //definir taille du menu gauche
             var menuGauche = document.getElementById('menuGauche');
             menuGauche.style.height = tailleVoulu;
+
+            var saveContainer = document.getElementById('saveContainer');
+            saveContainer.style.height = tailleVoulu;
+
+            var formPopUp = document.getElementById('formPopUp');
+            formPopUp.style.height = (tailleNb - 100) + 'px';
 
 
 
@@ -274,7 +299,6 @@
             if (monPath.getLength() === 1) {
                 marker = new google.maps.Marker({
                     position: event.latLng,
-                    title: '#' + monPath.getLength(),    //path.getLength est le nombre de notre point
                     map: map,
                     icon: markerStart          //le marqueur aura notre image de drapeau
                 });
@@ -288,7 +312,6 @@
             else{     //sinon cela veut dire que ce n'est pas le premier marqueur et on ne lui donne pas de skin (empty.png)
                 marker = new google.maps.Marker({
                     position: event.latLng,
-                    title: '#' + monPath.getLength(),
                     map: map,
                     icon: markerVide
                 });
@@ -384,7 +407,6 @@
 
             marker = new google.maps.Marker({
                 position: event.latLng,
-                title: '#' + monPath.getLength(),
                 map: map,
                 icon: markerVide
             });
@@ -640,29 +662,30 @@
             mapFilter.style.display = "block";
         };
 
+
+        var saveContainer = document.getElementById('saveContainer');
+
         mapFilter.onclick = function() {
             menuGauche.style.display = "none";
             mapFilter.style.display = "none";
         };
 
-
         $('#savePath').click(function() {
+            mapFilterForm.style.display = "block";
+            saveContainer.style.display = "block";
+
             var monPath = globalPoly.getPath();
             var encodeString = google.maps.geometry.encoding.encodePath(monPath);
+            var hiddenInput = document.getElementById('hiddenInput');
 
-            $.ajax('{{ path('savePath') }}', {
-                type: "POST",
-                data: {
-                    pathString: encodeString
-                },
-                success: function(data) {
-                },
-                error: function() {
-                    alert('Erreur. Rendez vous sur la page Aide ou contactez nous');
-                }
-            });
-            return false; // this stops normal button behaviour from executing;
+            hiddenInput.value = encodeString;
         });
+
+        var mapFilterForm = document.getElementById('mapFilterForm');
+        mapFilterForm.onclick = function() {
+            saveContainer.style.display = "none";
+            mapFilterForm.style.display = "none";
+        };
 
 
 

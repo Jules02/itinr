@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/css/apropos.css') }}{% endblock %}
+
+{% block body %}
+
+    <p>Bienvenue {{ app.user.fullName }} !</p>
+
+{% endblock %}

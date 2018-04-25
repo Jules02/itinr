@@ -14,25 +14,35 @@
 
         <div class="header-navbar">
             <ul class="nav_onglets">
-                <li class="nav-item"><a href="concepteur">Concepteur d'itinéraires</a></li>
-                <li class="nav-item"><a href="chercher">Trouver un itinéraire</a></li>
+                <li class="nav-item"><a href="{{ path("concepteur") }}">Concepteur d'itinéraires</a></li>
+                <li class="nav-item"><a href="{{ path("chercher", {'id': 2}) }}">Trouver un itinéraire</a></li>
                 <li class="nav-item nav-item-plus" id="plus">
                     <a>Plus <img src="{{ asset('images/caretdown.png') }}" alt="Déroulant" class="caretdown" id="caret"/></a>
                 </li>
             </ul>
             <div class="sub-nav" id="accordeon">
                 <ul class="sub-nav-ul">
-                    <li class="sub-nav-item"><a href="contact">Contact</a></li>
-                    <li class="sub-nav-item"><a href="aide">Aide</a></li>
-                    <li class="sub-nav-item"><a href="apropos">À propos</a></li>
+                    <li class="sub-nav-item"><a href="{{ path("contact") }}">Contact</a></li>
+                    <li class="sub-nav-item"><a href="{{ path("aide") }}">Aide</a></li>
+                    <li class="sub-nav-item"><a href="{{ path("apropos") }}">À propos</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="header-account">
-            <button class="header-account-signup btn-account">Inscription</button>
-            <button class="header-account-signin btn-account">Connexion</button>
-        </div>
+        {% if app.user %}
+            <div class="header-account">
+                <a href="{{ path('profil') }}" class="header-account-signup btn-account profil-container">
+                    {{ app.user.fullName }}
+                    <div class="user-image-container"><img src="{{ app.user.image }}" class="header-account-user-image"/></div>
+                </a>
+                <a href="{{ path('security_logout') }}" class="header-account-signin btn-account">Déconnexion</a>
+            </div>
+            {% else %}
+                <div class="header-account">
+                    <a class="header-account-signup btn-account" href="register">Inscription</a>
+                    <a class="header-account-signin btn-account" href="login">Connexion</a>
+                </div>
+        {% endif %}
     </header>
 
 {% block body %}{% endblock %}

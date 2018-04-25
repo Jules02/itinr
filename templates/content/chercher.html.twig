@@ -11,7 +11,75 @@
 
 <div id="map" oncontextmenu="return false"></div>
 
-<div id="mapFilter"></div>
+<div id="textDiv" class="textDivDisplay"></div>
+<div id="petitTextDiv"></div>
+
+<div id="mapFilter" class="mapFilter"></div>
+
+    <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+
+    <div id="menuGauche">
+        <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
+
+        <div id="menuGauche-interieur">
+            <div class="menuGauche-partie">
+                <p class="menuGauche-partie-texte">Vitesse Moyenne</p>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <p class="menuGauche-partie-texte">Temps nécessaire</p>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
+                </div>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
+                </div>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Type de sport</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Note</th>
+            <th>Autre filtre</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ path.titre }}</td>
+            <td>{{ path.typeSport }}</td>
+            <td>{{ path.description }}</td>
+            <td>{{ path.image }}</td>
+            <td>{{ path.note }}</td>
+            <td>{{ path.autreFiltre }}</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
 
 {% block javascripts %}
@@ -33,6 +101,10 @@
         var markerStart = "{{ asset('images/marker.png') }}";   //icone de marqueur de début
         var markerEnd = "{{ asset('images/empty.png') }}";
 
+        var vitesseVelo = 20;
+        var vitesseFooting = 13;
+        var vitesseMarche = 6;
+
 
 
 
@@ -46,8 +118,12 @@
             mapDiv.style.height = tailleVoulu;
             //c'est comme si je fais en CSS: 'height: tailleVoulu;'
 
+            //definir taille du menu gauche
+            var menuGauche = document.getElementById('menuGauche');
+            menuGauche.style.height = tailleVoulu;
+
             //on veut centrer la carte sur notre position si la geolocalisation est activée
-            if (navigator.geolocation) {
+            /*if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
                     geoPos = {
                         lat: position.coords.latitude,
@@ -63,7 +139,7 @@
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
                 handleLocationError(false, infoWindow, map.getCenter());
-            }
+            };*/
 
 
             var ancienPath ='{{ path.path }}';
@@ -82,21 +158,8 @@
             });
             globalPoly.setMap(map);   //on attache l'objet polyline à notre map
 
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
-                }
-            });
-
             var premierMarker = ancienPathDesencode[0];
-            marker = new google.maps.Marker({
+            firstMarker = new google.maps.Marker({
                 position: premierMarker,
                 title: 'Premier marqueur',
                 map: map,
@@ -110,8 +173,159 @@
                 map: map,
                 icon: markerEnd
             });
+
+            google.maps.event.addListener( map, 'maptypeid_changed', function(){
+                var mapType = map.getMapTypeId();
+
+                if (mapType == 'hybrid'){
+                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
+                } else {
+                    globalPoly.setOptions({strokeColor: '#3BA14C'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+                }
+            });
+
+            var boutonMenuLateral = document.getElementById('boutonMenuLateral');
+            map.controls[google.maps.ControlPosition.LEFT].push(boutonMenuLateral);
+
+            updateRouteLength();
+
+            var monPath = globalPoly.getPath();
+
+            var pathArray = monPath.getArray();
+
+            zoomToObject(pathArray);
         }
         /************* FIN INITMAP *************/
+
+
+
+
+        function zoomToObject(pathArray){
+            var bounds = new google.maps.LatLngBounds();
+            var points = pathArray;
+            for (var n = 0; n < points.length ; n++){
+                bounds.extend(points[n]);
+            }
+            map.fitBounds(bounds);
+        }
+
+        function updateRouteLength(){
+            var monPath = globalPoly.getPath();
+
+            var pathArray = monPath.getArray();
+
+            var distance = google.maps.geometry.spherical.computeLength(pathArray);   //calcule la distance du parcours en comptant tout les points
+            distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près
+            distanceKmFloat = distanceArrondie/1000;
+            distanceKm = Math.round(distanceKmFloat*10)/10;
+
+
+            var div = document.getElementById("textDiv");    //recupere la div textDiv
+            var petiteDiv = document.getElementById("petitTextDiv");
+            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
+                div.textContent = "Il n'y a qu'un seul marqueur";
+            } else {
+                div.textContent = distanceKm + " kilomètres" ;
+                //on affiche la distance arrondie et au km dans la div textDiv
+                petiteDiv.textContent = distanceArrondie + " mètres"
+
+                var menuGaucheInterieur = document.getElementById("menuGauche-interieur");
+                menuGaucheInterieur.style.display = "block";
+
+                var menuGaucheMessage = document.getElementById("menuGauche-message");
+                menuGaucheMessage.style.display = "none";
+            }
+
+            updateTempsGlobal(distanceKmFloat);
+        }
+
+        function getDecimal(n) {
+            return (n - Math.floor(n));
+        }
+
+        function getPartieDecimale(n){
+            return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
+        }
+
+        function updateTempsGlobal(distanceKmFloat){
+            //velo
+            updateTempsNecessaire(distanceKmFloat, vitesseVelo, "tempsVelo");
+
+            //footing
+            updateTempsNecessaire(distanceKmFloat, vitesseFooting, "tempsFooting");
+
+            //marche
+            updateTempsNecessaire(distanceKmFloat, vitesseMarche, "tempsMarche");
+        }
+
+        function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
+            var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
+
+            var temps = distanceKmFloat / vitesseMoyenne; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
+            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;  //on sort 52.31 (52 minutes 31 secondes)
+            var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
+
+            var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
+
+            if(tempsEnMinutes === 1){
+                var minuteOrthographe = " minute";
+            }else{
+                var minuteOrthographe = " minutes";
+            }
+
+            if(secondesTemps === 1){
+                var secondeOrthographe = " seconde";
+            }else{
+                var secondeOrthographe = " secondes";
+            }
+
+
+            if(tempsEnMinutes < 1){
+                tempsHTML.textContent = secondesTemps + secondeOrthographe;
+                tempsHTML.title = "";
+            }else{
+                //si il y a plus de 60 minutes on affiche en heures et minutes
+                if(tempsEnMinutes < 60){
+                    tempsHTML.textContent = tempsEnMinutes + minuteOrthographe;
+                    tempsHTML.title = "Et " + secondesTemps + secondeOrthographe;
+                }else{
+                    var tempsEnHeuresFloat = tempsEnMinutes / 60;
+                    var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
+                    var tempsEnHeures = Math.round(tempsEnHeuresFloat);
+
+                    if(minutesDuTempsPourHeures === 1){
+                        var minuteOrthographe = " minute";
+                    }else{
+                        var minuteOrthographe = " minutes";
+                    }
+
+                    if(tempsEnHeures === 1){
+                        var heureOrthographe = " heure";
+                    }else{
+                        var heureOrthographe = " heures";
+                    }
+
+                    tempsHTML.textContent = tempsEnHeures + heureOrthographe + " et " + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
+                }
+            }
+
+        }
+
+        var menuGaucheBouton = document.getElementById('boutonMenuLateral');
+        var menuGauche = document.getElementById('menuGauche');
+        var mapFilter = document.getElementById('mapFilter');
+
+        menuGaucheBouton.onclick = function() {
+            menuGauche.style.display = "block";
+            mapFilter.style.display = "block";
+        };
+
+        mapFilter.onclick = function() {
+            menuGauche.style.display = "none";
+            mapFilter.style.display = "none";
+        };
 
 
         /***** RACCOURCIS CLAVIER ********/
