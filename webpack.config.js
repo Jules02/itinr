@@ -24,6 +24,7 @@ Encore
     .addEntry('flash_messages', './assets/css/flash_messages_style.css')
     .addEntry('mousetrap', './assets/js/mousetrap.js')
     .addEntry('header', './assets/js/header.js')
+    .addEntry('footer', './assets/js/footer.js')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

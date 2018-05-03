@@ -45,9 +45,12 @@
         {% endif %}
     </header>
 
-{% block body %}{% endblock %}
+    <section id="content">
+{% block body %}
+{% endblock %}
+    </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-content">
             <div class="footer-contentrs">
                 <ul class="footer-rs">
@@ -66,5 +69,18 @@
 
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/header.js') }}"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    var content = document.getElementById("content");
+
+    var tailleVoulu = window.innerHeight - 80 - 30;
+
+    if (content.offsetHeight < tailleVoulu){
+        content.style.height = tailleVoulu + 'px';
+    }else{
+        var footer = document.getElementById("footer");
+        footer.style.marginTop = "50px";
+    }
+</script>
 </body>
 </html>
