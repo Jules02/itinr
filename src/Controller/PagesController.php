@@ -182,4 +182,13 @@ class PagesController extends Controller
     public function modifier (Environment $twig) {
         return new Response($twig->render('content/modifier_profil.html.twig'));
     }
+
+    /**
+     * @Route("/conditions-generales", name="conditions")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function conditions (Environment $twig) {
+        return new Response($twig->render('content/conditions.html.twig'));
+    }
 }
