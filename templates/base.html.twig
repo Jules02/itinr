@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} | Movee{% endblock %}</title>
-    <link rel="stylesheet" href=" {{ asset('build/layout.css') }}">
-    <link rel="stylesheet" href=" {% block stylesheets %}{% endblock %}">
+    <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
+    <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
 </head>
 <body>
 

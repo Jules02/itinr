@@ -19,6 +19,8 @@ Encore
         './assets/js/main.js',
         './assets/css/concepteur_style.css'
     ])
+    .addEntry('contact', './assets/css/contact_style.css')
+    .addEntry('inscription', './assets/css/inscription_style.css')
     .addEntry('flash_messages', './assets/css/flash_messages_style.css')
     .addEntry('mousetrap', './assets/js/mousetrap.js')
     .addEntry('header', './assets/js/header.js')

@@ -1,7 +1,38 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Contact{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/contact.css') }}{% endblock %}
+
 {% block body %}
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
+    {% include 'flash_messages.html.twig' %}
+
+     <h1 class="titre margin-left">Contactez-nous</h1>
+        <p class="sous-titre margin-left">Une question, une suggestion ? Nous vous répondrons avec plaisir 😉 </p>
+
+        <div class="titre-separation margin-left"></div>
+
+        <p class="texte texte1 texte-flex margin-left">Envoyez nous votre message sur<a class="texte1-facebook texte-flex" href="facebook.com">Facebook<img class="texte-img" src="{{ asset('images/facebookcontact.png') }}"/></a></p>
+        <p class="texte texte2 texte-flex margin-left">Par mail : <a class="texte2-email texte-flex" href="mailto:contact@movee.fr">contact@movee.fr <img class="texte-img" src="{{ asset('images/envelope(1).png') }}"/></a></p>
+
+        <p class="texte texte3 margin-left">Ou simplement en remplissant ce formulaire :</p>
+
+        <div class="form-container">
+           {{ form_start(form) }}
+           {{ form_widget(form) }}
+           <button class="submit-input">Envoyer<img src="{{ asset("images/envoyercontact.png") }}" class="submit-input-img"></button>
+           {{ form_end(form) }}
+        </div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    /*var bouton = document.getElementById('submit');
+
+    var windowWidth = window.innerWidth;
+    var tailleNb = windowWidth - 90;
+    var tailleVoulu = tailleNb + 'px';
+
+    bouton.style.width = tailleVoulu;*/
+</script>
 {% endblock %}

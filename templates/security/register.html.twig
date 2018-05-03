@@ -7,8 +7,9 @@
 {% block body %}
 
     {{ form_start(form) }}
-    {{ form_row(form.fullName) }}
+    {{ form_row(form.surname) }}
     {{ form_row(form.username) }}
+    <span title="Nous en avons besoin pour votre avatar">{{ form_row(form.genre) }}</span>
     {{ form_row(form.email) }}
     {{ form_row(form.password.first) }}
     {{ form_row(form.password.second) }}

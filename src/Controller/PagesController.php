@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Entity\Path;
+use App\Form\ContactType;
 use App\Form\PathType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -93,37 +94,7 @@ class PagesController extends Controller
      * @return Response
      */
     public function apropos (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
-        $path = new Path();
-
-        $formBuilder = $formFactory->createBuilder(PathType::class, $path);
-
-        $form = $formBuilder->getForm();
-
-        if ($request->isMethod('POST')) {
-            // On fait le lien Requête <-> Formulaire
-            // À partir de maintenant, la variable $advert contient les valeurs entrées dans le formulaire par le visiteur
-            $form->handleRequest($request);
-
-            // On vérifie que les valeurs entrées sont correctes
-            // (Nous verrons la validation des objets en détail dans le prochain chapitre)
-            if ($form->isSubmitted() && $form->isValid()) {
-                // On enregistre notre objet $advert dans la base de données, par exemple
-                $em = $doctrine->getEntityManager();
-                $em->persist($path);
-                $em->flush();
-
-                $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
-
-                // On redirige vers la page de visualisation de l'annonce nouvellement créée
-                return new Response($twig->render('content/aide.html.twig', [
-                    'id' => $path->getId()
-                ]));
-            }
-        }
-
-        return new Response($twig->render('content/apropos.html.twig', [
-            'form' => $form->createView()
-        ]));
+        return new Response($twig->render('content/apropos.html.twig'));
     }
 
     /**
@@ -157,34 +128,28 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function contact (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
-        $path = new Path();
-
-        $formBuilder = $formFactory->createBuilder(FormType::class, $path);
-
-        $form = $formBuilder
-            ->add('path',        TextType::class)
-            ->add('titre',       TextType::class)
-            ->add('typeSport',   TextType::class)
-            ->add('description', TextType::class)
-            ->add('image',       TextType::class)
-            ->add('note',        IntegerType::class)
-            ->add('autre_filtre',TextType::class)
-            ->add('save',        SubmitType::class)
-            ->getForm();
+    public function contact (Request $request, Environment $twig, \Swift_Mailer $mailer, FormFactoryInterface $formFactory) {
+        $form = $this->createForm(ContactType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $path = $form->getData();
+            $data = $form->getData();
 
-            $em = $doctrine->getEntityManager();
-            $em->persist($path);
-            $em->flush();
+            $subject = $data['objet'];
+            $body = "Message de: " . $data['email'] . "<br/>" . $data['contenu'];
 
-            return new Response($twig->render('content/aide.html.twig'));
+            $message = (new \Swift_Message())
+                ->setSubject($subject)
+                ->setTo('julesdupont02@gmail.com')
+                ->setFrom('moveetest@gmail.com')
+                ->setBody($body, 'text/html')
+            ;
+
+            $mailer->send($message);
+
+            $this->addFlash('mailsent', 'Email bien envoyé ! Nous vous répondrons le plus rapidement possible');
         }
-
 
         return new Response($twig->render('content/contact.html.twig', [
             'form' => $form->createView()

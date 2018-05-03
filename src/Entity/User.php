@@ -33,11 +33,11 @@ class User implements UserInterface, \Serializable
      * @Assert\Length(
      *      min = 2,
      *      max = 20,
-     *      minMessage = "Votre nom doit faire au moins {{ limit }} caractères",
-     *      maxMessage = "Votre nom ne doit pas faire plus de {{ limit }} caractères"
+     *      minMessage = "Votre prénom doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre prénom ne doit pas faire plus de {{ limit }} caractères"
      * )
      */
-    private $fullName;
+    private $surname;
 
     /**
      * @var string
@@ -105,15 +105,15 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    public function setFullName(string $fullName): void
+    public function setSurname(string $surname): void
     {
-        $this->fullName = $fullName;
+        $this->surname = $surname;
     }
 
     // le ? signifie que cela peur aussi retourner null
-    public function getFullName(): ?string
+    public function getSurname(): ?string
     {
-        return $this->fullName;
+        return $this->surname;
     }
 
     public function getUsername(): ?string

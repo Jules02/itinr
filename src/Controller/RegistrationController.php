@@ -17,7 +17,7 @@ class RegistrationController extends Controller
     /**
      * @Route("/register", name="user_registration")
      */
-    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder, EventDispatcherInterface $eventDispatcher)
+    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -46,10 +46,19 @@ class RegistrationController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $this->addFlash('registred', 'Inscription réussie');
+            $subject = "Test";
+            $body = "Inscription réussie";
 
-            $event = new GenericEvent($user);
-            $eventDispatcher->dispatch(Events::USER_REGISTERED, $event);
+            $message = (new \Swift_Message())
+                ->setSubject($subject)
+                ->setTo($user->getEmail())
+                ->setFrom('moveetest@gmail.com')
+                ->setBody($body, 'text/html')
+            ;
+
+            $mailer->send($message);
+
+            $this->addFlash('registred', 'Inscription réussie. Nous vous avons envoyé un email de bienvenue');
 
             return $this->redirectToRoute('concepteur');
         }
