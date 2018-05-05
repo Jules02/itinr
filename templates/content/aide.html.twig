@@ -1,5 +1,51 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Aide{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/aide.css') }}{% endblock %}
+
 {% block body %}
-    <p>Message</p>
+    <div class="margin-left">
+        <h1 class="titre">Novice ? Un problème ?</h1>
+        <div class="titre-separation"></div>
+
+        <h2 class="sous-titre sous-titre1">Découvrez nos tutoriels sur Youtube</h2>
+
+        <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="full" data-count="default"></div>
+
+        <h2 class="sous-titre sous-titre2">Ou nos tutoriels écrits</h2>
+
+            <div class="tutoecrit-groupcontainer">
+                <div class="tutoecrit-container">
+                    <a class="tutoecrit-a" href="#">Comment concevoir un itinéraire</a>
+                    <div class="tutoecrit-sepa"></div>
+                </div>
+
+                <div class="tutoecrit-container">
+                    <a class="tutoecrit-a" href="#">Comment publier mon itinéraire</a>
+                    <div class="tutoecrit-sepa"></div>
+                </div>
+
+                <div class="tutoecrit-container">
+                    <a class="tutoecrit-a" href="#">Comment retrouver mon itinéraire après l’avoir sauvegardé</a>
+                    <div class="tutoecrit-sepa"></div>
+                </div>
+
+                <div class="tutoecrit-container">
+                    <a class="tutoecrit-a" href="#">Comment trouver un itinéraire</a>
+                    <div class="tutoecrit-sepa"></div>
+                </div>
+            </div>
+
+
+        <a class="sous-titre sous-titre3" href="#">Découvrez également la documentation du concepteur d’itinéraires</a>
+
+
+        <h2 class="sous-titre sous-titre4">Vous n’avez pas trouvé de solution ?</h2>
+            <p class="fin">Décrivez nous votre problème en nous envoyant un message depuis la page <a href="{{ path('contact') }}" class="fin-contact">Contact</a>, nous saurons peut-être vous répondre</p>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://apis.google.com/js/platform.js"></script>
 {% endblock %}

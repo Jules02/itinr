@@ -100,9 +100,9 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // user_registration
-        if ('/register' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\RegistrationController::registerAction',  '_route' => 'user_registration',);
+        // inscription
+        if ('/inscription' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\RegistrationController::registerAction',  '_route' => 'inscription',);
         }
 
         // savePath

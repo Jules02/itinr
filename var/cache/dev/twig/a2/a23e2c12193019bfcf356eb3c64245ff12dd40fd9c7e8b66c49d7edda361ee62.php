@@ -1,6 +1,6 @@
 <?php
 
-/* security/register.html.twig */
+/* security/inscription.html.twig */
 class __TwigTemplate_2ea9cc49247b8c67c723ed8317f882eb44732ed97f3f207bfcaf9b3c9643e5bf extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_2ea9cc49247b8c67c723ed8317f882eb44732ed97f3f207bfcaf9b3c964
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "security/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "security/inscription.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
@@ -24,10 +24,10 @@ class __TwigTemplate_2ea9cc49247b8c67c723ed8317f882eb44732ed97f3f207bfcaf9b3c964
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_81942df171a732bf58b50d67b227511fda23fe6324a1655c29b7f824a8c2f1c4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_81942df171a732bf58b50d67b227511fda23fe6324a1655c29b7f824a8c2f1c4->enter($__internal_81942df171a732bf58b50d67b227511fda23fe6324a1655c29b7f824a8c2f1c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "security/register.html.twig"));
+        $__internal_81942df171a732bf58b50d67b227511fda23fe6324a1655c29b7f824a8c2f1c4->enter($__internal_81942df171a732bf58b50d67b227511fda23fe6324a1655c29b7f824a8c2f1c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "security/inscription.html.twig"));
 
         $__internal_6d2e2b4d897731b7aa04a4019df9e85140fb75c47f90d7035f829d961189913f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6d2e2b4d897731b7aa04a4019df9e85140fb75c47f90d7035f829d961189913f->enter($__internal_6d2e2b4d897731b7aa04a4019df9e85140fb75c47f90d7035f829d961189913f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "security/register.html.twig"));
+        $__internal_6d2e2b4d897731b7aa04a4019df9e85140fb75c47f90d7035f829d961189913f->enter($__internal_6d2e2b4d897731b7aa04a4019df9e85140fb75c47f90d7035f829d961189913f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "security/inscription.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -152,7 +152,7 @@ class __TwigTemplate_2ea9cc49247b8c67c723ed8317f882eb44732ed97f3f207bfcaf9b3c964
 
     public function getTemplateName()
     {
-        return "security/register.html.twig";
+        return "security/inscription.html.twig";
     }
 
     public function isTraitable()
@@ -206,6 +206,6 @@ class __TwigTemplate_2ea9cc49247b8c67c723ed8317f882eb44732ed97f3f207bfcaf9b3c964
         {{ form_end(form) }}
     </div>
 
-{% endblock %}", "security/register.html.twig", "C:\\wamp64\\www\\mapbox\\templates\\security\\register.html.twig");
+{% endblock %}", "security/inscription.html.twig", "C:\\wamp64\\www\\mapbox\\templates\\security\\inscription.html.twig");
     }
 }

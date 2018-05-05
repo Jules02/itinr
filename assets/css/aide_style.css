@@ -1,0 +1,62 @@
+.margin-left{
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 45px;
+}
+
+.titre{
+    font-weight: 400;
+    font-size: 40px;
+
+    line-height: 40px;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.titre-separation{
+    width: 150px;
+    height: 5px;
+
+    background-color: #228A31;
+}
+
+.sous-titre{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+
+.tutoecrit-groupcontainer{
+    margin-left: 30px;
+}
+
+.tutoecrit-container{
+    margin-bottom: 15px;
+}
+
+.tutoecrit-a{
+    font-size: 18px;
+    color: #222222;
+}
+
+.tutoecrit-sepa{
+    width: 50px;
+    height: 2px;
+
+    background-color: #228A31;
+
+    margin-top: 3px;
+}
+
+
+.fin{
+    font-size: 18px;
+    color: #222222;
+    margin-top: -10px;
+}
+
+.fin-contact{
+    font-weight: 600;
+}

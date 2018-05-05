@@ -115,12 +115,9 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function aide (Environment $twig, RegistryInterface $doctrine) {
-        $path = $doctrine->getRepository(Path::class)->find(id);
-
-        return new Response($twig->render('content/aide.html.twig', [
-            'path' => $path
-        ]));
+    public function aide (Environment $twig) {
+        //Affichage de la dernière vidéo de la chaine Youtube
+        return new Response($twig->render('content/aide.html.twig'));
     }
 
     /**

@@ -15,7 +15,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class RegistrationController extends Controller
 {
     /**
-     * @Route("/register", name="user_registration")
+     * @Route("/inscription", name="inscription")
      */
     public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
     {
@@ -64,7 +64,7 @@ class RegistrationController extends Controller
         }
 
         return $this->render(
-            'security/register.html.twig',
+            'security/inscription.html.twig',
             array('form' => $form->createView())
         );
     }
