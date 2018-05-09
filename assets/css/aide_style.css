@@ -28,6 +28,23 @@
 
 
 
+.yt-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yt-sepa{
+    width: 3px;
+    height: 100px;
+
+    background-color: #228A31;
+
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
 .tutoecrit-groupcontainer{
     margin-left: 30px;
 }

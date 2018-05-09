@@ -3,7 +3,7 @@
 {% block flash_messages %}
     {% for type, messages in app.session.flashbag.all() %}
         {% for message in messages %}
-            <div id="container">
+            <div id="message-container">
                 <p class="message">{{ message | raw }}</p>
                 <button id="hideButton" onclick="cacherBouton()"></button>
             </div>
@@ -12,13 +12,16 @@
 {% endblock %}
 
 <script>
-    var hideButton = document.getElementById("hideButton");
-    var container = document.getElementById("container");
+    /*var hideButton = document.getElementById("hideButton");
+    var container = document.getElementById("message-container");
 
     function cacherBouton(){
         container.style.display = "none";
-    };
+        alert('hello');
+    }
 
-    setTimeout(cacherBouton, 10000);
+    if(container =! null){
+        setTimeout(cacherBouton, 10000);
+    }*/
 
 </script>

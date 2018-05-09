@@ -1,24 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-
-    height: 100%;
-
-    font-family: 'Source Sans Pro';
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-button{
-    border: none;
-    cursor: pointer;
-}
-
-
-
 #loading {
     width: 100%;
     height: 100%;
@@ -286,6 +265,24 @@ button{
 }
 
 .menuGauche-partie-texte{
+    margin: 0;
+
+    text-align: center;
+}
+
+#temps-necessaire-input{
+    width: 15px;
+}
+
+.temps-necessaire-soustexte{
+    font-weight: 300;
+}
+
+#temps-necessaire-resultat-container{
+    display: none;
+}
+
+#temps-necessaire-resultat{
     margin: 0;
 }
 

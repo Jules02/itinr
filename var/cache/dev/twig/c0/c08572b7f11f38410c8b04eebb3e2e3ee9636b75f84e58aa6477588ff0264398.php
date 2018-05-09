@@ -16,11 +16,11 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f30a8c6d97e1f64bf78f7a4e88890a82af9a1907dfc8107e93866adc15f1fb67 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f30a8c6d97e1f64bf78f7a4e88890a82af9a1907dfc8107e93866adc15f1fb67->enter($__internal_f30a8c6d97e1f64bf78f7a4e88890a82af9a1907dfc8107e93866adc15f1fb67_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "flash_messages.html.twig"));
+        $__internal_0a3188bac925d94c15592dd216944790e9025261dbf49daf74b2191e9f50c606 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0a3188bac925d94c15592dd216944790e9025261dbf49daf74b2191e9f50c606->enter($__internal_0a3188bac925d94c15592dd216944790e9025261dbf49daf74b2191e9f50c606_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "flash_messages.html.twig"));
 
-        $__internal_1831fb648fde9a045714bd737ec1db036283dec21b4d692f332644a353a0e5ec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1831fb648fde9a045714bd737ec1db036283dec21b4d692f332644a353a0e5ec->enter($__internal_1831fb648fde9a045714bd737ec1db036283dec21b4d692f332644a353a0e5ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "flash_messages.html.twig"));
+        $__internal_b8853dcc488f44c930a44c4d3aaa1ff94f9f04d4e3b88ab91bc72115dda72ea1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b8853dcc488f44c930a44c4d3aaa1ff94f9f04d4e3b88ab91bc72115dda72ea1->enter($__internal_b8853dcc488f44c930a44c4d3aaa1ff94f9f04d4e3b88ab91bc72115dda72ea1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "flash_messages.html.twig"));
 
         // line 1
         echo "<link rel=\"stylesheet\" href=\"";
@@ -33,32 +33,35 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
         // line 13
         echo "
 <script>
-    var hideButton = document.getElementById(\"hideButton\");
-    var container = document.getElementById(\"container\");
+    /*var hideButton = document.getElementById(\"hideButton\");
+    var container = document.getElementById(\"message-container\");
 
     function cacherBouton(){
         container.style.display = \"none\";
-    };
+        alert('hello');
+    }
 
-    setTimeout(cacherBouton, 10000);
+    if(container =! null){
+        setTimeout(cacherBouton, 10000);
+    }*/
 
 </script>";
         
-        $__internal_f30a8c6d97e1f64bf78f7a4e88890a82af9a1907dfc8107e93866adc15f1fb67->leave($__internal_f30a8c6d97e1f64bf78f7a4e88890a82af9a1907dfc8107e93866adc15f1fb67_prof);
+        $__internal_0a3188bac925d94c15592dd216944790e9025261dbf49daf74b2191e9f50c606->leave($__internal_0a3188bac925d94c15592dd216944790e9025261dbf49daf74b2191e9f50c606_prof);
 
         
-        $__internal_1831fb648fde9a045714bd737ec1db036283dec21b4d692f332644a353a0e5ec->leave($__internal_1831fb648fde9a045714bd737ec1db036283dec21b4d692f332644a353a0e5ec_prof);
+        $__internal_b8853dcc488f44c930a44c4d3aaa1ff94f9f04d4e3b88ab91bc72115dda72ea1->leave($__internal_b8853dcc488f44c930a44c4d3aaa1ff94f9f04d4e3b88ab91bc72115dda72ea1_prof);
 
     }
 
     // line 3
     public function block_flash_messages($context, array $blocks = array())
     {
-        $__internal_f59f0b66fe4320ac317c6fe5d624346186425cf2a568b747a3bac7d23562b359 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f59f0b66fe4320ac317c6fe5d624346186425cf2a568b747a3bac7d23562b359->enter($__internal_f59f0b66fe4320ac317c6fe5d624346186425cf2a568b747a3bac7d23562b359_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "flash_messages"));
+        $__internal_1a93ae769350b16a2e2e42a524a70e25cfecefeb45f75e42569db7e03234ed94 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1a93ae769350b16a2e2e42a524a70e25cfecefeb45f75e42569db7e03234ed94->enter($__internal_1a93ae769350b16a2e2e42a524a70e25cfecefeb45f75e42569db7e03234ed94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "flash_messages"));
 
-        $__internal_7e2ada3a6723913a9d2440a63ab14a8a92e38dbaf17ca53cc1bd7f71427cb8dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7e2ada3a6723913a9d2440a63ab14a8a92e38dbaf17ca53cc1bd7f71427cb8dc->enter($__internal_7e2ada3a6723913a9d2440a63ab14a8a92e38dbaf17ca53cc1bd7f71427cb8dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "flash_messages"));
+        $__internal_cd1d155f80bb41c0129d36b823509f69903a1bf0249724a3d34220093e8f6346 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cd1d155f80bb41c0129d36b823509f69903a1bf0249724a3d34220093e8f6346->enter($__internal_cd1d155f80bb41c0129d36b823509f69903a1bf0249724a3d34220093e8f6346_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "flash_messages"));
 
         // line 4
         echo "    ";
@@ -71,7 +74,7 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
                 // line 6
-                echo "            <div id=\"container\">
+                echo "            <div id=\"message-container\">
                 <p class=\"message\">";
                 // line 7
                 echo $context["message"];
@@ -90,10 +93,10 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
         unset($context['_seq'], $context['_iterated'], $context['type'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_7e2ada3a6723913a9d2440a63ab14a8a92e38dbaf17ca53cc1bd7f71427cb8dc->leave($__internal_7e2ada3a6723913a9d2440a63ab14a8a92e38dbaf17ca53cc1bd7f71427cb8dc_prof);
+        $__internal_cd1d155f80bb41c0129d36b823509f69903a1bf0249724a3d34220093e8f6346->leave($__internal_cd1d155f80bb41c0129d36b823509f69903a1bf0249724a3d34220093e8f6346_prof);
 
         
-        $__internal_f59f0b66fe4320ac317c6fe5d624346186425cf2a568b747a3bac7d23562b359->leave($__internal_f59f0b66fe4320ac317c6fe5d624346186425cf2a568b747a3bac7d23562b359_prof);
+        $__internal_1a93ae769350b16a2e2e42a524a70e25cfecefeb45f75e42569db7e03234ed94->leave($__internal_1a93ae769350b16a2e2e42a524a70e25cfecefeb45f75e42569db7e03234ed94_prof);
 
     }
 
@@ -109,7 +112,7 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
 
     public function getDebugInfo()
     {
-        return array (  87 => 11,  77 => 7,  74 => 6,  69 => 5,  64 => 4,  55 => 3,  34 => 13,  32 => 3,  26 => 1,);
+        return array (  90 => 11,  80 => 7,  77 => 6,  72 => 5,  67 => 4,  58 => 3,  34 => 13,  32 => 3,  26 => 1,);
     }
 
     public function getSourceContext()
@@ -119,7 +122,7 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
 {% block flash_messages %}
     {% for type, messages in app.session.flashbag.all() %}
         {% for message in messages %}
-            <div id=\"container\">
+            <div id=\"message-container\">
                 <p class=\"message\">{{ message | raw }}</p>
                 <button id=\"hideButton\" onclick=\"cacherBouton()\"></button>
             </div>
@@ -128,14 +131,17 @@ class __TwigTemplate_7e0d5a199a8eef7dd54934c307a288fa72992200942a05c0de37d0c1545
 {% endblock %}
 
 <script>
-    var hideButton = document.getElementById(\"hideButton\");
-    var container = document.getElementById(\"container\");
+    /*var hideButton = document.getElementById(\"hideButton\");
+    var container = document.getElementById(\"message-container\");
 
     function cacherBouton(){
         container.style.display = \"none\";
-    };
+        alert('hello');
+    }
 
-    setTimeout(cacherBouton, 10000);
+    if(container =! null){
+        setTimeout(cacherBouton, 10000);
+    }*/
 
 </script>", "flash_messages.html.twig", "C:\\wamp64\\www\\mapbox\\templates\\flash_messages.html.twig");
     }

@@ -32,18 +32,27 @@
                 <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
             </div>
 
+
+
+
             <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
             <div id="menuGauche">
                 <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
 
                 <div id="menuGauche-interieur">
-                    <div class="menuGauche-partie">
-                        <p class="menuGauche-partie-texte">Vitesse Moyenne</p>
+                    <div class="menuGauche-partie" id="temps-necessaire-container">
+                        <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                        <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
+                        <button type="submit" id="temps-necessaire-submit">+</button>
+                        <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
+                    </div>
+                    <div class="menuGauche-partie" id="temps-necessaire-resultat-container">
+                        <p id="temps-necessaire-resultat"></p>
                     </div>
 
                     <div class="menuGauche-partie">
                         <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <p class="menuGauche-partie-texte">Temps nécessaire</p>
+                        <p class="menuGauche-partie-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
                     </div>
 
                     <div class="menuGauche-partie">
@@ -73,6 +82,10 @@
 
                 <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
             </div>
+
+
+
+
 
             <select name="modeSuivi" id="selectModeSuivi">
                 <option value="DRIVING" selected disabled=true>Mode de suivi des routes</option>
@@ -110,7 +123,9 @@
             $('#loading').hide();
         });
     </script>
+    <script>
 
+    </script>
     <script>
         var globalPoly;
         var poly;
@@ -662,12 +677,34 @@
             mapFilter.style.display = "block";
         };
 
+        $('#temps-necessaire-submit').click(function() {
+            var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
+
+            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+            tempsNecessaireDiv.style.display = "none";
+            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
+            tempsNecessaireResultatDiv.style.display = "block";
+
+            var vitesseInput = inputTempsNecessaire.value;
+
+            var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
+            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+
+            var tempsNecessaireResultat = document.getElementById('temps-necessaire-resultat');
+            tempsNecessaireResultat.textContent = "Vous prendrez " + tempsEnMinutesAvecSecondes;
+        });
+
 
         var saveContainer = document.getElementById('saveContainer');
 
         mapFilter.onclick = function() {
             menuGauche.style.display = "none";
             mapFilter.style.display = "none";
+
+            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+            tempsNecessaireDiv.style.display = "block";
+            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
+            tempsNecessaireResultatDiv.style.display = "none";
         };
 
         $('#savePath').click(function() {
