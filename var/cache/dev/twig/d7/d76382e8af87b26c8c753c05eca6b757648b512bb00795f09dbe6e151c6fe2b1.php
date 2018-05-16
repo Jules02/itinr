@@ -24,69 +24,69 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_757836476d0e777a8382ec95181628248f3681667a75dca519715d78d6b04ff3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_757836476d0e777a8382ec95181628248f3681667a75dca519715d78d6b04ff3->enter($__internal_757836476d0e777a8382ec95181628248f3681667a75dca519715d78d6b04ff3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8->enter($__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
-        $__internal_94bf2051c367daef6f5e5ec5f8754c7fca5f92d5bc8f5af191cbd97240390c78 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_94bf2051c367daef6f5e5ec5f8754c7fca5f92d5bc8f5af191cbd97240390c78->enter($__internal_94bf2051c367daef6f5e5ec5f8754c7fca5f92d5bc8f5af191cbd97240390c78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db->enter($__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 3, $this->getSourceContext()); })()), array(0 => "bootstrap_4_layout.html.twig"), true);
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_757836476d0e777a8382ec95181628248f3681667a75dca519715d78d6b04ff3->leave($__internal_757836476d0e777a8382ec95181628248f3681667a75dca519715d78d6b04ff3_prof);
+        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8->leave($__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8_prof);
 
         
-        $__internal_94bf2051c367daef6f5e5ec5f8754c7fca5f92d5bc8f5af191cbd97240390c78->leave($__internal_94bf2051c367daef6f5e5ec5f8754c7fca5f92d5bc8f5af191cbd97240390c78_prof);
+        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db->leave($__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_96dd8166093662022006f2059508036e40448b4f3e537e114cdf729ac7921ea0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_96dd8166093662022006f2059508036e40448b4f3e537e114cdf729ac7921ea0->enter($__internal_96dd8166093662022006f2059508036e40448b4f3e537e114cdf729ac7921ea0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74->enter($__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_b98515d3759339d0ec8f989be0a7683ea5c39a5b087c26dd4d56e6307758656f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b98515d3759339d0ec8f989be0a7683ea5c39a5b087c26dd4d56e6307758656f->enter($__internal_b98515d3759339d0ec8f989be0a7683ea5c39a5b087c26dd4d56e6307758656f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a->enter($__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Concepteur";
         $this->displayParentBlock("title", $context, $blocks);
         
-        $__internal_b98515d3759339d0ec8f989be0a7683ea5c39a5b087c26dd4d56e6307758656f->leave($__internal_b98515d3759339d0ec8f989be0a7683ea5c39a5b087c26dd4d56e6307758656f_prof);
+        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a->leave($__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a_prof);
 
         
-        $__internal_96dd8166093662022006f2059508036e40448b4f3e537e114cdf729ac7921ea0->leave($__internal_96dd8166093662022006f2059508036e40448b4f3e537e114cdf729ac7921ea0_prof);
+        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74->leave($__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_86df728c1a4cfa8a1a2235677ba3f68672145788ded277bb55923321b3d3a83d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_86df728c1a4cfa8a1a2235677ba3f68672145788ded277bb55923321b3d3a83d->enter($__internal_86df728c1a4cfa8a1a2235677ba3f68672145788ded277bb55923321b3d3a83d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2->enter($__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_21e43764973947bfda9c354d32533e27ad3eef873c0dab612e25b6f4b4c950c9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_21e43764973947bfda9c354d32533e27ad3eef873c0dab612e25b6f4b4c950c9->enter($__internal_21e43764973947bfda9c354d32533e27ad3eef873c0dab612e25b6f4b4c950c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5->enter($__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/concepteur.css"), "html", null, true);
         
-        $__internal_21e43764973947bfda9c354d32533e27ad3eef873c0dab612e25b6f4b4c950c9->leave($__internal_21e43764973947bfda9c354d32533e27ad3eef873c0dab612e25b6f4b4c950c9_prof);
+        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5->leave($__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5_prof);
 
         
-        $__internal_86df728c1a4cfa8a1a2235677ba3f68672145788ded277bb55923321b3d3a83d->leave($__internal_86df728c1a4cfa8a1a2235677ba3f68672145788ded277bb55923321b3d3a83d_prof);
+        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2->leave($__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e6d2ab89ba4c6a07fa849a1066a195c5bcd08ad7cc34026b285ce8c1bdbdfe4b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e6d2ab89ba4c6a07fa849a1066a195c5bcd08ad7cc34026b285ce8c1bdbdfe4b->enter($__internal_e6d2ab89ba4c6a07fa849a1066a195c5bcd08ad7cc34026b285ce8c1bdbdfe4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9->enter($__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_ff59c799ae054e2d18296aab368701798eca3761872e68c54c8f1fd84f3296e6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ff59c799ae054e2d18296aab368701798eca3761872e68c54c8f1fd84f3296e6->enter($__internal_ff59c799ae054e2d18296aab368701798eca3761872e68c54c8f1fd84f3296e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755->enter($__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "        ";
@@ -134,24 +134,66 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 <div id=\"menuGauche-interieur\">
                     <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
                         <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
-                        <button type=\"submit\" id=\"temps-necessaire-submit\">+</button>
+                        <div class=\"temps-necessaire-formcontainer\">
+                            <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
+                            <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/fleche-tempsnecessaire.png"), "html", null, true);
+        echo "\"></button>
+                        </div>
                         <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
                     </div>
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-container\">
-                        <p id=\"temps-necessaire-resultat\"></p>
+                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
+                        <div class=\"temps-necessaire-resultat-container\">
+                            <p id=\"temps-necessaire-resultat\">
+                                Avec votre allure de
+                                <span id=\"temps-necessaire-resultat-allure\"></span>
+                                km/h, <br/> vous prendrez
+                                <span id=\"temps-necessaire-resultat-temps\"></span>
+                            </p>
+                            <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
+                        </div>
                     </div>
 
-                    <div class=\"menuGauche-partie\">
+
+
+
+                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <p class=\"menuGauche-partie-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                        <div class=\"vitesse-moyenne-souscontainer\">
+                                <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                                <div class=\"vitesse-moyenne-formcontainer\">
+                                    <div class=\"vitesse-moyenne-inputcontainer\">
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
+                                    </div>
+                                    <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"";
+        // line 76
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/fleche-tempsnecessaire.png"), "html", null, true);
+        echo "\"></button>
+                                </div>
+                        </div>
                     </div>
+                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
+                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                        <div class=\"vitesse-moyenne-resultat-container\">
+                            <p id=\"vitesse-moyenne-resultat\">
+                                Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                                <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
+                                km/h
+                            </p>
+                            <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
+                        </div>
+                    </div>
+
+
 
                     <div class=\"menuGauche-partie\">
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
                         <div class=\"menuGauche-partie-container\">
                             <img src=\"";
-        // line 61
+        // line 97
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/velo.png"), "html", null, true);
         echo "\" alt=\"Icône vélo\" class=\"menuGauche-img\">
                             <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
@@ -162,7 +204,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
                         <div class=\"menuGauche-partie-container\">
                             <img src=\"";
-        // line 69
+        // line 105
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/footing.png"), "html", null, true);
         echo "\" alt=\"Icône footing\" class=\"menuGauche-img\">
                             <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
@@ -173,7 +215,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
                         <div class=\"menuGauche-partie-container\">
                             <img src=\"";
-        // line 77
+        // line 113
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marche.png"), "html", null, true);
         echo "\" alt=\"Icône marche\" class=\"menuGauche-img\">
                             <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
@@ -197,7 +239,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             <button id=\"savePath\" class=\"saveButton\" name=\"button4\" value=\"\" title=\"Sauvegardez ou publiez votre parcours\">
                 <img src=\"";
-        // line 98
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/share.png"), "html", null, true);
         echo "\" alt='Icône sauvegarder' class=\"saveImgHover\">
             </button>
@@ -205,18 +247,18 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 <div class=\"formContainer\">
                     <div class=\"formPopUp\" id=\"formPopUp\">
                         ";
-        // line 103
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 103, $this->getSourceContext()); })()), 'form_start', array("method" => "POST"));
+        // line 139
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 139, $this->getSourceContext()); })()), 'form_start', array("method" => "POST"));
         echo "
                         ";
-        // line 104
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 104, $this->getSourceContext()); })()), 'widget');
+        // line 140
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 140, $this->getSourceContext()); })()), 'widget');
         echo "
                         <input type=\"hidden\" value=\"Caché\" id=\"hiddenInput\" name=\"path[path]\"/>
                         <button id=\"saveFormBtn\">Envoyer</button>
                         ";
-        // line 107
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 107, $this->getSourceContext()); })()), 'form_end');
+        // line 143
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 143, $this->getSourceContext()); })()), 'form_end');
         echo "
                     </div>
                 </div>
@@ -225,25 +267,25 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 ";
         
-        $__internal_ff59c799ae054e2d18296aab368701798eca3761872e68c54c8f1fd84f3296e6->leave($__internal_ff59c799ae054e2d18296aab368701798eca3761872e68c54c8f1fd84f3296e6_prof);
+        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755->leave($__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755_prof);
 
         
-        $__internal_e6d2ab89ba4c6a07fa849a1066a195c5bcd08ad7cc34026b285ce8c1bdbdfe4b->leave($__internal_e6d2ab89ba4c6a07fa849a1066a195c5bcd08ad7cc34026b285ce8c1bdbdfe4b_prof);
+        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9->leave($__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9_prof);
 
     }
 
-    // line 117
+    // line 153
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_4a2e9938dbc8c68841c630e60f1260b81d129bc1935927cd59b2797a916681c7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4a2e9938dbc8c68841c630e60f1260b81d129bc1935927cd59b2797a916681c7->enter($__internal_4a2e9938dbc8c68841c630e60f1260b81d129bc1935927cd59b2797a916681c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e->enter($__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_8a8d4d18626f0810443c9cfdf0202a6440a6a5784943f4eafb5b9863e2ef281a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8a8d4d18626f0810443c9cfdf0202a6440a6a5784943f4eafb5b9863e2ef281a->enter($__internal_8a8d4d18626f0810443c9cfdf0202a6440a6a5784943f4eafb5b9863e2ef281a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459->enter($__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 118
+        // line 154
         echo "    ";
-        // line 119
+        // line 155
         echo "    <script src=\" ";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/mousetrap.js"), "html", null, true);
         echo " \"></script>
@@ -266,11 +308,11 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var geoPos;
 
         var markerStart = \"";
-        // line 138
+        // line 174
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\";   //icone de marqueur de début
         var markerVide = \"";
-        // line 139
+        // line 175
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/empty.png"), "html", null, true);
         echo "\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -425,13 +467,13 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 if (mapType == 'hybrid'){
                     globalPoly.setOptions({strokeColor: '#FFFFFF'});
                     firstMarker.setOptions({icon: \"";
-        // line 291
+        // line 327
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_white.png"), "html", null, true);
         echo "\"});
                 } else {
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
                     firstMarker.setOptions({icon: \"";
-        // line 294
+        // line 330
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\"});
                 }
@@ -821,20 +863,167 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
         \$('#temps-necessaire-submit').click(function() {
             var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
-
-            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
-            tempsNecessaireDiv.style.display = \"none\";
-            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
-            tempsNecessaireResultatDiv.style.display = \"block\";
-
             var vitesseInput = inputTempsNecessaire.value;
 
-            var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
-            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+            if(vitesseInput != '' && isNaN(vitesseInput) == false && vitesseInput <= 300){
+                var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+                tempsNecessaireDiv.style.display = \"none\";
+                var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+                tempsNecessaireResultatDiv.style.display = \"block\";
 
-            var tempsNecessaireResultat = document.getElementById('temps-necessaire-resultat');
-            tempsNecessaireResultat.textContent = \"Vous prendrez\" + tempsEnMinutesAvecSecondes;
+                var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
+                var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+                var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
+                var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
+
+                var tempsNecessaireResultatAllureSpan = document.getElementById('temps-necessaire-resultat-allure');
+                tempsNecessaireResultatAllureSpan.textContent = vitesseInput;
+                var tempsNecessaireResultatSpan = document.getElementById('temps-necessaire-resultat-temps');
+
+                if(tempsEnMinutes === 1){
+                    var minuteOrthographe = \" minute\";
+                }else{
+                    var minuteOrthographe = \" minutes\";
+                }
+
+                if(secondesTemps === 1){
+                    var secondeOrthographe = \" seconde\";
+                }else{
+                    var secondeOrthographe = \" secondes\";
+                }
+
+
+                if(tempsEnMinutes < 1){
+                    tempsNecessaireResultatSpan.textContent = secondesTemps + secondeOrthographe;
+                    tempsNecessaireResultatSpan.title = \"\";
+                }else{
+                    //si il y a plus de 60 minutes on affiche en heures et minutes
+                    if(tempsEnMinutes < 60){
+                        tempsNecessaireResultatSpan.textContent = tempsEnMinutes + minuteOrthographe;
+                        tempsNecessaireResultatSpan.title = \"Et \" + secondesTemps + secondeOrthographe;
+                    }else{
+                        var tempsEnHeuresFloat = tempsEnMinutes / 60;
+                        var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
+                        var tempsEnHeures = Math.round(tempsEnHeuresFloat);
+
+                        if(minutesDuTempsPourHeures === 1){
+                            var minuteOrthographe = \" minute\";
+                        }else{
+                            var minuteOrthographe = \" minutes\";
+                        }
+
+                        if(tempsEnHeures === 1){
+                            var heureOrthographe = \" heure\";
+                        }else{
+                            var heureOrthographe = \" heures\";
+                        }
+
+                        tempsNecessaireResultatSpan.textContent = tempsEnHeures + heureOrthographe + \" et \" + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
+                    }
+                }
+            }else{
+                alert(\"Vous n'avez soit rien rentré, soit rentré quelque chose d'autre qu'un nombre, soit un nombre supérieur à 300\");
+            }
         });
+
+        \$('#temps-necessaire-resultat-btn').click(function() {
+            displayDefaultInterfaceTempsNecessaire();
+        });
+
+        function displayDefaultInterfaceTempsNecessaire(){
+            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+            tempsNecessaireDiv.style.display = \"block\";
+            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+            tempsNecessaireResultatDiv.style.display = \"none\";
+            var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
+            inputTempsNecessaire.value = \"\";
+        }
+
+
+
+
+        /****** tpvm = Temps pour vitesse moyenne ******/
+
+        \$('#vitesse-moyenne-submit').click(function() {
+            var tpvmHInput = document.getElementById(\"vitesse-moyenne-input-h\");
+            var tpvmMInput = document.getElementById(\"vitesse-moyenne-input-m\");
+            var tpvmSInput = document.getElementById(\"vitesse-moyenne-input-s\");
+
+            var tpvmH = tpvmHInput.value;
+            var tpvmM = tpvmMInput.value;
+            var tpvmS = tpvmSInput.value;
+
+            if(tpvmH + tpvmM + tpvmS != '' && tpvmH + tpvmM + tpvmS != '0' && tpvmH + tpvmM + tpvmS != '00' && tpvmH + tpvmM + tpvmS != '000'){
+                if(tpvmH <= 99){
+                    if(tpvmM <= 59){
+                        if(tpvmS <= 59){
+                            var tpvmHInt;
+                            var tpvmMInt;
+                            var tpvmSInt;
+
+                            if(tpvmH != ''){
+                                tpvmHInt = parseInt(tpvmH, 10);
+                            }else{
+                                tpvmHInt = 0;
+                            }
+                            if(tpvmM != ''){
+                                tpvmMInt = parseInt(tpvmM, 10);
+                            }else{
+                                tpvmMInt = 0;
+                            }
+                            if(tpvmS != ''){
+                                tpvmSInt = parseInt(tpvmS, 10);
+                            }else{
+                                tpvmSInt = 0;
+                            }
+
+                            tpvmMInt = tpvmMInt * 100 / 60;
+                            tpvmSInt = tpvmSInt * 100 / 60; /* On passe en base 100 */
+
+                            tpvmMInt = tpvmMInt * 0.01;
+                            tpvmSInt = tpvmSInt * 0.0001;
+
+                            var tpvm = tpvmHInt + tpvmMInt + tpvmSInt;
+
+                            var vitesseMoyenne = distanceKmFloat / tpvm; //d/t
+                            var vitesseMoyenne = Math.round(100 * vitesseMoyenne) / 100;
+
+                            var vitesseMoyenneResultatSpan = document.getElementById('vitesse-moyenne-resultat-vitesse');
+                            vitesseMoyenneResultatSpan.textContent = vitesseMoyenne;
+                        }else{
+                            alert('Vous avez rentré une valeur supérieure à 59 dans le champ secondes');
+                        }
+                    }else{
+                        alert('Vous avez rentré une valeur supérieure à 59 dans le champ minutes');
+                    }
+                }else{
+                    alert('Vous avez rentré une valeur trop haute dans le champ heures');
+                }
+            }else{
+                alert(\"Vous n'avez rien rentré\");
+            }
+
+            var vitesseMoyenneContainer = document.getElementById(\"vitesse-moyenne-container\");
+            vitesseMoyenneContainer.style.display = \"none\";
+            var vitesseMoyenneResultatContainer = document.getElementById(\"vitesse-moyenne-resultat-container\");
+            vitesseMoyenneResultatContainer.style.display = \"block\";
+        });
+
+        \$('#vitesse-moyenne-resultat-btn').click(function() {
+            displayDefaultInterfaceVitesseMoyenne();
+        });
+
+        function displayDefaultInterfaceVitesseMoyenne(){
+            var vitesseMoyenneContainer = document.getElementById(\"vitesse-moyenne-container\");
+            vitesseMoyenneContainer.style.display = \"block\";
+            var vitesseMoyenneResultatContainer = document.getElementById(\"vitesse-moyenne-resultat-container\");
+            vitesseMoyenneResultatContainer.style.display = \"none\";
+            document.getElementById(\"vitesse-moyenne-input-h\").value = \"\";
+            document.getElementById(\"vitesse-moyenne-input-m\").value = \"\";
+            document.getElementById(\"vitesse-moyenne-input-s\").value = \"\";
+        }
+
+
 
 
         var saveContainer = document.getElementById('saveContainer');
@@ -843,10 +1032,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             menuGauche.style.display = \"none\";
             mapFilter.style.display = \"none\";
 
-            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
-            tempsNecessaireDiv.style.display = \"block\";
-            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
-            tempsNecessaireResultatDiv.style.display = \"none\";
+            displayDefaultInterfaceTempsNecessaire();
+            displayDefaultInterfaceVitesseMoyenne();
         };
 
         \$('#savePath').click(function() {
@@ -905,10 +1092,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
     </script>
 ";
         
-        $__internal_8a8d4d18626f0810443c9cfdf0202a6440a6a5784943f4eafb5b9863e2ef281a->leave($__internal_8a8d4d18626f0810443c9cfdf0202a6440a6a5784943f4eafb5b9863e2ef281a_prof);
+        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459->leave($__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459_prof);
 
         
-        $__internal_4a2e9938dbc8c68841c630e60f1260b81d129bc1935927cd59b2797a916681c7->leave($__internal_4a2e9938dbc8c68841c630e60f1260b81d129bc1935927cd59b2797a916681c7_prof);
+        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e->leave($__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e_prof);
 
     }
 
@@ -924,7 +1111,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     public function getDebugInfo()
     {
-        return array (  435 => 294,  429 => 291,  274 => 139,  270 => 138,  247 => 119,  245 => 118,  236 => 117,  219 => 107,  213 => 104,  209 => 103,  201 => 98,  177 => 77,  166 => 69,  155 => 61,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
+        return array (  477 => 330,  471 => 327,  316 => 175,  312 => 174,  289 => 155,  287 => 154,  278 => 153,  261 => 143,  255 => 140,  251 => 139,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -973,18 +1160,54 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 <div id=\"menuGauche-interieur\">
                     <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
                         <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
-                        <button type=\"submit\" id=\"temps-necessaire-submit\">+</button>
+                        <div class=\"temps-necessaire-formcontainer\">
+                            <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
+                            <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
+                        </div>
                         <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
                     </div>
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-container\">
-                        <p id=\"temps-necessaire-resultat\"></p>
+                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
+                        <div class=\"temps-necessaire-resultat-container\">
+                            <p id=\"temps-necessaire-resultat\">
+                                Avec votre allure de
+                                <span id=\"temps-necessaire-resultat-allure\"></span>
+                                km/h, <br/> vous prendrez
+                                <span id=\"temps-necessaire-resultat-temps\"></span>
+                            </p>
+                            <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
+                        </div>
                     </div>
 
-                    <div class=\"menuGauche-partie\">
+
+
+
+                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <p class=\"menuGauche-partie-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                        <div class=\"vitesse-moyenne-souscontainer\">
+                                <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                                <div class=\"vitesse-moyenne-formcontainer\">
+                                    <div class=\"vitesse-moyenne-inputcontainer\">
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
+                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
+                                    </div>
+                                    <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
+                                </div>
+                        </div>
                     </div>
+                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
+                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                        <div class=\"vitesse-moyenne-resultat-container\">
+                            <p id=\"vitesse-moyenne-resultat\">
+                                Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                                <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
+                                km/h
+                            </p>
+                            <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
+                        </div>
+                    </div>
+
+
 
                     <div class=\"menuGauche-partie\">
                         <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
@@ -1610,20 +1833,167 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
         \$('#temps-necessaire-submit').click(function() {
             var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
-
-            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
-            tempsNecessaireDiv.style.display = \"none\";
-            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
-            tempsNecessaireResultatDiv.style.display = \"block\";
-
             var vitesseInput = inputTempsNecessaire.value;
 
-            var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
-            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+            if(vitesseInput != '' && isNaN(vitesseInput) == false && vitesseInput <= 300){
+                var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+                tempsNecessaireDiv.style.display = \"none\";
+                var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+                tempsNecessaireResultatDiv.style.display = \"block\";
 
-            var tempsNecessaireResultat = document.getElementById('temps-necessaire-resultat');
-            tempsNecessaireResultat.textContent = \"Vous prendrez\" + tempsEnMinutesAvecSecondes;
+                var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
+                var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+                var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
+                var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
+
+                var tempsNecessaireResultatAllureSpan = document.getElementById('temps-necessaire-resultat-allure');
+                tempsNecessaireResultatAllureSpan.textContent = vitesseInput;
+                var tempsNecessaireResultatSpan = document.getElementById('temps-necessaire-resultat-temps');
+
+                if(tempsEnMinutes === 1){
+                    var minuteOrthographe = \" minute\";
+                }else{
+                    var minuteOrthographe = \" minutes\";
+                }
+
+                if(secondesTemps === 1){
+                    var secondeOrthographe = \" seconde\";
+                }else{
+                    var secondeOrthographe = \" secondes\";
+                }
+
+
+                if(tempsEnMinutes < 1){
+                    tempsNecessaireResultatSpan.textContent = secondesTemps + secondeOrthographe;
+                    tempsNecessaireResultatSpan.title = \"\";
+                }else{
+                    //si il y a plus de 60 minutes on affiche en heures et minutes
+                    if(tempsEnMinutes < 60){
+                        tempsNecessaireResultatSpan.textContent = tempsEnMinutes + minuteOrthographe;
+                        tempsNecessaireResultatSpan.title = \"Et \" + secondesTemps + secondeOrthographe;
+                    }else{
+                        var tempsEnHeuresFloat = tempsEnMinutes / 60;
+                        var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
+                        var tempsEnHeures = Math.round(tempsEnHeuresFloat);
+
+                        if(minutesDuTempsPourHeures === 1){
+                            var minuteOrthographe = \" minute\";
+                        }else{
+                            var minuteOrthographe = \" minutes\";
+                        }
+
+                        if(tempsEnHeures === 1){
+                            var heureOrthographe = \" heure\";
+                        }else{
+                            var heureOrthographe = \" heures\";
+                        }
+
+                        tempsNecessaireResultatSpan.textContent = tempsEnHeures + heureOrthographe + \" et \" + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
+                    }
+                }
+            }else{
+                alert(\"Vous n'avez soit rien rentré, soit rentré quelque chose d'autre qu'un nombre, soit un nombre supérieur à 300\");
+            }
         });
+
+        \$('#temps-necessaire-resultat-btn').click(function() {
+            displayDefaultInterfaceTempsNecessaire();
+        });
+
+        function displayDefaultInterfaceTempsNecessaire(){
+            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+            tempsNecessaireDiv.style.display = \"block\";
+            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+            tempsNecessaireResultatDiv.style.display = \"none\";
+            var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
+            inputTempsNecessaire.value = \"\";
+        }
+
+
+
+
+        /****** tpvm = Temps pour vitesse moyenne ******/
+
+        \$('#vitesse-moyenne-submit').click(function() {
+            var tpvmHInput = document.getElementById(\"vitesse-moyenne-input-h\");
+            var tpvmMInput = document.getElementById(\"vitesse-moyenne-input-m\");
+            var tpvmSInput = document.getElementById(\"vitesse-moyenne-input-s\");
+
+            var tpvmH = tpvmHInput.value;
+            var tpvmM = tpvmMInput.value;
+            var tpvmS = tpvmSInput.value;
+
+            if(tpvmH + tpvmM + tpvmS != '' && tpvmH + tpvmM + tpvmS != '0' && tpvmH + tpvmM + tpvmS != '00' && tpvmH + tpvmM + tpvmS != '000'){
+                if(tpvmH <= 99){
+                    if(tpvmM <= 59){
+                        if(tpvmS <= 59){
+                            var tpvmHInt;
+                            var tpvmMInt;
+                            var tpvmSInt;
+
+                            if(tpvmH != ''){
+                                tpvmHInt = parseInt(tpvmH, 10);
+                            }else{
+                                tpvmHInt = 0;
+                            }
+                            if(tpvmM != ''){
+                                tpvmMInt = parseInt(tpvmM, 10);
+                            }else{
+                                tpvmMInt = 0;
+                            }
+                            if(tpvmS != ''){
+                                tpvmSInt = parseInt(tpvmS, 10);
+                            }else{
+                                tpvmSInt = 0;
+                            }
+
+                            tpvmMInt = tpvmMInt * 100 / 60;
+                            tpvmSInt = tpvmSInt * 100 / 60; /* On passe en base 100 */
+
+                            tpvmMInt = tpvmMInt * 0.01;
+                            tpvmSInt = tpvmSInt * 0.0001;
+
+                            var tpvm = tpvmHInt + tpvmMInt + tpvmSInt;
+
+                            var vitesseMoyenne = distanceKmFloat / tpvm; //d/t
+                            var vitesseMoyenne = Math.round(100 * vitesseMoyenne) / 100;
+
+                            var vitesseMoyenneResultatSpan = document.getElementById('vitesse-moyenne-resultat-vitesse');
+                            vitesseMoyenneResultatSpan.textContent = vitesseMoyenne;
+                        }else{
+                            alert('Vous avez rentré une valeur supérieure à 59 dans le champ secondes');
+                        }
+                    }else{
+                        alert('Vous avez rentré une valeur supérieure à 59 dans le champ minutes');
+                    }
+                }else{
+                    alert('Vous avez rentré une valeur trop haute dans le champ heures');
+                }
+            }else{
+                alert(\"Vous n'avez rien rentré\");
+            }
+
+            var vitesseMoyenneContainer = document.getElementById(\"vitesse-moyenne-container\");
+            vitesseMoyenneContainer.style.display = \"none\";
+            var vitesseMoyenneResultatContainer = document.getElementById(\"vitesse-moyenne-resultat-container\");
+            vitesseMoyenneResultatContainer.style.display = \"block\";
+        });
+
+        \$('#vitesse-moyenne-resultat-btn').click(function() {
+            displayDefaultInterfaceVitesseMoyenne();
+        });
+
+        function displayDefaultInterfaceVitesseMoyenne(){
+            var vitesseMoyenneContainer = document.getElementById(\"vitesse-moyenne-container\");
+            vitesseMoyenneContainer.style.display = \"block\";
+            var vitesseMoyenneResultatContainer = document.getElementById(\"vitesse-moyenne-resultat-container\");
+            vitesseMoyenneResultatContainer.style.display = \"none\";
+            document.getElementById(\"vitesse-moyenne-input-h\").value = \"\";
+            document.getElementById(\"vitesse-moyenne-input-m\").value = \"\";
+            document.getElementById(\"vitesse-moyenne-input-s\").value = \"\";
+        }
+
+
 
 
         var saveContainer = document.getElementById('saveContainer');
@@ -1632,10 +2002,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             menuGauche.style.display = \"none\";
             mapFilter.style.display = \"none\";
 
-            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
-            tempsNecessaireDiv.style.display = \"block\";
-            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-container');
-            tempsNecessaireResultatDiv.style.display = \"none\";
+            displayDefaultInterfaceTempsNecessaire();
+            displayDefaultInterfaceVitesseMoyenne();
         };
 
         \$('#savePath').click(function() {

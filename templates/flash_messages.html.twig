@@ -11,17 +11,18 @@
     {% endfor %}
 {% endblock %}
 
-<script>
-    /*var hideButton = document.getElementById("hideButton");
-    var container = document.getElementById("message-container");
+{% if messages is defined %}
+    <script>
+        var container = document.getElementById("message-container");
 
-    function cacherBouton(){
-        container.style.display = "none";
-        alert('hello');
-    }
+        function cacherBouton(){
+            container.style.display = "none";
+            alert('hello');
+        }
 
-    if(container =! null){
-        setTimeout(cacherBouton, 10000);
-    }*/
+        if(container =! null){
+            setTimeout(cacherBouton, 10000);
+        }
 
-</script>
+    </script>
+{% endif %}
