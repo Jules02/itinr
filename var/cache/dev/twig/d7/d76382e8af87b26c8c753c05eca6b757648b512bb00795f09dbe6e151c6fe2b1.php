@@ -24,69 +24,69 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8->enter($__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_79cc026b36e9773c9ba925d4883bfbac3aaf5d0b71f8dcdadcf8c2c4c5af8b51 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_79cc026b36e9773c9ba925d4883bfbac3aaf5d0b71f8dcdadcf8c2c4c5af8b51->enter($__internal_79cc026b36e9773c9ba925d4883bfbac3aaf5d0b71f8dcdadcf8c2c4c5af8b51_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
-        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db->enter($__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_5e967afcb43cf7e61ed7e238bca05ab66a86ece31480c325f25270d548590ebb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5e967afcb43cf7e61ed7e238bca05ab66a86ece31480c325f25270d548590ebb->enter($__internal_5e967afcb43cf7e61ed7e238bca05ab66a86ece31480c325f25270d548590ebb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 3, $this->getSourceContext()); })()), array(0 => "bootstrap_4_layout.html.twig"), true);
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8->leave($__internal_f2f6187a045416024bd65ad8732361d4f5b129a7277b07c08a2f020d1118abc8_prof);
+        $__internal_79cc026b36e9773c9ba925d4883bfbac3aaf5d0b71f8dcdadcf8c2c4c5af8b51->leave($__internal_79cc026b36e9773c9ba925d4883bfbac3aaf5d0b71f8dcdadcf8c2c4c5af8b51_prof);
 
         
-        $__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db->leave($__internal_c4804878ab8b49a219094b483af4e06568b2c122c8422fa5070190c4ab2b93db_prof);
+        $__internal_5e967afcb43cf7e61ed7e238bca05ab66a86ece31480c325f25270d548590ebb->leave($__internal_5e967afcb43cf7e61ed7e238bca05ab66a86ece31480c325f25270d548590ebb_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74->enter($__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e62fdc48be338cb0ab79b40d6f22e1cf29804891c614eb8259eb17864868a58b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e62fdc48be338cb0ab79b40d6f22e1cf29804891c614eb8259eb17864868a58b->enter($__internal_e62fdc48be338cb0ab79b40d6f22e1cf29804891c614eb8259eb17864868a58b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a->enter($__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_d3adf424090eb7313c8609c344f339c4601969f839bee0617deff84befac849a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d3adf424090eb7313c8609c344f339c4601969f839bee0617deff84befac849a->enter($__internal_d3adf424090eb7313c8609c344f339c4601969f839bee0617deff84befac849a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Concepteur";
         $this->displayParentBlock("title", $context, $blocks);
         
-        $__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a->leave($__internal_82d20b426d67f69d932aef0e548d5de0c535ba067f9cb1bd2bad4bcc96e76b8a_prof);
+        $__internal_d3adf424090eb7313c8609c344f339c4601969f839bee0617deff84befac849a->leave($__internal_d3adf424090eb7313c8609c344f339c4601969f839bee0617deff84befac849a_prof);
 
         
-        $__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74->leave($__internal_9f822734950e17812bf067f3512d56ad224e55aed952afa548f0a25ee241ab74_prof);
+        $__internal_e62fdc48be338cb0ab79b40d6f22e1cf29804891c614eb8259eb17864868a58b->leave($__internal_e62fdc48be338cb0ab79b40d6f22e1cf29804891c614eb8259eb17864868a58b_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2->enter($__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_3469b39f40b48803850b7cd39772da27279625d4ad03d9bc495da9c7bdb37360 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3469b39f40b48803850b7cd39772da27279625d4ad03d9bc495da9c7bdb37360->enter($__internal_3469b39f40b48803850b7cd39772da27279625d4ad03d9bc495da9c7bdb37360_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5->enter($__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_6814418c8c4f6d90878541c3ce74759f6da7956403e268448bb11a1c8e909f45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6814418c8c4f6d90878541c3ce74759f6da7956403e268448bb11a1c8e909f45->enter($__internal_6814418c8c4f6d90878541c3ce74759f6da7956403e268448bb11a1c8e909f45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/concepteur.css"), "html", null, true);
         
-        $__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5->leave($__internal_8c47c9d1649bfd8c2bb738d77f05f2352a5b019df257a768151fa934b05993e5_prof);
+        $__internal_6814418c8c4f6d90878541c3ce74759f6da7956403e268448bb11a1c8e909f45->leave($__internal_6814418c8c4f6d90878541c3ce74759f6da7956403e268448bb11a1c8e909f45_prof);
 
         
-        $__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2->leave($__internal_133187463ff31a3babf4795fb543540d0895c69dcf7d7961695e8cd30e6819f2_prof);
+        $__internal_3469b39f40b48803850b7cd39772da27279625d4ad03d9bc495da9c7bdb37360->leave($__internal_3469b39f40b48803850b7cd39772da27279625d4ad03d9bc495da9c7bdb37360_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9->enter($__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_afa8c35729d9a5879dddfc73bf12206c1e3f17335e98b07e1c4b8c7c782037c3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_afa8c35729d9a5879dddfc73bf12206c1e3f17335e98b07e1c4b8c7c782037c3->enter($__internal_afa8c35729d9a5879dddfc73bf12206c1e3f17335e98b07e1c4b8c7c782037c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755->enter($__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ac3263a84b9e1066886fbd339fb586f2e439d39b4592d9df7347e4578a85a78a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ac3263a84b9e1066886fbd339fb586f2e439d39b4592d9df7347e4578a85a78a->enter($__internal_ac3263a84b9e1066886fbd339fb586f2e439d39b4592d9df7347e4578a85a78a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "        ";
@@ -265,27 +265,29 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
             </div>
 
+        <button id=\"avg\" onclick=\"getCoordinatesAverage()\">ggg</button>
+
 ";
         
-        $__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755->leave($__internal_eee9987350854ef1d857ced84629524d1489f12654f82c29dcf35115abe11755_prof);
+        $__internal_ac3263a84b9e1066886fbd339fb586f2e439d39b4592d9df7347e4578a85a78a->leave($__internal_ac3263a84b9e1066886fbd339fb586f2e439d39b4592d9df7347e4578a85a78a_prof);
 
         
-        $__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9->leave($__internal_93d379a0ecc6c9e6d3c5d627bb13cc5e29f025011621be22fb6fa46f3cfed7a9_prof);
+        $__internal_afa8c35729d9a5879dddfc73bf12206c1e3f17335e98b07e1c4b8c7c782037c3->leave($__internal_afa8c35729d9a5879dddfc73bf12206c1e3f17335e98b07e1c4b8c7c782037c3_prof);
 
     }
 
-    // line 153
+    // line 155
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e->enter($__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_b910b35feac464bc46c776a6539d309c134dc454792cc1eccaf99262b836bf8d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b910b35feac464bc46c776a6539d309c134dc454792cc1eccaf99262b836bf8d->enter($__internal_b910b35feac464bc46c776a6539d309c134dc454792cc1eccaf99262b836bf8d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459->enter($__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ea4fa4dbb2400910e6e287d08776f6f4f147747c71fbefb3633fae9b097386b9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ea4fa4dbb2400910e6e287d08776f6f4f147747c71fbefb3633fae9b097386b9->enter($__internal_ea4fa4dbb2400910e6e287d08776f6f4f147747c71fbefb3633fae9b097386b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 154
+        // line 156
         echo "    ";
-        // line 155
+        // line 157
         echo "    <script src=\" ";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/mousetrap.js"), "html", null, true);
         echo " \"></script>
@@ -307,12 +309,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var map;
         var geoPos;
 
-        var markerStart = \"";
-        // line 174
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
-        echo "\";   //icone de marqueur de début
         var markerVide = \"";
-        // line 175
+        // line 176
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/empty.png"), "html", null, true);
         echo "\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -375,18 +373,31 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
                 zoom: 14,   //Définie le zoom par défaut
-                draggableCursor: \"crosshair\"   //on a une croix comme curseur
+                draggableCursor: \"crosshair\",   //on a une croix comme curseur
+                mapTypeId: 'hybrid'
             });
 
+            var mapType = map.getMapTypeId();
+            var polyColor;
+            var textDiv = document.getElementById('textDiv');
+
+            if (mapType == 'hybrid'){
+                polyColor = \"#35f700\";
+                textDiv.style.color = \"#fff\";
+            } else {
+                polyColor = \"#3BA14C\";
+                textDiv.style.color = \"#000\";
+            }
+
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor:  polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
             globalPoly.setMap(map);   //on attache l'objet polyline à notre map
 
             poly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor: polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -465,17 +476,19 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 var mapType = map.getMapTypeId();
 
                 if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
+                    globalPoly.setOptions({strokeColor: '#35f700'});
                     firstMarker.setOptions({icon: \"";
-        // line 327
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_white.png"), "html", null, true);
+        // line 341
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
         echo "\"});
+                    textDiv.style.color = \"#fff\";
                 } else {
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
                     firstMarker.setOptions({icon: \"";
-        // line 330
+        // line 345
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\"});
+                    textDiv.style.color = \"#000\";
                 }
             });
         }
@@ -493,6 +506,23 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
             monPath.push(event.latLng);
+
+
+            var markerStart;
+            var mapType = map.getMapTypeId();
+
+            if (mapType == 'hybrid'){
+                markerStart = \"";
+        // line 370
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
+        echo "\";
+            } else {
+                markerStart = \"";
+        // line 372
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
+        echo "\";
+            }
+
 
             //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
             if (monPath.getLength() === 1) {
@@ -1055,6 +1085,27 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
+        function getCoordinatesAverage(){
+            var a = Math.round(pathArray.length / 2);
+            alert(a);
+            var coordinatesF = pathArray[a];
+            alert(coordinatesF);
+
+            var geocoder = new google.maps.Geocoder;
+
+            geocoder.geocode({'location': coordinatesF}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        alert(results[1].formatted_address);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
+        }
+
 
 
 
@@ -1092,10 +1143,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
     </script>
 ";
         
-        $__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459->leave($__internal_6f8ba4f7b1d9acbab877212918d9933c856b0460e26da69a93f579cb96563459_prof);
+        $__internal_ea4fa4dbb2400910e6e287d08776f6f4f147747c71fbefb3633fae9b097386b9->leave($__internal_ea4fa4dbb2400910e6e287d08776f6f4f147747c71fbefb3633fae9b097386b9_prof);
 
         
-        $__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e->leave($__internal_dd71df7aae0912b578b0da9f20654b14d4713925d3a21c395998f9133b980b6e_prof);
+        $__internal_b910b35feac464bc46c776a6539d309c134dc454792cc1eccaf99262b836bf8d->leave($__internal_b910b35feac464bc46c776a6539d309c134dc454792cc1eccaf99262b836bf8d_prof);
 
     }
 
@@ -1111,7 +1162,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     public function getDebugInfo()
     {
-        return array (  477 => 330,  471 => 327,  316 => 175,  312 => 174,  289 => 155,  287 => 154,  278 => 153,  261 => 143,  255 => 140,  251 => 139,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
+        return array (  522 => 372,  517 => 370,  489 => 345,  482 => 341,  314 => 176,  291 => 157,  289 => 156,  280 => 155,  261 => 143,  255 => 140,  251 => 139,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -1264,6 +1315,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
             </div>
 
+        <button id=\"avg\" onclick=\"getCoordinatesAverage()\">ggg</button>
+
 {% endblock %}
 
 
@@ -1289,7 +1342,6 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var map;
         var geoPos;
 
-        var markerStart = \"{{ asset('images/marker.png') }}\";   //icone de marqueur de début
         var markerVide = \"{{ asset('images/empty.png') }}\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
         var firstPoint;    //premier point à qui l'on donnera un skin différent (marqueur vert)
@@ -1351,18 +1403,31 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
                 zoom: 14,   //Définie le zoom par défaut
-                draggableCursor: \"crosshair\"   //on a une croix comme curseur
+                draggableCursor: \"crosshair\",   //on a une croix comme curseur
+                mapTypeId: 'hybrid'
             });
 
+            var mapType = map.getMapTypeId();
+            var polyColor;
+            var textDiv = document.getElementById('textDiv');
+
+            if (mapType == 'hybrid'){
+                polyColor = \"#35f700\";
+                textDiv.style.color = \"#fff\";
+            } else {
+                polyColor = \"#3BA14C\";
+                textDiv.style.color = \"#000\";
+            }
+
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor:  polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
             globalPoly.setMap(map);   //on attache l'objet polyline à notre map
 
             poly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor: polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -1441,11 +1506,13 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 var mapType = map.getMapTypeId();
 
                 if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: \"{{ asset('images/marker_white.png') }}\"});
+                    globalPoly.setOptions({strokeColor: '#35f700'});
+                    firstMarker.setOptions({icon: \"{{ asset('images/marker_hybrid.png') }}\"});
+                    textDiv.style.color = \"#fff\";
                 } else {
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
                     firstMarker.setOptions({icon: \"{{ asset('images/marker.png') }}\"});
+                    textDiv.style.color = \"#000\";
                 }
             });
         }
@@ -1463,6 +1530,17 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
             monPath.push(event.latLng);
+
+
+            var markerStart;
+            var mapType = map.getMapTypeId();
+
+            if (mapType == 'hybrid'){
+                markerStart = \"{{ asset('images/marker_hybrid.png') }}\";
+            } else {
+                markerStart = \"{{ asset('images/marker.png') }}\";
+            }
+
 
             //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
             if (monPath.getLength() === 1) {
@@ -2024,6 +2102,27 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         };
 
 
+
+        function getCoordinatesAverage(){
+            var a = Math.round(pathArray.length / 2);
+            alert(a);
+            var coordinatesF = pathArray[a];
+            alert(coordinatesF);
+
+            var geocoder = new google.maps.Geocoder;
+
+            geocoder.geocode({'location': coordinatesF}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        alert(results[1].formatted_address);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
+        }
 
 
 

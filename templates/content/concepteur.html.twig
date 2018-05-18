@@ -146,6 +146,8 @@
                 <div id="mapFilterForm" class="mapFilter"></div>
             </div>
 
+        <button id="avg" onclick="getCoordinatesAverage()">ggg</button>
+
 {% endblock %}
 
 
@@ -171,7 +173,6 @@
         var map;
         var geoPos;
 
-        var markerStart = "{{ asset('images/marker.png') }}";   //icone de marqueur de début
         var markerVide = "{{ asset('images/empty.png') }}";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
         var firstPoint;    //premier point à qui l'on donnera un skin différent (marqueur vert)
@@ -233,18 +234,31 @@
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
                 zoom: 14,   //Définie le zoom par défaut
-                draggableCursor: "crosshair"   //on a une croix comme curseur
+                draggableCursor: "crosshair",   //on a une croix comme curseur
+                mapTypeId: 'hybrid'
             });
 
+            var mapType = map.getMapTypeId();
+            var polyColor;
+            var textDiv = document.getElementById('textDiv');
+
+            if (mapType == 'hybrid'){
+                polyColor = "#35f700";
+                textDiv.style.color = "#fff";
+            } else {
+                polyColor = "#3BA14C";
+                textDiv.style.color = "#000";
+            }
+
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor:  polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
             globalPoly.setMap(map);   //on attache l'objet polyline à notre map
 
             poly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: '#3BA14C',
+                strokeColor: polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -323,11 +337,13 @@
                 var mapType = map.getMapTypeId();
 
                 if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
+                    globalPoly.setOptions({strokeColor: '#35f700'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
+                    textDiv.style.color = "#fff";
                 } else {
                     globalPoly.setOptions({strokeColor: '#3BA14C'});
                     firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+                    textDiv.style.color = "#000";
                 }
             });
         }
@@ -345,6 +361,17 @@
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
             monPath.push(event.latLng);
+
+
+            var markerStart;
+            var mapType = map.getMapTypeId();
+
+            if (mapType == 'hybrid'){
+                markerStart = "{{ asset('images/marker_hybrid.png') }}";
+            } else {
+                markerStart = "{{ asset('images/marker.png') }}";
+            }
+
 
             //Si c'est le premier marqueur on lui donne l'icone image sinon on laisse un marqeur normale
             if (monPath.getLength() === 1) {
@@ -906,6 +933,27 @@
         };
 
 
+
+        function getCoordinatesAverage(){
+            var a = Math.round(pathArray.length / 2);
+            alert(a);
+            var coordinatesF = pathArray[a];
+            alert(coordinatesF);
+
+            var geocoder = new google.maps.Geocoder;
+
+            geocoder.geocode({'location': coordinatesF}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        alert(results[1].formatted_address);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
+        }
 
 
 
