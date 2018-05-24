@@ -3,6 +3,8 @@
   "build/aide.js": "/build/aide.js",
   "build/apropos.css": "/build/apropos.css",
   "build/apropos.js": "/build/apropos.js",
+  "build/chercher.css": "/build/chercher.css",
+  "build/chercher.js": "/build/chercher.js",
   "build/concepteur.css": "/build/concepteur.css",
   "build/concepteur.js": "/build/concepteur.js",
   "build/contact.css": "/build/contact.css",

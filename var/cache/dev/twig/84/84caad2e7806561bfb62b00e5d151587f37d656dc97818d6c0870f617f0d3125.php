@@ -24,252 +24,233 @@ class __TwigTemplate_41ade4ee441cbbbdf21328290705d104719b3208c6f8f5f89f66b4c1b7a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a7734ce6e01c742a1e160fbb3a8d213901f6ac775b30dccd0856e097351ffa59 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a7734ce6e01c742a1e160fbb3a8d213901f6ac775b30dccd0856e097351ffa59->enter($__internal_a7734ce6e01c742a1e160fbb3a8d213901f6ac775b30dccd0856e097351ffa59_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/chercher.html.twig"));
+        $__internal_c1851c512ede579b9702d2932bdff2b89be8e08246884c23d4c28fe17bd9fa53 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c1851c512ede579b9702d2932bdff2b89be8e08246884c23d4c28fe17bd9fa53->enter($__internal_c1851c512ede579b9702d2932bdff2b89be8e08246884c23d4c28fe17bd9fa53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/chercher.html.twig"));
 
-        $__internal_4618bdc032ee7d4013b7112fb6dce233c8013d353e630ced23b6482c7ccf1e05 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4618bdc032ee7d4013b7112fb6dce233c8013d353e630ced23b6482c7ccf1e05->enter($__internal_4618bdc032ee7d4013b7112fb6dce233c8013d353e630ced23b6482c7ccf1e05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/chercher.html.twig"));
+        $__internal_ac50a927701c092f8450691c4f0ac0916a925a767246d4f083eb204d776a0a91 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ac50a927701c092f8450691c4f0ac0916a925a767246d4f083eb204d776a0a91->enter($__internal_ac50a927701c092f8450691c4f0ac0916a925a767246d4f083eb204d776a0a91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/chercher.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a7734ce6e01c742a1e160fbb3a8d213901f6ac775b30dccd0856e097351ffa59->leave($__internal_a7734ce6e01c742a1e160fbb3a8d213901f6ac775b30dccd0856e097351ffa59_prof);
+        $__internal_c1851c512ede579b9702d2932bdff2b89be8e08246884c23d4c28fe17bd9fa53->leave($__internal_c1851c512ede579b9702d2932bdff2b89be8e08246884c23d4c28fe17bd9fa53_prof);
 
         
-        $__internal_4618bdc032ee7d4013b7112fb6dce233c8013d353e630ced23b6482c7ccf1e05->leave($__internal_4618bdc032ee7d4013b7112fb6dce233c8013d353e630ced23b6482c7ccf1e05_prof);
+        $__internal_ac50a927701c092f8450691c4f0ac0916a925a767246d4f083eb204d776a0a91->leave($__internal_ac50a927701c092f8450691c4f0ac0916a925a767246d4f083eb204d776a0a91_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5a7fb46779c388799589c9ed6df9e4d01d857dc5b6aca0f3c7fccd5b920c9421 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5a7fb46779c388799589c9ed6df9e4d01d857dc5b6aca0f3c7fccd5b920c9421->enter($__internal_5a7fb46779c388799589c9ed6df9e4d01d857dc5b6aca0f3c7fccd5b920c9421_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b664e4fe0bcd5cef034e0a69f70ce8803e3c1eadf602168abb731ffb5ecb27f5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b664e4fe0bcd5cef034e0a69f70ce8803e3c1eadf602168abb731ffb5ecb27f5->enter($__internal_b664e4fe0bcd5cef034e0a69f70ce8803e3c1eadf602168abb731ffb5ecb27f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_ec3b812a98be21a23ba07350a46699699876d28d9b782bd1032de690269bad3e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ec3b812a98be21a23ba07350a46699699876d28d9b782bd1032de690269bad3e->enter($__internal_ec3b812a98be21a23ba07350a46699699876d28d9b782bd1032de690269bad3e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e6e4db872117d09f876ff5518c302216853c21b62ef0e821a2016b26b0c19f49 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e6e4db872117d09f876ff5518c302216853c21b62ef0e821a2016b26b0c19f49->enter($__internal_e6e4db872117d09f876ff5518c302216853c21b62ef0e821a2016b26b0c19f49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Chercher";
         $this->displayParentBlock("title", $context, $blocks);
         
-        $__internal_ec3b812a98be21a23ba07350a46699699876d28d9b782bd1032de690269bad3e->leave($__internal_ec3b812a98be21a23ba07350a46699699876d28d9b782bd1032de690269bad3e_prof);
+        $__internal_e6e4db872117d09f876ff5518c302216853c21b62ef0e821a2016b26b0c19f49->leave($__internal_e6e4db872117d09f876ff5518c302216853c21b62ef0e821a2016b26b0c19f49_prof);
 
         
-        $__internal_5a7fb46779c388799589c9ed6df9e4d01d857dc5b6aca0f3c7fccd5b920c9421->leave($__internal_5a7fb46779c388799589c9ed6df9e4d01d857dc5b6aca0f3c7fccd5b920c9421_prof);
+        $__internal_b664e4fe0bcd5cef034e0a69f70ce8803e3c1eadf602168abb731ffb5ecb27f5->leave($__internal_b664e4fe0bcd5cef034e0a69f70ce8803e3c1eadf602168abb731ffb5ecb27f5_prof);
 
     }
 
     // line 5
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_a89dd234f84a15287c7ec33e60a366b8fae2e83f3c6ca4f6eeb110c785f97f81 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a89dd234f84a15287c7ec33e60a366b8fae2e83f3c6ca4f6eeb110c785f97f81->enter($__internal_a89dd234f84a15287c7ec33e60a366b8fae2e83f3c6ca4f6eeb110c785f97f81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7b05706445d4cfc37599853a144512d58cbb1de241ca42ec5d6c6f0410edc151 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7b05706445d4cfc37599853a144512d58cbb1de241ca42ec5d6c6f0410edc151->enter($__internal_7b05706445d4cfc37599853a144512d58cbb1de241ca42ec5d6c6f0410edc151_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_d7273da8f3f70fd27f94e12f1e2b50bab448385c599088567a936ec18715b7e4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d7273da8f3f70fd27f94e12f1e2b50bab448385c599088567a936ec18715b7e4->enter($__internal_d7273da8f3f70fd27f94e12f1e2b50bab448385c599088567a936ec18715b7e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_46d7d39057fbbdc26688011874970f268a3e8a34b165210478b8a0f0b98e9ef6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_46d7d39057fbbdc26688011874970f268a3e8a34b165210478b8a0f0b98e9ef6->enter($__internal_46d7d39057fbbdc26688011874970f268a3e8a34b165210478b8a0f0b98e9ef6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/concepteur.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/chercher.css"), "html", null, true);
         
-        $__internal_d7273da8f3f70fd27f94e12f1e2b50bab448385c599088567a936ec18715b7e4->leave($__internal_d7273da8f3f70fd27f94e12f1e2b50bab448385c599088567a936ec18715b7e4_prof);
+        $__internal_46d7d39057fbbdc26688011874970f268a3e8a34b165210478b8a0f0b98e9ef6->leave($__internal_46d7d39057fbbdc26688011874970f268a3e8a34b165210478b8a0f0b98e9ef6_prof);
 
         
-        $__internal_a89dd234f84a15287c7ec33e60a366b8fae2e83f3c6ca4f6eeb110c785f97f81->leave($__internal_a89dd234f84a15287c7ec33e60a366b8fae2e83f3c6ca4f6eeb110c785f97f81_prof);
+        $__internal_7b05706445d4cfc37599853a144512d58cbb1de241ca42ec5d6c6f0410edc151->leave($__internal_7b05706445d4cfc37599853a144512d58cbb1de241ca42ec5d6c6f0410edc151_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_88602fa2b93bf1472d329ba356a485820bbdbcee2c7d24e72b34d4673a56b966 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_88602fa2b93bf1472d329ba356a485820bbdbcee2c7d24e72b34d4673a56b966->enter($__internal_88602fa2b93bf1472d329ba356a485820bbdbcee2c7d24e72b34d4673a56b966_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b351d2950baf69cf773e337d59f24ca72438cc570e43c513f38ece311b259f99 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b351d2950baf69cf773e337d59f24ca72438cc570e43c513f38ece311b259f99->enter($__internal_b351d2950baf69cf773e337d59f24ca72438cc570e43c513f38ece311b259f99_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_6be9dc473870ff782e07ca5eac028dac3b3d9e08d9bf949f845d81de2372edb0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6be9dc473870ff782e07ca5eac028dac3b3d9e08d9bf949f845d81de2372edb0->enter($__internal_6be9dc473870ff782e07ca5eac028dac3b3d9e08d9bf949f845d81de2372edb0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_52028c38748bf66978b17163f18a09f359576035b0ebb87505cd9a79572ad807 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_52028c38748bf66978b17163f18a09f359576035b0ebb87505cd9a79572ad807->enter($__internal_52028c38748bf66978b17163f18a09f359576035b0ebb87505cd9a79572ad807_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        echo "<div id=\"loading\">
-    <img id=\"loading-image\" src=\"";
-        // line 9
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/loader.gif"), "html", null, true);
-        echo "\" alt=\"Loading...\" />
-</div>
+        echo "
+    <h1 class=\"titre margin-left\">Vous prévoyez une séance de course à pied, une sortie vélo, une randonnée ou autre ? Trouvez l’itinéraire qu’il vous faut grâçe à Movee.</h1>
+    <p class=\"sous-titre margin-left\">Nouvelle, nouveau ? <a href=\"";
+        // line 10
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("aide");
+        echo "\" class=\"sous-titre-aide\">Découvrez nos tutoriaux </a>ou lisez <a href=\"";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("aide");
+        echo "\" class=\"sous-titre-tuto\">Comment trouver un itinéraire</a></p>
 
-<div id=\"map\" oncontextmenu=\"return false\"></div>
+    <div class=\"titre-separation margin-left\"></div>
 
-<div id=\"textDiv\" class=\"textDivDisplay\"></div>
-<div id=\"petitTextDiv\"></div>
-
-<div id=\"mapFilter\" class=\"mapFilter\"></div>
-
-    <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/menu-droite.png"), "html", null, true);
-        echo "\" alt=\"Droite\" id=\"imgBoutonMenuGauche\"></button>
-
-    <div id=\"menuGauche\">
-        <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
-
-        <div id=\"menuGauche-interieur\">
-            <div class=\"menuGauche-partie\">
-                <p class=\"menuGauche-partie-texte\">Vitesse Moyenne</p>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <p class=\"menuGauche-partie-texte\">Temps nécessaire</p>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"";
-        // line 37
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/velo.png"), "html", null, true);
-        echo "\" alt=\"Icône vélo\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
-                </div>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"";
-        // line 45
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/footing.png"), "html", null, true);
-        echo "\" alt=\"Icône footing\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
-                </div>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marche.png"), "html", null, true);
-        echo "\" alt=\"Icône marche\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
-                </div>
-            </div>
+    <div class=\"form-container\">
+        ";
+        // line 15
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 15, $this->getSourceContext()); })()), 'form_start');
+        echo "
+        <div class=\"placeId-input-container\">
+            <input id=\"chercher_placeId\" placeholder=\"Où voulez vous trouver un itinéraire ?\" type=\"text\" name=\"chercher[placeId]\" />
+            <button id=\"placeId_gps_btn\" name=\"chercher[gps]\" type=\"button\" onclick=\"fillInAdressGeolocation()\"><img src=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_gps.png"), "html", null, true);
+        echo "\" alt=\"Icône gps\" class=\"placeId-gps-btn-img\"/></button>
         </div>
 
-        <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+        <div class=\"form-part1-container\">
+            <h2 class=\"titre-form-part1\">Affinez votre recherche</h2>
+            <div class=\"titre-form-part1-separation\"></div>
+
+            <h3 class=\"sous-titre-form-part1\">Quel type d’itinéraire cherchez-vous ?</h3>
+            <div class=\"typeSport-container\">
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_0\" name=\"user[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
+                    <label for=\"user_typeSport_0\" class=\"required typeSport-input\"><span></span><img src=\"";
+        // line 29
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_typeSport3.png"), "html", null, true);
+        echo "\" alt=\"Icône marche\"/>Marche</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_1\" name=\"user[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
+                    <label for=\"user_typeSport_1\" class=\"required typeSport-input\"><span></span><img src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_typeSport2.png"), "html", null, true);
+        echo "\" alt=\"Icône course\"/>Course à pied</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_2\" name=\"user[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
+                    <label for=\"user_typeSport_2\" class=\"required typeSport-input\"><span></span><img src=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_typeSport4.png"), "html", null, true);
+        echo "\" alt=\"Icône vélo de route\"/>Vélo de route</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_3\" name=\"user[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
+                    <label for=\"user_typeSport_3\" class=\"required typeSport-input\"><span></span><img src=\"";
+        // line 44
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_typeSport5.png"), "html", null, true);
+        echo "\" alt=\"Icône VTT\"/>VTT</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_4\" name=\"user[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
+                    <label for=\"user_typeSport_4\" class=\"required typeSport-input\"><span></span><img src=\"";
+        // line 49
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/chercher_typeSport1.png"), "html", null, true);
+        echo "\" alt=\"Icône autre\"/>Autre</label>
+                </div>
+            </div>
+            <h3 class=\"sous-titre-form-part1\">Ajoutez quelques filtres</h3>
+            ";
+        // line 53
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 53, $this->getSourceContext()); })()), "filtres", array()), 'row');
+        echo "
+            ";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 54, $this->getSourceContext()); })()), "noteMinimale", array()), 'row');
+        echo "
+        </div>
+        ";
+        // line 56
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 56, $this->getSourceContext()); })()), "trier", array()), 'row');
+        echo "
+        <button type=\"submit\" class=\"submit-input\">Chercher</button>
+        ";
+        // line 58
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 58, $this->getSourceContext()); })()), 'form_end');
+        echo "
     </div>
-    <table>
-        <thead>
-        <tr>
-            <th>Titre</th>
-            <th>Type de sport</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Note</th>
-            <th>Autre filtre</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>";
-        // line 74
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 74, $this->getSourceContext()); })()), "titre", array()), "html", null, true);
-        echo "</td>
-            <td>";
-        // line 75
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 75, $this->getSourceContext()); })()), "typeSport", array()), "html", null, true);
-        echo "</td>
-            <td>";
-        // line 76
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 76, $this->getSourceContext()); })()), "description", array()), "html", null, true);
-        echo "</td>
-            <td>";
-        // line 77
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 77, $this->getSourceContext()); })()), "image", array()), "html", null, true);
-        echo "</td>
-            <td>";
-        // line 78
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 78, $this->getSourceContext()); })()), "note", array()), "html", null, true);
-        echo "</td>
-            <td>";
-        // line 79
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 79, $this->getSourceContext()); })()), "autreFiltre", array()), "html", null, true);
-        echo "</td>
-        </tr>
-        </tbody>
-    </table>
 ";
         
-        $__internal_6be9dc473870ff782e07ca5eac028dac3b3d9e08d9bf949f845d81de2372edb0->leave($__internal_6be9dc473870ff782e07ca5eac028dac3b3d9e08d9bf949f845d81de2372edb0_prof);
+        $__internal_52028c38748bf66978b17163f18a09f359576035b0ebb87505cd9a79572ad807->leave($__internal_52028c38748bf66978b17163f18a09f359576035b0ebb87505cd9a79572ad807_prof);
 
         
-        $__internal_88602fa2b93bf1472d329ba356a485820bbdbcee2c7d24e72b34d4673a56b966->leave($__internal_88602fa2b93bf1472d329ba356a485820bbdbcee2c7d24e72b34d4673a56b966_prof);
+        $__internal_b351d2950baf69cf773e337d59f24ca72438cc570e43c513f38ece311b259f99->leave($__internal_b351d2950baf69cf773e337d59f24ca72438cc570e43c513f38ece311b259f99_prof);
 
     }
 
-    // line 85
+    // line 62
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_0b63589fa79c63753eefcbd8505fa0e460f36a370267c58bd5f9ff4f28b348a0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0b63589fa79c63753eefcbd8505fa0e460f36a370267c58bd5f9ff4f28b348a0->enter($__internal_0b63589fa79c63753eefcbd8505fa0e460f36a370267c58bd5f9ff4f28b348a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_4b34eae3c02f4648341863e183d29d1eab77ff6f1c6b5200d272b8d3b984de7a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4b34eae3c02f4648341863e183d29d1eab77ff6f1c6b5200d272b8d3b984de7a->enter($__internal_4b34eae3c02f4648341863e183d29d1eab77ff6f1c6b5200d272b8d3b984de7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_75d81a2bb3d858b4783ca0f14ebfb45863f2fe5886139b73d01ba8ef2e10084a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_75d81a2bb3d858b4783ca0f14ebfb45863f2fe5886139b73d01ba8ef2e10084a->enter($__internal_75d81a2bb3d858b4783ca0f14ebfb45863f2fe5886139b73d01ba8ef2e10084a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_98b96a739fc2294fbd65c624d3a80bc5dcc927f686aabfbef120661421902f1b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_98b96a739fc2294fbd65c624d3a80bc5dcc927f686aabfbef120661421902f1b->enter($__internal_98b96a739fc2294fbd65c624d3a80bc5dcc927f686aabfbef120661421902f1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 86
-        echo "    ";
-        // line 87
-        echo "    <script src=\" ";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/mousetrap.js"), "html", null, true);
-        echo " \"></script>
-    <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.js\"></script>
-    <script language=\"javascript\" type=\"text/javascript\">
-        \$(window).load(function() {
-            \$('#loading').hide();
-        });
-    </script>
-
+        // line 63
+        echo "    <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.js\"></script>
+    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=initAutocomplete\" async defer></script>
     <script>
-        var globalPoly;
+        var placeSearch, autocomplete, geocoder;
 
-        var map;
-        var geoPos;
+        function initAutocomplete() {
+            geocoder = new google.maps.Geocoder();
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('chercher_placeId')),
+                {types: ['(cities)']});
 
-        var markerStart = \"";
-        // line 101
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
-        echo "\";   //icone de marqueur de début
-        var markerEnd = \"";
-        // line 102
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/empty.png"), "html", null, true);
-        echo "\";
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
 
-        var vitesseVelo = 20;
-        var vitesseFooting = 13;
-        var vitesseMarche = 6;
+        function codeAddress(address) {
+            geocoder.geocode( { 'address': address}, function(results, status) {
+                if (status == 'OK') {
+                    alert(results[0].geometry.location);
+                } else {
+                    alert('Le Geocoder a echoué. Raison: ' + status);
+                }
+            });
+        }
 
+        function fillInAddress() {
+            var place = autocomplete.getPlace();
+            alert(place.place_id);
+        }
 
-
-
-        function initMap() {
-            var mapDiv = document.getElementById(\"map\");
-            //je récupére mon element avec l'id map
-            var windowHeight = window.innerHeight;
-            //je prend la hauteur de la fenêtre
-            var tailleVoulu = (windowHeight - 80) + 'px';
-            //je calcule pour que ma map fasse hauteur de la fenêtre moins le header
-            mapDiv.style.height = tailleVoulu;
-            //c'est comme si je fais en CSS: 'height: tailleVoulu;'
-
-            //definir taille du menu gauche
-            var menuGauche = document.getElementById('menuGauche');
-            menuGauche.style.height = tailleVoulu;
-
-            //on veut centrer la carte sur notre position si la geolocalisation est activée
-            /*if (navigator.geolocation) {
+        function fillInAdressGeolocation(){
+            if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
                     geoPos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
 
-                    map.setCenter(geoPos);   //centre la carte
+                    geocoder.geocode({
+                            'location': geoPos
+                        }, function(results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            if (results[1]) {
+                                geocoder.geocode({'placeId': results[1].place_id}, function(results, status) {
+                                    if (status !== 'OK') {
+                                        alert('Le Geocoder a echoué. Raison: ' + status);
+                                    }
+                                    var geolocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                                    document.getElementById('chercher_placeId').value = geolocationResult;
+                                });
+                            } else {
+                                alert('Aucun résultat trouvé');
+                            }
+                        } else {
+                            alert('Le Geocoder a echoué. Raison: ' + status);
+                        }
+                    });
 
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
@@ -278,242 +259,15 @@ class __TwigTemplate_41ade4ee441cbbbdf21328290705d104719b3208c6f8f5f89f66b4c1b7a
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
                 handleLocationError(false, infoWindow, map.getCenter());
-            };*/
-
-
-            var ancienPath ='";
-        // line 145
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["path"]) || array_key_exists("path", $context) ? $context["path"] : (function () { throw new Twig_Error_Runtime('Variable "path" does not exist.', 145, $this->getSourceContext()); })()), "path", array()), "html", null, true);
-        echo "';
-
-            var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
-
-            map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
-                zoom: 14  //Définie le zoom par défaut
-            });
-
-            globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                path: ancienPathDesencode,
-                strokeColor: '#3BA14C',
-                strokeOpacity: 1.0,
-                strokeWeight: 3
-            });
-            globalPoly.setMap(map);   //on attache l'objet polyline à notre map
-
-            var premierMarker = ancienPathDesencode[0];
-            firstMarker = new google.maps.Marker({
-                position: premierMarker,
-                title: 'Premier marqueur',
-                map: map,
-                icon: markerStart
-            });
-
-            var dernierMarker = ancienPathDesencode[ancienPathDesencode.length - 1];
-            marker = new google.maps.Marker({
-                position: dernierMarker,
-                title: 'Dernier marqueur',
-                map: map,
-                icon: markerEnd
-            });
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: \"";
-        // line 182
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_white.png"), "html", null, true);
-        echo "\"});
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: \"";
-        // line 185
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
-        echo "\"});
-                }
-            });
-
-            var boutonMenuLateral = document.getElementById('boutonMenuLateral');
-            map.controls[google.maps.ControlPosition.LEFT].push(boutonMenuLateral);
-
-            updateRouteLength();
-
-            var monPath = globalPoly.getPath();
-
-            var pathArray = monPath.getArray();
-
-            zoomToObject(pathArray);
-        }
-        /************* FIN INITMAP *************/
-
-
-
-
-        function zoomToObject(pathArray){
-            var bounds = new google.maps.LatLngBounds();
-            var points = pathArray;
-            for (var n = 0; n < points.length ; n++){
-                bounds.extend(points[n]);
             }
-            map.fitBounds(bounds);
         }
-
-        function updateRouteLength(){
-            var monPath = globalPoly.getPath();
-
-            var pathArray = monPath.getArray();
-
-            var distance = google.maps.geometry.spherical.computeLength(pathArray);   //calcule la distance du parcours en comptant tout les points
-            distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près
-            distanceKmFloat = distanceArrondie/1000;
-            distanceKm = Math.round(distanceKmFloat*10)/10;
-
-
-            var div = document.getElementById(\"textDiv\");    //recupere la div textDiv
-            var petiteDiv = document.getElementById(\"petitTextDiv\");
-            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
-                div.textContent = \"Il n'y a qu'un seul marqueur\";
-            } else {
-                div.textContent = distanceKm + \" kilomètres\" ;
-                //on affiche la distance arrondie et au km dans la div textDiv
-                petiteDiv.textContent = distanceArrondie + \" mètres\"
-
-                var menuGaucheInterieur = document.getElementById(\"menuGauche-interieur\");
-                menuGaucheInterieur.style.display = \"block\";
-
-                var menuGaucheMessage = document.getElementById(\"menuGauche-message\");
-                menuGaucheMessage.style.display = \"none\";
-            }
-
-            updateTempsGlobal(distanceKmFloat);
-        }
-
-        function getDecimal(n) {
-            return (n - Math.floor(n));
-        }
-
-        function getPartieDecimale(n){
-            return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
-        }
-
-        function updateTempsGlobal(distanceKmFloat){
-            //velo
-            updateTempsNecessaire(distanceKmFloat, vitesseVelo, \"tempsVelo\");
-
-            //footing
-            updateTempsNecessaire(distanceKmFloat, vitesseFooting, \"tempsFooting\");
-
-            //marche
-            updateTempsNecessaire(distanceKmFloat, vitesseMarche, \"tempsMarche\");
-        }
-
-        function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
-            var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
-
-            var temps = distanceKmFloat / vitesseMoyenne; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
-            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;  //on sort 52.31 (52 minutes 31 secondes)
-            var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
-
-            var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
-
-            if(tempsEnMinutes === 1){
-                var minuteOrthographe = \" minute\";
-            }else{
-                var minuteOrthographe = \" minutes\";
-            }
-
-            if(secondesTemps === 1){
-                var secondeOrthographe = \" seconde\";
-            }else{
-                var secondeOrthographe = \" secondes\";
-            }
-
-
-            if(tempsEnMinutes < 1){
-                tempsHTML.textContent = secondesTemps + secondeOrthographe;
-                tempsHTML.title = \"\";
-            }else{
-                //si il y a plus de 60 minutes on affiche en heures et minutes
-                if(tempsEnMinutes < 60){
-                    tempsHTML.textContent = tempsEnMinutes + minuteOrthographe;
-                    tempsHTML.title = \"Et \" + secondesTemps + secondeOrthographe;
-                }else{
-                    var tempsEnHeuresFloat = tempsEnMinutes / 60;
-                    var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
-                    var tempsEnHeures = Math.round(tempsEnHeuresFloat);
-
-                    if(minutesDuTempsPourHeures === 1){
-                        var minuteOrthographe = \" minute\";
-                    }else{
-                        var minuteOrthographe = \" minutes\";
-                    }
-
-                    if(tempsEnHeures === 1){
-                        var heureOrthographe = \" heure\";
-                    }else{
-                        var heureOrthographe = \" heures\";
-                    }
-
-                    tempsHTML.textContent = tempsEnHeures + heureOrthographe + \" et \" + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
-                }
-            }
-
-        }
-
-        var menuGaucheBouton = document.getElementById('boutonMenuLateral');
-        var menuGauche = document.getElementById('menuGauche');
-        var mapFilter = document.getElementById('mapFilter');
-
-        menuGaucheBouton.onclick = function() {
-            menuGauche.style.display = \"block\";
-            mapFilter.style.display = \"block\";
-        };
-
-        mapFilter.onclick = function() {
-            menuGauche.style.display = \"none\";
-            mapFilter.style.display = \"none\";
-        };
-
-
-        /***** RACCOURCIS CLAVIER ********/
-        Mousetrap.bind(['ctrl+z'], function() {
-            deleteLastPoint();
-        });
-
-
-
-
-        //zoom/dezoom avec Ctrl Alt +/- ou Ctrl +/-
-        var zoom = 14;
-
-        Mousetrap.bind(['ctrl+alt++', 'ctrl++'], function() {
-            if(zoom <= 23){
-                zoom++;
-                map.setZoom(zoom);
-            }else{
-                alert('Impossible de zoomer davantage');
-            }
-        });
-
-        Mousetrap.bind(['ctrl+alt+-', 'ctrl+-'], function() {
-            if(zoom >= 1){
-                zoom--;
-                map.setZoom(zoom);
-            }else{
-                alert('Impossible de dézoomer davantage');
-            }
-        });
-    </script>
-    <script async defer
-            src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&callback=initMap\">
     </script>
 ";
         
-        $__internal_75d81a2bb3d858b4783ca0f14ebfb45863f2fe5886139b73d01ba8ef2e10084a->leave($__internal_75d81a2bb3d858b4783ca0f14ebfb45863f2fe5886139b73d01ba8ef2e10084a_prof);
+        $__internal_98b96a739fc2294fbd65c624d3a80bc5dcc927f686aabfbef120661421902f1b->leave($__internal_98b96a739fc2294fbd65c624d3a80bc5dcc927f686aabfbef120661421902f1b_prof);
 
         
-        $__internal_0b63589fa79c63753eefcbd8505fa0e460f36a370267c58bd5f9ff4f28b348a0->leave($__internal_0b63589fa79c63753eefcbd8505fa0e460f36a370267c58bd5f9ff4f28b348a0_prof);
+        $__internal_4b34eae3c02f4648341863e183d29d1eab77ff6f1c6b5200d272b8d3b984de7a->leave($__internal_4b34eae3c02f4648341863e183d29d1eab77ff6f1c6b5200d272b8d3b984de7a_prof);
 
     }
 
@@ -529,7 +283,7 @@ class __TwigTemplate_41ade4ee441cbbbdf21328290705d104719b3208c6f8f5f89f66b4c1b7a
 
     public function getDebugInfo()
     {
-        return array (  332 => 185,  326 => 182,  286 => 145,  240 => 102,  236 => 101,  218 => 87,  216 => 86,  207 => 85,  192 => 79,  188 => 78,  184 => 77,  180 => 76,  176 => 75,  172 => 74,  148 => 53,  137 => 45,  126 => 37,  105 => 19,  92 => 9,  89 => 8,  80 => 7,  62 => 5,  43 => 3,  11 => 1,);
+        return array (  198 => 63,  189 => 62,  176 => 58,  171 => 56,  166 => 54,  162 => 53,  155 => 49,  147 => 44,  139 => 39,  131 => 34,  123 => 29,  109 => 18,  103 => 15,  93 => 10,  89 => 8,  80 => 7,  62 => 5,  43 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -538,135 +292,120 @@ class __TwigTemplate_41ade4ee441cbbbdf21328290705d104719b3208c6f8f5f89f66b4c1b7a
 
 {% block title %}Chercher{{ parent() }}{% endblock %}
 
-{% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
+{% block stylesheets %}{{ asset('build/chercher.css') }}{% endblock %}
 
 {% block body %}
-<div id=\"loading\">
-    <img id=\"loading-image\" src=\"{{ asset('images/loader.gif') }}\" alt=\"Loading...\" />
-</div>
 
-<div id=\"map\" oncontextmenu=\"return false\"></div>
+    <h1 class=\"titre margin-left\">Vous prévoyez une séance de course à pied, une sortie vélo, une randonnée ou autre ? Trouvez l’itinéraire qu’il vous faut grâçe à Movee.</h1>
+    <p class=\"sous-titre margin-left\">Nouvelle, nouveau ? <a href=\"{{ path('aide') }}\" class=\"sous-titre-aide\">Découvrez nos tutoriaux </a>ou lisez <a href=\"{{ path('aide') }}\" class=\"sous-titre-tuto\">Comment trouver un itinéraire</a></p>
 
-<div id=\"textDiv\" class=\"textDivDisplay\"></div>
-<div id=\"petitTextDiv\"></div>
+    <div class=\"titre-separation margin-left\"></div>
 
-<div id=\"mapFilter\" class=\"mapFilter\"></div>
-
-    <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"{{ asset('images/menu-droite.png') }}\" alt=\"Droite\" id=\"imgBoutonMenuGauche\"></button>
-
-    <div id=\"menuGauche\">
-        <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
-
-        <div id=\"menuGauche-interieur\">
-            <div class=\"menuGauche-partie\">
-                <p class=\"menuGauche-partie-texte\">Vitesse Moyenne</p>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <p class=\"menuGauche-partie-texte\">Temps nécessaire</p>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"{{ asset('images/velo.png') }}\" alt=\"Icône vélo\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
-                </div>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"{{ asset('images/footing.png') }}\" alt=\"Icône footing\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
-                </div>
-            </div>
-
-            <div class=\"menuGauche-partie\">
-                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                <div class=\"menuGauche-partie-container\">
-                    <img src=\"{{ asset('images/marche.png') }}\" alt=\"Icône marche\" class=\"menuGauche-img\">
-                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
-                </div>
-            </div>
+    <div class=\"form-container\">
+        {{ form_start(form) }}
+        <div class=\"placeId-input-container\">
+            <input id=\"chercher_placeId\" placeholder=\"Où voulez vous trouver un itinéraire ?\" type=\"text\" name=\"chercher[placeId]\" />
+            <button id=\"placeId_gps_btn\" name=\"chercher[gps]\" type=\"button\" onclick=\"fillInAdressGeolocation()\"><img src=\"{{ asset('images/chercher_gps.png') }}\" alt=\"Icône gps\" class=\"placeId-gps-btn-img\"/></button>
         </div>
 
-        <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+        <div class=\"form-part1-container\">
+            <h2 class=\"titre-form-part1\">Affinez votre recherche</h2>
+            <div class=\"titre-form-part1-separation\"></div>
+
+            <h3 class=\"sous-titre-form-part1\">Quel type d’itinéraire cherchez-vous ?</h3>
+            <div class=\"typeSport-container\">
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_0\" name=\"user[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
+                    <label for=\"user_typeSport_0\" class=\"required typeSport-input\"><span></span><img src=\"{{ asset('images/chercher_typeSport3.png') }}\" alt=\"Icône marche\"/>Marche</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_1\" name=\"user[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
+                    <label for=\"user_typeSport_1\" class=\"required typeSport-input\"><span></span><img src=\"{{ asset('images/chercher_typeSport2.png') }}\" alt=\"Icône course\"/>Course à pied</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_2\" name=\"user[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
+                    <label for=\"user_typeSport_2\" class=\"required typeSport-input\"><span></span><img src=\"{{ asset('images/chercher_typeSport4.png') }}\" alt=\"Icône vélo de route\"/>Vélo de route</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_3\" name=\"user[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
+                    <label for=\"user_typeSport_3\" class=\"required typeSport-input\"><span></span><img src=\"{{ asset('images/chercher_typeSport5.png') }}\" alt=\"Icône VTT\"/>VTT</label>
+                </div>
+
+                <div class=\"typeSport-input-container\">
+                    <input id=\"user_typeSport_4\" name=\"user[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
+                    <label for=\"user_typeSport_4\" class=\"required typeSport-input\"><span></span><img src=\"{{ asset('images/chercher_typeSport1.png') }}\" alt=\"Icône autre\"/>Autre</label>
+                </div>
+            </div>
+            <h3 class=\"sous-titre-form-part1\">Ajoutez quelques filtres</h3>
+            {{ form_row(form.filtres) }}
+            {{ form_row(form.noteMinimale) }}
+        </div>
+        {{ form_row(form.trier) }}
+        <button type=\"submit\" class=\"submit-input\">Chercher</button>
+        {{ form_end(form) }}
     </div>
-    <table>
-        <thead>
-        <tr>
-            <th>Titre</th>
-            <th>Type de sport</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Note</th>
-            <th>Autre filtre</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>{{ path.titre }}</td>
-            <td>{{ path.typeSport }}</td>
-            <td>{{ path.description }}</td>
-            <td>{{ path.image }}</td>
-            <td>{{ path.note }}</td>
-            <td>{{ path.autreFiltre }}</td>
-        </tr>
-        </tbody>
-    </table>
 {% endblock %}
 
 {% block javascripts %}
-    {#<script src=\" {{ asset('build/js/main.js') }} \"></script>#}
-    <script src=\" {{ asset('build/mousetrap.js') }} \"></script>
     <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.js\"></script>
-    <script language=\"javascript\" type=\"text/javascript\">
-        \$(window).load(function() {
-            \$('#loading').hide();
-        });
-    </script>
-
+    <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=initAutocomplete\" async defer></script>
     <script>
-        var globalPoly;
+        var placeSearch, autocomplete, geocoder;
 
-        var map;
-        var geoPos;
+        function initAutocomplete() {
+            geocoder = new google.maps.Geocoder();
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('chercher_placeId')),
+                {types: ['(cities)']});
 
-        var markerStart = \"{{ asset('images/marker.png') }}\";   //icone de marqueur de début
-        var markerEnd = \"{{ asset('images/empty.png') }}\";
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
 
-        var vitesseVelo = 20;
-        var vitesseFooting = 13;
-        var vitesseMarche = 6;
+        function codeAddress(address) {
+            geocoder.geocode( { 'address': address}, function(results, status) {
+                if (status == 'OK') {
+                    alert(results[0].geometry.location);
+                } else {
+                    alert('Le Geocoder a echoué. Raison: ' + status);
+                }
+            });
+        }
 
+        function fillInAddress() {
+            var place = autocomplete.getPlace();
+            alert(place.place_id);
+        }
 
-
-
-        function initMap() {
-            var mapDiv = document.getElementById(\"map\");
-            //je récupére mon element avec l'id map
-            var windowHeight = window.innerHeight;
-            //je prend la hauteur de la fenêtre
-            var tailleVoulu = (windowHeight - 80) + 'px';
-            //je calcule pour que ma map fasse hauteur de la fenêtre moins le header
-            mapDiv.style.height = tailleVoulu;
-            //c'est comme si je fais en CSS: 'height: tailleVoulu;'
-
-            //definir taille du menu gauche
-            var menuGauche = document.getElementById('menuGauche');
-            menuGauche.style.height = tailleVoulu;
-
-            //on veut centrer la carte sur notre position si la geolocalisation est activée
-            /*if (navigator.geolocation) {
+        function fillInAdressGeolocation(){
+            if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
                     geoPos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
 
-                    map.setCenter(geoPos);   //centre la carte
+                    geocoder.geocode({
+                            'location': geoPos
+                        }, function(results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            if (results[1]) {
+                                geocoder.geocode({'placeId': results[1].place_id}, function(results, status) {
+                                    if (status !== 'OK') {
+                                        alert('Le Geocoder a echoué. Raison: ' + status);
+                                    }
+                                    var geolocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                                    document.getElementById('chercher_placeId').value = geolocationResult;
+                                });
+                            } else {
+                                alert('Aucun résultat trouvé');
+                            }
+                        } else {
+                            alert('Le Geocoder a echoué. Raison: ' + status);
+                        }
+                    });
 
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
@@ -675,226 +414,8 @@ class __TwigTemplate_41ade4ee441cbbbdf21328290705d104719b3208c6f8f5f89f66b4c1b7a
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
                 handleLocationError(false, infoWindow, map.getCenter());
-            };*/
-
-
-            var ancienPath ='{{ path.path }}';
-
-            var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
-
-            map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
-                zoom: 14  //Définie le zoom par défaut
-            });
-
-            globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                path: ancienPathDesencode,
-                strokeColor: '#3BA14C',
-                strokeOpacity: 1.0,
-                strokeWeight: 3
-            });
-            globalPoly.setMap(map);   //on attache l'objet polyline à notre map
-
-            var premierMarker = ancienPathDesencode[0];
-            firstMarker = new google.maps.Marker({
-                position: premierMarker,
-                title: 'Premier marqueur',
-                map: map,
-                icon: markerStart
-            });
-
-            var dernierMarker = ancienPathDesencode[ancienPathDesencode.length - 1];
-            marker = new google.maps.Marker({
-                position: dernierMarker,
-                title: 'Dernier marqueur',
-                map: map,
-                icon: markerEnd
-            });
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: \"{{ asset('images/marker_white.png') }}\"});
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: \"{{ asset('images/marker.png') }}\"});
-                }
-            });
-
-            var boutonMenuLateral = document.getElementById('boutonMenuLateral');
-            map.controls[google.maps.ControlPosition.LEFT].push(boutonMenuLateral);
-
-            updateRouteLength();
-
-            var monPath = globalPoly.getPath();
-
-            var pathArray = monPath.getArray();
-
-            zoomToObject(pathArray);
-        }
-        /************* FIN INITMAP *************/
-
-
-
-
-        function zoomToObject(pathArray){
-            var bounds = new google.maps.LatLngBounds();
-            var points = pathArray;
-            for (var n = 0; n < points.length ; n++){
-                bounds.extend(points[n]);
             }
-            map.fitBounds(bounds);
         }
-
-        function updateRouteLength(){
-            var monPath = globalPoly.getPath();
-
-            var pathArray = monPath.getArray();
-
-            var distance = google.maps.geometry.spherical.computeLength(pathArray);   //calcule la distance du parcours en comptant tout les points
-            distanceArrondie = Math.round(distance);    //arrondi la distance à l'unité près
-            distanceKmFloat = distanceArrondie/1000;
-            distanceKm = Math.round(distanceKmFloat*10)/10;
-
-
-            var div = document.getElementById(\"textDiv\");    //recupere la div textDiv
-            var petiteDiv = document.getElementById(\"petitTextDiv\");
-            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
-                div.textContent = \"Il n'y a qu'un seul marqueur\";
-            } else {
-                div.textContent = distanceKm + \" kilomètres\" ;
-                //on affiche la distance arrondie et au km dans la div textDiv
-                petiteDiv.textContent = distanceArrondie + \" mètres\"
-
-                var menuGaucheInterieur = document.getElementById(\"menuGauche-interieur\");
-                menuGaucheInterieur.style.display = \"block\";
-
-                var menuGaucheMessage = document.getElementById(\"menuGauche-message\");
-                menuGaucheMessage.style.display = \"none\";
-            }
-
-            updateTempsGlobal(distanceKmFloat);
-        }
-
-        function getDecimal(n) {
-            return (n - Math.floor(n));
-        }
-
-        function getPartieDecimale(n){
-            return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
-        }
-
-        function updateTempsGlobal(distanceKmFloat){
-            //velo
-            updateTempsNecessaire(distanceKmFloat, vitesseVelo, \"tempsVelo\");
-
-            //footing
-            updateTempsNecessaire(distanceKmFloat, vitesseFooting, \"tempsFooting\");
-
-            //marche
-            updateTempsNecessaire(distanceKmFloat, vitesseMarche, \"tempsMarche\");
-        }
-
-        function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
-            var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
-
-            var temps = distanceKmFloat / vitesseMoyenne; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
-            var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;  //on sort 52.31 (52 minutes 31 secondes)
-            var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
-
-            var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
-
-            if(tempsEnMinutes === 1){
-                var minuteOrthographe = \" minute\";
-            }else{
-                var minuteOrthographe = \" minutes\";
-            }
-
-            if(secondesTemps === 1){
-                var secondeOrthographe = \" seconde\";
-            }else{
-                var secondeOrthographe = \" secondes\";
-            }
-
-
-            if(tempsEnMinutes < 1){
-                tempsHTML.textContent = secondesTemps + secondeOrthographe;
-                tempsHTML.title = \"\";
-            }else{
-                //si il y a plus de 60 minutes on affiche en heures et minutes
-                if(tempsEnMinutes < 60){
-                    tempsHTML.textContent = tempsEnMinutes + minuteOrthographe;
-                    tempsHTML.title = \"Et \" + secondesTemps + secondeOrthographe;
-                }else{
-                    var tempsEnHeuresFloat = tempsEnMinutes / 60;
-                    var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
-                    var tempsEnHeures = Math.round(tempsEnHeuresFloat);
-
-                    if(minutesDuTempsPourHeures === 1){
-                        var minuteOrthographe = \" minute\";
-                    }else{
-                        var minuteOrthographe = \" minutes\";
-                    }
-
-                    if(tempsEnHeures === 1){
-                        var heureOrthographe = \" heure\";
-                    }else{
-                        var heureOrthographe = \" heures\";
-                    }
-
-                    tempsHTML.textContent = tempsEnHeures + heureOrthographe + \" et \" + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
-                }
-            }
-
-        }
-
-        var menuGaucheBouton = document.getElementById('boutonMenuLateral');
-        var menuGauche = document.getElementById('menuGauche');
-        var mapFilter = document.getElementById('mapFilter');
-
-        menuGaucheBouton.onclick = function() {
-            menuGauche.style.display = \"block\";
-            mapFilter.style.display = \"block\";
-        };
-
-        mapFilter.onclick = function() {
-            menuGauche.style.display = \"none\";
-            mapFilter.style.display = \"none\";
-        };
-
-
-        /***** RACCOURCIS CLAVIER ********/
-        Mousetrap.bind(['ctrl+z'], function() {
-            deleteLastPoint();
-        });
-
-
-
-
-        //zoom/dezoom avec Ctrl Alt +/- ou Ctrl +/-
-        var zoom = 14;
-
-        Mousetrap.bind(['ctrl+alt++', 'ctrl++'], function() {
-            if(zoom <= 23){
-                zoom++;
-                map.setZoom(zoom);
-            }else{
-                alert('Impossible de zoomer davantage');
-            }
-        });
-
-        Mousetrap.bind(['ctrl+alt+-', 'ctrl+-'], function() {
-            if(zoom >= 1){
-                zoom--;
-                map.setZoom(zoom);
-            }else{
-                alert('Impossible de dézoomer davantage');
-            }
-        });
-    </script>
-    <script async defer
-            src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry&callback=initMap\">
     </script>
 {% endblock %}", "content/chercher.html.twig", "C:\\wamp64\\www\\mapbox\\templates\\content\\chercher.html.twig");
     }

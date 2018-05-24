@@ -19,6 +19,7 @@ Encore
         './assets/js/main.js',
         './assets/css/concepteur_style.css'
     ])
+    .addEntry('chercher', './assets/css/chercher_style.css')
     .addEntry('contact', './assets/css/contact_style.css')
     .addEntry('aide', './assets/css/aide_style.css')
     .addEntry('apropos', './assets/css/apropos_style.css')

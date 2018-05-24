@@ -119,6 +119,7 @@ button{
     text-decoration: none;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 }
 
 .nav-item::after {

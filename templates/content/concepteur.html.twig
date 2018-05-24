@@ -138,7 +138,8 @@
                     <div class="formPopUp" id="formPopUp">
                         {{ form_start(form, {'method': 'POST'}) }}
                         {{ form_widget(form) }}
-                        <input type="hidden" value="Caché" id="hiddenInput" name="path[path]"/>
+                        <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>
+                        <input type="hidden" value="Caché" id="hiddenInputPlaceId" name="path[placeId]"/>
                         <button id="saveFormBtn">Envoyer</button>
                         {{ form_end(form) }}
                     </div>
@@ -706,8 +707,14 @@
             distanceKmFloat = 0;
 
 
+            if (mapType == 'hybrid'){
+                polyColor = "#35f700";
+            } else {
+                polyColor = "#3BA14C";
+            }
+
             globalPoly = new google.maps.Polyline({   //on recréé une polyline pour que lorsque que l'on supprime l'ancienne on ne reparte pas sur l'ancienne
-                strokeColor: '#3BA14C',
+                strokeColor:  polyColor,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -921,9 +928,30 @@
 
             var monPath = globalPoly.getPath();
             var encodeString = google.maps.geometry.encoding.encodePath(monPath);
-            var hiddenInput = document.getElementById('hiddenInput');
+            var hiddenInputPath = document.getElementById('hiddenInputPath');
+            var hiddenInputPlaceId = document.getElementById('hiddenInputPlaceId');
 
-            hiddenInput.value = encodeString;
+            hiddenInputPath.value = encodeString;
+
+            var geocoder = new google.maps.Geocoder;
+
+            latitude = firstMarker.getPosition().lat();
+            longitude = firstMarker.getPosition().lng();
+            var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+
+            geocoder.geocode({'location': latlng}, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    if (results[1]) {
+                        hiddenInputPlaceId.value = results[1].place_id;
+                    } else {
+                        alert('Aucun résultat trouvé');
+                    }
+                } else {
+                    alert('Le Geocoder a echoué. Raison: ' + status);
+                }
+            });
+
+
         });
 
         var mapFilterForm = document.getElementById('mapFilterForm');
@@ -935,17 +963,16 @@
 
 
         function getCoordinatesAverage(){
-            var a = Math.round(pathArray.length / 2);
-            alert(a);
-            var coordinatesF = pathArray[a];
-            alert(coordinatesF);
-
             var geocoder = new google.maps.Geocoder;
 
-            geocoder.geocode({'location': coordinatesF}, function(results, status) {
-                if (status === 'OK') {
+            latitude = firstMarker.getPosition().lat();
+            longitude = firstMarker.getPosition().lng();
+            var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+
+            geocoder.geocode({'location': latlng}, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
                     if (results[1]) {
-                        alert(results[1].formatted_address);
+                        console.log(results[1].place_id);
                     } else {
                         window.alert('No results found');
                     }

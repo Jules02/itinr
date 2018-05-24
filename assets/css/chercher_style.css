@@ -1,0 +1,123 @@
+.margin-left{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.titre{
+    font-weight: 400;
+    font-size: 20px;
+
+    line-height: 40px;
+
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.sous-titre{
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 18px;
+
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.titre-separation{
+    width: 150px;
+    height: 4px;
+
+    background-color: #3ba14c;
+}
+
+.form-container div:not(.typeSport-container){
+    margin-left: 30px;
+}
+
+.placeId-input-none{
+    display: none;
+}
+
+.placeId-input-container{
+    display: flex;
+
+    margin-top: 10px;
+}
+
+#chercher_placeId{
+    height: 50px;
+    width: 92%;
+    border: solid 1px #999;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding-left: 10px;
+
+    font-size: 15px;
+}
+
+#chercher_placeId::placeholder{
+    color: #222;
+}
+
+#placeId_gps_btn{
+    background-color: #fff;
+    border: solid 2px #3ba14c;
+    border-radius: 3px;
+    width: 54px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeId-gps-btn-img{
+    height: 24px;
+    width: 24px;
+}
+
+#chercher_typeSport{
+    display: none;
+}
+
+.typeSport-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeSport-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+.typeSport-input img{
+    width: 32px;
+    height: 32px;
+
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.typeSport-input-container{
+    margin: 20px;
+    width: 20%;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+input[type="radio"] + label span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(http://www.image-heberg.fr/files/15253652702034805357.png) -20px top no-repeat;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label span{
+    background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
+}

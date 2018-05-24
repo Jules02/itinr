@@ -24,6 +24,11 @@ class Path
     private $path;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $placeId;
+
+    /**
      * @ORM\Column(name="titre", type="string")
      */
     private $titre;
@@ -190,6 +195,22 @@ class Path
     public function setPath($path): void
     {
         $this->path = $path;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlaceId()
+    {
+        return $this->placeId;
+    }
+
+    /**
+     * @param mixed $placeId
+     */
+    public function setPlaceId($placeId): void
+    {
+        $this->placeId = $placeId;
     }
 
     /**

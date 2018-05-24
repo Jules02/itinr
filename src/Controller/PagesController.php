@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Entity\Path;
+use App\Form\ChercherType;
 use App\Form\ContactType;
 use App\Form\PathType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
@@ -98,16 +99,38 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/chercher/{id}", name="chercher")
+     * @Route("/afficherPath/{id}", name="afficherPath")
      * @param Environment $twig
      * @return Response
      */
-    public function chercher (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
+    public function afficherPath (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
         $path = $doctrine->getRepository(Path::class)->find($id);
 
-        return new Response($twig->render('content/chercher.html.twig', [
+        return new Response($twig->render('content/afficherPath.html.twig', [
             'path' => $path
         ]));
+    }
+
+    /**
+     * @Route("/chercher", name="chercher")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function chercher (Environment $twig, Request $request) {
+        $form = $this->createForm(ChercherType::class);
+
+        return new Response($twig->render('content/chercher.html.twig', [
+            'form' => $form->createView()
+        ]));
+    }
+
+    /**
+     * @Route("/displayResultsChercher", name="displayResultsChercher")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function displayResultsChercher (Environment $twig) {
+        return new Response($twig->render('content/displayResultsChercher.html.twig'));
     }
 
     /**
@@ -116,7 +139,6 @@ class PagesController extends Controller
      * @return Response
      */
     public function aide (Environment $twig) {
-        //Affichage de la dernière vidéo de la chaine Youtube
         return new Response($twig->render('content/aide.html.twig'));
     }
 

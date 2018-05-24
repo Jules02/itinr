@@ -65,14 +65,19 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // chercher
-        if (0 === strpos($pathinfo, '/chercher') && preg_match('#^/chercher/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'chercher')), array (  '_controller' => 'App\\Controller\\PagesController::chercher',));
+        if ('/chercher' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\PagesController::chercher',  '_route' => 'chercher',);
         }
 
         if (0 === strpos($pathinfo, '/a')) {
             // apropos
             if ('/apropos' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::apropos',  '_route' => 'apropos',);
+            }
+
+            // afficherPath
+            if (0 === strpos($pathinfo, '/afficherPath') && preg_match('#^/afficherPath/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'afficherPath')), array (  '_controller' => 'App\\Controller\\PagesController::afficherPath',));
             }
 
             // aide
@@ -87,7 +92,12 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/profil')) {
+        // displayResultsChercher
+        if ('/displayResultsChercher' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\PagesController::displayResultsChercher',  '_route' => 'displayResultsChercher',);
+        }
+
+        if (0 === strpos($pathinfo, '/profil')) {
             // profil
             if ('/profil' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::profil',  '_route' => 'profil',);

@@ -21,15 +21,5 @@
       <user-name>root</user-name>
       <introspection-schemas>*:movee</introspection-schemas>
     </data-source>
-    <data-source name="@localhost" uuid="3097ee10-5c1b-4728-9358-d25a9931f621">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
-    </data-source>
-    <data-source name="@localhost [2]" uuid="f9525cd0-89f4-4633-8708-3c0dd13ad2c7">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
-    </data-source>
   </component>
 </project>

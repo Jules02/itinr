@@ -18,13 +18,14 @@ class PathType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('path', HiddenType::class)
+            ->add('path',        HiddenType::class)
+            ->add('placeId',     HiddenType::class)
             ->add('titre',       TextType::class)
-            ->add('typeSport',       TextType::class)
+            ->add('typeSport',   TextType::class)
             ->add('description', TextType::class)
             ->add('image',       TextType::class)
             ->add('note',        IntegerType::class)
-            ->add('autre_filtre',   TextType::class)
+            ->add('autre_filtre',TextType::class)
         ;
     }
 
