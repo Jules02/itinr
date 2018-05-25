@@ -45,9 +45,18 @@ class ChercherType extends AbstractType
                     'multiple' => false
                 )
             )
-            ->add('noteMinimale', RadioType::class)
-            ->add('filtres', CheckboxType::class)
-            ->add('trier')
+            ->add('filtres', CheckboxType::class, array(
+                'label'  => false,
+                'attr' => array(
+                    'class' => 'filtres-input'
+                )
+            ))
+            ->add('recherchePrecise', ChercherPrecisType::class, array(
+                'label'  => false,
+                'attr' => array(
+                    'class' => 'recherchePrecise-container'
+                )
+            ))
         ;
     }
 

@@ -373,6 +373,9 @@
       </call>
     </service>
     <service id="App\Events" class="App\Events" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\ChercherPrecisType" class="App\Form\ChercherPrecisType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ChercherType" class="App\Form\ChercherType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -648,6 +651,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ChercherPrecisType</argument>
         <argument>App\Form\ChercherType</argument>
         <argument>App\Form\ContactType</argument>
         <argument>App\Form\PathType</argument>
@@ -857,7 +861,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.Au00RBP"/>
+      <argument type="service" id="service_locator.KFkMMmy"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -3886,6 +3890,8 @@
     <service id="instanceof.Symfony\Component\DependencyInjection\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChercherPrecisType" class="App\Form\ChercherPrecisType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Form\ChercherPrecisType" class="App\Form\ChercherPrecisType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChercherType" class="App\Form\ChercherType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Form\ChercherType" class="App\Form\ChercherType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" public="false" autowire="true" abstract="true"/>
@@ -4251,9 +4257,10 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.Au00RBP" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.KFkMMmy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ChercherPrecisType" type="service" id="App\Form\ChercherPrecisType"/>
         <argument key="App\Form\ChercherType" type="service" id="App\Form\ChercherType"/>
         <argument key="App\Form\ContactType" type="service" id="App\Form\ContactType"/>
         <argument key="App\Form\PathType" type="service" id="App\Form\PathType"/>

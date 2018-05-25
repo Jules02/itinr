@@ -29,7 +29,11 @@
     background-color: #3ba14c;
 }
 
-.form-container div:not(.typeSport-container){
+.sous-titre-form-part1{
+    font-weight: 600;
+}
+
+.form-container div:not(.typeSport-container):not(.titre-form-part1-separation){
     margin-left: 30px;
 }
 
@@ -40,7 +44,7 @@
 .placeId-input-container{
     display: flex;
 
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #chercher_placeId{
@@ -55,7 +59,12 @@
 }
 
 #chercher_placeId::placeholder{
-    color: #222;
+    color: #333;
+    font-family: 'Source Sans Pro';
+}
+
+.gps-btn-none{
+    display: none;
 }
 
 #placeId_gps_btn{
@@ -72,6 +81,22 @@
 .placeId-gps-btn-img{
     height: 24px;
     width: 24px;
+}
+
+
+
+.titre-form-part1{
+    font-size: 30px;
+    font-weight: 300;
+
+    margin-bottom: 5px;
+}
+
+.titre-form-part1-separation{
+    width: 50px;
+    height: 4px;
+
+    background-color: #3ba14c;
 }
 
 #chercher_typeSport{
@@ -101,7 +126,7 @@
 }
 
 .typeSport-input-container{
-    margin: 20px;
+    margin: 10px 20px 15px 20px;
     width: 20%;
 }
 

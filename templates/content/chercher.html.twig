@@ -19,8 +19,8 @@
         </div>
 
         <div class="form-part1-container">
-            <h2 class="titre-form-part1">Affinez votre recherche</h2>
-            <div class="titre-form-part1-separation"></div>
+            <h2 class="titre-form-part">Affinez votre recherche</h2>
+            <div class="titre-form-part-separation"></div>
 
             <h3 class="sous-titre-form-part1">Quel type d’itinéraire cherchez-vous ?</h3>
             <div class="typeSport-container">
@@ -51,10 +51,21 @@
             </div>
             <h3 class="sous-titre-form-part1">Ajoutez quelques filtres</h3>
             {{ form_row(form.filtres) }}
-            {{ form_row(form.noteMinimale) }}
         </div>
-        {{ form_row(form.trier) }}
-        <button type="submit" class="submit-input">Chercher</button>
+
+        <div class="form-part2-container">
+            <h2 class="titre-form-part">Ou recherchez un parcours précis</h2>
+            <div class="titre-form-part-separation"></div>
+            <div class="recherchePrecise-input-container">
+                <label class="required recherchePrecise_label">En rentrant le nom de l’auteur</label>
+                <input name="chercher[recherchePrecise][parAuteur]" required="required" class="recherchePrecise-input" type="text">
+            </div>
+            <div class="recherchePrecise-input-container">
+                <label class="required recherchePrecise_label">Ou en rentrant le titre de l’itinéraire</label>
+                <input name="chercher[recherchePrecise][parTitre]" required="required" class="recherchePrecise-input" type="text">
+            </div>
+        </div>
+        <div class="submit-container"><button class="submit-input" type="submit">Rechercher</button></div>
         {{ form_end(form) }}
     </div>
 {% endblock %}
@@ -105,9 +116,10 @@
                                 geocoder.geocode({'placeId': results[1].place_id}, function(results, status) {
                                     if (status !== 'OK') {
                                         alert('Le Geocoder a echoué. Raison: ' + status);
+                                        return;
                                     }
-                                    var geolocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
-                                    document.getElementById('chercher_placeId').value = geolocationResult;
+                                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                                    document.getElementById('chercher_placeId').value = geoLocationResult;
                                 });
                             } else {
                                 alert('Aucun résultat trouvé');

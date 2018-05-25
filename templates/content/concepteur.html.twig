@@ -224,19 +224,17 @@
 
                     map.setCenter(geoPos);   //centre la carte
 
-                }, function() {
-                    handleLocationError(true, infoWindow, map.getCenter());
                 });
-
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
-                handleLocationError(false, infoWindow, map.getCenter());
+                alert('Votre naviguateur ne supporte pas la géolocalisation ou un problème est survenu');
             }
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
                 zoom: 14,   //Définie le zoom par défaut
                 draggableCursor: "crosshair",   //on a une croix comme curseur
-                mapTypeId: 'hybrid'
+                mapTypeId: 'hybrid',
+                center: {lat: 49.3904707, lng: 3.3929198}
             });
 
             var mapType = map.getMapTypeId();
@@ -706,6 +704,7 @@
             distanceArrondie = 0;
             distanceKmFloat = 0;
 
+            var mapType = map.getMapTypeId();
 
             if (mapType == 'hybrid'){
                 polyColor = "#35f700";
