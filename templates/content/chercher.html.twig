@@ -5,6 +5,7 @@
 {% block stylesheets %}{{ asset('build/chercher.css') }}{% endblock %}
 
 {% block body %}
+    {% include 'flash_messages.html.twig' %}
 
     <h1 class="titre margin-left">Vous prévoyez une séance de course à pied, une sortie vélo, une randonnée ou autre ? Trouvez l’itinéraire qu’il vous faut grâçe à Movee.</h1>
     <p class="sous-titre margin-left">Nouvelle, nouveau ? <a href="{{ path('aide') }}" class="sous-titre-aide">Découvrez nos tutoriaux </a>ou lisez <a href="{{ path('aide') }}" class="sous-titre-tuto">Comment trouver un itinéraire</a></p>
@@ -14,59 +15,51 @@
     <div class="form-container">
         {{ form_start(form) }}
         <div class="placeId-input-container">
-            <input id="chercher_placeId" placeholder="Où voulez vous trouver un itinéraire ?" type="text" name="chercher[placeId]" />
+            {{ form_row(form.placeId) }}
             <button id="placeId_gps_btn" name="chercher[gps]" type="button" onclick="fillInAdressGeolocation()"><img src="{{ asset('images/chercher_gps.png') }}" alt="Icône gps" class="placeId-gps-btn-img"/></button>
         </div>
-
         <div class="form-part1-container">
             <h2 class="titre-form-part">Affinez votre recherche</h2>
             <div class="titre-form-part-separation"></div>
 
             <h3 class="sous-titre-form-part1">Quel type d’itinéraire cherchez-vous ?</h3>
+            {#{{ form_row(form.typeSport) }}#}
             <div class="typeSport-container">
                 <div class="typeSport-input-container">
-                    <input id="user_typeSport_0" name="user[typeSport]" required="required" value="marche" type="radio">
-                    <label for="user_typeSport_0" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport3.png') }}" alt="Icône marche"/>Marche</label>
+                    <input id="chercher_typeSport_0" name="chercher[typeSport]" required="required" value="marche" type="radio">
+                    <label for="chercher_typeSport_0" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport3.png') }}" alt="Icône marche"/>Marche</label>
                 </div>
 
                 <div class="typeSport-input-container">
-                    <input id="user_typeSport_1" name="user[typeSport]" required="required" value="course" type="radio">
-                    <label for="user_typeSport_1" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport2.png') }}" alt="Icône course"/>Course à pied</label>
+                    <input id="chercher_typeSport_1" name="chercher[typeSport]" required="required" value="course" type="radio">
+                    <label for="chercher_typeSport_1" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport2.png') }}" alt="Icône course"/>Course à pied</label>
                 </div>
 
                 <div class="typeSport-input-container">
-                    <input id="user_typeSport_2" name="user[typeSport]" required="required" value="veloroute" type="radio">
-                    <label for="user_typeSport_2" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport4.png') }}" alt="Icône vélo de route"/>Vélo de route</label>
+                    <input id="chercher_typeSport_2" name="chercher[typeSport]" required="required" value="veloroute" type="radio">
+                    <label for="chercher_typeSport_2" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport4.png') }}" alt="Icône vélo de route"/>Vélo de route</label>
                 </div>
 
                 <div class="typeSport-input-container">
-                    <input id="user_typeSport_3" name="user[typeSport]" required="required" value="vtt" type="radio">
-                    <label for="user_typeSport_3" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport5.png') }}" alt="Icône VTT"/>VTT</label>
+                    <input id="chercher_typeSport_3" name="chercher[typeSport]" required="required" value="vtt" type="radio">
+                    <label for="chercher_typeSport_3" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport5.png') }}" alt="Icône VTT"/>VTT</label>
                 </div>
 
                 <div class="typeSport-input-container">
-                    <input id="user_typeSport_4" name="user[typeSport]" required="required" value="autre" type="radio">
-                    <label for="user_typeSport_4" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport1.png') }}" alt="Icône autre"/>Autre</label>
+                    <input id="chercher_typeSport_4" name="chercher[typeSport]" required="required" value="autre" type="radio">
+                    <label for="chercher_typeSport_4" class="required typeSport-input"><span></span><img src="{{ asset('images/chercher_typeSport1.png') }}" alt="Icône autre"/>Autre</label>
                 </div>
             </div>
-            <h3 class="sous-titre-form-part1">Ajoutez quelques filtres</h3>
-            {{ form_row(form.filtres) }}
         </div>
 
         <div class="form-part2-container">
             <h2 class="titre-form-part">Ou recherchez un parcours précis</h2>
             <div class="titre-form-part-separation"></div>
-            <div class="recherchePrecise-input-container">
-                <label class="required recherchePrecise_label">En rentrant le nom de l’auteur</label>
-                <input name="chercher[recherchePrecise][parAuteur]" required="required" class="recherchePrecise-input" type="text">
-            </div>
-            <div class="recherchePrecise-input-container">
-                <label class="required recherchePrecise_label">Ou en rentrant le titre de l’itinéraire</label>
-                <input name="chercher[recherchePrecise][parTitre]" required="required" class="recherchePrecise-input" type="text">
-            </div>
+            {{ form_row(form.recherchePrecise) }}
         </div>
-        <div class="submit-container"><button class="submit-input" type="submit">Rechercher</button></div>
+        <div class="submit-container"><button type="submit" class="submit-input">Rechercher</button></div>
         {{ form_end(form) }}
+
     </div>
 {% endblock %}
 

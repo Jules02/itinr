@@ -31,14 +31,15 @@
 
 .sous-titre-form-part1{
     font-weight: 600;
+    margin-top: 10px;
 }
 
-.form-container div:not(.typeSport-container):not(.titre-form-part1-separation){
+.placeId-input-container, .form-part1-container, .form-part2-container{
     margin-left: 30px;
 }
 
 .placeId-input-none{
-    display: none;
+    /*display: none;*/
 }
 
 .placeId-input-container{
@@ -47,12 +48,16 @@
     margin-top: 15px;
 }
 
+.placeId-input-container div{
+    width: 92%;
+    margin-right: 17px;
+}
+
 #chercher_placeId{
     height: 50px;
-    width: 92%;
+    width: 100%;
     border: solid 1px #999;
     border-radius: 3px;
-    margin-right: 5px;
     padding-left: 10px;
 
     font-size: 15px;
@@ -84,15 +89,18 @@
 }
 
 
+.form-part1-container, .form-part2-container{
+    padding-right: 30px;
+}
 
-.titre-form-part1{
+.titre-form-part{
     font-size: 30px;
     font-weight: 300;
 
     margin-bottom: 5px;
 }
 
-.titre-form-part1-separation{
+.titre-form-part-separation{
     width: 50px;
     height: 4px;
 
@@ -100,13 +108,15 @@
 }
 
 #chercher_typeSport{
-    display: none;
+
 }
 
 .typeSport-container{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-bottom: 10px;
 }
 
 .typeSport-input{
@@ -129,7 +139,7 @@
     margin: 10px 20px 15px 20px;
     width: 20%;
 }
-
+/*
 input[type="radio"]{
     display:none;
 }
@@ -145,4 +155,58 @@ input[type="radio"] + label span{
 
 input[type="radio"]:checked + label span{
     background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
+}*/
+
+#chercher_recherchePrecise_parAuteur, #chercher_recherchePrecise_parTitre{
+
+}
+
+.recherchePrecise-input-container{
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.recherchePrecise_label{
+    font-weight: 600;
+}
+
+.recherchePrecise-input{
+    flex: 1;
+    height: 35px;
+    border: solid 1px #999;
+    border-radius: 3px;
+
+    padding-left: 10px;
+    margin-left: 5px;
+
+    font-size: 15px;
+    font-family: 'Source Sans Pro';
+}
+
+
+.submit-container{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.submit-input{
+    height: 45px;
+    width: 100%;
+
+    background-color: #228A31;
+    border-radius: 3px;
+
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Source Sans Pro';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
 }

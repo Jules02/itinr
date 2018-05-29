@@ -12,7 +12,6 @@ use App\Entity\Path;
 use App\Form\ChercherType;
 use App\Form\ContactType;
 use App\Form\PathType;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormFactoryInterface;
@@ -21,9 +20,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Twig\Environment;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class PagesController extends Controller
 {
@@ -119,6 +115,13 @@ class PagesController extends Controller
     public function chercher (Environment $twig, Request $request) {
         $form = $this->createForm(ChercherType::class);
 
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'Réussite');
+            return new Response($twig->render('content/displayResultsChercher.html.twig'));
+        }
+
         return new Response($twig->render('content/chercher.html.twig', [
             'form' => $form->createView()
         ]));
@@ -129,8 +132,20 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function displayResultsChercher (Environment $twig) {
-        return new Response($twig->render('content/displayResultsChercher.html.twig'));
+    public function displayResultsChercher (Environment $twig, Request $request) {
+        $form = $this->createForm(ChercherType::class);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'Réussite');
+        }else{
+            $this->addFlash('fail', 'Echec');
+        }
+
+        return new Response($twig->render('content/displayResultsChercher.html.twig', [
+            'form' => $form->createView()
+        ]));
     }
 
     /**

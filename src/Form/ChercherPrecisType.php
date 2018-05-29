@@ -13,13 +13,13 @@ class ChercherPrecisType extends AbstractType
     {
         $builder
             ->add('parAuteur', TextType::class, array(
-                'label' => false,
+                'label' => "En rentrant le nom de l’auteur",
                 'attr' => array(
                     'class' => 'recherchePrecis-input'
                 )
             ))
             ->add('parTitre', TextType::class, array(
-                'label' => false,
+                'label' => "Ou en rentrant le titre de l’itinéraire",
                 'attr' => array(
                     'class' => 'recherchePrecis-input'
                 )

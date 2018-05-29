@@ -5,7 +5,8 @@
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
 
 {% block body %}
-    <p>Salut</p>
+    {% include 'flash_messages.html.twig' %}
+    <p>Hello</p>
 {% endblock %}
 
 {% block javascripts %}

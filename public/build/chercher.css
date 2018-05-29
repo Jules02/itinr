@@ -39,7 +39,7 @@
 }
 
 .placeId-input-none{
-    display: none;
+    /*display: none;*/
 }
 
 .placeId-input-container{
@@ -48,12 +48,16 @@
     margin-top: 15px;
 }
 
+.placeId-input-container div{
+    width: 92%;
+    margin-right: 17px;
+}
+
 #chercher_placeId{
     height: 50px;
-    width: 92%;
+    width: 100%;
     border: solid 1px #999;
     border-radius: 3px;
-    margin-right: 5px;
     padding-left: 10px;
 
     font-size: 15px;
@@ -153,8 +157,33 @@ input[type="radio"]:checked + label span{
     background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
 }
 
+
+.form-part2-container h2{
+    margin-top: 10px;
+}
+
 #chercher_recherchePrecise_parAuteur, #chercher_recherchePrecise_parTitre{
-    display: none;
+    flex: 1;
+    height: 35px;
+    border: solid 1px #999;
+    border-radius: 3px;
+
+    padding-left: 10px;
+    margin-left: 5px;
+
+    font-size: 15px;
+    font-family: 'Source Sans Pro';
+}
+
+.recherchePrecise-container div{
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.recherchePrecise-container label{
+    font-weight: 600;
 }
 
 .recherchePrecise-input-container{
@@ -163,6 +192,7 @@ input[type="radio"]:checked + label span{
 
     margin: 10px 0;
 }
+
 
 .recherchePrecise_label{
     font-weight: 600;

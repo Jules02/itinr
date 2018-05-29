@@ -7,9 +7,33 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/css/chercher_style.css" afterPath="$PROJECT_DIR$/assets/css/chercher_style.css" />
       <change beforePath="$PROJECT_DIR$/public/build/chercher.css" afterPath="$PROJECT_DIR$/public/build/chercher.css" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesController.php" afterPath="$PROJECT_DIR$/src/Controller/PagesController.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ChercherPrecisType.php" afterPath="$PROJECT_DIR$/src/Form/ChercherPrecisType.php" />
       <change beforePath="$PROJECT_DIR$/src/Form/ChercherType.php" afterPath="$PROJECT_DIR$/src/Form/ChercherType.php" />
       <change beforePath="$PROJECT_DIR$/templates/content/chercher.html.twig" afterPath="$PROJECT_DIR$/templates/content/chercher.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/content/concepteur.html.twig" afterPath="$PROJECT_DIR$/templates/content/concepteur.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig" afterPath="$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/7/25mIbvOZT0-r42IjGNXV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/7/25mIbvOZT0-r42IjGNXV" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/M/m6GjV682KJBXLdamE-Vj" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/M/m6GjV682KJBXLdamE-Vj" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/B/0/TjoXlEGKGXkjPowiRpIs" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/B/0/TjoXlEGKGXkjPowiRpIs" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/M/TGG6vmxsSwviuJNok3Ct" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/M/TGG6vmxsSwviuJNok3Ct" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/fjTkiRhiZBjWk1qHtnvo" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/fjTkiRhiZBjWk1qHtnvo" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/B/7z436C-QntUeo7zD5rc0" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/B/7z436C-QntUeo7zD5rc0" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/D/+mFfv5lpte7ofojUHZ2V" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/D/+mFfv5lpte7ofojUHZ2V" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/N/WIZXyaySa9z6kqbnnV0m" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/N/WIZXyaySa9z6kqbnnV0m" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/W/WIMOf-qA5TgBhTF2v4oa" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/W/WIMOf-qA5TgBhTF2v4oa" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/I/3QurFmZX0Qz3bfRlMY6n" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/I/3QurFmZX0Qz3bfRlMY6n" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/S/LHsDZ3KUeuyHNXVaEwp8" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/S/LHsDZ3KUeuyHNXVaEwp8" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/L/xu4nAdv5L0WHyB1rEv2B" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/L/xu4nAdv5L0WHyB1rEv2B" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/I/7YZis+KjxAIhUiX30QrT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/I/7YZis+KjxAIhUiX30QrT" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/O/Q78RouMPvlzQ--0QN0i+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/O/Q78RouMPvlzQ--0QN0i+" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/3/PGNq1JcX-JLRn20CSoXN" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/3/PGNq1JcX-JLRn20CSoXN" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/A/AJDjy6RsG1bFntJ91vFU" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/A/AJDjy6RsG1bFntJ91vFU" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/Q/QpB6LvySJ6Z1x5EL6Qwv" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/Q/QpB6LvySJ6Z1x5EL6Qwv" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/M/WWmArKl+yY7+yYr2f0LH" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/M/WWmArKl+yY7+yYr2f0LH" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/B/s65OL-8uvrGDY97SEmt5" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/B/s65OL-8uvrGDY97SEmt5" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/F/G0k864awImAaJh5UdNrY" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/F/G0k864awImAaJh5UdNrY" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/M/TQZ0YLwFhh6eHmXAIBAI" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/M/TQZ0YLwFhh6eHmXAIBAI" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/C/Zx3-UcBSLZ9DsshorrDv" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/C/Zx3-UcBSLZ9DsshorrDv" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php.meta" />
@@ -17,7 +41,6 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml.meta" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerCompiler.log" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/84/84caad2e7806561bfb62b00e5d151587f37d656dc97818d6c0870f617f0d3125.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/84/84caad2e7806561bfb62b00e5d151587f37d656dc97818d6c0870f617f0d3125.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/d7/d76382e8af87b26c8c753c05eca6b757648b512bb00795f09dbe6e151c6fe2b1.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d7/d76382e8af87b26c8c753c05eca6b757648b512bb00795f09dbe6e151c6fe2b1.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,31 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChercherType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/ChercherType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="51" column="17" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="51" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chercher.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/content/chercher.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chercher.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chercher.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/chercher.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="168" column="1" lean-forward="true" selection-start-line="168" selection-start-column="1" selection-end-line="168" selection-end-column="1" />
+            <state relative-caret-position="54">
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,8 +110,28 @@
       <file leaf-file-name="ChercherPrecisType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/ChercherPrecisType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="360">
+              <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChercherType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/ChercherType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chercher.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/content/chercher.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,6 +169,7 @@
       <find>infoWindo</find>
       <find>latLng</find>
       <find>mapType</find>
+      <find>ChercherType</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,19 +217,19 @@
         <option value="$PROJECT_DIR$/templates/content/afficherPath.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Path.php" />
         <option value="$PROJECT_DIR$/src/Form/PathType.php" />
-        <option value="$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/public/build/layout.css" />
         <option value="$PROJECT_DIR$/assets/css/layout_style.css" />
-        <option value="$PROJECT_DIR$/src/Controller/PagesController.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/css/inscription_style.css" />
         <option value="$PROJECT_DIR$/templates/content/concepteur.html.twig" />
+        <option value="$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/PagesController.php" />
         <option value="$PROJECT_DIR$/assets/css/chercher_style.css" />
-        <option value="$PROJECT_DIR$/src/Form/ChercherType.php" />
         <option value="$PROJECT_DIR$/src/Form/ChercherPrecisType.php" />
-        <option value="$PROJECT_DIR$/templates/content/chercher.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/ChercherType.php" />
         <option value="$PROJECT_DIR$/public/build/chercher.css" />
+        <option value="$PROJECT_DIR$/templates/content/chercher.html.twig" />
       </list>
     </option>
   </component>
@@ -295,10 +319,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-101" />
-    <option name="y" value="66" />
+    <option name="x" value="1432" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -324,6 +348,17 @@
             <path>
               <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
@@ -456,28 +491,30 @@
       <workItem from="1527015003025" duration="1076000" />
       <workItem from="1527075710733" duration="7976000" />
       <workItem from="1527175692919" duration="6829000" />
-      <workItem from="1527274384380" duration="8262000" />
+      <workItem from="1527274384380" duration="8504000" />
+      <workItem from="1527328061309" duration="6641000" />
+      <workItem from="1527533989457" duration="2022000" />
+      <workItem from="1527611626989" duration="4389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322699000" />
+    <option name="totallyTimeSpent" value="335993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="true" />
+    <frame x="1432" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13538682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14901665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57281554" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34795764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19126074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5706667" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5695793" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -719,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -762,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1908">
-          <caret line="126" column="7" lean-forward="false" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -802,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,66 +840,76 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/chercher_style.css">
+    <entry file="file://$PROJECT_DIR$/public/build/contact.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/concepteur.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2967">
-          <caret line="713" column="0" lean-forward="false" selection-start-line="713" selection-start-column="0" selection-end-line="713" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="148">
+          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/content/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/contact.css">
+    <entry file="file://$PROJECT_DIR$/templates/content/displayResultsChercher.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ChercherType.php">
+    <entry file="file://$PROJECT_DIR$/templates/content/concepteur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="51" column="17" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="51" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="134" column="21" lean-forward="false" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="125" column="17" lean-forward="false" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/chercher_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="207" column="24" lean-forward="true" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ChercherPrecisType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/chercher.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="61" />
+        <state relative-caret-position="360">
+          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/chercher.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="168" column="1" lean-forward="true" selection-start-line="168" selection-start-column="1" selection-end-line="168" selection-end-column="1" />
+        <state relative-caret-position="54">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ChercherType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/content/chercher.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
