@@ -62,6 +62,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'App\\Controller\\PagesController::conditions',  '_route' => 'conditions',);
             }
 
+            // security_login
+            if ('/connexion' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\SecurityController::login',  '_route' => 'security_login',);
+            }
+
         }
 
         // chercher
@@ -92,12 +97,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // displayResultsChercher
-        if ('/displayResultsChercher' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\PagesController::displayResultsChercher',  '_route' => 'displayResultsChercher',);
-        }
-
-        if (0 === strpos($pathinfo, '/profil')) {
+        elseif (0 === strpos($pathinfo, '/profil')) {
             // profil
             if ('/profil' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::profil',  '_route' => 'profil',);
@@ -118,11 +118,6 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // savePath
         if ('/savePath' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\SavePathController::index',  '_route' => 'savePath',);
-        }
-
-        // security_login
-        if ('/login' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\SecurityController::login',  '_route' => 'security_login',);
         }
 
         // security_logout

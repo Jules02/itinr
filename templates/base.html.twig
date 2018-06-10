@@ -5,6 +5,7 @@
     <title>{% block title %} | Movee{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
+    <link rel="stylesheet" href="{{ asset('build/flash_messages.css') }}">
 </head>
 <body>
 
@@ -31,15 +32,15 @@
 
         {% if app.user %}
             <div class="header-account">
-                <a href="{{ path('profil') }}" class="header-account-signup btn-account profil-container">
-                    {{ app.user.fullName }}
+                <a href="{{ path('profil') }}" class="header-account-signed btn-account btn-account-gauche profil-container">
+                    {{ app.user.surname }}
                     <div class="user-image-container"><img src="{{ app.user.image }}" class="header-account-user-image"/></div>
                 </a>
-                <a href="{{ path('security_logout') }}" class="header-account-signin btn-account">Déconnexion</a>
+                <a href="{{ path('security_logout') }}" class="header-account-signout btn-account">Déconnexion</a>
             </div>
             {% else %}
                 <div class="header-account">
-                    <a class="header-account-signup btn-account" href="{{ path("inscription") }}">Inscription</a>
+                    <a class="header-account-signup btn-account btn-account-gauche" href="{{ path("inscription") }}">Inscription</a>
                     <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
                 </div>
         {% endif %}

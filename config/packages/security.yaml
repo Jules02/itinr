@@ -37,6 +37,11 @@ security:
                 # La route sur laquelle doit etre rediriger l'utilisateur apres une deconnexion
                 target: concepteur
 
+            remember_me:
+                            secret:   '%kernel.secret%'
+                            lifetime: 2592000 # 30 jours en secondes
+                            path:     /
+
     access_control:
         # Les regles de securité
         # Là dans ce cas seul les utilisateurs ayant le rôle ROLE_ADMIN

@@ -112,38 +112,54 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function chercher (Environment $twig, Request $request) {
+    public function chercher (Environment $twig, Request $request, RegistryInterface $doctrine) {
         $form = $this->createForm(ChercherType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('success', 'Réussite');
-            return new Response($twig->render('content/displayResultsChercher.html.twig'));
+            $valeurs = $form->getData();
+
+            $recherchePreciseArray = $valeurs["recherchePrecise"];
+
+            $criteresArray = [
+                'placeId' => $valeurs["placeId"],
+                'typeSport' => $valeurs['typeSport'],
+                'auteur' => $recherchePreciseArray['parAuteur'],
+                'titre' => $recherchePreciseArray['parTitre']
+            ];
+
+            if(empty($valeurs["placeId"]) && empty($valeurs["typeSport"]) && empty($recherchePreciseArray['parAuteur']) && empty($recherchePreciseArray['parTitre'])){
+                $this->addFlash('error', "Vous n'avez rien rentré");
+                return new Response($twig->render('content/chercher.html.twig', [
+                    'form' => $form->createView()
+                ]));
+            }
+
+            $criteresArray = array_filter($criteresArray);
+
+            $pathRepository = $doctrine->getRepository(Path::class);
+            $resultatPath = $pathRepository->findBy(
+                $criteresArray, // Critere
+                array(),        // Tri
+                9,                              // Limite
+                0                               // Offset
+            );
+
+            if(empty($resultatPath)){
+                $this->addFlash('error', 'Aucun itinéraire ne correspond à vos critères');
+                return new Response($twig->render('content/chercher.html.twig', [
+                    'form' => $form->createView()
+                ]));
+            }else{
+                $this->addFlash('success', 'Réussite');
+                return new Response($twig->render('content/resultatsChercher.html.twig', [
+                    'resultatPath' => $resultatPath
+                ]));
+            }
         }
 
         return new Response($twig->render('content/chercher.html.twig', [
-            'form' => $form->createView()
-        ]));
-    }
-
-    /**
-     * @Route("/displayResultsChercher", name="displayResultsChercher")
-     * @param Environment $twig
-     * @return Response
-     */
-    public function displayResultsChercher (Environment $twig, Request $request) {
-        $form = $this->createForm(ChercherType::class);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('success', 'Réussite');
-        }else{
-            $this->addFlash('fail', 'Echec');
-        }
-
-        return new Response($twig->render('content/displayResultsChercher.html.twig', [
             'form' => $form->createView()
         ]));
     }

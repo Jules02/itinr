@@ -14,9 +14,9 @@
 
     <div class="form-container">
         {{ form_start(form) }}
-        <div class="placeId-input-container">
-            {{ form_row(form.placeId) }}
-            <button id="placeId_gps_btn" name="chercher[gps]" type="button" onclick="fillInAdressGeolocation()"><img src="{{ asset('images/chercher_gps.png') }}" alt="Icône gps" class="placeId-gps-btn-img"/></button>
+        <div class="lieu-input-container">
+            {{ form_row(form.lieu) }}
+            <button id="lieu_gps_btn" name="chercher[gps]" type="button" onclick="fillInAdressGeolocation()"><img src="{{ asset('images/chercher_gps.png') }}" alt="Icône gps" class="lieu-gps-btn-img"/></button>
         </div>
         <div class="form-part1-container">
             <h2 class="titre-form-part">Affinez votre recherche</h2>
@@ -72,7 +72,7 @@
         function initAutocomplete() {
             geocoder = new google.maps.Geocoder();
             autocomplete = new google.maps.places.Autocomplete(
-                (document.getElementById('chercher_placeId')),
+                (document.getElementById('chercher_lieu')),
                 {types: ['(cities)']});
 
             autocomplete.addListener('place_changed', fillInAddress);
@@ -90,7 +90,8 @@
 
         function fillInAddress() {
             var place = autocomplete.getPlace();
-            alert(place.place_id);
+            var placeIdInput = document.getElementById('chercher_placeId');
+            placeIdInput.value = place.place_id;
         }
 
         function fillInAdressGeolocation(){
@@ -112,7 +113,9 @@
                                         return;
                                     }
                                     var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
-                                    document.getElementById('chercher_placeId').value = geoLocationResult;
+                                    document.getElementById('chercher_lieu').value = geoLocationResult;
+                                    var placeIdInput = document.getElementById('chercher_placeId');
+                                    placeIdInput.value = place.place_id;
                                 });
                             } else {
                                 alert('Aucun résultat trouvé');

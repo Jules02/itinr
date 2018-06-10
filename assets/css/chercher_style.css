@@ -34,26 +34,22 @@
     margin-top: 10px;
 }
 
-.placeId-input-container, .form-part1-container, .form-part2-container{
+.lieu-input-container, .form-part1-container, .form-part2-container{
     margin-left: 30px;
 }
 
-.placeId-input-none{
-    /*display: none;*/
-}
-
-.placeId-input-container{
+.lieu-input-container{
     display: flex;
 
     margin-top: 15px;
 }
 
-.placeId-input-container div{
+.lieu-input-container div{
     width: 92%;
     margin-right: 17px;
 }
 
-#chercher_placeId{
+#chercher_lieu{
     height: 50px;
     width: 100%;
     border: solid 1px #999;
@@ -63,7 +59,7 @@
     font-size: 15px;
 }
 
-#chercher_placeId::placeholder{
+#chercher_lieu::placeholder{
     color: #333;
     font-family: 'Source Sans Pro';
 }
@@ -72,7 +68,7 @@
     display: none;
 }
 
-#placeId_gps_btn{
+#lieu_gps_btn{
     background-color: #fff;
     border: solid 2px #3ba14c;
     border-radius: 3px;
@@ -83,7 +79,7 @@
     align-items: center;
 }
 
-.placeId-gps-btn-img{
+.lieu-gps-btn-img{
     height: 24px;
     width: 24px;
 }
@@ -108,7 +104,7 @@
 }
 
 #chercher_typeSport{
-
+    display: none;
 }
 
 .typeSport-container{
@@ -139,7 +135,7 @@
     margin: 10px 20px 15px 20px;
     width: 20%;
 }
-/*
+
 input[type="radio"]{
     display:none;
 }
@@ -155,10 +151,35 @@ input[type="radio"] + label span{
 
 input[type="radio"]:checked + label span{
     background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
-}*/
+}
+
+
+.form-part2-container h2{
+    margin-top: 10px;
+}
 
 #chercher_recherchePrecise_parAuteur, #chercher_recherchePrecise_parTitre{
+    flex: 1;
+    height: 35px;
+    border: solid 1px #999;
+    border-radius: 3px;
 
+    padding-left: 10px;
+    margin-left: 5px;
+
+    font-size: 15px;
+    font-family: 'Source Sans Pro';
+}
+
+.recherchePrecise-container div{
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.recherchePrecise-container label{
+    font-weight: 600;
 }
 
 .recherchePrecise-input-container{
@@ -167,6 +188,7 @@ input[type="radio"]:checked + label span{
 
     margin: 10px 0;
 }
+
 
 .recherchePrecise_label{
     font-weight: 600;

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche d'itinéraires{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/resultatsChercher.css') }}{% endblock %}
+
+{% block body %}
+    {% include 'flash_messages.html.twig' %}
+
+    <h1 class="titre margin-left">Résultats de votre recherche d'itinéraires</h1>
+
+    <div class="titre-separation margin-left"></div>
+
+    <div class="resultats-bigcontainer">
+        <div class="resultats-container">
+            {% for path in resultatPath %}
+                <div class="resultat-container">
+                    <p class="resultat-titre">{{ path.titre }}</p>
+                    <div class="resultat-titre-sepa"></div>
+                    <p>{{ path.typeSport }}</p>
+                    <p>{{ path.auteur }}</p>
+                    <p id="resultat-placeId">
+                        {{ path.placeId }}
+                    </p>
+                    <p>{{ path.note }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=init" async defer></script>
+    <script>
+
+        var placeIdP = document.getElementById('resultat-placeId');
+
+        function init(){
+            var geocoder = new google.maps.Geocoder();
+
+            var placeIdValue = placeIdP.textContent;
+
+            geocoder.geocode({'placeId': placeIdValue}, function(results, status) {
+                if (status !== 'OK') {
+                    alert('Le Geocoder a echoué. Raison: ' + status);
+                    return;
+                }
+                var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                var i = '2';
+                document.getElementById('resultat-placeId' + i).textContent = geoLocationResult;
+            });
+
+        }
+    </script>
+{% endblock %}

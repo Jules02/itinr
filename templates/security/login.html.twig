@@ -2,38 +2,41 @@
 
 {% block title %}Connexion{{ parent() }}{% endblock %}
 
-{% block stylesheets %}{{ asset('build/css/apropos.css') }}{% endblock %}
+{% block stylesheets %}{{ asset('build/connexion.css') }}{% endblock %}
 
 {% block body %}
 
+    <h1 class="titre margin-left">Connexion</h1>
+    <div class="titre-separation margin-left"></div>
+
     {% if error %}
-        <div class="alert alert-danger">
+        <div class="form-error">
             {{ error.messageKey }}
         </div>
     {% endif %}
 
-    <div class="row">
-    <div class="col-sm-5">
-        <div class="well">
-            <form action="{{ path('security_login') }}" method="post">
-                <fieldset>
-                    <legend><i class="fa fa-lock" aria-hidden="true"></i> Connexion</legend>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="_password" class="form-control" />
-                    </div>
-                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i> Connexion
-                    </button>
-                </fieldset>
-            </form>
-        </div>
+    <div class="form-container">
+        <form action="{{ path('security_login') }}" method="post">
+            <div class="OAuth-connect facebook-connect"><img src="{{ asset('images/facebook_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Facebook</div>
+
+            <div class="OAuth-connect google-connect"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Google</div>
+
+            <div class="form-group">
+                <input placeholder="Nom d'utilisateur" type="text" id="username" name="_username" value="{{ last_username }}" class="form-username form-input"/>
+            </div>
+
+            <div class="form-group">
+                <input placeholder="Mot de passe" type="password" id="password" name="_password" class="form-mdp form-input" />
+            </div>
+
+            <div class="form-rememberme-container">
+                <input type="checkbox" class="form-rememberme" id="remember_me" name="_remember_me" checked />
+                <label for="remember_me"><span></span>Se souvenir de moi</label>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+
+            <button type="submit" class="form-submit">Connexion</button>
+        </form>
     </div>
-
-
 {% endblock %}

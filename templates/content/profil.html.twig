@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <p>Bienvenue {{ app.user.fullName }}</p>
+    <p>Bienvenue {{ app.user.surname }}</p>
     <a href="{{ path('modifier_profil') }}">Modifier mes informations</a>
 {% endblock %}

@@ -7,6 +7,8 @@
   "build/chercher.js": "/build/chercher.js",
   "build/concepteur.css": "/build/concepteur.css",
   "build/concepteur.js": "/build/concepteur.js",
+  "build/connexion.css": "/build/connexion.css",
+  "build/connexion.js": "/build/connexion.js",
   "build/contact.css": "/build/contact.css",
   "build/contact.js": "/build/contact.js",
   "build/flash_messages.css": "/build/flash_messages.css",
@@ -17,5 +19,7 @@
   "build/inscription.js": "/build/inscription.js",
   "build/layout.css": "/build/layout.css",
   "build/layout.js": "/build/layout.js",
-  "build/mousetrap.js": "/build/mousetrap.js"
+  "build/mousetrap.js": "/build/mousetrap.js",
+  "build/resultatsChercher.css": "/build/resultatsChercher.css",
+  "build/resultatsChercher.js": "/build/resultatsChercher.js"
 }

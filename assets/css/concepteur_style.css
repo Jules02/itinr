@@ -156,6 +156,56 @@
     height: 100%;
 }
 
+#path_typeSport{
+    display: none;
+}
+
+.typeSport-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 10px;
+}
+
+.typeSport-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+.typeSport-input img{
+    width: 32px;
+    height: 32px;
+
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.typeSport-input-container{
+    margin: 10px 20px 15px 20px;
+    width: 20%;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+input[type="radio"] + label span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(http://www.image-heberg.fr/files/15253652702034805357.png) -20px top no-repeat;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label span{
+    background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
+}
+
 
 
 

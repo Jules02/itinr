@@ -10,13 +10,13 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-    * @Route("/login", name="security_login")
+    * @Route("/connexion", name="security_login")
     */
     public function login(AuthenticationUtils $helper): Response
     {
         $this->redirectToRoute("concepteur");
 
-        $this->addFlash('logged', 'Ravi de vous revoir !');
+        //$this->addFlash('logged', 'Ravi de vous revoir !');
 
         return $this->render('security/login.html.twig', [
         // dernier username saisi (si il y en a un)

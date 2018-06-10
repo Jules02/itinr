@@ -10,6 +10,11 @@
     <div class="titre-separation margin-left"></div>
 
     <div class="form-container">
+        <div class="OAuth-connect facebook-connect"><img src="{{ asset('images/facebook_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>S'inscire avec Facebook</div>
+
+        <div class="OAuth-connect google-connect"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>S'inscire avec Google</div>
+
+
         {{ form_start(form) }}
         {{ form_row(form.surname) }}
         {{ form_row(form.username) }}

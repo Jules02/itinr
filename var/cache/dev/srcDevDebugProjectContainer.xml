@@ -416,7 +416,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.QQHVCPL"/>
+      <argument type="service" id="service_locator.oyg9e.Y"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -3126,6 +3126,7 @@
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
       <argument type="iterator">
         <argument type="service" id="security.authentication.provider.dao.main"/>
+        <argument type="service" id="security.authentication.provider.rememberme.main"/>
         <argument type="service" id="security.authentication.provider.anonymous.main"/>
       </argument>
       <argument>true</argument>
@@ -3590,6 +3591,7 @@
       <argument type="collection">
         <argument>logout</argument>
         <argument>form_login</argument>
+        <argument>remember_me</argument>
         <argument>anonymous</argument>
       </argument>
       <argument>null</argument>
@@ -3618,6 +3620,9 @@
       </argument>
       <call method="addHandler">
         <argument type="service" id="security.logout.handler.session"/>
+      </call>
+      <call method="addHandler">
+        <argument type="service" id="security.authentication.rememberme.services.simplehash.main"/>
       </call>
     </service>
     <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
@@ -3683,12 +3688,47 @@
       <argument type="service" id="logger" on-invalid="null"/>
       <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
       <argument type="service" id="security.csrf.token_manager"/>
+      <call method="setRememberMeServices">
+        <argument type="service" id="security.authentication.rememberme.services.simplehash.main"/>
+      </call>
     </service>
     <service id="security.authentication.form_entry_point.main" class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
       <argument type="service" id="http_kernel"/>
       <argument type="service" id="security.http_utils"/>
       <argument>security_login</argument>
       <argument>false</argument>
+    </service>
+    <service id="security.authentication.provider.rememberme.main" class="Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider" public="false">
+      <argument type="service" id="security.user_checker"/>
+      <argument>%env(APP_SECRET)%</argument>
+      <argument>main</argument>
+    </service>
+    <service id="security.authentication.rememberme.services.simplehash.main" class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+      <argument type="collection">
+        <argument type="service" id="security.user.provider.concrete.database_users"/>
+      </argument>
+      <argument>%env(APP_SECRET)%</argument>
+      <argument>main</argument>
+      <argument type="collection">
+        <argument key="lifetime">2592000</argument>
+        <argument key="path">/</argument>
+        <argument key="name">REMEMBERME</argument>
+        <argument key="domain">null</argument>
+        <argument key="secure">false</argument>
+        <argument key="httponly">true</argument>
+        <argument key="always_remember_me">false</argument>
+        <argument key="remember_me_parameter">_remember_me</argument>
+      </argument>
+      <argument type="service" id="logger" on-invalid="null"/>
+    </service>
+    <service id="security.authentication.listener.rememberme.main" class="Symfony\Component\Security\Http\Firewall\RememberMeListener" public="false">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.authentication.rememberme.services.simplehash.main"/>
+      <argument type="service" id="security.authentication.manager"/>
+      <argument type="service" id="logger" on-invalid="null"/>
+      <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+      <argument>true</argument>
+      <argument type="service" id="security.authentication.session_strategy"/>
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3716,6 +3756,7 @@
         <argument type="service" id="security.context_listener.0"/>
         <argument type="service" id="security.logout_listener.main"/>
         <argument type="service" id="security.authentication.listener.form.main"/>
+        <argument type="service" id="security.authentication.listener.rememberme.main"/>
         <argument type="service" id="security.authentication.listener.anonymous.main"/>
         <argument type="service" id="security.access_listener"/>
       </argument>
@@ -4039,12 +4080,6 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.vLMWBoX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
-      </argument>
-    </service>
     <service id="service_locator.VOn0Nci" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4072,18 +4107,17 @@
         <argument key="helper" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.QQHVCPL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.oyg9e.Y" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\PagesController:admin" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController:aide" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:apropos" type="service" id="service_locator.THq2EBF"/>
-        <argument key="App\Controller\PagesController:chercher" type="service" id="service_locator.vLMWBoX"/>
+        <argument key="App\Controller\PagesController:chercher" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController:concepteur" type="service" id="service_locator.THq2EBF"/>
         <argument key="App\Controller\PagesController:conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:contact" type="service" id="service_locator.VOn0Nci"/>
-        <argument key="App\Controller\PagesController:displayResultsChercher" type="service" id="service_locator.vLMWBoX"/>
         <argument key="App\Controller\PagesController:index" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:modifier" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:profil" type="service" id="service_locator.Xbt2C5t"/>
@@ -4094,11 +4128,10 @@
         <argument key="App\Controller\PagesController::afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController::aide" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::apropos" type="service" id="service_locator.THq2EBF"/>
-        <argument key="App\Controller\PagesController::chercher" type="service" id="service_locator.vLMWBoX"/>
+        <argument key="App\Controller\PagesController::chercher" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController::concepteur" type="service" id="service_locator.THq2EBF"/>
         <argument key="App\Controller\PagesController::conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::contact" type="service" id="service_locator.VOn0Nci"/>
-        <argument key="App\Controller\PagesController::displayResultsChercher" type="service" id="service_locator.vLMWBoX"/>
         <argument key="App\Controller\PagesController::index" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::modifier" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::profil" type="service" id="service_locator.Xbt2C5t"/>

@@ -79,8 +79,10 @@ button{
     border: 1px solid white;
     border-radius: 2px;
 
-    padding: 10px 45px;
     margin: 30px;
+
+    display: flex;
+    align-items: center;
 }
 
 .btn-account:hover{
@@ -98,8 +100,20 @@ button{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edfff0',GradientType=1 );
 }
 
-.header-account-signup{
+.user-image-container{
+    margin-left: 10px;
+}
+
+.btn-account-gauche{
     margin-right: 0px;
+}
+
+.header-account-signup, .header-account-signin{
+    padding: 10px 45px;
+}
+
+.header-account-signed, .header-account-signout{
+    padding: 7px 45px;
 }
 
 
