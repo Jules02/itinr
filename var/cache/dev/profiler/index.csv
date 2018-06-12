@@ -2277,3 +2277,5 @@ c387bb,127.0.0.1,POST,http://localhost:8000/chercher,1528643473,,200
 f313c8,127.0.0.1,POST,http://localhost:8000/chercher,1528643485,,200
 4dcb59,127.0.0.1,POST,http://localhost:8000/chercher,1528643494,,200
 d3fa40,127.0.0.1,GET,http://localhost:8000/chercher,1528643497,,200
+64fea0,127.0.0.1,GET,http://localhost:8000/concepteur,1528743847,,200
+3258f4,127.0.0.1,GET,http://localhost:8000/connexion,1528743935,,200
