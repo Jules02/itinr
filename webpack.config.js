@@ -26,6 +26,7 @@ Encore
     .addEntry('apropos', './assets/css/apropos_style.css')
     .addEntry('inscription', './assets/css/inscription_style.css')
     .addEntry('connexion', './assets/css/connexion_style.css')
+    .addEntry('profil', './assets/css/profil_style.css')
     .addEntry('flash_messages', './assets/css/flash_messages_style.css')
     .addEntry('mousetrap', './assets/js/mousetrap.js')
     .addEntry('header', './assets/js/header.js')

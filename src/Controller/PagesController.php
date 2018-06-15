@@ -220,8 +220,56 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function profil (Environment $twig) {
-        return new Response($twig->render('content/profil.html.twig'));
+    public function profil (Environment $twig, RegistryInterface $doctrine) {
+        $user = $this->getUser();
+
+        $username = $user->getUsername();
+
+        $pathRepository = $doctrine->getRepository(Path::class);
+        $resultatPath = $pathRepository->findByAuteur(
+            $username,
+            array(),
+            9,
+            0
+        );
+
+        $nbPaths = count($resultatPath);
+
+        if(empty($resultatPath)){
+            return new Response($twig->render('content/profil.html.twig'));
+        }else{
+            return new Response($twig->render('content/profil.html.twig', [
+                'resultatPath' => $resultatPath,
+                'nbPaths' => $nbPaths
+            ]));
+        }
+    }
+
+    /**
+     * @Route("/newAvatar", name="newAvatar")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function newAvatar (Environment $twig) {
+        $user = $this->getUser();
+
+        $genre = $user->getGenre();
+        if($genre === "homme"){
+            $avatarNb = rand(1, 27);
+        }elseif($genre === "femme"){
+            $avatarNb = rand(1, 19);
+        }else{
+            $avatarNb = rand(1, 4);
+        }
+        $user->setImage("images/avatar/" . $genre . "/avatar (" . $avatarNb . ").png");
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+
+        $this->addFlash('success', 'Vous avez un nouvel avatar ;)');
+
+        return $this->redirectToRoute('profil');
     }
 
     /**

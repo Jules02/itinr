@@ -1,6 +1,47 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Mon profil{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/profil.css') }}{% endblock %}
+
 {% block body %}
-    <p>Bienvenue {{ app.user.surname }}</p>
-    <a href="{{ path('modifier_profil') }}">Modifier mes informations</a>
+    {% include 'flash_messages.html.twig' %}
+
+    <h1 class="titre margin-left">Mon profil</h1>
+    <div class="titre-separation margin-left"></div>
+
+    <div class="bonjour-container margin-left"><div class="avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ app.user.image }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
+    <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations</a>
+
+    <div class="informations-container margin-left">
+        <h2 class="informations-titre">Mes informations</h2>
+        <p class="informations-username informations-content">Nom d'utilisateur<span>{{ app.user.username }}</span></p>
+        <p class="informations-email informations-content">Adresse email<span>{{ app.user.email }}</span></p>
+        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy">Que faisons-nous de vos données ?</a>
+    </div>
+
+    <div class="itineraires-container margin-left">
+        <h2 class="itineraires-titre">Mes itinéraires<span>{{ nbPaths }}</span></h2>
+        <div class="resultats-bigcontainer">
+            <div class="resultats-container">
+                {% for path in resultatPath %}
+                    <div class="resultat-container">
+                        <p class="resultat-titre">{{ path.titre }}</p>
+                        <div class="resultat-titre-sepa"></div>
+                        <p>{{ path.typeSport }}</p>
+                        <p>{{ path.auteur }}</p>
+                        <p id="resultat-placeId">
+                            {{ path.placeId }}
+                        </p>
+                        <p>{{ path.note }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+    </script>
 {% endblock %}

@@ -110,6 +110,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // newAvatar
+        if ('/newAvatar' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\PagesController::newAvatar',  '_route' => 'newAvatar',);
+        }
+
         // inscription
         if ('/inscription' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\RegistrationController::registerAction',  '_route' => 'inscription',);

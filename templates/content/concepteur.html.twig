@@ -134,9 +134,15 @@
                 <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
             </button>
             <div class="saveContainer" id="saveContainer">
+                <div class="save-messageContainer">
+                    <div id="save-message">
+                        <p>Commencez par tracer votre parcours</p>
+                    </div>
+                </div>
+                <div id="formFilter"></div>
                 <div class="formContainer">
                     <div class="formPopUp" id="formPopUp">
-                        {{ form_start(form, {'method': 'POST'}) }}
+                        {{ form_start(form) }}
                         {{ form_row(form.titre) }}
                         {#{{ form_row(form.typeSport) }}#}
                         <div class="typeSport-container">
@@ -179,9 +185,6 @@
                 </div>
                 <div id="mapFilterForm" class="mapFilter"></div>
             </div>
-
-        <button id="avg" onclick="getCoordinatesAverage()">ggg</button>
-
 {% endblock %}
 
 
@@ -242,8 +245,8 @@
             var saveContainer = document.getElementById('saveContainer');
             saveContainer.style.height = tailleVoulu;
 
-            var formPopUp = document.getElementById('formPopUp');
-            formPopUp.style.height = (tailleNb - 100) + 'px';
+            /*var formPopUp = document.getElementById('formPopUp');
+            formPopUp.style.height = (tailleNb - 100) + 'px';*/
 
 
 
@@ -450,6 +453,12 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "none";
+
+                var formPopUp = document.getElementById("formPopUp");
+                formPopUp.style.display = "block";
+
+                var saveMessage = document.getElementById("save-message");
+                saveMessage.style.display = "none";
             }
 
             updateTempsGlobal(distanceKmFloat);
@@ -563,6 +572,12 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "none";
+
+                var formPopUp = document.getElementById("formPopUp");
+                formPopUp.style.display = "block";
+
+                var saveMessage = document.getElementById("save-message");
+                saveMessage.style.display = "none";
             }
 
             updateTempsGlobal(distanceKmFloat);
@@ -712,6 +727,15 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "block";
+
+                var formPopUp = document.getElementById("formPopUp");
+                formPopUp.style.display = "block";
+
+                var formFilter = document.getElementById("formFilter");
+                formFilter.style.display = "block";
+
+                var saveMessage = document.getElementById("save-message");
+                saveMessage.style.display = "block";
             }
 
             updateRouteLength();
@@ -757,6 +781,15 @@
 
             var menuGaucheMessage = document.getElementById("menuGauche-message");
             menuGaucheMessage.style.display = "block";
+
+            var formPopUp = document.getElementById("formPopUp");
+            formPopUp.style.display = "block";
+
+            var formFilter = document.getElementById("formFilter");
+            formFilter.style.display = "block";
+
+            var saveMessage = document.getElementById("save-message");
+            saveMessage.style.display = "block";
         });
 
         $('#closeLoopButton').click(function() {

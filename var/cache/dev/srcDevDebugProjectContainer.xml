@@ -416,7 +416,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.oyg9e.Y"/>
+      <argument type="service" id="service_locator.v0jr.x5"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -4088,6 +4088,13 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id="service_locator.6U4AvGX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="doctrine" type="service" id="doctrine" on-invalid="ignore"/>
+        <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
+      </argument>
+    </service>
     <service id="service_locator.keBwKQZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4107,7 +4114,7 @@
         <argument key="helper" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.oyg9e.Y" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.v0jr.x5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\PagesController:admin" type="service" id="service_locator.Xbt2C5t"/>
@@ -4120,7 +4127,8 @@
         <argument key="App\Controller\PagesController:contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController:index" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:modifier" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController:profil" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController:newAvatar" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController:profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController:registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController:index" type="service" id="service_locator.SyY2KNI"/>
         <argument key="App\Controller\SecurityController:login" type="service" id="service_locator.Syn2D.o"/>
@@ -4134,7 +4142,8 @@
         <argument key="App\Controller\PagesController::contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController::index" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::modifier" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController::profil" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController::newAvatar" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController::profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController::registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController::index" type="service" id="service_locator.SyY2KNI"/>
         <argument key="App\Controller\SecurityController::login" type="service" id="service_locator.Syn2D.o"/>
