@@ -96,11 +96,11 @@ input[type="checkbox"] + label span{
     display: inline-block;
     width: 18px;
     height: 18px;
-    /*background: url("../images/checkbox_login.png") -17px top no-repeat;*/
+    background: url("../images/checkbox_login.png") -17px top no-repeat;
     cursor: pointer;
 }
 input[type="checkbox"]:checked + label span{
-    /*background: url("../images/checkbox_login.png") 0px top no-repeat;*/
+    background: url("../images/checkbox_login.png") 0px top no-repeat;
 }
 
 

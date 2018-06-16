@@ -10,14 +10,16 @@
     <h1 class="titre margin-left">Mon profil</h1>
     <div class="titre-separation margin-left"></div>
 
-    <div class="bonjour-container margin-left"><div class="avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ app.user.image }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
-    <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations</a>
+    <div class="section1-container">
+        <div class="bonjour-container margin-left"><div class="avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ app.user.image }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
+        <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/edit(1).png') }}"/></a>
+    </div>
 
     <div class="informations-container margin-left">
         <h2 class="informations-titre">Mes informations</h2>
         <p class="informations-username informations-content">Nom d'utilisateur<span>{{ app.user.username }}</span></p>
         <p class="informations-email informations-content">Adresse email<span>{{ app.user.email }}</span></p>
-        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy">Que faisons-nous de vos données ?</a>
+        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy"><img src="{{ asset('images/icons8-privacy-16.png') }}"/>Que faisons-nous de vos données ?</a>
     </div>
 
     <div class="itineraires-container margin-left">

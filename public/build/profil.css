@@ -20,6 +20,13 @@
     background-color: #3ba14c;
 }
 
+
+.section1-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .bonjour-container{
     display: flex;
     align-items: center;
@@ -67,10 +74,27 @@
     font-weight: 600;
 }
 
+.modifier{
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    color: #222;
+}
+
+.modifier img{
+    padding-left: 15px;
+}
+
 
 
 h2{
     font-weight: 400;
+}
+
+.informations-titre{
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .informations-content{
@@ -81,8 +105,20 @@ h2{
     padding-left: 10px;
 }
 
+.informations-privacy{
+    display: flex;
+    align-items: center;
+}
+
+.informations-privacy img{
+    padding-right: 5px;
+}
 
 
+.itineraires-titre{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
 
 .itineraires-titre span{
     padding-left: 15px;
