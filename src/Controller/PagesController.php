@@ -247,18 +247,18 @@ class PagesController extends Controller
 
     /**
      * @Route("/newAvatar", name="newAvatar")
-     * @param Environment $twig
      * @return Response
      */
-    public function newAvatar (Environment $twig) {
+    public function newAvatar ()
+    {
         $user = $this->getUser();
 
         $genre = $user->getGenre();
-        if($genre === "homme"){
+        if ($genre === "homme") {
             $avatarNb = rand(1, 27);
-        }elseif($genre === "femme"){
+        } elseif ($genre === "femme") {
             $avatarNb = rand(1, 19);
-        }else{
+        } else {
             $avatarNb = rand(1, 4);
         }
         $user->setImage("images/avatar/" . $genre . "/avatar (" . $avatarNb . ").png");
@@ -270,15 +270,6 @@ class PagesController extends Controller
         $this->addFlash('success', 'Vous avez un nouvel avatar ;)');
 
         return $this->redirectToRoute('profil');
-    }
-
-    /**
-     * @Route("/profil/modifier", name="modifier_profil")
-     * @param Environment $twig
-     * @return Response
-     */
-    public function modifier (Environment $twig) {
-        return new Response($twig->render('content/modifier_profil.html.twig'));
     }
 
     /**

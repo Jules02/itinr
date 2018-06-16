@@ -12,17 +12,18 @@
 
     <div class="section1-container">
         <div class="bonjour-container margin-left"><div class="avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ app.user.image }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
-        <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/edit(1).png') }}"/></a>
+        <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/modifier_profil.png') }}"/></a>
     </div>
 
     <div class="informations-container margin-left">
         <h2 class="informations-titre">Mes informations</h2>
         <p class="informations-username informations-content">Nom d'utilisateur<span>{{ app.user.username }}</span></p>
         <p class="informations-email informations-content">Adresse email<span>{{ app.user.email }}</span></p>
-        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy"><img src="{{ asset('images/icons8-privacy-16.png') }}"/>Que faisons-nous de vos données ?</a>
+        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy"><img src="{{ asset('images/profil_privacy.png') }}"/>Que faisons-nous de vos données ?</a>
     </div>
 
     <div class="itineraires-container margin-left">
+        {% if nbPaths is defined %}
         <h2 class="itineraires-titre">Mes itinéraires<span>{{ nbPaths }}</span></h2>
         <div class="resultats-bigcontainer">
             <div class="resultats-container">
@@ -40,6 +41,11 @@
                 {% endfor %}
             </div>
         </div>
+        {% else %}
+            <h2 class="itineraires-titre">Mes itinéraires<span>0</span></h2>
+            <p class="itineraires-null">Vous n'avez toujours pas posté d'itinéraires 🙁</p>
+            <a class="itineraires-null-a" href="{{ path('aide') }}">Découvrez comment</a>
+        {% endif %}
     </div>
 {% endblock %}
 

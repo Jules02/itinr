@@ -355,6 +355,9 @@
   </parameters>
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
+    <service id="App\Controller\EditProfilController" class="App\Controller\EditProfilController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="App\Controller\PagesController" class="App\Controller\PagesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -416,7 +419,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.v0jr.x5"/>
+      <argument type="service" id="service_locator.AhM5Zgu"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -3922,6 +3925,8 @@
     <service id="swiftmailer.mailer.default.plugin.messagelogger" class="Swift_Plugins_MessageLogger" public="true">
       <tag name="swiftmailer.default.plugin"/>
     </service>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\EditProfilController" class="App\Controller\EditProfilController" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Controller\EditProfilController" class="App\Controller\EditProfilController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\PagesController" class="App\Controller\PagesController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\PagesController" class="App\Controller\PagesController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="false" autowire="true" abstract="true"/>
@@ -4059,6 +4064,12 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id="service_locator.sDAoPSH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic" on-invalid="ignore"/>
+      </argument>
+    </service>
     <service id="service_locator.Xbt2C5t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4114,9 +4125,10 @@
         <argument key="helper" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.v0jr.x5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.AhM5Zgu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\EditProfilController:modifier" type="service" id="service_locator.sDAoPSH"/>
         <argument key="App\Controller\PagesController:admin" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController:aide" type="service" id="service_locator.Xbt2C5t"/>
@@ -4126,12 +4138,11 @@
         <argument key="App\Controller\PagesController:conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController:index" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController:modifier" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController:newAvatar" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController:registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController:index" type="service" id="service_locator.SyY2KNI"/>
         <argument key="App\Controller\SecurityController:login" type="service" id="service_locator.Syn2D.o"/>
+        <argument key="App\Controller\EditProfilController::modifier" type="service" id="service_locator.sDAoPSH"/>
         <argument key="App\Controller\PagesController::admin" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController::aide" type="service" id="service_locator.Xbt2C5t"/>
@@ -4141,8 +4152,6 @@
         <argument key="App\Controller\PagesController::conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController::index" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController::modifier" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController::newAvatar" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController::registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController::index" type="service" id="service_locator.SyY2KNI"/>

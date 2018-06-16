@@ -155,4 +155,16 @@ h2{
 
     margin-left: 20px;
 }
+
+
+.itineraires-null{
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+.itineraires-null-a{
+    font-weight: 300;
+}
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hc3NldHMvY3NzL3Byb2ZpbF9zdHlsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7SUFDbEIsbUJBQW1CO0NBQ3RCOztBQUVEO0lBQ0ksaUJBQWlCO0lBQ2pCLGdCQUFnQjs7SUFFaEIsa0JBQWtCOztJQUVsQixpQkFBaUI7SUFDakIsb0JBQW9CO0NBQ3ZCOztBQUVEO0lBQ0ksYUFBYTtJQUNiLFlBQVk7O0lBRVosMEJBQTBCIiwiZmlsZSI6InByb2ZpbC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFyZ2luLWxlZnR7XHJcbiAgICBtYXJnaW4tbGVmdDogMzBweDtcclxuICAgIG1hcmdpbi1yaWdodDogMzBweDtcclxufVxyXG5cclxuLnRpdHJle1xyXG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcclxuICAgIGZvbnQtc2l6ZTogMzZweDtcclxuXHJcbiAgICBsaW5lLWhlaWdodDogNDBweDtcclxuXHJcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxufVxyXG5cclxuLnRpdHJlLXNlcGFyYXRpb257XHJcbiAgICB3aWR0aDogMTUwcH

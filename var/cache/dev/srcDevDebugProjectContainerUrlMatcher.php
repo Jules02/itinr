@@ -30,6 +30,19 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
+        if (0 === strpos($pathinfo, '/profil')) {
+            // modifier_profil
+            if ('/profil/modifier' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\EditProfilController::modifier',  '_route' => 'modifier_profil',);
+            }
+
+            // profil
+            if ('/profil' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\PagesController::profil',  '_route' => 'profil',);
+            }
+
+        }
+
         // app_pages_index
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'App\\Controller\\PagesController::index',  '_route' => 'app_pages_index',);
@@ -93,19 +106,6 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // admin
             if ('/admin' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::admin',  '_route' => 'admin',);
-            }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/profil')) {
-            // profil
-            if ('/profil' === $pathinfo) {
-                return array (  '_controller' => 'App\\Controller\\PagesController::profil',  '_route' => 'profil',);
-            }
-
-            // modifier_profil
-            if ('/profil/modifier' === $pathinfo) {
-                return array (  '_controller' => 'App\\Controller\\PagesController::modifier',  '_route' => 'modifier_profil',);
             }
 
         }

@@ -52,6 +52,7 @@ class UserType extends AbstractType
                     'Femme' => "femme",
                     'Autre' => "autre"
                 ),
+                'data' => '',
                 'expanded' => true,
                 'multiple' => false
                 )

@@ -10,7 +10,7 @@
     line-height: 40px;
 
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .titre-separation{
@@ -18,4 +18,140 @@
     height: 5px;
 
     background-color: #3ba14c;
+}
+
+
+.section1-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bonjour-container{
+    display: flex;
+    align-items: center;
+
+    font-weight: 300;
+    font-size: 20px;
+
+    margin-top: 5px;
+}
+
+.bonjour-container a{
+    width: 24px;
+    height: 24px;
+}
+
+.avatar-container{
+    border: solid 1px #3ba14c;
+    border-radius: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 10px;
+}
+
+.avatar-container:hover{
+    -webkit- transition: -webkit- all 0.3s ease-in-out;
+    -moz- transition: -moz- all 0.3s ease-in-out;
+    -o- transition: -o- all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.avatar{
+    width: 24px;
+    height: 24px;
+}
+
+.bonjour-nom{
+    font-weight: 600;
+}
+
+.modifier{
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    color: #222;
+}
+
+.modifier img{
+    padding-left: 15px;
+}
+
+
+
+h2{
+    font-weight: 400;
+}
+
+.informations-titre{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.informations-content{
+    font-weight: 300;
+}
+.informations-content span{
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.informations-privacy{
+    display: flex;
+    align-items: center;
+}
+
+.informations-privacy img{
+    padding-right: 5px;
+}
+
+
+.itineraires-titre{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.itineraires-titre span{
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.resultats-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+
+    width: 100%;
+}
+
+.resultat-container{
+    border: solid 2px #3ba14c;
+    border-radius: 3px;
+
+    height: 150px;
+}
+
+.resultat-titre{
+    margin: 10px 10px 3px 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.resultat-titre-sepa{
+    width: 25px;
+    height: 3px;
+
+    background-color: #3ba14c;
+
+    margin-left: 20px;
 }
