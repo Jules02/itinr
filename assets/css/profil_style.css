@@ -155,3 +155,15 @@ h2{
 
     margin-left: 20px;
 }
+
+
+.itineraires-null{
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+.itineraires-null-a{
+    font-weight: 300;
+}

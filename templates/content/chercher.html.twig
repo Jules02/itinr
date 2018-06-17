@@ -69,6 +69,7 @@
     <script>
         var placeSearch, autocomplete, geocoder;
 
+        //Autocompletion de l'adresse
         function initAutocomplete() {
             geocoder = new google.maps.Geocoder();
             autocomplete = new google.maps.places.Autocomplete(
@@ -91,9 +92,10 @@
         function fillInAddress() {
             var place = autocomplete.getPlace();
             var placeIdInput = document.getElementById('chercher_placeId');
-            placeIdInput.value = place.place_id;
+            placeIdInput.value = place.place_id;   //On met le placeId du lieu qui vient d'être rentré dans l'hidden input placeId
         }
 
+        //Rempli la searchbox de notre localisation lorsqu'on appuye sur le bouton géolocalisation
         function fillInAdressGeolocation(){
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
@@ -112,7 +114,7 @@
                                         alert('Le Geocoder a echoué. Raison: ' + status);
                                         return;
                                     }
-                                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);   //Un peu à l'arrache, mais on passe de 02880, Bucy-le-Long, France à Bucy-le-Long, France
                                     document.getElementById('chercher_lieu').value = geoLocationResult;
                                     var placeIdInput = document.getElementById('chercher_placeId');
                                     placeIdInput.value = place.place_id;

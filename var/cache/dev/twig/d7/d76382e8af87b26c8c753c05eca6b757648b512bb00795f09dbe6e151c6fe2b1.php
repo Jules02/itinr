@@ -24,69 +24,69 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_98a4315599e0f9692eb849da775201664cbb2d0b7d4e4544881e7948df6d6074 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_98a4315599e0f9692eb849da775201664cbb2d0b7d4e4544881e7948df6d6074->enter($__internal_98a4315599e0f9692eb849da775201664cbb2d0b7d4e4544881e7948df6d6074_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_d9194afa382d15ecd8e3f13a5156c09a89d9122a42dab7f53dea178db1713dc5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d9194afa382d15ecd8e3f13a5156c09a89d9122a42dab7f53dea178db1713dc5->enter($__internal_d9194afa382d15ecd8e3f13a5156c09a89d9122a42dab7f53dea178db1713dc5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
-        $__internal_7a5ac4a60dc37f4fcfeeafc0cd406fe796b6b07d048eee9065f8b3530b2772a0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7a5ac4a60dc37f4fcfeeafc0cd406fe796b6b07d048eee9065f8b3530b2772a0->enter($__internal_7a5ac4a60dc37f4fcfeeafc0cd406fe796b6b07d048eee9065f8b3530b2772a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_08352c1c486a93bca490681f2cf421ebb6dce9eb449c7128b70d454222d5865e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_08352c1c486a93bca490681f2cf421ebb6dce9eb449c7128b70d454222d5865e->enter($__internal_08352c1c486a93bca490681f2cf421ebb6dce9eb449c7128b70d454222d5865e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 3, $this->getSourceContext()); })()), array(0 => "bootstrap_4_layout.html.twig"), true);
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_98a4315599e0f9692eb849da775201664cbb2d0b7d4e4544881e7948df6d6074->leave($__internal_98a4315599e0f9692eb849da775201664cbb2d0b7d4e4544881e7948df6d6074_prof);
+        $__internal_d9194afa382d15ecd8e3f13a5156c09a89d9122a42dab7f53dea178db1713dc5->leave($__internal_d9194afa382d15ecd8e3f13a5156c09a89d9122a42dab7f53dea178db1713dc5_prof);
 
         
-        $__internal_7a5ac4a60dc37f4fcfeeafc0cd406fe796b6b07d048eee9065f8b3530b2772a0->leave($__internal_7a5ac4a60dc37f4fcfeeafc0cd406fe796b6b07d048eee9065f8b3530b2772a0_prof);
+        $__internal_08352c1c486a93bca490681f2cf421ebb6dce9eb449c7128b70d454222d5865e->leave($__internal_08352c1c486a93bca490681f2cf421ebb6dce9eb449c7128b70d454222d5865e_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_d0a805e613593037eb67987f21a680817715e9d587847063483d76c65b0e091d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d0a805e613593037eb67987f21a680817715e9d587847063483d76c65b0e091d->enter($__internal_d0a805e613593037eb67987f21a680817715e9d587847063483d76c65b0e091d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_734171ac9162ce36c07424614c897c3320c3b981acff0dc43870aaa3489e99a6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_734171ac9162ce36c07424614c897c3320c3b981acff0dc43870aaa3489e99a6->enter($__internal_734171ac9162ce36c07424614c897c3320c3b981acff0dc43870aaa3489e99a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_8b19454db83b78474a51766fd951eb822932d96fd99531c6dfad5751e9911205 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8b19454db83b78474a51766fd951eb822932d96fd99531c6dfad5751e9911205->enter($__internal_8b19454db83b78474a51766fd951eb822932d96fd99531c6dfad5751e9911205_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_5680ac68ddb352db18ff0f2df2122e94414b39223a8040fc247a652b3c3d893a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5680ac68ddb352db18ff0f2df2122e94414b39223a8040fc247a652b3c3d893a->enter($__internal_5680ac68ddb352db18ff0f2df2122e94414b39223a8040fc247a652b3c3d893a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Concepteur";
         $this->displayParentBlock("title", $context, $blocks);
         
-        $__internal_8b19454db83b78474a51766fd951eb822932d96fd99531c6dfad5751e9911205->leave($__internal_8b19454db83b78474a51766fd951eb822932d96fd99531c6dfad5751e9911205_prof);
+        $__internal_5680ac68ddb352db18ff0f2df2122e94414b39223a8040fc247a652b3c3d893a->leave($__internal_5680ac68ddb352db18ff0f2df2122e94414b39223a8040fc247a652b3c3d893a_prof);
 
         
-        $__internal_d0a805e613593037eb67987f21a680817715e9d587847063483d76c65b0e091d->leave($__internal_d0a805e613593037eb67987f21a680817715e9d587847063483d76c65b0e091d_prof);
+        $__internal_734171ac9162ce36c07424614c897c3320c3b981acff0dc43870aaa3489e99a6->leave($__internal_734171ac9162ce36c07424614c897c3320c3b981acff0dc43870aaa3489e99a6_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_bc12ff24b5b3ad19d948b372cd52cdb91f9e70a86ad2ced9b07961442b84ae49 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bc12ff24b5b3ad19d948b372cd52cdb91f9e70a86ad2ced9b07961442b84ae49->enter($__internal_bc12ff24b5b3ad19d948b372cd52cdb91f9e70a86ad2ced9b07961442b84ae49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_2f7335bedf5a594c8b872d891d07fe82b367d94d748baca61a2ed6d39541e760 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2f7335bedf5a594c8b872d891d07fe82b367d94d748baca61a2ed6d39541e760->enter($__internal_2f7335bedf5a594c8b872d891d07fe82b367d94d748baca61a2ed6d39541e760_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_12d4469228bb4f141fb1e4a4add8c170e6e6910b753ed355c1b5b20042dc810d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_12d4469228bb4f141fb1e4a4add8c170e6e6910b753ed355c1b5b20042dc810d->enter($__internal_12d4469228bb4f141fb1e4a4add8c170e6e6910b753ed355c1b5b20042dc810d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_67b3d76e5475613e4006c21f8565785bc4b11633ecf0f5c72cd4890bcffe4d9d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_67b3d76e5475613e4006c21f8565785bc4b11633ecf0f5c72cd4890bcffe4d9d->enter($__internal_67b3d76e5475613e4006c21f8565785bc4b11633ecf0f5c72cd4890bcffe4d9d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/concepteur.css"), "html", null, true);
         
-        $__internal_12d4469228bb4f141fb1e4a4add8c170e6e6910b753ed355c1b5b20042dc810d->leave($__internal_12d4469228bb4f141fb1e4a4add8c170e6e6910b753ed355c1b5b20042dc810d_prof);
+        $__internal_67b3d76e5475613e4006c21f8565785bc4b11633ecf0f5c72cd4890bcffe4d9d->leave($__internal_67b3d76e5475613e4006c21f8565785bc4b11633ecf0f5c72cd4890bcffe4d9d_prof);
 
         
-        $__internal_bc12ff24b5b3ad19d948b372cd52cdb91f9e70a86ad2ced9b07961442b84ae49->leave($__internal_bc12ff24b5b3ad19d948b372cd52cdb91f9e70a86ad2ced9b07961442b84ae49_prof);
+        $__internal_2f7335bedf5a594c8b872d891d07fe82b367d94d748baca61a2ed6d39541e760->leave($__internal_2f7335bedf5a594c8b872d891d07fe82b367d94d748baca61a2ed6d39541e760_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_bbbe11adda761f8cd8c7d656b6b3456993f0d531e101c5d763e4b5af481155d4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bbbe11adda761f8cd8c7d656b6b3456993f0d531e101c5d763e4b5af481155d4->enter($__internal_bbbe11adda761f8cd8c7d656b6b3456993f0d531e101c5d763e4b5af481155d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_24bd97613cb55d87ca1aa08a553e3f5bd87da9ec5e854b7d39c6c08934b5e06f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_24bd97613cb55d87ca1aa08a553e3f5bd87da9ec5e854b7d39c6c08934b5e06f->enter($__internal_24bd97613cb55d87ca1aa08a553e3f5bd87da9ec5e854b7d39c6c08934b5e06f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_67ce97241fdabe3b4a74326b5d35c2012bc8c46eba2f6e0b1fb449b5c42c20b3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_67ce97241fdabe3b4a74326b5d35c2012bc8c46eba2f6e0b1fb449b5c42c20b3->enter($__internal_67ce97241fdabe3b4a74326b5d35c2012bc8c46eba2f6e0b1fb449b5c42c20b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_727cb1419e705586768adcefca60ac26b2c3feacb534436d065adf6c454e6d0d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_727cb1419e705586768adcefca60ac26b2c3feacb534436d065adf6c454e6d0d->enter($__internal_727cb1419e705586768adcefca60ac26b2c3feacb534436d065adf6c454e6d0d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "        ";
@@ -323,27 +323,29 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 </div>
                 <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
             </div>
+
+            <button onclick=\"test();\">Test</button>
 ";
         
-        $__internal_67ce97241fdabe3b4a74326b5d35c2012bc8c46eba2f6e0b1fb449b5c42c20b3->leave($__internal_67ce97241fdabe3b4a74326b5d35c2012bc8c46eba2f6e0b1fb449b5c42c20b3_prof);
+        $__internal_727cb1419e705586768adcefca60ac26b2c3feacb534436d065adf6c454e6d0d->leave($__internal_727cb1419e705586768adcefca60ac26b2c3feacb534436d065adf6c454e6d0d_prof);
 
         
-        $__internal_bbbe11adda761f8cd8c7d656b6b3456993f0d531e101c5d763e4b5af481155d4->leave($__internal_bbbe11adda761f8cd8c7d656b6b3456993f0d531e101c5d763e4b5af481155d4_prof);
+        $__internal_24bd97613cb55d87ca1aa08a553e3f5bd87da9ec5e854b7d39c6c08934b5e06f->leave($__internal_24bd97613cb55d87ca1aa08a553e3f5bd87da9ec5e854b7d39c6c08934b5e06f_prof);
 
     }
 
-    // line 192
+    // line 194
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_e09274fdb25bf2cf3909c5ad33a5dc63bd37254070256bbd59fd42c964ab75ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e09274fdb25bf2cf3909c5ad33a5dc63bd37254070256bbd59fd42c964ab75ea->enter($__internal_e09274fdb25bf2cf3909c5ad33a5dc63bd37254070256bbd59fd42c964ab75ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_25b62623b9b2b458394dc216e791764d0fc12b99ff41632ff81ff60adbdc9e39 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_25b62623b9b2b458394dc216e791764d0fc12b99ff41632ff81ff60adbdc9e39->enter($__internal_25b62623b9b2b458394dc216e791764d0fc12b99ff41632ff81ff60adbdc9e39_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_773f5981f7301989e410164424bfad8106289e25a0b610e7ab0e665d95678c50 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_773f5981f7301989e410164424bfad8106289e25a0b610e7ab0e665d95678c50->enter($__internal_773f5981f7301989e410164424bfad8106289e25a0b610e7ab0e665d95678c50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ea95a87cbffaa0ebd07c6010937f30b92289364b1a14ac05759e301cf9aa5024 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ea95a87cbffaa0ebd07c6010937f30b92289364b1a14ac05759e301cf9aa5024->enter($__internal_ea95a87cbffaa0ebd07c6010937f30b92289364b1a14ac05759e301cf9aa5024_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 193
+        // line 195
         echo "    ";
-        // line 194
+        // line 196
         echo "    <script src=\" ";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/mousetrap.js"), "html", null, true);
         echo " \"></script>
@@ -354,19 +356,16 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         });
     </script>
     <script>
+        var globalPoly;   //objet Polyline
+        var poly;   //objet Polyline
 
-    </script>
-    <script>
-        var globalPoly;
-        var poly;
+        var pathArray = [];     //tableau contenant les coordonnées de chaque point
 
-        var pathArray = [];
-
-        var map;
-        var geoPos;
+        var map;     //la carte (objet)
+        var geoPos;     //objet
 
         var markerVide = \"";
-        // line 213
+        // line 212
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/empty.png"), "html", null, true);
         echo "\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -375,12 +374,16 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var marker;
         var markers = [];    //array contenant l'ensemble des marqueurs
         var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
-        var distanceKmFloat;     //distance en km
-        var distanceArrondie;
+        var distanceKmFloat;     //distance en km et au millième près (ex. 3.564 pour 3km et 564 mètres)
+        var distanceArrondie;    //distance en mètres
 
-        var vitesseVelo = 20;
+        var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
         var vitesseFooting = 12;
         var vitesseMarche = 6;
+
+        function test(){
+            alert(distanceArrondie);
+        }
 
 
 
@@ -428,9 +431,12 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 zoom: 14,   //Définie le zoom par défaut
                 draggableCursor: \"crosshair\",   //on a une croix comme curseur
                 mapTypeId: 'hybrid',
-                center: {lat: 49.3904707, lng: 3.3929198}
+                center: {lat: 49.3904707, lng: 3.3929198}  //si la geolocalisation n'est pas activée, on centre à Bucy
             });
 
+
+
+            //Dans un soucis d'ergonomie, les markers et la couleurs des polylines changent en fonction du type de carte
             var mapType = map.getMapTypeId();
             var polyColor;
             var textDiv = document.getElementById('textDiv');
@@ -442,6 +448,28 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 polyColor = \"#3BA14C\";
                 textDiv.style.color = \"#000\";
             }
+
+            google.maps.event.addListener( map, 'maptypeid_changed', function(){
+                var mapType = map.getMapTypeId();
+
+                if (mapType == 'hybrid'){
+                    globalPoly.setOptions({strokeColor: '#35f700'});
+                    firstMarker.setOptions({icon: \"";
+        // line 299
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
+        echo "\"});
+                    textDiv.style.color = \"#fff\";
+                } else {
+                    globalPoly.setOptions({strokeColor: '#3BA14C'});
+                    firstMarker.setOptions({icon: \"";
+        // line 303
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
+        echo "\"});
+                    textDiv.style.color = \"#000\";
+                }
+            });
+
+
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
                 strokeColor:  polyColor,
@@ -459,6 +487,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             //listeners qui vont écouter les événements click et rightcick pour y lancer des fonctions
             map.addListener('click', addLatLng);     //quand on clique sur un endroit de la carte on lance la fonction addLatLng
             map.addListener('rightclick', addLatLngRoute);    //quand on clique droit sur un endroit on lance la fonction addLatLngRoute
+
 
 
 
@@ -495,7 +524,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-            //toute cette dernière section se rapporte à la searchbox (localisation)
+            //Toute cette dernière section se rapporte à la searchbox (localisation)
 
             map.addListener('bounds_changed', function() {
                 searchBox.setBounds(map.getBounds());
@@ -525,26 +554,6 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
                 map.fitBounds(bounds);
             });
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#35f700'});
-                    firstMarker.setOptions({icon: \"";
-        // line 376
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
-        echo "\"});
-                    textDiv.style.color = \"#fff\";
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: \"";
-        // line 380
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
-        echo "\"});
-                    textDiv.style.color = \"#000\";
-                }
-            });
         }
         /************* FIN INITMAP *************/
 
@@ -555,7 +564,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-// Fonction qui sera executée lors du clique d'un endroit de la carte
+        // Fonction qui sera executée lors du clique d'un endroit de la carte
         function addLatLng(event) {
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
@@ -567,12 +576,12 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             if (mapType == 'hybrid'){
                 markerStart = \"";
-        // line 405
+        // line 414
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
         echo "\";
             } else {
                 markerStart = \"";
-        // line 407
+        // line 416
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\";
             }
@@ -646,11 +655,11 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
+        //Fonction pour le clique droit qui permet de calculer la route entre deux points, passés en paramètres
 
         var directionsService;
 
         function calculateRoute(directionsService, lastPoint, newPoint) {
-
             var monPath = globalPoly.getPath();
 
             var directionsService = new google.maps.DirectionsService();
@@ -685,7 +694,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
+        //lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
         function addLatLngRoute(event){
 
             newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
@@ -717,7 +726,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//met à jour la zone de texte en bas de la carte qui donne la distance du parcours
+        //Fonction qui met à jour la zone de texte en bas de la carte qui donne la distance du parcours
         function updateRouteLength(){
 
             var monPath = globalPoly.getPath();
@@ -761,15 +770,18 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//return 23 si on lui passe x.23
+        //return 23 si on lui passe x.23
         function getDecimal(n) {
             return (n - Math.floor(n));
         }
 
+
+        //return 15 si on lui passe x.25 (passe en base 60)
         function getPartieDecimale(n){
             return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
         }
 
+        //met à jour tout les temps nécessaires dans le menu gauche
         function updateTempsGlobal(distanceKmFloat){
             //velo
             updateTempsNecessaire(distanceKmFloat, vitesseVelo, \"tempsVelo\");
@@ -781,6 +793,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             updateTempsNecessaire(distanceKmFloat, vitesseMarche, \"tempsMarche\");
         }
 
+        //met à jour le temps nécessaure (menu gauche) du sport qu'on lui passe
         function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
             var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
 
@@ -790,6 +803,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
 
+            //Pour l'orthographe :)
             if(tempsEnMinutes === 1){
                 var minuteOrthographe = \" minute\";
             }else{
@@ -847,8 +861,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-        var recup;
 
+        //return le dernier élément d'un tableau
         function dernierElem(tbl){
             var tbl = tbl;
             var tblLength = tbl.length;
@@ -856,13 +870,15 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             return tbl[pos];
         }
 
-        //erreur avec erreur de geolocalisation
+
+        //Erreur de geolocalisation
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
             infoWindow.setContent(browserHasGeolocation ?
                 'Erreur: Le service de Géolocalisation a echoué.' :
                 'Erreur: Votre naviguateur ne support pas la Géolocalisation.');
         }
+
 
 
 
@@ -877,7 +893,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
         //Fonctions des contrôles
 
-        \$('#deleteLastButton').click(function() {
+        function deleteLastPoint(){
             var monPath = globalPoly.getPath();
 
             monPath.pop();   //on supprime le dernier élément du tableau path
@@ -911,7 +927,9 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             updateRouteLength();
 
             updateTempsGlobal(distanceKmFloat);
-        });
+        }
+
+        \$('#deleteLastButton').click(deleteLastPoint);
 
         \$('#deleteAllButton').click(function() {
             firstMarker.setMap(null);
@@ -962,6 +980,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             saveMessage.style.display = \"block\";
         });
 
+
+        //Calcule et affiche la route entre le dernier point et le point de départ pour fermer la boucle
         \$('#closeLoopButton').click(function() {
             calculateRoute(directionsService, lastPoint, firstPoint);
         });
@@ -973,6 +993,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
+
+        /****** MENU GAUCHE ******/
         var menuGaucheBouton = document.getElementById('boutonMenuLateral');
         var menuGauche = document.getElementById('menuGauche');
         var mapFilter = document.getElementById('mapFilter');
@@ -1220,7 +1242,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-        /***** RACCOURCIS CLAVIER ********/
+        /****** RACCOURCIS CLAVIER ********/
         Mousetrap.bind(['ctrl+z'], function() {
             deleteLastPoint();
         });
@@ -1254,10 +1276,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
     </script>
 ";
         
-        $__internal_773f5981f7301989e410164424bfad8106289e25a0b610e7ab0e665d95678c50->leave($__internal_773f5981f7301989e410164424bfad8106289e25a0b610e7ab0e665d95678c50_prof);
+        $__internal_ea95a87cbffaa0ebd07c6010937f30b92289364b1a14ac05759e301cf9aa5024->leave($__internal_ea95a87cbffaa0ebd07c6010937f30b92289364b1a14ac05759e301cf9aa5024_prof);
 
         
-        $__internal_e09274fdb25bf2cf3909c5ad33a5dc63bd37254070256bbd59fd42c964ab75ea->leave($__internal_e09274fdb25bf2cf3909c5ad33a5dc63bd37254070256bbd59fd42c964ab75ea_prof);
+        $__internal_25b62623b9b2b458394dc216e791764d0fc12b99ff41632ff81ff60adbdc9e39->leave($__internal_25b62623b9b2b458394dc216e791764d0fc12b99ff41632ff81ff60adbdc9e39_prof);
 
     }
 
@@ -1273,7 +1295,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     public function getDebugInfo()
     {
-        return array (  576 => 407,  571 => 405,  543 => 380,  536 => 376,  370 => 213,  347 => 194,  345 => 193,  336 => 192,  320 => 183,  313 => 179,  309 => 178,  305 => 177,  301 => 176,  297 => 175,  293 => 174,  265 => 148,  261 => 146,  257 => 145,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
+        return array (  585 => 416,  580 => 414,  466 => 303,  459 => 299,  369 => 212,  349 => 196,  347 => 195,  338 => 194,  320 => 183,  313 => 179,  309 => 178,  305 => 177,  301 => 176,  297 => 175,  293 => 174,  265 => 148,  261 => 146,  257 => 145,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -1465,6 +1487,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 </div>
                 <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
             </div>
+
+            <button onclick=\"test();\">Test</button>
 {% endblock %}
 
 
@@ -1479,16 +1503,13 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         });
     </script>
     <script>
+        var globalPoly;   //objet Polyline
+        var poly;   //objet Polyline
 
-    </script>
-    <script>
-        var globalPoly;
-        var poly;
+        var pathArray = [];     //tableau contenant les coordonnées de chaque point
 
-        var pathArray = [];
-
-        var map;
-        var geoPos;
+        var map;     //la carte (objet)
+        var geoPos;     //objet
 
         var markerVide = \"{{ asset('images/empty.png') }}\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -1497,12 +1518,16 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var marker;
         var markers = [];    //array contenant l'ensemble des marqueurs
         var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
-        var distanceKmFloat;     //distance en km
-        var distanceArrondie;
+        var distanceKmFloat;     //distance en km et au millième près (ex. 3.564 pour 3km et 564 mètres)
+        var distanceArrondie;    //distance en mètres
 
-        var vitesseVelo = 20;
+        var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
         var vitesseFooting = 12;
         var vitesseMarche = 6;
+
+        function test(){
+            alert(distanceArrondie);
+        }
 
 
 
@@ -1550,9 +1575,12 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 zoom: 14,   //Définie le zoom par défaut
                 draggableCursor: \"crosshair\",   //on a une croix comme curseur
                 mapTypeId: 'hybrid',
-                center: {lat: 49.3904707, lng: 3.3929198}
+                center: {lat: 49.3904707, lng: 3.3929198}  //si la geolocalisation n'est pas activée, on centre à Bucy
             });
 
+
+
+            //Dans un soucis d'ergonomie, les markers et la couleurs des polylines changent en fonction du type de carte
             var mapType = map.getMapTypeId();
             var polyColor;
             var textDiv = document.getElementById('textDiv');
@@ -1564,6 +1592,22 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                 polyColor = \"#3BA14C\";
                 textDiv.style.color = \"#000\";
             }
+
+            google.maps.event.addListener( map, 'maptypeid_changed', function(){
+                var mapType = map.getMapTypeId();
+
+                if (mapType == 'hybrid'){
+                    globalPoly.setOptions({strokeColor: '#35f700'});
+                    firstMarker.setOptions({icon: \"{{ asset('images/marker_hybrid.png') }}\"});
+                    textDiv.style.color = \"#fff\";
+                } else {
+                    globalPoly.setOptions({strokeColor: '#3BA14C'});
+                    firstMarker.setOptions({icon: \"{{ asset('images/marker.png') }}\"});
+                    textDiv.style.color = \"#000\";
+                }
+            });
+
+
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
                 strokeColor:  polyColor,
@@ -1581,6 +1625,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             //listeners qui vont écouter les événements click et rightcick pour y lancer des fonctions
             map.addListener('click', addLatLng);     //quand on clique sur un endroit de la carte on lance la fonction addLatLng
             map.addListener('rightclick', addLatLngRoute);    //quand on clique droit sur un endroit on lance la fonction addLatLngRoute
+
 
 
 
@@ -1617,7 +1662,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-            //toute cette dernière section se rapporte à la searchbox (localisation)
+            //Toute cette dernière section se rapporte à la searchbox (localisation)
 
             map.addListener('bounds_changed', function() {
                 searchBox.setBounds(map.getBounds());
@@ -1647,20 +1692,6 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
                 map.fitBounds(bounds);
             });
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#35f700'});
-                    firstMarker.setOptions({icon: \"{{ asset('images/marker_hybrid.png') }}\"});
-                    textDiv.style.color = \"#fff\";
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: \"{{ asset('images/marker.png') }}\"});
-                    textDiv.style.color = \"#000\";
-                }
-            });
         }
         /************* FIN INITMAP *************/
 
@@ -1671,7 +1702,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-// Fonction qui sera executée lors du clique d'un endroit de la carte
+        // Fonction qui sera executée lors du clique d'un endroit de la carte
         function addLatLng(event) {
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
@@ -1756,11 +1787,11 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
+        //Fonction pour le clique droit qui permet de calculer la route entre deux points, passés en paramètres
 
         var directionsService;
 
         function calculateRoute(directionsService, lastPoint, newPoint) {
-
             var monPath = globalPoly.getPath();
 
             var directionsService = new google.maps.DirectionsService();
@@ -1795,7 +1826,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
+        //lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
         function addLatLngRoute(event){
 
             newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
@@ -1827,7 +1858,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//met à jour la zone de texte en bas de la carte qui donne la distance du parcours
+        //Fonction qui met à jour la zone de texte en bas de la carte qui donne la distance du parcours
         function updateRouteLength(){
 
             var monPath = globalPoly.getPath();
@@ -1871,15 +1902,18 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-//return 23 si on lui passe x.23
+        //return 23 si on lui passe x.23
         function getDecimal(n) {
             return (n - Math.floor(n));
         }
 
+
+        //return 15 si on lui passe x.25 (passe en base 60)
         function getPartieDecimale(n){
             return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
         }
 
+        //met à jour tout les temps nécessaires dans le menu gauche
         function updateTempsGlobal(distanceKmFloat){
             //velo
             updateTempsNecessaire(distanceKmFloat, vitesseVelo, \"tempsVelo\");
@@ -1891,6 +1925,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             updateTempsNecessaire(distanceKmFloat, vitesseMarche, \"tempsMarche\");
         }
 
+        //met à jour le temps nécessaure (menu gauche) du sport qu'on lui passe
         function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
             var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
 
@@ -1900,6 +1935,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
 
+            //Pour l'orthographe :)
             if(tempsEnMinutes === 1){
                 var minuteOrthographe = \" minute\";
             }else{
@@ -1957,8 +1993,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-        var recup;
 
+        //return le dernier élément d'un tableau
         function dernierElem(tbl){
             var tbl = tbl;
             var tblLength = tbl.length;
@@ -1966,13 +2002,15 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             return tbl[pos];
         }
 
-        //erreur avec erreur de geolocalisation
+
+        //Erreur de geolocalisation
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
             infoWindow.setContent(browserHasGeolocation ?
                 'Erreur: Le service de Géolocalisation a echoué.' :
                 'Erreur: Votre naviguateur ne support pas la Géolocalisation.');
         }
+
 
 
 
@@ -1987,7 +2025,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
         //Fonctions des contrôles
 
-        \$('#deleteLastButton').click(function() {
+        function deleteLastPoint(){
             var monPath = globalPoly.getPath();
 
             monPath.pop();   //on supprime le dernier élément du tableau path
@@ -2021,7 +2059,9 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             updateRouteLength();
 
             updateTempsGlobal(distanceKmFloat);
-        });
+        }
+
+        \$('#deleteLastButton').click(deleteLastPoint);
 
         \$('#deleteAllButton').click(function() {
             firstMarker.setMap(null);
@@ -2072,6 +2112,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             saveMessage.style.display = \"block\";
         });
 
+
+        //Calcule et affiche la route entre le dernier point et le point de départ pour fermer la boucle
         \$('#closeLoopButton').click(function() {
             calculateRoute(directionsService, lastPoint, firstPoint);
         });
@@ -2083,6 +2125,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
+
+        /****** MENU GAUCHE ******/
         var menuGaucheBouton = document.getElementById('boutonMenuLateral');
         var menuGauche = document.getElementById('menuGauche');
         var mapFilter = document.getElementById('mapFilter');
@@ -2330,7 +2374,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 
-        /***** RACCOURCIS CLAVIER ********/
+        /****** RACCOURCIS CLAVIER ********/
         Mousetrap.bind(['ctrl+z'], function() {
             deleteLastPoint();
         });

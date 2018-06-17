@@ -19,6 +19,8 @@
   "build/inscription.js": "/build/inscription.js",
   "build/layout.css": "/build/layout.css",
   "build/layout.js": "/build/layout.js",
+  "build/modifier_profil.css": "/build/modifier_profil.css",
+  "build/modifier_profil.js": "/build/modifier_profil.js",
   "build/mousetrap.js": "/build/mousetrap.js",
   "build/profil.css": "/build/profil.css",
   "build/profil.js": "/build/profil.js",

@@ -185,6 +185,8 @@
                 </div>
                 <div id="mapFilterForm" class="mapFilter"></div>
             </div>
+
+            <button onclick="test();">Test</button>
 {% endblock %}
 
 
@@ -199,16 +201,13 @@
         });
     </script>
     <script>
+        var globalPoly;   //objet Polyline
+        var poly;   //objet Polyline
 
-    </script>
-    <script>
-        var globalPoly;
-        var poly;
+        var pathArray = [];     //tableau contenant les coordonnées de chaque point
 
-        var pathArray = [];
-
-        var map;
-        var geoPos;
+        var map;     //la carte (objet)
+        var geoPos;     //objet
 
         var markerVide = "{{ asset('images/empty.png') }}";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -217,12 +216,16 @@
         var marker;
         var markers = [];    //array contenant l'ensemble des marqueurs
         var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
-        var distanceKmFloat;     //distance en km
-        var distanceArrondie;
+        var distanceKmFloat;     //distance en km et au millième près (ex. 3.564 pour 3km et 564 mètres)
+        var distanceArrondie;    //distance en mètres
 
-        var vitesseVelo = 20;
+        var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
         var vitesseFooting = 12;
         var vitesseMarche = 6;
+
+        function test(){
+            alert(distanceArrondie);
+        }
 
 
 
@@ -270,9 +273,12 @@
                 zoom: 14,   //Définie le zoom par défaut
                 draggableCursor: "crosshair",   //on a une croix comme curseur
                 mapTypeId: 'hybrid',
-                center: {lat: 49.3904707, lng: 3.3929198}
+                center: {lat: 49.3904707, lng: 3.3929198}  //si la geolocalisation n'est pas activée, on centre à Bucy
             });
 
+
+
+            //Dans un soucis d'ergonomie, les markers et la couleurs des polylines changent en fonction du type de carte
             var mapType = map.getMapTypeId();
             var polyColor;
             var textDiv = document.getElementById('textDiv');
@@ -284,6 +290,22 @@
                 polyColor = "#3BA14C";
                 textDiv.style.color = "#000";
             }
+
+            google.maps.event.addListener( map, 'maptypeid_changed', function(){
+                var mapType = map.getMapTypeId();
+
+                if (mapType == 'hybrid'){
+                    globalPoly.setOptions({strokeColor: '#35f700'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
+                    textDiv.style.color = "#fff";
+                } else {
+                    globalPoly.setOptions({strokeColor: '#3BA14C'});
+                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+                    textDiv.style.color = "#000";
+                }
+            });
+
+
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
                 strokeColor:  polyColor,
@@ -301,6 +323,7 @@
             //listeners qui vont écouter les événements click et rightcick pour y lancer des fonctions
             map.addListener('click', addLatLng);     //quand on clique sur un endroit de la carte on lance la fonction addLatLng
             map.addListener('rightclick', addLatLngRoute);    //quand on clique droit sur un endroit on lance la fonction addLatLngRoute
+
 
 
 
@@ -337,7 +360,7 @@
 
 
 
-            //toute cette dernière section se rapporte à la searchbox (localisation)
+            //Toute cette dernière section se rapporte à la searchbox (localisation)
 
             map.addListener('bounds_changed', function() {
                 searchBox.setBounds(map.getBounds());
@@ -367,20 +390,6 @@
 
                 map.fitBounds(bounds);
             });
-
-            google.maps.event.addListener( map, 'maptypeid_changed', function(){
-                var mapType = map.getMapTypeId();
-
-                if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#35f700'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
-                    textDiv.style.color = "#fff";
-                } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
-                    textDiv.style.color = "#000";
-                }
-            });
         }
         /************* FIN INITMAP *************/
 
@@ -391,7 +400,7 @@
 
 
 
-// Fonction qui sera executée lors du clique d'un endroit de la carte
+        // Fonction qui sera executée lors du clique d'un endroit de la carte
         function addLatLng(event) {
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
@@ -476,11 +485,11 @@
 
 
 
+        //Fonction pour le clique droit qui permet de calculer la route entre deux points, passés en paramètres
 
         var directionsService;
 
         function calculateRoute(directionsService, lastPoint, newPoint) {
-
             var monPath = globalPoly.getPath();
 
             var directionsService = new google.maps.DirectionsService();
@@ -515,7 +524,7 @@
 
 
 
-//lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
+        //lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
         function addLatLngRoute(event){
 
             newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
@@ -547,7 +556,7 @@
 
 
 
-//met à jour la zone de texte en bas de la carte qui donne la distance du parcours
+        //Fonction qui met à jour la zone de texte en bas de la carte qui donne la distance du parcours
         function updateRouteLength(){
 
             var monPath = globalPoly.getPath();
@@ -591,15 +600,18 @@
 
 
 
-//return 23 si on lui passe x.23
+        //return 23 si on lui passe x.23
         function getDecimal(n) {
             return (n - Math.floor(n));
         }
 
+
+        //return 15 si on lui passe x.25 (passe en base 60)
         function getPartieDecimale(n){
             return (Math.round((Math.round(100 * getDecimal(n))/100) * 100 * 60 / 100));
         }
 
+        //met à jour tout les temps nécessaires dans le menu gauche
         function updateTempsGlobal(distanceKmFloat){
             //velo
             updateTempsNecessaire(distanceKmFloat, vitesseVelo, "tempsVelo");
@@ -611,6 +623,7 @@
             updateTempsNecessaire(distanceKmFloat, vitesseMarche, "tempsMarche");
         }
 
+        //met à jour le temps nécessaure (menu gauche) du sport qu'on lui passe
         function updateTempsNecessaire(distanceKmFloat, vitesseMoyenne, sport){
             var tempsHTML = document.getElementById(sport); //on récup l'élément p tempsVelo
 
@@ -620,6 +633,7 @@
 
             var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
 
+            //Pour l'orthographe :)
             if(tempsEnMinutes === 1){
                 var minuteOrthographe = " minute";
             }else{
@@ -677,8 +691,8 @@
 
 
 
-        var recup;
 
+        //return le dernier élément d'un tableau
         function dernierElem(tbl){
             var tbl = tbl;
             var tblLength = tbl.length;
@@ -686,13 +700,15 @@
             return tbl[pos];
         }
 
-        //erreur avec erreur de geolocalisation
+
+        //Erreur de geolocalisation
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
             infoWindow.setContent(browserHasGeolocation ?
                 'Erreur: Le service de Géolocalisation a echoué.' :
                 'Erreur: Votre naviguateur ne support pas la Géolocalisation.');
         }
+
 
 
 
@@ -707,7 +723,7 @@
 
         //Fonctions des contrôles
 
-        $('#deleteLastButton').click(function() {
+        function deleteLastPoint(){
             var monPath = globalPoly.getPath();
 
             monPath.pop();   //on supprime le dernier élément du tableau path
@@ -741,7 +757,9 @@
             updateRouteLength();
 
             updateTempsGlobal(distanceKmFloat);
-        });
+        }
+
+        $('#deleteLastButton').click(deleteLastPoint);
 
         $('#deleteAllButton').click(function() {
             firstMarker.setMap(null);
@@ -792,6 +810,8 @@
             saveMessage.style.display = "block";
         });
 
+
+        //Calcule et affiche la route entre le dernier point et le point de départ pour fermer la boucle
         $('#closeLoopButton').click(function() {
             calculateRoute(directionsService, lastPoint, firstPoint);
         });
@@ -803,6 +823,8 @@
 
 
 
+
+        /****** MENU GAUCHE ******/
         var menuGaucheBouton = document.getElementById('boutonMenuLateral');
         var menuGauche = document.getElementById('menuGauche');
         var mapFilter = document.getElementById('mapFilter');
@@ -1050,7 +1072,7 @@
 
 
 
-        /***** RACCOURCIS CLAVIER ********/
+        /****** RACCOURCIS CLAVIER ********/
         Mousetrap.bind(['ctrl+z'], function() {
             deleteLastPoint();
         });

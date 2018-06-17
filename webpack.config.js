@@ -16,7 +16,7 @@ Encore
         './assets/css/layout_style.css'
     ])
     .addEntry('concepteur', [
-        './assets/js/main.js',
+        './assets/js/concepteur.js',
         './assets/css/concepteur_style.css'
     ])
     .addEntry('chercher', './assets/css/chercher_style.css')
