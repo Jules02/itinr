@@ -140,11 +140,18 @@
 }
 
 .formPopUp{
-    width: 500px;
     height: 500px;
     background-color: #fff;
 
     z-index: 500;
+
+    overflow-y: scroll;
+}
+
+.formContainer *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .formContainer{
@@ -156,8 +163,49 @@
     height: 100%;
 }
 
+input{
+    font-family: 'Source Sans Pro';
+}
+
+input::placeholder{
+    color: #333;
+}
+
+.margin-left{
+    margin-left: 15px;
+}
+
+.form-facultatif{
+    font-weight: 300;
+    color: #3b3b3b;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.titre-input{
+    width: 750px;
+    height: 45px;
+
+    border: solid 1px #999;
+    border-radius: 2px;
+
+    padding-left: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    font-size: 15px;
+}
+
 #path_typeSport{
     display: none;
+}
+
+.typeSport-title{
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
 }
 
 .typeSport-container{
@@ -165,7 +213,7 @@
     justify-content: center;
     align-items: center;
 
-    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .typeSport-input{
@@ -200,10 +248,128 @@ input[type="radio"] + label span{
     vertical-align: middle;
     background: url(http://www.image-heberg.fr/files/15253652702034805357.png) -20px top no-repeat;
     cursor: pointer;
+
+    margin-right: 10px;
 }
 
 input[type="radio"]:checked + label span{
     background: url(http://www.image-heberg.fr/files/15253652702034805357.png) 0px top no-repeat;
+}
+
+.description-input{
+    width: 750px;
+
+    border: solid 1px #999;
+    border-radius: 2px;
+
+    padding: 10px 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    font-size: 15px;
+    font-family: 'Source Sans Pro';
+
+    resize: none;
+}
+
+fieldset{
+    display: none;
+}
+
+
+.stars-container{
+    width: 750px;
+
+    margin-left: 15px;
+    margin-right: 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+div.stars{
+    width: 270px;
+    display: inline-block;
+}
+
+input.star{
+    display: none;
+}
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+    content:'\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+
+input.star-5:checked ~ label.star:before {
+    text-shadow: 0 0 20px #FE7;
+    transition: all .25s;
+}
+
+input.star-1:checked ~ label.star:before {
+    color: #F62;
+}
+
+label.star:hover{
+    transform: scale(1.2);
+}
+
+label.star:before{
+    content:'\f006';
+    font-family: FontAwesome;
+}
+
+.rev-box{
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: all .25s;
+}
+
+textarea.review{
+    background: #222;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #EEE;
+}
+
+label.review{
+    display: block;
+    transition:opacity .25s;
+}
+
+input.star:checked ~ .rev-box{
+    height: 125px;
+    overflow: visible;
+}
+
+.submit-input{
+    width: 750px;
+    background-color: #3ba14c;
+    border-radius: 2px;
+
+    margin: 15px;
+
+    padding: 12px;
+
+    font-size: 22px;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    color: white;
 }
 
 

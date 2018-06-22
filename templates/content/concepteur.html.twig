@@ -5,6 +5,7 @@
 {% block title %}Concepteur{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
+{% block stylesheets2 %}http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css{% endblock %}
 
 
 {% block body %}
@@ -142,9 +143,11 @@
                 <div id="formFilter"></div>
                 <div class="formContainer">
                     <div class="formPopUp" id="formPopUp">
+                        <p class="form-facultatif margin-left">* À part pour le titre, tous les champs sont facultatifs</p>
                         {{ form_start(form) }}
                         {{ form_row(form.titre) }}
-                        {#{{ form_row(form.typeSport) }}#}
+
+                        <p class="typeSport-title margin-left">Pour quel sport ce parcours est il le plus adapté ?</p>
                         <div class="typeSport-container">
                             <div class="typeSport-input-container">
                                 <input id="path_typeSport_0" name="path[typeSport]" required="required" value="marche" type="radio">
@@ -173,20 +176,36 @@
                         </div>
                         {{ form_row(form.description) }}
                         {{ form_row(form.image) }}
+
+                        <div class="stars-container">
+                            <div class="stars">
+                                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-1"></label>
+                            </div>
+                        </div>
+                        <p>Note générale</p>
                         {{ form_row(form.note) }}
+
+                        <p>Pour être encore plus précis</p>
                         {{ form_row(form.autre_filtre) }}
                         {{ form_row(form.path) }}
                         {{ form_row(form.placeId) }}
                         <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>
                         <input type="hidden" value="Caché" id="hiddenInputPlaceId" name="path[placeId]"/>
-                        <button id="saveFormBtn">Envoyer</button>
+                        <button id="saveFormBtn" class="submit-input">Partager</button>
                         {{ form_end(form) }}
                     </div>
                 </div>
                 <div id="mapFilterForm" class="mapFilter"></div>
             </div>
-
-            <button onclick="test();">Test</button>
 {% endblock %}
 
 
@@ -220,12 +239,8 @@
         var distanceArrondie;    //distance en mètres
 
         var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
-        var vitesseFooting = 12;
+        var vitesseFooting = 11;
         var vitesseMarche = 6;
-
-        function test(){
-            alert(distanceArrondie);
-        }
 
 
 
