@@ -50,10 +50,12 @@ class PathType extends AbstractType
                     'placeholder' => 'Ajoutez une description',
                     'rows' => '5'
                 ),
-                'required' => false
+                'required' => false,
+                'empty_data' => 'g'
             ))
             ->add('image',       TextType::class, array(
-                'required' => false
+                'required' => false,
+                'empty_data' => 'g'
             ))
             ->add('note',        ChoiceType::class, array(
                 'label'  => false,
@@ -66,9 +68,20 @@ class PathType extends AbstractType
                 ),
                 'expanded' => true,
                 'multiple' => false,
-                'required' => false
+                'required' => false,
+                'empty_data' => 'g'
             ))
-            ->add('autre_filtre',TextType::class, array(
+            ->add('autre_filtre',ChoiceType::class, array(
+                'label'  => false,
+                'choices'  => array(
+                    'Détente' => "detente",
+                    'Sportif' => "sportif",
+                    'Dénivelé important' => "denivele",
+                    'Beau paysage' => "paysage",
+                    'Chemins en mauvais état' => "mauvais etat"
+                ),
+                'expanded' => true,
+                'multiple' => false,
                 'required' => false
             ))
         ;

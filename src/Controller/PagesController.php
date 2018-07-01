@@ -67,7 +67,7 @@ class PagesController extends Controller
                 $nbNom = rand(1, 9);
                 $nom = $noms[$nbNom];
 
-                $path->setAuteur($nom);
+                $path->setAuteur($nom + " (anonyme)");
             }else{
                 $path->setAuteur($user->getUsername());
             }
@@ -95,14 +95,14 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/afficherPath/{id}", name="afficherPath")
+     * @Route("/itineraire/{id}", name="itineraire")
      * @param Environment $twig
      * @return Response
      */
-    public function afficherPath (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
+    public function itinieraire (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
         $path = $doctrine->getRepository(Path::class)->find($id);
 
-        return new Response($twig->render('content/afficherPath.html.twig', [
+        return new Response($twig->render('content/itineraire.html.twig', [
             'path' => $path
         ]));
     }
@@ -129,7 +129,7 @@ class PagesController extends Controller
                 'titre' => $recherchePreciseArray['parTitre']
             ];
 
-            if(empty($valeurs["placeId"]) && empty($valeurs["typeSport"]) && empty($recherchePreciseArray['parAuteur']) && empty($recherchePreciseArray['parTitre'])){
+            if(empty($valeurs["lieu"]) && empty($valeurs["placeId"]) && empty($valeurs["typeSport"]) && empty($recherchePreciseArray['parAuteur']) && empty($recherchePreciseArray['parTitre'])){
                 $this->addFlash('error', "Vous n'avez rien rentré");
                 return new Response($twig->render('content/chercher.html.twig', [
                     'form' => $form->createView()

@@ -17,6 +17,8 @@
   "build/header.js": "/build/header.js",
   "build/inscription.css": "/build/inscription.css",
   "build/inscription.js": "/build/inscription.js",
+  "build/itineraire.css": "/build/itineraire.css",
+  "build/itineraire.js": "/build/itineraire.js",
   "build/layout.css": "/build/layout.css",
   "build/layout.js": "/build/layout.js",
   "build/modifier_profil.css": "/build/modifier_profil.css",

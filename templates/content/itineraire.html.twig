@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Afficher{{ parent() }}{% endblock %}
+{% block title %}{{ path.titre }} par {{ path.auteur }}{{ parent() }}{% endblock %}
 
-{% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
+{% block stylesheets %}{{ asset('build/itineraire.css') }}{% endblock %}
 
 {% block body %}
     <div id="loading">
@@ -17,19 +17,60 @@
     <div id="mapFilter" class="mapFilter"></div>
 
     <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
-
     <div id="menuGauche">
         <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
 
         <div id="menuGauche-interieur">
-            <div class="menuGauche-partie">
-                <p class="menuGauche-partie-texte">Vitesse Moyenne</p>
+            <div class="menuGauche-partie" id="temps-necessaire-container">
+                <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                <div class="temps-necessaire-formcontainer">
+                    <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
+                    <button type="submit" id="temps-necessaire-submit" class="menuGauche-btn-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                </div>
+                <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
+            </div>
+            <div class="menuGauche-partie" id="temps-necessaire-resultat-partie">
+                <div class="temps-necessaire-resultat-container">
+                    <p id="temps-necessaire-resultat">
+                        Avec votre allure de
+                        <span id="temps-necessaire-resultat-allure"></span>
+                        km/h, <br/> vous prendrez
+                        <span id="temps-necessaire-resultat-temps"></span>
+                    </p>
+                    <button id="temps-necessaire-resultat-btn">Calculer à nouveau</button>
+                </div>
             </div>
 
-            <div class="menuGauche-partie">
+
+
+
+            <div class="menuGauche-partie" id="vitesse-moyenne-container">
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                <p class="menuGauche-partie-texte">Temps nécessaire</p>
+                <div class="vitesse-moyenne-souscontainer">
+                    <p class="menuGauche-partie-texte vitesse-moyenne-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                    <div class="vitesse-moyenne-formcontainer">
+                        <div class="vitesse-moyenne-inputcontainer">
+                            <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-h" class="vitesse-input" placeholder="h"/>
+                            <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-m" class="vitesse-input" placeholder="m"/>
+                            <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-s" class="vitesse-input" placeholder="s"/>
+                        </div>
+                        <button type="submit" id="vitesse-moyenne-submit" class="menuGauche-btn-submit vitesse-moyenne-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                    </div>
+                </div>
             </div>
+            <div class="menuGauche-partie" id="vitesse-moyenne-resultat-container">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="vitesse-moyenne-resultat-container">
+                    <p id="vitesse-moyenne-resultat">
+                        Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                        <span id="vitesse-moyenne-resultat-vitesse"></span>
+                        km/h
+                    </p>
+                    <button id="vitesse-moyenne-resultat-btn">Calculer à nouveau</button>
+                </div>
+            </div>
+
+
 
             <div class="menuGauche-partie">
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
@@ -326,6 +367,185 @@
             menuGauche.style.display = "none";
             mapFilter.style.display = "none";
         };
+
+
+
+
+        /****** MENU GAUCHE ******/
+        var menuGaucheBouton = document.getElementById('boutonMenuLateral');
+        var menuGauche = document.getElementById('menuGauche');
+        var mapFilter = document.getElementById('mapFilter');
+
+        menuGaucheBouton.onclick = function() {
+            menuGauche.style.display = "block";
+            mapFilter.style.display = "block";
+        };
+
+        $('#temps-necessaire-submit').click(function() {
+            var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
+            var vitesseInput = inputTempsNecessaire.value;
+
+            if(vitesseInput != '' && isNaN(vitesseInput) == false && vitesseInput <= 300){
+                var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+                tempsNecessaireDiv.style.display = "none";
+                var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+                tempsNecessaireResultatDiv.style.display = "block";
+
+                var temps = distanceKmFloat / vitesseInput; // t = d / v      on sort le temps qu'il faut en heures (mais on a 1.5 heures au lieu de 1h30)
+                var tempsEnMinutesAvecSecondes = Math.round(100 * (temps * 60))/100;
+                var secondesTemps = getPartieDecimale(tempsEnMinutesAvecSecondes);
+                var tempsEnMinutes = Math.round(tempsEnMinutesAvecSecondes);   //on sort juste 52
+
+                var tempsNecessaireResultatAllureSpan = document.getElementById('temps-necessaire-resultat-allure');
+                tempsNecessaireResultatAllureSpan.textContent = vitesseInput;
+                var tempsNecessaireResultatSpan = document.getElementById('temps-necessaire-resultat-temps');
+
+                if(tempsEnMinutes === 1){
+                    var minuteOrthographe = " minute";
+                }else{
+                    var minuteOrthographe = " minutes";
+                }
+
+                if(secondesTemps === 1){
+                    var secondeOrthographe = " seconde";
+                }else{
+                    var secondeOrthographe = " secondes";
+                }
+
+
+                if(tempsEnMinutes < 1){
+                    tempsNecessaireResultatSpan.textContent = secondesTemps + secondeOrthographe;
+                    tempsNecessaireResultatSpan.title = "";
+                }else{
+                    //si il y a plus de 60 minutes on affiche en heures et minutes
+                    if(tempsEnMinutes < 60){
+                        tempsNecessaireResultatSpan.textContent = tempsEnMinutes + minuteOrthographe;
+                        tempsNecessaireResultatSpan.title = "Et " + secondesTemps + secondeOrthographe;
+                    }else{
+                        var tempsEnHeuresFloat = tempsEnMinutes / 60;
+                        var minutesDuTempsPourHeures = getPartieDecimale(tempsEnHeuresFloat); //on recup les minutes
+                        var tempsEnHeures = Math.round(tempsEnHeuresFloat);
+
+                        if(minutesDuTempsPourHeures === 1){
+                            var minuteOrthographe = " minute";
+                        }else{
+                            var minuteOrthographe = " minutes";
+                        }
+
+                        if(tempsEnHeures === 1){
+                            var heureOrthographe = " heure";
+                        }else{
+                            var heureOrthographe = " heures";
+                        }
+
+                        tempsNecessaireResultatSpan.textContent = tempsEnHeures + heureOrthographe + " et " + minutesDuTempsPourHeures + minuteOrthographe;  //on affiche
+                    }
+                }
+            }else{
+                alert("Vous n'avez soit rien rentré, soit rentré quelque chose d'autre qu'un nombre, soit un nombre supérieur à 300");
+            }
+        });
+
+        $('#temps-necessaire-resultat-btn').click(function() {
+            displayDefaultInterfaceTempsNecessaire();
+        });
+
+        function displayDefaultInterfaceTempsNecessaire(){
+            var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
+            tempsNecessaireDiv.style.display = "block";
+            var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
+            tempsNecessaireResultatDiv.style.display = "none";
+            var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
+            inputTempsNecessaire.value = "";
+        }
+
+
+
+
+        /****** tpvm = Temps pour vitesse moyenne ******/
+
+        $('#vitesse-moyenne-submit').click(function() {
+            var tpvmHInput = document.getElementById("vitesse-moyenne-input-h");
+            var tpvmMInput = document.getElementById("vitesse-moyenne-input-m");
+            var tpvmSInput = document.getElementById("vitesse-moyenne-input-s");
+
+            var tpvmH = tpvmHInput.value;
+            var tpvmM = tpvmMInput.value;
+            var tpvmS = tpvmSInput.value;
+
+            if(tpvmH + tpvmM + tpvmS != '' && tpvmH + tpvmM + tpvmS != '0' && tpvmH + tpvmM + tpvmS != '00' && tpvmH + tpvmM + tpvmS != '000'){
+                if(tpvmH <= 99){
+                    if(tpvmM <= 59){
+                        if(tpvmS <= 59){
+                            var tpvmHInt;
+                            var tpvmMInt;
+                            var tpvmSInt;
+
+                            if(tpvmH != ''){
+                                tpvmHInt = parseInt(tpvmH, 10);
+                            }else{
+                                tpvmHInt = 0;
+                            }
+                            if(tpvmM != ''){
+                                tpvmMInt = parseInt(tpvmM, 10);
+                            }else{
+                                tpvmMInt = 0;
+                            }
+                            if(tpvmS != ''){
+                                tpvmSInt = parseInt(tpvmS, 10);
+                            }else{
+                                tpvmSInt = 0;
+                            }
+
+                            tpvmMInt = tpvmMInt * 100 / 60;
+                            tpvmSInt = tpvmSInt * 100 / 60; /* On passe en base 100 */
+
+                            tpvmMInt = tpvmMInt * 0.01;
+                            tpvmSInt = tpvmSInt * 0.0001;
+
+                            var tpvm = tpvmHInt + tpvmMInt + tpvmSInt;
+
+                            var vitesseMoyenne = distanceKmFloat / tpvm; //d/t
+                            var vitesseMoyenne = Math.round(100 * vitesseMoyenne) / 100;
+
+                            var vitesseMoyenneResultatSpan = document.getElementById('vitesse-moyenne-resultat-vitesse');
+                            vitesseMoyenneResultatSpan.textContent = vitesseMoyenne;
+                        }else{
+                            alert('Vous avez rentré une valeur supérieure à 59 dans le champ secondes');
+                        }
+                    }else{
+                        alert('Vous avez rentré une valeur supérieure à 59 dans le champ minutes');
+                    }
+                }else{
+                    alert('Vous avez rentré une valeur trop haute dans le champ heures');
+                }
+            }else{
+                alert("Vous n'avez rien rentré");
+            }
+
+            var vitesseMoyenneContainer = document.getElementById("vitesse-moyenne-container");
+            vitesseMoyenneContainer.style.display = "none";
+            var vitesseMoyenneResultatContainer = document.getElementById("vitesse-moyenne-resultat-container");
+            vitesseMoyenneResultatContainer.style.display = "block";
+        });
+
+        $('#vitesse-moyenne-resultat-btn').click(function() {
+            displayDefaultInterfaceVitesseMoyenne();
+        });
+
+        function displayDefaultInterfaceVitesseMoyenne(){
+            var vitesseMoyenneContainer = document.getElementById("vitesse-moyenne-container");
+            vitesseMoyenneContainer.style.display = "block";
+            var vitesseMoyenneResultatContainer = document.getElementById("vitesse-moyenne-resultat-container");
+            vitesseMoyenneResultatContainer.style.display = "none";
+            document.getElementById("vitesse-moyenne-input-h").value = "";
+            document.getElementById("vitesse-moyenne-input-m").value = "";
+            document.getElementById("vitesse-moyenne-input-s").value = "";
+        }
+        /****** FIN MENU GAUCHE ******/
+
+
+
 
 
         /***** RACCOURCIS CLAVIER ********/

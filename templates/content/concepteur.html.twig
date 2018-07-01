@@ -177,6 +177,7 @@
                         {{ form_row(form.description) }}
                         {{ form_row(form.image) }}
 
+                        <p class="note-title margin-left">Note générale</p>
                         <div class="stars-container">
                             <div class="stars">
                                     <input class="star star-5" id="star-5" type="radio" name="star"/>
@@ -191,11 +192,37 @@
                                     <label class="star star-1" for="star-1"></label>
                             </div>
                         </div>
-                        <p>Note générale</p>
-                        {{ form_row(form.note) }}
+                        {#{{ form_row(form.note) }}#}
 
-                        <p>Pour être encore plus précis</p>
+                        <p class="autre_filtre-title margin-left">Pour être encore plus précis</p>
                         {{ form_row(form.autre_filtre) }}
+                        <div class="typeSport-container">
+                            <div class="typeSport-input-container">
+                                <input id="path_autre_filtre_0" name="path[autre_filtre]" value="detente" type="radio">
+                                <label for="path_autre_filtre_0" class="typeSport-input"><span></span>Détente</label>
+                            </div>
+
+                            <div class="typeSport-input-container">
+                                <input id="path_autre_filtre_1" name="path[autre_filtre]" value="sportif" type="radio">
+                                <label for="path_autre_filtre_1" class="typeSport-input"><span></span>Sportif</label>
+                            </div>
+
+                            <div class="typeSport-input-container">
+                                <input id="path_autre_filtre_2" name="path[autre_filtre]" value="denivele" type="radio">
+                                <label for="path_autre_filtre_2" class="typeSport-input"><span></span>Dénivelé important</label>
+                            </div>
+
+                            <div class="typeSport-input-container">
+                                <input id="path_autre_filtre_3" name="path[autre_filtre]" value="paysage" type="radio">
+                                <label for="path_autre_filtre_3" class="typeSport-input"><span></span>Beau paysage</label>
+                            </div>
+
+                            <div class="typeSport-input-container">
+                                <input id="path_autre_filtre_4" name="path[autre_filtre]" value="mauvais etat" type="radio">
+                                <label for="path_autre_filtre_4" class="typeSport-input"><span></span>Mauvais état</label>
+                            </div>
+                        </div>
+
                         {{ form_row(form.path) }}
                         {{ form_row(form.placeId) }}
                         <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>

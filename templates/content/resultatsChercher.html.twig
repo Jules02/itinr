@@ -14,7 +14,7 @@
     <div class="resultats-bigcontainer">
         <div class="resultats-container">
             {% for path in resultatPath %}
-                <div class="resultat-container">
+                <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
                     <p class="resultat-titre">{{ path.titre }}</p>
                     <div class="resultat-titre-sepa"></div>
                     <p>{{ path.typeSport }}</p>
@@ -23,7 +23,7 @@
                         {{ path.placeId }}
                     </p>
                     <p>{{ path.note }}</p>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </div>

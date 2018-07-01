@@ -93,11 +93,6 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'App\\Controller\\PagesController::apropos',  '_route' => 'apropos',);
             }
 
-            // afficherPath
-            if (0 === strpos($pathinfo, '/afficherPath') && preg_match('#^/afficherPath/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'afficherPath')), array (  '_controller' => 'App\\Controller\\PagesController::afficherPath',));
-            }
-
             // aide
             if ('/aide' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::aide',  '_route' => 'aide',);
@@ -110,14 +105,19 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // newAvatar
-        if ('/newAvatar' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\PagesController::newAvatar',  '_route' => 'newAvatar',);
+        // itineraire
+        if (0 === strpos($pathinfo, '/itineraire') && preg_match('#^/itineraire/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'itineraire')), array (  '_controller' => 'App\\Controller\\PagesController::itinieraire',));
         }
 
         // inscription
         if ('/inscription' === $pathinfo) {
             return array (  '_controller' => 'App\\Controller\\RegistrationController::registerAction',  '_route' => 'inscription',);
+        }
+
+        // newAvatar
+        if ('/newAvatar' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\PagesController::newAvatar',  '_route' => 'newAvatar',);
         }
 
         // savePath

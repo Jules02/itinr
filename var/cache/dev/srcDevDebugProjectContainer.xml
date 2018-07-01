@@ -419,7 +419,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.AhM5Zgu"/>
+      <argument type="service" id="service_locator.HvQh0cY"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -4125,12 +4125,11 @@
         <argument key="helper" type="service" id="security.authentication_utils" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="service_locator.AhM5Zgu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.HvQh0cY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\EditProfilController:modifier" type="service" id="service_locator.sDAoPSH"/>
         <argument key="App\Controller\PagesController:admin" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController:afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController:aide" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:apropos" type="service" id="service_locator.THq2EBF"/>
         <argument key="App\Controller\PagesController:chercher" type="service" id="service_locator.seIhI4_"/>
@@ -4138,13 +4137,13 @@
         <argument key="App\Controller\PagesController:conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController:contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController:index" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController:itinieraire" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController:profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController:registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController:index" type="service" id="service_locator.SyY2KNI"/>
         <argument key="App\Controller\SecurityController:login" type="service" id="service_locator.Syn2D.o"/>
         <argument key="App\Controller\EditProfilController::modifier" type="service" id="service_locator.sDAoPSH"/>
         <argument key="App\Controller\PagesController::admin" type="service" id="service_locator.Xbt2C5t"/>
-        <argument key="App\Controller\PagesController::afficherPath" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController::aide" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::apropos" type="service" id="service_locator.THq2EBF"/>
         <argument key="App\Controller\PagesController::chercher" type="service" id="service_locator.seIhI4_"/>
@@ -4152,6 +4151,7 @@
         <argument key="App\Controller\PagesController::conditions" type="service" id="service_locator.Xbt2C5t"/>
         <argument key="App\Controller\PagesController::contact" type="service" id="service_locator.VOn0Nci"/>
         <argument key="App\Controller\PagesController::index" type="service" id="service_locator.Xbt2C5t"/>
+        <argument key="App\Controller\PagesController::itinieraire" type="service" id="service_locator.seIhI4_"/>
         <argument key="App\Controller\PagesController::profil" type="service" id="service_locator.6U4AvGX"/>
         <argument key="App\Controller\RegistrationController::registerAction" type="service" id="service_locator.keBwKQZ"/>
         <argument key="App\Controller\SavePathController::index" type="service" id="service_locator.SyY2KNI"/>

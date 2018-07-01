@@ -21,6 +21,7 @@ Encore
     ])
     .addEntry('chercher', './assets/css/chercher_style.css')
     .addEntry('resultatsChercher', './assets/css/resultatsChercher_style.css')
+    .addEntry('itineraire', './assets/css/itineraire_style.css')
     .addEntry('contact', './assets/css/contact_style.css')
     .addEntry('aide', './assets/css/aide_style.css')
     .addEntry('apropos', './assets/css/apropos_style.css')

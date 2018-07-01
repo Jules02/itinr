@@ -49,7 +49,7 @@ class Path
     private $image;
 
     /**
-     * @ORM\Column(name="note", type="integer")
+     * @ORM\Column(name="note", type="string")
      */
     private $note;
 
