@@ -5,6 +5,8 @@
 {% block stylesheets %}{{ asset('build/itineraire.css') }}{% endblock %}
 
 {% block body %}
+    <h1 class="titre margin-left"><span>{{ path.titre }}</span> par <a>{{ path.auteur }}</a></h1>
+
     <div id="loading">
         <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
     </div>
@@ -99,28 +101,14 @@
 
         <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
     </div>
-    <table>
-        <thead>
-        <tr>
-            <th>Titre</th>
-            <th>Type de sport</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Note</th>
-            <th>Autre filtre</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>{{ path.titre }}</td>
-            <td>{{ path.typeSport }}</td>
-            <td>{{ path.description }}</td>
-            <td>{{ path.image }}</td>
-            <td>{{ path.note }}</td>
-            <td>{{ path.autreFiltre }}</td>
-        </tr>
-        </tbody>
-    </table>
+    <h3>Itinéraire pour</h3>
+    <p>{{ path.typeSport }}</p>
+
+    <h3>Description</h3>
+    <p>{{ path.description }}</p>
+
+    <h3>Autres précisions</h3>
+    <p>{{ path.autre_filtre }}</p>
 {% endblock %}
 
 {% block javascripts %}
@@ -188,7 +176,16 @@
             var ancienPathDesencode = new google.maps.geometry.encoding.decodePath(ancienPath);
 
             map = new google.maps.Map(document.getElementById('map'), {    //recupére la div #map et la transforme en objet map, stocké dans la var map
-                zoom: 14  //Définie le zoom par défaut
+                zoom: 14,  //Définie le zoom par défaut
+                mapTypeId: 'hybrid',
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                },
+                fullscreenControl: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                }
             });
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline

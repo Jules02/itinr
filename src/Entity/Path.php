@@ -49,11 +49,6 @@ class Path
     private $image;
 
     /**
-     * @ORM\Column(name="note", type="string")
-     */
-    private $note;
-
-    /**
      * @ORM\Column(name="autre_filtre", type="string")
      */
     private $autre_filtre;

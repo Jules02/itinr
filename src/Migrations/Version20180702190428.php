@@ -8,14 +8,14 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20180331204718 extends AbstractMigration
+class Version20180702190428 extends AbstractMigration
 {
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE path ADD titre VARCHAR(255) NOT NULL, ADD autre_filtre VARCHAR(255) NOT NULL, DROP title, DROP `precision`');
+        $this->addSql('ALTER TABLE path DROP note');
     }
 
     public function down(Schema $schema)
@@ -23,6 +23,6 @@ class Version20180331204718 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE path ADD titre VARCHAR(255) NOT NULL COLLATE utf8_unicode_ci, ADD `precision` VARCHAR(255) NOT NULL COLLATE utf8_unicode_ci, DROP titre, DROP autre_filtre');
+        $this->addSql('ALTER TABLE path ADD note VARCHAR(255) NOT NULL COLLATE utf8_unicode_ci');
     }
 }

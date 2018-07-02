@@ -5,7 +5,6 @@
 {% block title %}Concepteur{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
-{% block stylesheets2 %}http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css{% endblock %}
 
 
 {% block body %}
@@ -176,23 +175,6 @@
                         </div>
                         {{ form_row(form.description) }}
                         {{ form_row(form.image) }}
-
-                        <p class="note-title margin-left">Note générale</p>
-                        <div class="stars-container">
-                            <div class="stars">
-                                    <input class="star star-5" id="star-5" type="radio" name="star"/>
-                                    <label class="star star-5" for="star-5"></label>
-                                    <input class="star star-4" id="star-4" type="radio" name="star"/>
-                                    <label class="star star-4" for="star-4"></label>
-                                    <input class="star star-3" id="star-3" type="radio" name="star"/>
-                                    <label class="star star-3" for="star-3"></label>
-                                    <input class="star star-2" id="star-2" type="radio" name="star"/>
-                                    <label class="star star-2" for="star-2"></label>
-                                    <input class="star star-1" id="star-1" type="radio" name="star"/>
-                                    <label class="star star-1" for="star-1"></label>
-                            </div>
-                        </div>
-                        {#{{ form_row(form.note) }}#}
 
                         <p class="autre_filtre-title margin-left">Pour être encore plus précis</p>
                         {{ form_row(form.autre_filtre) }}

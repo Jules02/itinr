@@ -67,7 +67,7 @@ class PagesController extends Controller
                 $nbNom = rand(1, 9);
                 $nom = $noms[$nbNom];
 
-                $path->setAuteur($nom + " (anonyme)");
+                $path->setAuteur($nom . " (anonyme)");
             }else{
                 $path->setAuteur($user->getUsername());
             }

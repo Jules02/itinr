@@ -57,20 +57,6 @@ class PathType extends AbstractType
                 'required' => false,
                 'empty_data' => 'g'
             ))
-            ->add('note',        ChoiceType::class, array(
-                'label'  => false,
-                'choices'  => array(
-                    '1' => "1",
-                    '2' => "2",
-                    '3' => "3",
-                    '4' => "4",
-                    '5' => "5"
-                ),
-                'expanded' => true,
-                'multiple' => false,
-                'required' => false,
-                'empty_data' => 'g'
-            ))
             ->add('autre_filtre',ChoiceType::class, array(
                 'label'  => false,
                 'choices'  => array(
