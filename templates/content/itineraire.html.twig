@@ -5,7 +5,9 @@
 {% block stylesheets %}{{ asset('build/itineraire.css') }}{% endblock %}
 
 {% block body %}
-    <h1 class="titre margin-left"><span>{{ path.titre }}</span> par <a>{{ path.auteur }}</a></h1>
+    <h1 id="titre"><span>{{ path.titre }}</span> par <a>{{ path.auteur }}</a></h1>
+
+    <div id="titre-sepa"></div>
 
     <div id="loading">
         <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
@@ -13,7 +15,7 @@
 
     <div id="map" oncontextmenu="return false"></div>
 
-    <div id="textDiv" class="textDivDisplay"></div>
+    <div id="textDiv"></div>
     <div id="petitTextDiv"></div>
 
     <div id="mapFilter" class="mapFilter"></div>
@@ -108,7 +110,7 @@
     <p>{{ path.description }}</p>
 
     <h3>Autres précisions</h3>
-    <p>{{ path.autre_filtre }}</p>
+    <p>{{ path.autrefiltre }}</p>
 {% endblock %}
 
 {% block javascripts %}
@@ -127,7 +129,7 @@
         var map;
         var geoPos;
 
-        var markerStart = "{{ asset('images/marker.png') }}";   //icone de marqueur de début
+        var markerStart = "{{ asset('images/marker_hybrid.png') }}";   //icone de marqueur de début
         var markerEnd = "{{ asset('images/empty.png') }}";
 
         var vitesseVelo = 20;
@@ -190,7 +192,7 @@
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
                 path: ancienPathDesencode,
-                strokeColor: '#3BA14C',
+                strokeColor: '#35f700',
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -216,11 +218,9 @@
                 var mapType = map.getMapTypeId();
 
                 if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#FFFFFF'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker_white.png') }}"});
+                    hybridMapStyle();
                 } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+                    planMapStyle();
                 }
             });
 
@@ -542,7 +542,33 @@
         /****** FIN MENU GAUCHE ******/
 
 
+        var textDiv = document.getElementById('textDiv');
+        var petitTextDiv = document.getElementById('petitTextDiv');
 
+        var titre = document.getElementById('titre');
+        var titreSepa = document.getElementById('titre-sepa');
+
+        function hybridMapStyle(){
+            globalPoly.setOptions({strokeColor: '#35f700'});
+            firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
+
+            textDiv.style.color = "#fff";
+            petitTextDiv.style.color = "rgba(255, 255, 255, 0.9)";
+
+            titre.style.color = "#fff";
+            titreSepa.style.backgroundColor = "#fff";
+        }
+
+        function planMapStyle(){
+            globalPoly.setOptions({strokeColor: '#3BA14C'});
+            firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+
+            textDiv.style.color = "#000";
+            petitTextDiv.style.color = "#000";
+
+            titre.style.color = "#000";
+            titreSepa.style.backgroundColor = "#3ba14c";
+        }
 
 
         /***** RACCOURCIS CLAVIER ********/

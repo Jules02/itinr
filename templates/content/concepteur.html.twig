@@ -319,27 +319,23 @@
                 var mapType = map.getMapTypeId();
 
                 if (mapType == 'hybrid'){
-                    globalPoly.setOptions({strokeColor: '#35f700'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
-                    textDiv.style.color = "#fff";
+                    hybridMapStyle();
                 } else {
-                    globalPoly.setOptions({strokeColor: '#3BA14C'});
-                    firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
-                    textDiv.style.color = "#000";
+                    planMapStyle();
                 }
             });
 
 
 
             globalPoly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor:  polyColor,
+                strokeColor: "#35f700",
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
             globalPoly.setMap(map);   //on attache l'objet polyline à notre map
 
             poly = new google.maps.Polyline({   //créé déjà la polyline
-                strokeColor: polyColor,
+                strokeColor: "#35f700",
                 strokeOpacity: 1.0,
                 strokeWeight: 3
             });
@@ -1091,6 +1087,22 @@
                     window.alert('Geocoder failed due to: ' + status);
                 }
             });
+        }
+
+        var textDiv = document.getElementById('textDiv');
+
+        function hybridMapStyle(){
+            globalPoly.setOptions({strokeColor: '#35f700'});
+            firstMarker.setOptions({icon: "{{ asset('images/marker_hybrid.png') }}"});
+
+            textDiv.style.color = "#fff";
+        }
+
+        function planMapStyle(){
+            globalPoly.setOptions({strokeColor: '#3BA14C'});
+            firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
+
+            textDiv.style.color = "#000";
         }
 
 

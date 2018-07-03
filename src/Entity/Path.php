@@ -130,22 +130,6 @@ class Path
     /**
      * @return mixed
      */
-    public function getNote()
-    {
-        return $this->note;
-    }
-
-    /**
-     * @param mixed $note
-     */
-    public function setNote($note): void
-    {
-        $this->note = $note;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getAutreFiltre()
     {
         return $this->autre_filtre;
