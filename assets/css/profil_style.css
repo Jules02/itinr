@@ -140,6 +140,10 @@ h2{
     height: 150px;
 }
 
+.resultat-margin-left{
+    margin-left: 20px;
+}
+
 .resultat-titre{
     margin: 10px 10px 3px 20px;
 
@@ -154,6 +158,17 @@ h2{
     background-color: #3ba14c;
 
     margin-left: 20px;
+}
+
+.resultat-typeSport{
+    display: flex;
+}
+
+.resultat-typeSport img{
+    width: 20px;
+    height: 20px;
+
+    padding-right: 5px;
 }
 
 

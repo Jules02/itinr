@@ -37,8 +37,8 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // profil
-            if ('/profil' === $pathinfo) {
-                return array (  '_controller' => 'App\\Controller\\PagesController::profil',  '_route' => 'profil',);
+            if (preg_match('#^/profil/(?P<username>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'profil')), array (  '_controller' => 'App\\Controller\\PagesController::profil',));
             }
 
         }

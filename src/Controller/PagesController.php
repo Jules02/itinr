@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Entity\Path;
+use App\Entity\User;
 use App\Form\ChercherType;
 use App\Form\ContactType;
 use App\Form\PathType;
@@ -216,14 +217,14 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/profil", name="profil")
+     * @Route("/profil/{username}", name="profil")
      * @param Environment $twig
      * @return Response
      */
-    public function profil (Environment $twig, RegistryInterface $doctrine) {
+    public function profil (Environment $twig, RegistryInterface $doctrine, $username) {
         $user = $this->getUser();
-
-        $username = $user->getUsername();
+        $userRepository = $doctrine->getRepository(User::class);
+        $user = $userRepository->findOneByUsername($username);
 
         $pathRepository = $doctrine->getRepository(Path::class);
         $resultatPath = $pathRepository->findByAuteur(
@@ -235,13 +236,31 @@ class PagesController extends Controller
 
         $nbPaths = count($resultatPath);
 
-        if(empty($resultatPath)){
-            return new Response($twig->render('content/profil.html.twig'));
+        if($user ==! null){
+            if($user === $this->getUser()){
+                if(empty($resultatPath)){
+                    return new Response($twig->render('content/monprofil.html.twig'));
+                }else{
+                    return new Response($twig->render('content/monprofil.html.twig', [
+                        'resultatPath' => $resultatPath,
+                        'nbPaths' => $nbPaths
+                    ]));
+                }
+            }else{
+                if(empty($resultatPath)){
+                    return new Response($twig->render('content/profil.html.twig', [
+                        'user' => $user
+                    ]));
+                }else{
+                    return new Response($twig->render('content/profil.html.twig', [
+                        'resultatPath' => $resultatPath,
+                        'nbPaths' => $nbPaths,
+                        'user' => $user
+                    ]));
+                }
+            }
         }else{
-            return new Response($twig->render('content/profil.html.twig', [
-                'resultatPath' => $resultatPath,
-                'nbPaths' => $nbPaths
-            ]));
+            $this->addFlash('error', 'Problème');
         }
     }
 

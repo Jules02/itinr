@@ -1,18 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ user.username }}{{ parent() }}{% endblock %}
+{% block title %}Mon profil{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/profil.css') }}{% endblock %}
 
 {% block body %}
     {% include 'flash_messages.html.twig' %}
 
-    <h1 class="titre margin-left"><div class="avatar-container"><img src="{{ asset(user.image) }}" class="avatar"/></div>{{ user.username }}</h1>
+    <h1 class="titre margin-left">Mon profil</h1>
     <div class="titre-separation margin-left"></div>
+
+    <div class="section1-container">
+        <div class="bonjour-container margin-left"><div class="avatar-container mon-avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ asset(app.user.image) }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
+        <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/modifier_profil.png') }}"/></a>
+    </div>
+
+    <div class="informations-container margin-left">
+        <h2 class="informations-titre">Mes informations</h2>
+        <p class="informations-username informations-content">Nom d'utilisateur<span>{{ app.user.username }}</span></p>
+        <p class="informations-email informations-content">Adresse email<span>{{ app.user.email }}</span></p>
+        <a href="{{ path('conditions') }}" title="Spoil: pas grand chose" class="informations-privacy"><img src="{{ asset('images/profil_privacy.png') }}"/>Que faisons-nous de vos données ?</a>
+    </div>
 
     <div class="itineraires-container margin-left">
         {% if nbPaths is defined %}
-            <h2 class="itineraires-titre">{{ user.surname }} a déjà partagé <span class="itineraires-titre-profil-span">{{ nbPaths }}</span> itinéraires</h2>
+            <h2 class="itineraires-titre">Mes itinéraires<span>{{ nbPaths }}</span></h2>
             <div class="resultats-bigcontainer">
                 <div class="resultats-container">
                     {% for path in resultatPath %}
@@ -46,8 +58,9 @@
                 </div>
             </div>
         {% else %}
-            <h2 class="itineraires-vide"><img src="{{ asset('images/profil_vide.png') }}"/>C’est un peu vide ici...</h2>
-            <p class="itineraires-vide-p"><span>{{ user.surname }}</span> n’a toujours pas partagé d’itinéraires</p>
+            <h2 class="itineraires-titre">Mes itinéraires<span>0</span></h2>
+            <p class="itineraires-null">Vous n'avez toujours pas posté d'itinéraires 🙁</p>
+            <a class="itineraires-null-a" href="{{ path('aide') }}">Découvrez comment</a>
         {% endif %}
     </div>
 {% endblock %}

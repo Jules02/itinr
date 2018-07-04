@@ -11,6 +11,8 @@
 
     margin-top: 30px;
     margin-bottom: 10px;
+
+    display: flex;
 }
 
 .titre-separation{
@@ -56,7 +58,7 @@
     margin-right: 10px;
 }
 
-.avatar-container:hover{
+.mon-avatar-container:hover{
     -webkit- transition: -webkit- all 0.3s ease-in-out;
     -moz- transition: -moz- all 0.3s ease-in-out;
     -o- transition: -o- all 0.3s ease-in-out;
@@ -121,7 +123,29 @@ h2{
 }
 
 .itineraires-titre span{
-    padding-left: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.itineraires-titre-profil-span{
+    padding-left: 0 !important;
+}
+
+.itineraires-vide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itineraires-vide img{
+    padding-right: 10px;
+}
+
+.itineraires-vide-p{
+    font-size: 18px;
+}
+
+.itineraires-vide-p span{
     font-weight: 600;
 }
 
@@ -140,6 +164,10 @@ h2{
     height: 150px;
 }
 
+.resultat-margin-left{
+    margin-left: 20px;
+}
+
 .resultat-titre{
     margin: 10px 10px 3px 20px;
 
@@ -154,6 +182,17 @@ h2{
     background-color: #3ba14c;
 
     margin-left: 20px;
+}
+
+.resultat-typeSport{
+    display: flex;
+}
+
+.resultat-typeSport img{
+    width: 20px;
+    height: 20px;
+
+    padding-right: 5px;
 }
 
 

@@ -33,9 +33,9 @@
 
         {% if app.user %}
             <div class="header-account">
-                <a href="{{ path('profil') }}" class="header-account-signed btn-account btn-account-gauche profil-container">
+                <a href="{{ path('profil', {'username': app.user.username}) }}" class="header-account-signed btn-account btn-account-gauche profil-container">
                     {{ app.user.surname }}
-                    <div class="user-image-container"><img src="{{ app.user.image }}" class="header-account-user-image"/></div>
+                    <div class="user-image-container"><img src="{{ asset(app.user.image) }}" class="header-account-user-image"/></div>
                 </a>
                 <a href="{{ path('security_logout') }}" class="header-account-signout btn-account">Déconnexion</a>
             </div>

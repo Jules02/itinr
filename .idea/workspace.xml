@@ -5,13 +5,40 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/../demo/assets/css/includes/header_style.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/../demo/templates/autre/includes/header.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/itineraire_style.css" afterPath="$PROJECT_DIR$/assets/css/itineraire_style.css" />
-      <change beforePath="$PROJECT_DIR$/assets/css/resultatsChercher_style.css" afterPath="$PROJECT_DIR$/assets/css/resultatsChercher_style.css" />
-      <change beforePath="$PROJECT_DIR$/public/build/itineraire.css" afterPath="$PROJECT_DIR$/public/build/itineraire.css" />
-      <change beforePath="$PROJECT_DIR$/public/build/resultatsChercher.css" afterPath="$PROJECT_DIR$/public/build/resultatsChercher.css" />
-      <change beforePath="$PROJECT_DIR$/templates/content/itineraire.html.twig" afterPath="$PROJECT_DIR$/templates/content/itineraire.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/content/resultatsChercher.html.twig" afterPath="$PROJECT_DIR$/templates/content/resultatsChercher.html.twig" />
+      <change beforePath="$PROJECT_DIR$/assets/css/profil_style.css" afterPath="$PROJECT_DIR$/assets/css/profil_style.css" />
+      <change beforePath="$PROJECT_DIR$/public/build/profil.css" afterPath="$PROJECT_DIR$/public/build/profil.css" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PagesController.php" afterPath="$PROJECT_DIR$/src/Controller/PagesController.php" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/content/profil.html.twig" afterPath="$PROJECT_DIR$/templates/content/profil.html.twig" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/7/25mIbvOZT0-r42IjGNXV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/7/25mIbvOZT0-r42IjGNXV" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/M/m6GjV682KJBXLdamE-Vj" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/M/m6GjV682KJBXLdamE-Vj" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/B/0/TjoXlEGKGXkjPowiRpIs" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/B/0/TjoXlEGKGXkjPowiRpIs" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/fjTkiRhiZBjWk1qHtnvo" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/fjTkiRhiZBjWk1qHtnvo" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/B/7z436C-QntUeo7zD5rc0" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/B/7z436C-QntUeo7zD5rc0" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/D/+mFfv5lpte7ofojUHZ2V" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/D/+mFfv5lpte7ofojUHZ2V" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/N/WIZXyaySa9z6kqbnnV0m" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/N/WIZXyaySa9z6kqbnnV0m" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/W/WIMOf-qA5TgBhTF2v4oa" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/W/WIMOf-qA5TgBhTF2v4oa" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/S/LHsDZ3KUeuyHNXVaEwp8" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/S/LHsDZ3KUeuyHNXVaEwp8" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/L/xu4nAdv5L0WHyB1rEv2B" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/L/xu4nAdv5L0WHyB1rEv2B" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/I/7YZis+KjxAIhUiX30QrT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/I/7YZis+KjxAIhUiX30QrT" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/O/Q78RouMPvlzQ--0QN0i+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/O/Q78RouMPvlzQ--0QN0i+" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/3/PGNq1JcX-JLRn20CSoXN" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/3/PGNq1JcX-JLRn20CSoXN" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/A/AJDjy6RsG1bFntJ91vFU" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/A/AJDjy6RsG1bFntJ91vFU" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/Q/QpB6LvySJ6Z1x5EL6Qwv" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/Q/QpB6LvySJ6Z1x5EL6Qwv" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/M/WWmArKl+yY7+yYr2f0LH" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/M/WWmArKl+yY7+yYr2f0LH" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/B/s65OL-8uvrGDY97SEmt5" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/B/s65OL-8uvrGDY97SEmt5" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/F/G0k864awImAaJh5UdNrY" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/F/G0k864awImAaJh5UdNrY" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/M/TQZ0YLwFhh6eHmXAIBAI" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/M/TQZ0YLwFhh6eHmXAIBAI" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/C/Zx3-UcBSLZ9DsshorrDv" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/C/Zx3-UcBSLZ9DsshorrDv" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.php.meta" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml.meta" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerUrlGenerator.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainerUrlMatcher.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/d3/d3ca09c805544f7133accb5c00cf995e29bac7f8f8907fcb80721fcb759ac4d7.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d3/d3ca09c805544f7133accb5c00cf995e29bac7f8f8907fcb80721fcb759ac4d7.php" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/d5/d5480ecf26d32c6248ec79b8e2d183ef18b7869f07e7dd9f3b5167c6886bc3c2.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d5/d5480ecf26d32c6248ec79b8e2d183ef18b7869f07e7dd9f3b5167c6886bc3c2.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,31 +97,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="resultatsChercher.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/content/resultatsChercher.html.twig">
+      <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="36" column="24" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="450">
+              <caret line="252" column="24" lean-forward="false" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
+              <folding>
+                <element signature="e#7776#7805#1#PHP" expanded="true" />
+                <element signature="e#7886#7915#0#PHP" expanded="true" />
+                <element signature="e#8180#8206#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monprofil.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/content/monprofil.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="100" lean-forward="false" selection-start-line="13" selection-start-column="100" selection-end-line="13" selection-end-column="100" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#192#216#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/content/profil.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resultatsChercher.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/build/resultatsChercher.css">
+      <file leaf-file-name="profil.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/build/profil.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="58" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="2370" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resultatsChercher_style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/resultatsChercher_style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            <state relative-caret-position="324">
+              <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -143,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/content/apropos.html.twig" />
         <option value="$PROJECT_DIR$/public/build/flash_messages.css" />
         <option value="$PROJECT_DIR$/assets/css/flash_messages_style.css" />
         <option value="$PROJECT_DIR$/config/packages/swiftmailer.yaml" />
@@ -163,16 +206,12 @@
         <option value="$PROJECT_DIR$/src/Form/UserType.php" />
         <option value="$PROJECT_DIR$/templates/content/modifier_profil.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/EditProfilController.php" />
-        <option value="$PROJECT_DIR$/public/build/profil.css" />
-        <option value="$PROJECT_DIR$/assets/css/profil_style.css" />
         <option value="$PROJECT_DIR$/public/build/aide.js" />
         <option value="$PROJECT_DIR$/assets/js/concepteur.js" />
         <option value="$PROJECT_DIR$/public/build/concepteur.js" />
         <option value="$PROJECT_DIR$/templates/content/chercher.html.twig" />
         <option value="$PROJECT_DIR$/templates/content/aide.html.twig" />
-        <option value="$PROJECT_DIR$/templates/content/profil.html.twig" />
         <option value="$PROJECT_DIR$/templates/content/contact.html.twig" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/css/modifier_profil_style.css" />
         <option value="$PROJECT_DIR$/assets/css/inscription_style.css" />
@@ -185,7 +224,6 @@
         <option value="$PROJECT_DIR$/public/build/inscription.css" />
         <option value="$PROJECT_DIR$/public/build/modifier_profil.css" />
         <option value="$PROJECT_DIR$/src/Form/PathType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/PagesController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Path.php" />
         <option value="$PROJECT_DIR$/templates/content/concepteur.html.twig" />
         <option value="$PROJECT_DIR$/templates/content/resultatsChercher.html.twig" />
@@ -194,6 +232,12 @@
         <option value="$PROJECT_DIR$/public/build/itineraire.css" />
         <option value="$PROJECT_DIR$/assets/css/itineraire_style.css" />
         <option value="$PROJECT_DIR$/assets/css/resultatsChercher_style.css" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/assets/css/profil_style.css" />
+        <option value="$PROJECT_DIR$/src/Controller/PagesController.php" />
+        <option value="$PROJECT_DIR$/public/build/profil.css" />
+        <option value="$PROJECT_DIR$/templates/content/profil.html.twig" />
+        <option value="$PROJECT_DIR$/templates/content/monprofil.html.twig" />
       </list>
     </option>
   </component>
@@ -316,13 +360,35 @@
             <path>
               <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mapbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -440,12 +506,12 @@
       <workItem from="1530557797030" duration="1027000" />
       <workItem from="1530643859303" duration="3934000" />
       <workItem from="1530648620974" duration="371000" />
-      <workItem from="1530694128184" duration="5883000" />
+      <workItem from="1530694128184" duration="10746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278935000" />
+    <option name="totallyTimeSpent" value="283798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -511,34 +577,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/EditProfilController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/profil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="169" selection-end-column="806" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/profil_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="147" column="1" lean-forward="true" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/aide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/concepteur.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -589,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/profil.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/content/modifier_profil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -628,13 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -751,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/concepteur.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11051">
@@ -810,14 +827,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/resultatsChercher.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="36" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/content/itineraire.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -842,19 +851,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/resultatsChercher.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="58" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="2370" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/resultatsChercher_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/content/resultatsChercher.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/profil_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/resultatsChercher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="75" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="252" column="24" lean-forward="false" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
+          <folding>
+            <element signature="e#7776#7805#1#PHP" expanded="true" />
+            <element signature="e#7886#7915#0#PHP" expanded="true" />
+            <element signature="e#8180#8206#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/content/profil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/content/monprofil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="100" lean-forward="false" selection-start-line="13" selection-start-column="100" selection-end-line="13" selection-end-column="100" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#192#216#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
