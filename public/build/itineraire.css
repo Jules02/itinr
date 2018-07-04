@@ -453,4 +453,28 @@ button > .gm-fullscreen-control{
 
     background-color: #3ba14c;
 }
+
+.description-titre{
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+.description-p{
+    display: flex;
+    align-items: center;
+
+    font-size: 19px;
+
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.description-p img{
+    width: 20px;
+    height: 20px;
+
+    padding-right: 5px;
+}
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hc3NldHMvY3NzL2l0aW5lcmFpcmVfc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksc0JBQXNCIiwiZmlsZSI6Iml0aW5lcmFpcmUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJlZDtcclxufVxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL2Fzc2V0cy9jc3MvaXRpbmVyYWlyZV9zdHlsZS5jc3MiXSwic291cmNlUm9vdCI6IiJ9*/

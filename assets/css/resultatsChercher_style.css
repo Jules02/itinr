@@ -39,10 +39,13 @@
     border: solid 2px #3ba14c;
     border-radius: 3px;
 
-    height: 150px;
+    height: 175px;
 
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.resultat-margin-left{
+    margin-left: 20px;
 }
 
 .resultat-titre{
@@ -59,4 +62,15 @@
     background-color: #3ba14c;
 
     margin-left: 20px;
+}
+
+.resultat-typeSport{
+    display: flex;
+}
+
+.resultat-typeSport img{
+    width: 20px;
+    height: 20px;
+
+    padding-right: 5px;
 }
