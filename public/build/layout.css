@@ -52,12 +52,10 @@ button{
 }
 
 .header-title{
-    font-family: 'LeagueSpartan';
     color: white;
     font-size: 34px;
 
     margin-left: 20px;
-    padding-top: 5px;
 }
 
 .header-account{
@@ -86,9 +84,9 @@ button{
 }
 
 .btn-account:hover{
-    -webkit- transition: -webkit- all 0.3s ease-in-out;
-    -moz- transition: -moz- all 0.3s ease-in-out;
-    -o- transition: -o- all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
     color: #228A31;
@@ -172,7 +170,7 @@ button{
 
 .sub-nav-ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
     list-style: none none;
     white-space: nowrap;
@@ -182,7 +180,7 @@ button{
 }
 
 .sub-nav-ul li{
-    padding: 15px 150px;
+    padding: 15px 0;
     font-weight: 300;
     color: white;
 }
@@ -226,9 +224,9 @@ button{
 
 .sub-nav-ul li:hover::after {
     width: 100%;
-    -webkit- transition: -webkit- all 0.3s ease-in-out;
-    -moz- transition: -moz- all 0.3s ease-in-out;
-    -o- transition: -o- all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 

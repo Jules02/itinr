@@ -10,7 +10,7 @@
     <div class="titre-separation margin-left"></div>
 
     <div class="form-container">
-        <a class="newAvatar-container" href="{{ path('newAvatar') }}"><div class="newAvatar-avatar-container"><img src="{{ app.user.image }}" class="newAvatar-avatar"/></div><p>Nouvel avatar<img src="{{ asset('images/newAvatar_edit.png') }}" alt="Nouvel avatar"></p></a>
+        <a class="newAvatar-container" href="{{ path('newAvatar') }}"><div class="newAvatar-avatar-container"><img src="{{ asset(app.user.image) }}" class="newAvatar-avatar"/></div><p>Nouvel avatar<img src="{{ asset('images/newAvatar_edit.png') }}" alt="Nouvel avatar"></p></a>
 
         {{ form_start(form) }}
         {{ form_row(form.surname) }}

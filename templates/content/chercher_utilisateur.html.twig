@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chercher un utilisateur{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/conditions.css') }}{% endblock %}
+
+{% block body %}
+    {% include 'flash_messages.html.twig' %}
+
+    <form>
+        <input type="text"/>
+        <input type="submit"/>
+    </form>
+{% endblock %}

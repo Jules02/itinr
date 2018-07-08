@@ -11,6 +11,8 @@
 
     margin-top: 30px;
     margin-bottom: 10px;
+
+    display: flex;
 }
 
 .titre-separation{
@@ -56,10 +58,10 @@
     margin-right: 10px;
 }
 
-.avatar-container:hover{
-    -webkit- transition: -webkit- all 0.3s ease-in-out;
-    -moz- transition: -moz- all 0.3s ease-in-out;
-    -o- transition: -o- all 0.3s ease-in-out;
+.mon-avatar-container:hover{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
     background-color: rgba(0, 0, 0, 0.3);
@@ -121,7 +123,29 @@ h2{
 }
 
 .itineraires-titre span{
-    padding-left: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.itineraires-titre-profil-span{
+    padding-left: 0 !important;
+}
+
+.itineraires-vide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itineraires-vide img{
+    padding-right: 10px;
+}
+
+.itineraires-vide-p{
+    font-size: 18px;
+}
+
+.itineraires-vide-p span{
     font-weight: 600;
 }
 

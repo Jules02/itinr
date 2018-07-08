@@ -82,12 +82,20 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // chercher
-        if ('/chercher' === $pathinfo) {
-            return array (  '_controller' => 'App\\Controller\\PagesController::chercher',  '_route' => 'chercher',);
+        elseif (0 === strpos($pathinfo, '/chercher')) {
+            // chercher
+            if ('/chercher' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\PagesController::chercher',  '_route' => 'chercher',);
+            }
+
+            // chercher-utilisateur
+            if ('/chercher-utilisateur' === $pathinfo) {
+                return array (  '_controller' => 'App\\Controller\\PagesController::chercherUtilisateur',  '_route' => 'chercher-utilisateur',);
+            }
+
         }
 
-        if (0 === strpos($pathinfo, '/a')) {
+        elseif (0 === strpos($pathinfo, '/a')) {
             // apropos
             if ('/apropos' === $pathinfo) {
                 return array (  '_controller' => 'App\\Controller\\PagesController::apropos',  '_route' => 'apropos',);

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} | Movee{% endblock %}</title>
+    <title>{% block title %} | Itin'r{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
     <link rel="stylesheet" href="{% block stylesheets2 %}{% endblock %}">
@@ -12,7 +12,7 @@
 
     <header class="header">
         <a href="{{ path("concepteur") }}"><div class="header-logo"><p class="header-logo-txt">Logo</p></div></a> <!-- à remplacer par l'img du logo -->
-        <a href="{{ path("concepteur") }}"><h1 class="header-title">Movee</h1></a>
+        <a href="{{ path("concepteur") }}"><h1 class="header-title">Itin'r</h1></a>
 
         <div class="header-navbar">
             <ul class="nav_onglets">
@@ -24,6 +24,7 @@
             </ul>
             <div class="sub-nav" id="accordeon">
                 <ul class="sub-nav-ul">
+                    <li class="sub-nav-item"><a href="{{ path("chercher-utilisateur") }}">Trouver un utilisateur</a></li>
                     <li class="sub-nav-item"><a href="{{ path("contact") }}">Contact</a></li>
                     <li class="sub-nav-item"><a href="{{ path("aide") }}">Aide</a></li>
                     <li class="sub-nav-item"><a href="{{ path("apropos") }}">À propos</a></li>

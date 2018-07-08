@@ -299,4 +299,13 @@ class PagesController extends Controller
     public function conditions (Environment $twig) {
         return new Response($twig->render('content/conditions.html.twig'));
     }
+
+    /**
+     * @Route("/chercher-utilisateur", name="chercher-utilisateur")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function chercherUtilisateur (Environment $twig, Request $request) {
+        return new Response($twig->render('content/chercher_utilisateur.html.twig'));
+    }
 }

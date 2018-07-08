@@ -216,6 +216,7 @@ button > .gm-fullscreen-control{
 
 #menuGauche{
     display: none;
+    z-index: 30;
 
     width: 400px;
     margin-top: 80px;
