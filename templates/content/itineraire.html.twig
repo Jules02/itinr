@@ -128,7 +128,22 @@
     <p class="description-p">{{ path.description }}</p>
 
     <h3 class="description-titre">Autres précisions</h3>
-    <p class="description-p">{{ path.autrefiltre }}</p>
+    <p class="description-p">
+        {% for filtre in path.autrefiltre %}
+            {% if filtre == "detente" %}
+                Détente
+            {% elseif filtre == "sportif" %}
+                Sportif
+            {% elseif filtre == "denivele" %}
+                Dénivelé important
+            {% elseif filtre == "paysage" %}
+                Beau paysage
+            {% elseif filtre == "mauvais etat" %}
+                Mauvais état
+            {% endif %}
+            <br/>
+        {% endfor %}
+    </p>
 {% endblock %}
 
 {% block javascripts %}

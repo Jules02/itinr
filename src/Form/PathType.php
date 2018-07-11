@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Path;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -57,7 +58,7 @@ class PathType extends AbstractType
                 'required' => false,
                 'empty_data' => 'g'
             ))
-            ->add('autre_filtre',ChoiceType::class, array(
+            ->add('autre_filtre', ChoiceType::class, array(
                 'label'  => false,
                 'choices'  => array(
                     'Détente' => "detente",
@@ -67,7 +68,7 @@ class PathType extends AbstractType
                     'Chemins en mauvais état' => "mauvais etat"
                 ),
                 'expanded' => true,
-                'multiple' => false,
+                'multiple' => true,
                 'required' => false
             ))
         ;

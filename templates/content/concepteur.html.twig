@@ -177,31 +177,30 @@
                         {{ form_row(form.image) }}
 
                         <p class="autre_filtre-title">Pour être encore plus précis</p>
-                        {{ form_row(form.autre_filtre) }}
-                        <div class="typeSport-container">
-                            <div class="typeSport-input-container">
-                                <input id="path_autre_filtre_0" name="path[autre_filtre]" value="detente" type="radio">
-                                <label for="path_autre_filtre_0" class="typeSport-input"><span></span>Détente</label>
+                        <div class="path_autre_filtre">
+                            <div class="autrefiltre-input-container">
+                                <input id="path_autre_filtre_0" class="form-check-input" name="path[autre_filtre][]" value="detente" type="checkbox">
+                                <label for="path_autre_filtre_0" class="autrefiltre-input"><span></span>Détente</label>
                             </div>
 
-                            <div class="typeSport-input-container">
-                                <input id="path_autre_filtre_1" name="path[autre_filtre]" value="sportif" type="radio">
-                                <label for="path_autre_filtre_1" class="typeSport-input"><span></span>Sportif</label>
+                            <div class="autrefiltre-input-container">
+                                <input id="path_autre_filtre_1" class="form-check-input" name="path[autre_filtre][]" value="sportif" type="checkbox">
+                                <label for="path_autre_filtre_1" class="autrefiltre-input"><span></span>Sportif</label>
                             </div>
 
-                            <div class="typeSport-input-container">
-                                <input id="path_autre_filtre_2" name="path[autre_filtre]" value="denivele" type="radio">
-                                <label for="path_autre_filtre_2" class="typeSport-input"><span></span>Dénivelé important</label>
+                            <div class="autrefiltre-input-container">
+                                <input id="path_autre_filtre_2" class="form-check-input" name="path[autre_filtre][]" value="denivele" type="checkbox">
+                                <label for="path_autre_filtre_2" class="autrefiltre-input"><span></span>Dénivelé important</label>
                             </div>
 
-                            <div class="typeSport-input-container">
-                                <input id="path_autre_filtre_3" name="path[autre_filtre]" value="paysage" type="radio">
-                                <label for="path_autre_filtre_3" class="typeSport-input"><span></span>Beau paysage</label>
+                            <div class="autrefiltre-input-container">
+                                <input id="path_autre_filtre_3" class="form-check-input" name="path[autre_filtre][]" value="paysage" type="checkbox">
+                                <label for="path_autre_filtre_3" class="autrefiltre-input"><span></span>Beau paysage</label>
                             </div>
 
-                            <div class="typeSport-input-container">
-                                <input id="path_autre_filtre_4" name="path[autre_filtre]" value="mauvais etat" type="radio">
-                                <label for="path_autre_filtre_4" class="typeSport-input"><span></span>Mauvais état</label>
+                            <div class="autrefiltre-input-container">
+                                <input id="path_autre_filtre_4" class="form-check-input" name="path[autre_filtre][]" value="mauvais etat" type="checkbox">
+                                <label for="path_autre_filtre_4" class="autrefiltre-input"><span></span>Mauvais état</label>
                             </div>
                         </div>
 

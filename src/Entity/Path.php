@@ -49,7 +49,7 @@ class Path
     private $image;
 
     /**
-     * @ORM\Column(name="autre_filtre", type="string")
+     * @ORM\Column(name="autre_filtre", type="json_array")
      */
     private $autre_filtre;
 
@@ -130,22 +130,6 @@ class Path
     /**
      * @return mixed
      */
-    public function getAutreFiltre()
-    {
-        return $this->autre_filtre;
-    }
-
-    /**
-     * @param mixed $autre_filtre
-     */
-    public function setAutreFiltre($autre_filtre): void
-    {
-        $this->autre_filtre = $autre_filtre;
-    }
-
-    /**
-     * @return mixed
-     */
 
     public function getId()
     {
@@ -190,6 +174,22 @@ class Path
     public function setPlaceId($placeId): void
     {
         $this->placeId = $placeId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAutreFiltre()
+    {
+        return $this->autre_filtre;
+    }
+
+    /**
+     * @param mixed $autre_filtre
+     */
+    public function setAutreFiltre($autre_filtre): void
+    {
+        $this->autre_filtre = $autre_filtre;
     }
 
     /**

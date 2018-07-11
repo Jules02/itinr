@@ -2,35 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d38a68c1-b8f8-4c5c-9597-00c9d0072175" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mapbox.iml" afterPath="$PROJECT_DIR$/.idea/mapbox.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5e74c323-2486-4aa9-b180-22210be7e8ca.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5e74c323-2486-4aa9-b180-22210be7e8ca.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/css/concepteur_style.css" afterPath="$PROJECT_DIR$/assets/css/concepteur_style.css" />
       <change beforePath="$PROJECT_DIR$/public/build/concepteur.css" afterPath="$PROJECT_DIR$/public/build/concepteur.css" />
+      <change beforePath="$PROJECT_DIR$/public/images/radio_input.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Path.php" afterPath="$PROJECT_DIR$/src/Entity/Path.php" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PathType.php" afterPath="$PROJECT_DIR$/src/Form/PathType.php" />
       <change beforePath="$PROJECT_DIR$/templates/content/concepteur.html.twig" afterPath="$PROJECT_DIR$/templates/content/concepteur.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/content/itineraire.html.twig" afterPath="$PROJECT_DIR$/templates/content/itineraire.html.twig" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/-/D/HBlAn94GitQnjj1lqKnF" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/-/D/HBlAn94GitQnjj1lqKnF" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/+/QSRsrigC8ib8qxkqZgXQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/1/+/QSRsrigC8ib8qxkqZgXQ" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/2/E/ghmzDLmzfNcmTgMnWeha" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/2/E/ghmzDLmzfNcmTgMnWeha" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/6/O/78I8XPQd96S5kxeMM2A4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/6/O/78I8XPQd96S5kxeMM2A4" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/9/1/HeNyGepLkLxrG-mFejfM" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/9/1/HeNyGepLkLxrG-mFejfM" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/4/zM0holLZUDc70mFyYev9" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/A/4/zM0holLZUDc70mFyYev9" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/O/FfNiF+lDjbC9SsfNvVrh" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/O/FfNiF+lDjbC9SsfNvVrh" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/P/rcd9xxl1ucjCOGzFyDn4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/P/rcd9xxl1ucjCOGzFyDn4" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/z5SZdbX87x8XFlGDjUy4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/C/U/z5SZdbX87x8XFlGDjUy4" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/Q/JqwiABEh7lS9RiL+b9WO" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/Q/JqwiABEh7lS9RiL+b9WO" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/Z/k0lHF-4JZGq7eal5WxHq" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/D/Z/k0lHF-4JZGq7eal5WxHq" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/B/El-AY4veiNELpd2ccrJE" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/B/El-AY4veiNELpd2ccrJE" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/L/b5yr7tlDcTkJLITIfLg+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/L/b5yr7tlDcTkJLITIfLg+" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/W/as3DJOUPCCUL2PgLlP7t" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/E/W/as3DJOUPCCUL2PgLlP7t" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/C/AJnVOmIhJFqyF2A3XfN7" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/C/AJnVOmIhJFqyF2A3XfN7" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/M/G9I+PwWts218X3cbUFF+" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/M/G9I+PwWts218X3cbUFF+" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/Z/GZ-+LlWqa-JWutBqACis" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/F/Z/GZ-+LlWqa-JWutBqACis" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/V/oHW8hB5xYF6bDRrjeklN" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/G/V/oHW8hB5xYF6bDRrjeklN" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/I/P/onpMoFkP-D3WZ2KKoRaI" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/I/P/onpMoFkP-D3WZ2KKoRaI" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/9/4+T+C0h5wd1QmU2rnowV" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/9/4+T+C0h5wd1QmU2rnowV" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/F/ooco0p46uE5ZaFZn1WNM" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/F/ooco0p46uE5ZaFZn1WNM" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/K/0NGCYYQUJuSgcVv8V-Xp" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/K/0NGCYYQUJuSgcVv8V-Xp" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/M/Pnq35A1GQRG6vpsKp4pR" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/J/M/Pnq35A1GQRG6vpsKp4pR" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/K/DeaA7IsSM5c4KHUE3aBY" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/K/DeaA7IsSM5c4KHUE3aBY" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/O/27lH+u1wyw7BJT+3tH1O" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/L/O/27lH+u1wyw7BJT+3tH1O" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/F/j4sIIxWHQWnWwVwpCK02" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/F/j4sIIxWHQWnWwVwpCK02" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/I/CyP2OsTw52DXBs2-19Yy" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/I/CyP2OsTw52DXBs2-19Yy" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/T/jLc97p6sOoQz5YhDh1BT" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/M/T/jLc97p6sOoQz5YhDh1BT" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/O/M/g3yMWiXZjGfWUHGWLJCO" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/O/M/g3yMWiXZjGfWUHGWLJCO" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/O/Y/YHmJWZwD2Ax1eWAVyRxX" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/O/Y/YHmJWZwD2Ax1eWAVyRxX" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/G/f38EUxLRRdEU9yEHo18v" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/P/G/f38EUxLRRdEU9yEHo18v" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/S/OA16ai3UiO66ZFKJE95P" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Q/S/OA16ai3UiO66ZFKJE95P" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/4/W3dbQfYJpiI2w1shABBX" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/4/W3dbQfYJpiI2w1shABBX" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/4/uAkyHCqJY6WjoK-PczUk" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/4/uAkyHCqJY6WjoK-PczUk" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/D/iq7MaOb226aUY+NVQt9l" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/R/D/iq7MaOb226aUY+NVQt9l" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/B/Qfc9yq4cEEhPUuN+xmI4" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/B/Qfc9yq4cEEhPUuN+xmI4" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/B/bYxx60HEb4CeKH4jW7k7" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/S/B/bYxx60HEb4CeKH4jW7k7" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/6/1SPDfWeYY-cBA6xYOqJP" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/6/1SPDfWeYY-cBA6xYOqJP" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/A/IIKj0kNWawJXy3dzOt9E" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/A/IIKj0kNWawJXy3dzOt9E" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/O/vg+xJ4lBmZqywguYutgm" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/U/O/vg+xJ4lBmZqywguYutgm" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/-/6D+jm3FBumcqD9ORcpZy" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/V/-/6D+jm3FBumcqD9ORcpZy" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/H/fGqr1GTXxVMUyqkRrA-8" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/H/fGqr1GTXxVMUyqkRrA-8" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/T/7EHFbBvQ6QZduPjIpaOU" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/W/T/7EHFbBvQ6QZduPjIpaOU" />
@@ -38,6 +58,7 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/N/BZyX4XWsZ+kHTaa5TcnJ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/N/BZyX4XWsZ+kHTaa5TcnJ" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/O/Y0Rzon2AdFfUYkWFT-x9" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/O/Y0Rzon2AdFfUYkWFT-x9" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/Q/5GiydibWGgyMtXI8QlO1" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/X/Q/5GiydibWGgyMtXI8QlO1" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/-/vf-ejLciOEt+VNCv1huG" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/-/vf-ejLciOEt+VNCv1huG" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/A/CJDI1vVbU17eebRupISD" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/A/CJDI1vVbU17eebRupISD" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/N/QZFWyGMsvjfsy8PgwK5Y" afterPath="$PROJECT_DIR$/var/cache/dev/pools/tZlDXI-GdR/Z/N/QZFWyGMsvjfsy8PgwK5Y" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
@@ -102,7 +123,18 @@
     <favorites_list name="mapbox" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="concepteur.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/content/concepteur.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="182" column="16" lean-forward="false" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,11 +208,8 @@
         <option value="$PROJECT_DIR$/public/build/connexion.css" />
         <option value="$PROJECT_DIR$/public/build/inscription.css" />
         <option value="$PROJECT_DIR$/public/build/modifier_profil.css" />
-        <option value="$PROJECT_DIR$/src/Form/PathType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Path.php" />
         <option value="$PROJECT_DIR$/templates/content/resultatsChercher.html.twig" />
         <option value="$PROJECT_DIR$/public/build/resultatsChercher.css" />
-        <option value="$PROJECT_DIR$/templates/content/itineraire.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/resultatsChercher_style.css" />
         <option value="$PROJECT_DIR$/templates/content/profil.html.twig" />
         <option value="$PROJECT_DIR$/templates/content/monprofil.html.twig" />
@@ -198,6 +227,9 @@
         <option value="$PROJECT_DIR$/public/build/layout.css" />
         <option value="$PROJECT_DIR$/assets/css/layout_style.css" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/Form/PathType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Path.php" />
+        <option value="$PROJECT_DIR$/templates/content/itineraire.html.twig" />
         <option value="$PROJECT_DIR$/templates/content/concepteur.html.twig" />
         <option value="$PROJECT_DIR$/public/build/concepteur.css" />
         <option value="$PROJECT_DIR$/assets/css/concepteur_style.css" />
@@ -312,8 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -336,6 +366,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,18 +382,18 @@
     <property name="SearchEverywhereHistoryKey" value="admin&#9;null&#9;null&#10;security.yaml&#9;FILE&#9;file://C:/wamp64/www/mapbox/config/packages/security.yaml" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\mapbox\public\images" />
+      <recent name="C:\wamp64\www\mapbox\public" />
+      <recent name="C:\wamp64\www\mapbox\public\build" />
+      <recent name="C:\wamp64\www\mapbox\public\build\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\mapbox\public\images" />
       <recent name="C:\wamp64\www\mapbox\public\images\avatar" />
       <recent name="C:\wamp64\www\demo\src\Repository" />
       <recent name="C:\wamp64\www\demo\src\Entity" />
       <recent name="C:\wamp64\www\mapbox\templates\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\mapbox\public\images" />
-      <recent name="C:\wamp64\www\mapbox\public" />
-      <recent name="C:\wamp64\www\mapbox\public\build" />
-      <recent name="C:\wamp64\www\mapbox\public\build\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -451,12 +483,13 @@
       <workItem from="1531064683896" duration="2444000" />
       <workItem from="1531067248902" duration="868000" />
       <workItem from="1531166738252" duration="1476000" />
-      <workItem from="1531222844549" duration="4218000" />
+      <workItem from="1531222844549" duration="4331000" />
+      <workItem from="1531302174552" duration="5065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295748000" />
+    <option name="totallyTimeSpent" value="300926000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,8 +502,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25286534" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.256447" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39066666" sideWeight="0.51217765" order="7" side_tool="true" content_ui="tabs" />
@@ -478,7 +512,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19126074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38933334" sideWeight="0.48782235" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38933334" sideWeight="0.48782235" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.245702" sideWeight="0.5053333" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -556,27 +590,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Form/ContactType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cee34fa0/5e74c323-2486-4aa9-b180-22210be7e8ca/movee.path">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ChercherType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/modifier_profil_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -640,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/PathType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/PathRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -659,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Path.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -797,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content/itineraire.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="124" column="8" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/includes/header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -874,26 +866,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://src:table:/cee34fa0/5e74c323-2486-4aa9-b180-22210be7e8ca/movee.path">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/PathType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Path.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/content/itineraire.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="133" column="23" lean-forward="true" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/checkbox_login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/radio_input.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/concepteur.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="594" selection-end-column="23370" />
+        <state relative-caret-position="504">
+          <caret line="303" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="635" selection-end-column="23370" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/concepteur_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="572" column="0" lean-forward="true" selection-start-line="572" selection-start-column="0" selection-end-line="572" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="614" column="21" lean-forward="false" selection-start-line="614" selection-start-column="21" selection-end-line="614" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/content/concepteur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-558">
-          <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="49" selection-end-line="144" selection-end-column="49" />
+        <state relative-caret-position="108">
+          <caret line="182" column="16" lean-forward="false" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
           <folding />
         </state>
       </provider>

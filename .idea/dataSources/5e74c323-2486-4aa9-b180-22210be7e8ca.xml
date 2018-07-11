@@ -993,7 +993,8 @@
     </column>
     <column id="245" parent="233" name="autre_filtre">
       <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
+      <Comment>(DC2Type:array)</Comment>
+      <DataType>longtext|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
