@@ -8,218 +8,223 @@
 
 
 {% block body %}
-        {% include 'flash_messages.html.twig' %}
+    {% include 'flash_messages.html.twig' %}
 
-        <div id="loading">
-            <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+    <div id="loading">
+        <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+    </div>
+
+    <div id="map" oncontextmenu="return false"></div>
+
+    <div id="mapFilter" class="mapFilter"></div>
+
+    <!-- Zone de texte de la distance en bas -->
+
+    <!-- Contrôles présents sur la carte-->
+    <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
+    <button type="button" id="centerMap" name="bouton4" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
+
+
+    <div class="map-bottom">
+        <div id="textDiv"></div>
+        <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points">
+        <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point">
+        <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
+    </div>
+
+
+
+
+    <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+    <div id="menuGauche">
+        <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
+
+        <div id="menuGauche-interieur">
+            <div class="menuGauche-partie" id="temps-necessaire-container">
+                <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                <div class="temps-necessaire-formcontainer">
+                    <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
+                    <button type="submit" id="temps-necessaire-submit" class="menuGauche-btn-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                </div>
+                <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
+            </div>
+            <div class="menuGauche-partie" id="temps-necessaire-resultat-partie">
+                <div class="temps-necessaire-resultat-container">
+                    <p id="temps-necessaire-resultat">
+                        Avec votre allure de
+                        <span id="temps-necessaire-resultat-allure"></span>
+                        km/h, <br/> vous prendrez
+                        <span id="temps-necessaire-resultat-temps"></span>
+                    </p>
+                    <button id="temps-necessaire-resultat-btn">Calculer à nouveau</button>
+                </div>
+            </div>
+
+
+
+
+            <div class="menuGauche-partie" id="vitesse-moyenne-container">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="vitesse-moyenne-souscontainer">
+                        <p class="menuGauche-partie-texte vitesse-moyenne-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                        <div class="vitesse-moyenne-formcontainer">
+                            <div class="vitesse-moyenne-inputcontainer">
+                                <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-h" class="vitesse-input" placeholder="h"/>
+                                <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-m" class="vitesse-input" placeholder="m"/>
+                                <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-s" class="vitesse-input" placeholder="s"/>
+                            </div>
+                            <button type="submit" id="vitesse-moyenne-submit" class="menuGauche-btn-submit vitesse-moyenne-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                        </div>
+                </div>
+            </div>
+            <div class="menuGauche-partie" id="vitesse-moyenne-resultat-container">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="vitesse-moyenne-resultat-container">
+                    <p id="vitesse-moyenne-resultat">
+                        Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                        <span id="vitesse-moyenne-resultat-vitesse"></span>
+                        km/h
+                    </p>
+                    <button id="vitesse-moyenne-resultat-btn">Calculer à nouveau</button>
+                </div>
+            </div>
+
+
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
+                </div>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
+                </div>
+            </div>
+
+            <div class="menuGauche-partie">
+                <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
+                <div class="menuGauche-partie-container">
+                    <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
+                </div>
+            </div>
         </div>
 
-        <div id="map" oncontextmenu="return false"></div>
-
-        <div id="mapFilter" class="mapFilter"></div>
-
-        <!-- Zone de texte de la distance en bas -->
-
-           <!-- Contrôles présents sur la carte-->
-            <input id="pac-input" class="controls" type="text" placeholder="Entrez votre localisation">
-            <button type="button" id="centerMap" name="bouton4" title="Centrez la carte sur votre localisation"><img src="{{ asset('images/gps.png') }}" alt="Localisez vous"/></button>
+        <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
+    </div>
 
 
-            <div class="map-bottom">
-                <div id="textDiv"></div>
-                <input type="button" id="deleteAllButton" class="bottomButton" name="bouton2" value="Supprimer tous les points">
-                <input type="button" id="deleteLastButton" class="bottomButton" name="bouton" value="Supprimer le dernier point">
-                <input type="button" id="closeLoopButton" class="bottomButton" name="bouton3" value="Fermer la boucle" title="Reliez votre dernier point avec votre point de départ">
+
+
+
+    <select name="modeSuivi" id="selectModeSuivi">
+        <option value="DRIVING" selected disabled=true>Mode de suivi des routes</option>
+        <option value="BICYCLING" title="Les itinéraires essayerons au maximum de passer par des pistes cyclables">Vélo</option>
+        <option value="WALKING" title="Privilégie les voies piétonnes et les rues avec trottoir">Marche et course à pied</option>
+        <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
+    </select>
+
+    <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
+        <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
+    </button>
+    <div class="saveContainer" id="saveContainer">
+        <div class="save-messageContainer">
+            <div id="save-message">
+                <p>Commencez par tracer votre parcours</p>
             </div>
+        </div>
+        <div id="formFilter"></div>
+        <div class="formContainer">
+            <div class="formPopUp" id="formPopUp">
+                <p class="form-facultatif">* À part pour le titre, tous les champs sont facultatifs</p>
+                {{ form_start(form) }}
+                {{ form_row(form.titre) }}
 
-
-
-
-            <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
-            <div id="menuGauche">
-                <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
-
-                <div id="menuGauche-interieur">
-                    <div class="menuGauche-partie" id="temps-necessaire-container">
-                        <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                        <div class="temps-necessaire-formcontainer">
-                            <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
-                            <button type="submit" id="temps-necessaire-submit" class="menuGauche-btn-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
-                        </div>
-                        <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
-                    </div>
-                    <div class="menuGauche-partie" id="temps-necessaire-resultat-partie">
-                        <div class="temps-necessaire-resultat-container">
-                            <p id="temps-necessaire-resultat">
-                                Avec votre allure de
-                                <span id="temps-necessaire-resultat-allure"></span>
-                                km/h, <br/> vous prendrez
-                                <span id="temps-necessaire-resultat-temps"></span>
-                            </p>
-                            <button id="temps-necessaire-resultat-btn">Calculer à nouveau</button>
-                        </div>
+                <p class="typeSport-title">Pour quel sport ce parcours est il le plus adapté ?</p>
+                <div class="typeSport-container">
+                    <div class="typeSport-input-container">
+                        <input id="path_typeSport_0" name="path[typeSport]" required="required" value="marche" type="radio">
+                        <label for="path_typeSport_0" class="required typeSport-input"><span></span>Marche</label>
                     </div>
 
-
-
-
-                    <div class="menuGauche-partie" id="vitesse-moyenne-container">
-                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <div class="vitesse-moyenne-souscontainer">
-                                <p class="menuGauche-partie-texte vitesse-moyenne-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
-                                <div class="vitesse-moyenne-formcontainer">
-                                    <div class="vitesse-moyenne-inputcontainer">
-                                        <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-h" class="vitesse-input" placeholder="h"/>
-                                        <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-m" class="vitesse-input" placeholder="m"/>
-                                        <input type="text" name="vitesse-moyenne" id="vitesse-moyenne-input-s" class="vitesse-input" placeholder="s"/>
-                                    </div>
-                                    <button type="submit" id="vitesse-moyenne-submit" class="menuGauche-btn-submit vitesse-moyenne-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="menuGauche-partie" id="vitesse-moyenne-resultat-container">
-                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <div class="vitesse-moyenne-resultat-container">
-                            <p id="vitesse-moyenne-resultat">
-                                Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
-                                <span id="vitesse-moyenne-resultat-vitesse"></span>
-                                km/h
-                            </p>
-                            <button id="vitesse-moyenne-resultat-btn">Calculer à nouveau</button>
-                        </div>
+                    <div class="typeSport-input-container">
+                        <input id="path_typeSport_1" name="path[typeSport]" required="required" value="course" type="radio">
+                        <label for="path_typeSport_1" class="required typeSport-input"><span></span>Course à pied</label>
                     </div>
 
-
-
-                    <div class="menuGauche-partie">
-                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <div class="menuGauche-partie-container">
-                            <img src="{{ asset('images/velo.png') }}" alt="Icône vélo" class="menuGauche-img">
-                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 20 km/h">En vélo,</span> vous prendrez <span id="tempsVelo"></span></p>
-                        </div>
+                    <div class="typeSport-input-container">
+                        <input id="path_typeSport_2" name="path[typeSport]" required="required" value="veloroute" type="radio">
+                        <label for="path_typeSport_2" class="required typeSport-input"><span></span>Vélo de route</label>
                     </div>
 
-                    <div class="menuGauche-partie">
-                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <div class="menuGauche-partie-container">
-                            <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
-                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
-                        </div>
+                    <div class="typeSport-input-container">
+                        <input id="path_typeSport_3" name="path[typeSport]" required="required" value="vtt" type="radio">
+                        <label for="path_typeSport_3" class="required typeSport-input"><span></span>VTT</label>
                     </div>
 
-                    <div class="menuGauche-partie">
-                        <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                        <div class="menuGauche-partie-container">
-                            <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
-                            <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
-                        </div>
+                    <div class="typeSport-input-container">
+                        <input id="path_typeSport_4" name="path[typeSport]" required="required" value="autre" type="radio">
+                        <label for="path_typeSport_4" class="required typeSport-input"><span></span>Autre</label>
+                    </div>
+                </div>
+                {{ form_row(form.description) }}
+                {{ form_row(form.image) }}
+
+                <p class="autre_filtre-title">Pour être encore plus précis</p>
+                <div class="path_autre_filtre">
+                    <div class="autrefiltre-input-container">
+                        <input id="path_autre_filtre_0" class="form-check-input" name="path[autre_filtre][]" value="detente" type="checkbox">
+                        <label for="path_autre_filtre_0" class="autrefiltre-input"><span></span>Détente</label>
+                    </div>
+
+                    <div class="autrefiltre-input-container">
+                        <input id="path_autre_filtre_1" class="form-check-input" name="path[autre_filtre][]" value="sportif" type="checkbox">
+                        <label for="path_autre_filtre_1" class="autrefiltre-input"><span></span>Sportif</label>
+                    </div>
+
+                    <div class="autrefiltre-input-container">
+                        <input id="path_autre_filtre_2" class="form-check-input" name="path[autre_filtre][]" value="denivele" type="checkbox">
+                        <label for="path_autre_filtre_2" class="autrefiltre-input"><span></span>Dénivelé important</label>
+                    </div>
+
+                    <div class="autrefiltre-input-container">
+                        <input id="path_autre_filtre_3" class="form-check-input" name="path[autre_filtre][]" value="paysage" type="checkbox">
+                        <label for="path_autre_filtre_3" class="autrefiltre-input"><span></span>Beau paysage</label>
+                    </div>
+
+                    <div class="autrefiltre-input-container">
+                        <input id="path_autre_filtre_4" class="form-check-input" name="path[autre_filtre][]" value="mauvais etat" type="checkbox">
+                        <label for="path_autre_filtre_4" class="autrefiltre-input"><span></span>Mauvais état</label>
                     </div>
                 </div>
 
-                <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
+                {{ form_row(form.path) }}
+                {{ form_row(form.placeId) }}
+                <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>
+                <input type="hidden" value="Caché" id="hiddenInputPlaceId" name="path[placeId]"/>
+                <button id="saveFormBtn" class="submit-input">Partager</button>
+                {{ form_end(form) }}
             </div>
+        </div>
+        <div id="mapFilterForm" class="mapFilter"></div>
+    </div>
 
-
-
-
-
-            <select name="modeSuivi" id="selectModeSuivi">
-                <option value="DRIVING" selected disabled=true>Mode de suivi des routes</option>
-                <option value="BICYCLING" title="Les itinéraires essayerons au maximum de passer par des pistes cyclables">Vélo</option>
-                <option value="WALKING" title="Privilégie les voies piétonnes et les rues avec trottoir">Marche et course à pied</option>
-                <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
-            </select>
-
-            <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
-                <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
-            </button>
-            <div class="saveContainer" id="saveContainer">
-                <div class="save-messageContainer">
-                    <div id="save-message">
-                        <p>Commencez par tracer votre parcours</p>
-                    </div>
-                </div>
-                <div id="formFilter"></div>
-                <div class="formContainer">
-                    <div class="formPopUp" id="formPopUp">
-                        <p class="form-facultatif">* À part pour le titre, tous les champs sont facultatifs</p>
-                        {{ form_start(form) }}
-                        {{ form_row(form.titre) }}
-
-                        <p class="typeSport-title">Pour quel sport ce parcours est il le plus adapté ?</p>
-                        <div class="typeSport-container">
-                            <div class="typeSport-input-container">
-                                <input id="path_typeSport_0" name="path[typeSport]" required="required" value="marche" type="radio">
-                                <label for="path_typeSport_0" class="required typeSport-input"><span></span>Marche</label>
-                            </div>
-
-                            <div class="typeSport-input-container">
-                                <input id="path_typeSport_1" name="path[typeSport]" required="required" value="course" type="radio">
-                                <label for="path_typeSport_1" class="required typeSport-input"><span></span>Course à pied</label>
-                            </div>
-
-                            <div class="typeSport-input-container">
-                                <input id="path_typeSport_2" name="path[typeSport]" required="required" value="veloroute" type="radio">
-                                <label for="path_typeSport_2" class="required typeSport-input"><span></span>Vélo de route</label>
-                            </div>
-
-                            <div class="typeSport-input-container">
-                                <input id="path_typeSport_3" name="path[typeSport]" required="required" value="vtt" type="radio">
-                                <label for="path_typeSport_3" class="required typeSport-input"><span></span>VTT</label>
-                            </div>
-
-                            <div class="typeSport-input-container">
-                                <input id="path_typeSport_4" name="path[typeSport]" required="required" value="autre" type="radio">
-                                <label for="path_typeSport_4" class="required typeSport-input"><span></span>Autre</label>
-                            </div>
-                        </div>
-                        {{ form_row(form.description) }}
-                        {{ form_row(form.image) }}
-
-                        <p class="autre_filtre-title">Pour être encore plus précis</p>
-                        <div class="path_autre_filtre">
-                            <div class="autrefiltre-input-container">
-                                <input id="path_autre_filtre_0" class="form-check-input" name="path[autre_filtre][]" value="detente" type="checkbox">
-                                <label for="path_autre_filtre_0" class="autrefiltre-input"><span></span>Détente</label>
-                            </div>
-
-                            <div class="autrefiltre-input-container">
-                                <input id="path_autre_filtre_1" class="form-check-input" name="path[autre_filtre][]" value="sportif" type="checkbox">
-                                <label for="path_autre_filtre_1" class="autrefiltre-input"><span></span>Sportif</label>
-                            </div>
-
-                            <div class="autrefiltre-input-container">
-                                <input id="path_autre_filtre_2" class="form-check-input" name="path[autre_filtre][]" value="denivele" type="checkbox">
-                                <label for="path_autre_filtre_2" class="autrefiltre-input"><span></span>Dénivelé important</label>
-                            </div>
-
-                            <div class="autrefiltre-input-container">
-                                <input id="path_autre_filtre_3" class="form-check-input" name="path[autre_filtre][]" value="paysage" type="checkbox">
-                                <label for="path_autre_filtre_3" class="autrefiltre-input"><span></span>Beau paysage</label>
-                            </div>
-
-                            <div class="autrefiltre-input-container">
-                                <input id="path_autre_filtre_4" class="form-check-input" name="path[autre_filtre][]" value="mauvais etat" type="checkbox">
-                                <label for="path_autre_filtre_4" class="autrefiltre-input"><span></span>Mauvais état</label>
-                            </div>
-                        </div>
-
-                        {{ form_row(form.path) }}
-                        {{ form_row(form.placeId) }}
-                        <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>
-                        <input type="hidden" value="Caché" id="hiddenInputPlaceId" name="path[placeId]"/>
-                        <button id="saveFormBtn" class="submit-input">Partager</button>
-                        {{ form_end(form) }}
-                    </div>
-                </div>
-                <div id="mapFilterForm" class="mapFilter"></div>
-            </div>
+    <h3 class="topo-title">Topographie</h3>
+    <button id="topo-btn" title="Cela peut prendre un certain temps">Calculer la topographie</button>
+    <div id="elevation_chart"></div>
 {% endblock %}
 
 
 
 {% block javascripts %}
     {#<script src=" {{ asset('build/js/main.js') }} "></script>#}
+    <script src="https://www.google.com/jsapi"></script>
     <script src=" {{ asset('build/mousetrap.js') }} "></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script language="javascript" type="text/javascript">
@@ -228,6 +233,9 @@
         });
     </script>
     <script>
+        google.load('visualization', '1', {packages: ['columnchart']});
+        var elevator
+
         var globalPoly;   //objet Polyline
         var poly;   //objet Polyline
 
@@ -409,8 +417,50 @@
 
                 map.fitBounds(bounds);
             });
+
+            elevator = new google.maps.ElevationService;
         }
         /************* FIN INITMAP *************/
+
+
+        function displayPathElevation(path, elevator, map) {
+            elevator.getElevationAlongPath({
+                'path': path,
+                'samples': 256
+            }, plotElevation);
+        }
+
+        // Takes an array of ElevationResult objects, draws the path on the map
+        // and plots the elevation profile on a Visualization API ColumnChart.
+        function plotElevation(elevations, status) {
+            var chartDiv = document.getElementById('elevation_chart');
+            if (status !== 'OK') {
+                // Show the error code inside the chartDiv.
+                chartDiv.innerHTML = 'Cannot show elevation: request failed because ' +
+                    status;
+                return;
+            }
+            // Create a new chart in the elevation_chart DIV.
+            var chart = new google.visualization.ColumnChart(chartDiv);
+
+            // Extract the data from which to populate the chart.
+            // Because the samples are equidistant, the 'Sample'
+            // column here does double duty as distance along the
+            // X axis.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Sample');
+            data.addColumn('number', 'Elevation');
+            for (var i = 0; i < elevations.length; i++) {
+                data.addRow(['', elevations[i].elevation]);
+            }
+
+            // Draw the chart using the data within its DIV.
+            chart.draw(data, {
+                height: 150,
+                legend: 'none',
+                titleY: 'Altitude (m)'
+            });
+        }
 
 
 
@@ -490,6 +540,8 @@
             }
 
             updateTempsGlobal(distanceKmFloat);
+
+            hideElevation();
         }
         /************* FIN ADDLATLNG *************/
 
@@ -563,6 +615,10 @@
             markers.push(marker);   //on met notre tout nouveau marker dans le tableau markers
 
             lastPoint = event.latLng;
+
+            var pathArray = monPath.getArray();
+
+            hideElevation();
         }
         /************* FIN ADDLATLNGROUTE *************/
 
@@ -1056,8 +1112,6 @@
                     alert('Le Geocoder a echoué. Raison: ' + status);
                 }
             });
-
-
         });
 
         var mapFilterForm = document.getElementById('mapFilterForm');
@@ -1102,6 +1156,31 @@
             firstMarker.setOptions({icon: "{{ asset('images/marker.png') }}"});
 
             textDiv.style.color = "#000";
+        }
+
+
+        var topoBtn = document.getElementById('topo-btn');
+        var elevationChart = document.getElementById('elevation_chart');
+
+        topoBtn.onclick = function() {
+            calculateAndDisplayElevation();
+        };
+
+        function calculateAndDisplayElevation(){
+            if(pathArray[1] === undefined) {
+                alert('Commencez par tracer votre parcours !');
+                return;
+            }
+
+            displayPathElevation(pathArray, elevator, map);
+
+            topoBtn.style.display = "none";
+            elevationChart.style.display = "block";
+        }
+
+        function hideElevation(){
+            topoBtn.style.display = "block";
+            elevationChart.style.display = "none";
         }
 
 

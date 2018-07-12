@@ -472,9 +472,13 @@ button > .gm-fullscreen-control{
     margin-left: 15px;
 }
 
-.description-p img{
+.description-p img {
     width: 20px;
     height: 20px;
 
     padding-right: 5px;
+}
+
+#elevation_chart{
+    margin-top: 10px;
 }

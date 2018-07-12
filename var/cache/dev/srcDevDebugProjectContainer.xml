@@ -375,6 +375,9 @@
         <argument type="service" id="service_locator.aqxUcvZ.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\EventListener\ImageUploadListener" class="App\EventListener\ImageUploadListener" public="false" autowire="true" autoconfigure="true">
+      <argument type="service" id="App\Service\ImageUploader"/>
+    </service>
     <service id="App\Events" class="App\Events" public="false" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ChercherPrecisType" class="App\Form\ChercherPrecisType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -383,6 +386,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\ContactType" class="App\Form\ContactType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ImageType" class="App\Form\ImageType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\PathType" class="App\Form\PathType" public="false" autowire="true" autoconfigure="true">
@@ -395,6 +401,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\PathRepository" class="App\Repository\PathRepository" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -403,6 +413,7 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Service\ImageUploader" class="App\Service\ImageUploader" public="false" autowire="true" autoconfigure="true"/>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -657,6 +668,7 @@
         <argument>App\Form\ChercherPrecisType</argument>
         <argument>App\Form\ChercherType</argument>
         <argument>App\Form\ContactType</argument>
+        <argument>App\Form\ImageType</argument>
         <argument>App\Form\PathType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -864,7 +876,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.KFkMMmy"/>
+      <argument type="service" id="service_locator.038Ob_."/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -2875,7 +2887,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id="service_locator.BJWA0XI"/>
+      <argument type="service" id="service_locator.ejtdZgE"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -3942,12 +3954,16 @@
     <service id="abstract.instanceof.App\Form\ChercherType" class="App\Form\ChercherType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ImageType" class="App\Form\ImageType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Form\ImageType" class="App\Form\ImageType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PathType" class="App\Form\PathType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Form\PathType" class="App\Form\PathType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Form\UserType" class="App\Form\UserType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactRepository" class="App\Repository\ContactRepository" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Repository\ContactRepository" class="App\Repository\ContactRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PathRepository" class="App\Repository\PathRepository" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Repository\PathRepository" class="App\Repository\PathRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" public="false" autowire="true" abstract="true"/>
@@ -4316,12 +4332,13 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.KFkMMmy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.038Ob_." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ChercherPrecisType" type="service" id="App\Form\ChercherPrecisType"/>
         <argument key="App\Form\ChercherType" type="service" id="App\Form\ChercherType"/>
         <argument key="App\Form\ContactType" type="service" id="App\Form\ContactType"/>
+        <argument key="App\Form\ImageType" type="service" id="App\Form\ImageType"/>
         <argument key="App\Form\PathType" type="service" id="App\Form\PathType"/>
         <argument key="App\Form\UserType" type="service" id="App\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
@@ -4329,10 +4346,11 @@
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
       </argument>
     </service>
-    <service id="service_locator.BJWA0XI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.ejtdZgE" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ContactRepository" type="service" id="App\Repository\ContactRepository"/>
+        <argument key="App\Repository\ImageRepository" type="service" id="App\Repository\ImageRepository"/>
         <argument key="App\Repository\PathRepository" type="service" id="App\Repository\PathRepository"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>

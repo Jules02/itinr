@@ -24,349 +24,355 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_12e274521d35a328ade58491e00dd28bc09ccb3fba67187a74bd1359f58af72e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_12e274521d35a328ade58491e00dd28bc09ccb3fba67187a74bd1359f58af72e->enter($__internal_12e274521d35a328ade58491e00dd28bc09ccb3fba67187a74bd1359f58af72e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_ca99ad609aaa0df774490d64a9933c1bd2da8fd44766479303ebb0139c1219e2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ca99ad609aaa0df774490d64a9933c1bd2da8fd44766479303ebb0139c1219e2->enter($__internal_ca99ad609aaa0df774490d64a9933c1bd2da8fd44766479303ebb0139c1219e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
-        $__internal_50268bab7555d7332562807b550fa4acd5d4158c5b61d1c386b23f82dd320a1b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_50268bab7555d7332562807b550fa4acd5d4158c5b61d1c386b23f82dd320a1b->enter($__internal_50268bab7555d7332562807b550fa4acd5d4158c5b61d1c386b23f82dd320a1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
+        $__internal_03aa5181268b5d302738465736e2a6167b73731257045025a4934404f117b889 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_03aa5181268b5d302738465736e2a6167b73731257045025a4934404f117b889->enter($__internal_03aa5181268b5d302738465736e2a6167b73731257045025a4934404f117b889_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "content/concepteur.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 3, $this->getSourceContext()); })()), array(0 => "bootstrap_4_layout.html.twig"), true);
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_12e274521d35a328ade58491e00dd28bc09ccb3fba67187a74bd1359f58af72e->leave($__internal_12e274521d35a328ade58491e00dd28bc09ccb3fba67187a74bd1359f58af72e_prof);
+        $__internal_ca99ad609aaa0df774490d64a9933c1bd2da8fd44766479303ebb0139c1219e2->leave($__internal_ca99ad609aaa0df774490d64a9933c1bd2da8fd44766479303ebb0139c1219e2_prof);
 
         
-        $__internal_50268bab7555d7332562807b550fa4acd5d4158c5b61d1c386b23f82dd320a1b->leave($__internal_50268bab7555d7332562807b550fa4acd5d4158c5b61d1c386b23f82dd320a1b_prof);
+        $__internal_03aa5181268b5d302738465736e2a6167b73731257045025a4934404f117b889->leave($__internal_03aa5181268b5d302738465736e2a6167b73731257045025a4934404f117b889_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e098e090661f66ab5e3414aac4482696df6a3ab3a3b5e0fbf24fc76919d30088 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e098e090661f66ab5e3414aac4482696df6a3ab3a3b5e0fbf24fc76919d30088->enter($__internal_e098e090661f66ab5e3414aac4482696df6a3ab3a3b5e0fbf24fc76919d30088_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_48a14fe078a854cc89f659e7109f673cc9fce7ce6eefc8fdb5bf73a0188e7df6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_48a14fe078a854cc89f659e7109f673cc9fce7ce6eefc8fdb5bf73a0188e7df6->enter($__internal_48a14fe078a854cc89f659e7109f673cc9fce7ce6eefc8fdb5bf73a0188e7df6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_3c461d21b6a6d1ec96bba66c9e532a64e0eb39ccf5a0a3d3d6f62440697cde4e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3c461d21b6a6d1ec96bba66c9e532a64e0eb39ccf5a0a3d3d6f62440697cde4e->enter($__internal_3c461d21b6a6d1ec96bba66c9e532a64e0eb39ccf5a0a3d3d6f62440697cde4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_7e1de2d7c713fc4c90831dbab70217267b335e3afa9ae9748d180d3d4c2864ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7e1de2d7c713fc4c90831dbab70217267b335e3afa9ae9748d180d3d4c2864ad->enter($__internal_7e1de2d7c713fc4c90831dbab70217267b335e3afa9ae9748d180d3d4c2864ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Concepteur";
         $this->displayParentBlock("title", $context, $blocks);
         
-        $__internal_3c461d21b6a6d1ec96bba66c9e532a64e0eb39ccf5a0a3d3d6f62440697cde4e->leave($__internal_3c461d21b6a6d1ec96bba66c9e532a64e0eb39ccf5a0a3d3d6f62440697cde4e_prof);
+        $__internal_7e1de2d7c713fc4c90831dbab70217267b335e3afa9ae9748d180d3d4c2864ad->leave($__internal_7e1de2d7c713fc4c90831dbab70217267b335e3afa9ae9748d180d3d4c2864ad_prof);
 
         
-        $__internal_e098e090661f66ab5e3414aac4482696df6a3ab3a3b5e0fbf24fc76919d30088->leave($__internal_e098e090661f66ab5e3414aac4482696df6a3ab3a3b5e0fbf24fc76919d30088_prof);
+        $__internal_48a14fe078a854cc89f659e7109f673cc9fce7ce6eefc8fdb5bf73a0188e7df6->leave($__internal_48a14fe078a854cc89f659e7109f673cc9fce7ce6eefc8fdb5bf73a0188e7df6_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_81695c5694d76c7b925bcd6cd8665a8794ce311bb896b48fb83e01b928c52526 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_81695c5694d76c7b925bcd6cd8665a8794ce311bb896b48fb83e01b928c52526->enter($__internal_81695c5694d76c7b925bcd6cd8665a8794ce311bb896b48fb83e01b928c52526_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_22a5a73c5e6cd881084238cc18e2db456d8c1cc7a124f08172625ca79437d419 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_22a5a73c5e6cd881084238cc18e2db456d8c1cc7a124f08172625ca79437d419->enter($__internal_22a5a73c5e6cd881084238cc18e2db456d8c1cc7a124f08172625ca79437d419_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_08daa4bf036c542a0a0579cd77fc6cd4e537b1e64798143df1f922eaa56e42f7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_08daa4bf036c542a0a0579cd77fc6cd4e537b1e64798143df1f922eaa56e42f7->enter($__internal_08daa4bf036c542a0a0579cd77fc6cd4e537b1e64798143df1f922eaa56e42f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_8fa3555a25d1b323a1bcd4e0f5e7d2bbb15ace49416753c63603c008d9971d02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8fa3555a25d1b323a1bcd4e0f5e7d2bbb15ace49416753c63603c008d9971d02->enter($__internal_8fa3555a25d1b323a1bcd4e0f5e7d2bbb15ace49416753c63603c008d9971d02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/concepteur.css"), "html", null, true);
         
-        $__internal_08daa4bf036c542a0a0579cd77fc6cd4e537b1e64798143df1f922eaa56e42f7->leave($__internal_08daa4bf036c542a0a0579cd77fc6cd4e537b1e64798143df1f922eaa56e42f7_prof);
+        $__internal_8fa3555a25d1b323a1bcd4e0f5e7d2bbb15ace49416753c63603c008d9971d02->leave($__internal_8fa3555a25d1b323a1bcd4e0f5e7d2bbb15ace49416753c63603c008d9971d02_prof);
 
         
-        $__internal_81695c5694d76c7b925bcd6cd8665a8794ce311bb896b48fb83e01b928c52526->leave($__internal_81695c5694d76c7b925bcd6cd8665a8794ce311bb896b48fb83e01b928c52526_prof);
+        $__internal_22a5a73c5e6cd881084238cc18e2db456d8c1cc7a124f08172625ca79437d419->leave($__internal_22a5a73c5e6cd881084238cc18e2db456d8c1cc7a124f08172625ca79437d419_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_118734947d3db0991ef54ff760bea5a097f87eaa15376289345daaadf84b7b90 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_118734947d3db0991ef54ff760bea5a097f87eaa15376289345daaadf84b7b90->enter($__internal_118734947d3db0991ef54ff760bea5a097f87eaa15376289345daaadf84b7b90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0cd72fa09dae262585ef77994aa7b2370ceebfe26b52644e1e021a7116b70f5c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0cd72fa09dae262585ef77994aa7b2370ceebfe26b52644e1e021a7116b70f5c->enter($__internal_0cd72fa09dae262585ef77994aa7b2370ceebfe26b52644e1e021a7116b70f5c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_9e6a7883530f083a7b5c6cc491a2f2c7ed25de6e2249864af8b5ef9ac5b56e2d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9e6a7883530f083a7b5c6cc491a2f2c7ed25de6e2249864af8b5ef9ac5b56e2d->enter($__internal_9e6a7883530f083a7b5c6cc491a2f2c7ed25de6e2249864af8b5ef9ac5b56e2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_35625f71e329354e5b3a338cedec796d31c221cb7fc0ebb4ed815a2e54edc36c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_35625f71e329354e5b3a338cedec796d31c221cb7fc0ebb4ed815a2e54edc36c->enter($__internal_35625f71e329354e5b3a338cedec796d31c221cb7fc0ebb4ed815a2e54edc36c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "        ";
+        echo "    ";
         $this->loadTemplate("flash_messages.html.twig", "content/concepteur.html.twig", 11)->display($context);
         // line 12
         echo "
-        <div id=\"loading\">
-            <img id=\"loading-image\" src=\"";
+    <div id=\"loading\">
+        <img id=\"loading-image\" src=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/loader.gif"), "html", null, true);
         echo "\" alt=\"Loading...\" />
-        </div>
+    </div>
 
-        <div id=\"map\" oncontextmenu=\"return false\"></div>
+    <div id=\"map\" oncontextmenu=\"return false\"></div>
 
-        <div id=\"mapFilter\" class=\"mapFilter\"></div>
+    <div id=\"mapFilter\" class=\"mapFilter\"></div>
 
-        <!-- Zone de texte de la distance en bas -->
+    <!-- Zone de texte de la distance en bas -->
 
-           <!-- Contrôles présents sur la carte-->
-            <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Entrez votre localisation\">
-            <button type=\"button\" id=\"centerMap\" name=\"bouton4\" title=\"Centrez la carte sur votre localisation\"><img src=\"";
+    <!-- Contrôles présents sur la carte-->
+    <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Entrez votre localisation\">
+    <button type=\"button\" id=\"centerMap\" name=\"bouton4\" title=\"Centrez la carte sur votre localisation\"><img src=\"";
         // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/gps.png"), "html", null, true);
         echo "\" alt=\"Localisez vous\"/></button>
 
 
-            <div class=\"map-bottom\">
-                <div id=\"textDiv\"></div>
-                <input type=\"button\" id=\"deleteAllButton\" class=\"bottomButton\" name=\"bouton2\" value=\"Supprimer tous les points\">
-                <input type=\"button\" id=\"deleteLastButton\" class=\"bottomButton\" name=\"bouton\" value=\"Supprimer le dernier point\">
-                <input type=\"button\" id=\"closeLoopButton\" class=\"bottomButton\" name=\"bouton3\" value=\"Fermer la boucle\" title=\"Reliez votre dernier point avec votre point de départ\">
-            </div>
+    <div class=\"map-bottom\">
+        <div id=\"textDiv\"></div>
+        <input type=\"button\" id=\"deleteAllButton\" class=\"bottomButton\" name=\"bouton2\" value=\"Supprimer tous les points\">
+        <input type=\"button\" id=\"deleteLastButton\" class=\"bottomButton\" name=\"bouton\" value=\"Supprimer le dernier point\">
+        <input type=\"button\" id=\"closeLoopButton\" class=\"bottomButton\" name=\"bouton3\" value=\"Fermer la boucle\" title=\"Reliez votre dernier point avec votre point de départ\">
+    </div>
 
 
 
 
-            <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"";
+    <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"";
         // line 38
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/menu-droite.png"), "html", null, true);
         echo "\" alt=\"Droite\" id=\"imgBoutonMenuGauche\"></button>
-            <div id=\"menuGauche\">
-                <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
+    <div id=\"menuGauche\">
+        <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
 
-                <div id=\"menuGauche-interieur\">
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
-                        <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                        <div class=\"temps-necessaire-formcontainer\">
-                            <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
-                            <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"";
+        <div id=\"menuGauche-interieur\">
+            <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
+                <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                <div class=\"temps-necessaire-formcontainer\">
+                    <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
+                    <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"";
         // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/fleche-tempsnecessaire.png"), "html", null, true);
         echo "\"></button>
-                        </div>
-                        <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
-                    </div>
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
-                        <div class=\"temps-necessaire-resultat-container\">
-                            <p id=\"temps-necessaire-resultat\">
-                                Avec votre allure de
-                                <span id=\"temps-necessaire-resultat-allure\"></span>
-                                km/h, <br/> vous prendrez
-                                <span id=\"temps-necessaire-resultat-temps\"></span>
-                            </p>
-                            <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"vitesse-moyenne-souscontainer\">
-                                <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
-                                <div class=\"vitesse-moyenne-formcontainer\">
-                                    <div class=\"vitesse-moyenne-inputcontainer\">
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
-                                    </div>
-                                    <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"";
-        // line 76
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/fleche-tempsnecessaire.png"), "html", null, true);
-        echo "\"></button>
-                                </div>
-                        </div>
-                    </div>
-                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"vitesse-moyenne-resultat-container\">
-                            <p id=\"vitesse-moyenne-resultat\">
-                                Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
-                                <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
-                                km/h
-                            </p>
-                            <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
-                        </div>
-                    </div>
-
-
-
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"";
-        // line 97
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/velo.png"), "html", null, true);
-        echo "\" alt=\"Icône vélo\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
-                        </div>
-                    </div>
-
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"";
-        // line 105
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/footing.png"), "html", null, true);
-        echo "\" alt=\"Icône footing\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
-                        </div>
-                    </div>
-
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"";
-        // line 113
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marche.png"), "html", null, true);
-        echo "\" alt=\"Icône marche\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
-                        </div>
-                    </div>
                 </div>
-
-                <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+                <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
+            </div>
+            <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
+                <div class=\"temps-necessaire-resultat-container\">
+                    <p id=\"temps-necessaire-resultat\">
+                        Avec votre allure de
+                        <span id=\"temps-necessaire-resultat-allure\"></span>
+                        km/h, <br/> vous prendrez
+                        <span id=\"temps-necessaire-resultat-temps\"></span>
+                    </p>
+                    <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
+                </div>
             </div>
 
 
 
 
+            <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"vitesse-moyenne-souscontainer\">
+                        <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                        <div class=\"vitesse-moyenne-formcontainer\">
+                            <div class=\"vitesse-moyenne-inputcontainer\">
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
+                            </div>
+                            <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"";
+        // line 76
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/fleche-tempsnecessaire.png"), "html", null, true);
+        echo "\"></button>
+                        </div>
+                </div>
+            </div>
+            <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"vitesse-moyenne-resultat-container\">
+                    <p id=\"vitesse-moyenne-resultat\">
+                        Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                        <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
+                        km/h
+                    </p>
+                    <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
+                </div>
+            </div>
 
-            <select name=\"modeSuivi\" id=\"selectModeSuivi\">
-                <option value=\"DRIVING\" selected disabled=true>Mode de suivi des routes</option>
-                <option value=\"BICYCLING\" title=\"Les itinéraires essayerons au maximum de passer par des pistes cyclables\">Vélo</option>
-                <option value=\"WALKING\" title=\"Privilégie les voies piétonnes et les rues avec trottoir\">Marche et course à pied</option>
-                <option value=\"DRIVING\" title=\"N'emprunte que le réseau routier\">Voiture ou vélo de route</option>
-            </select>
 
-            <button id=\"savePath\" class=\"saveButton\" name=\"button4\" value=\"\" title=\"Sauvegardez ou publiez votre parcours\">
-                <img src=\"";
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"";
+        // line 97
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/velo.png"), "html", null, true);
+        echo "\" alt=\"Icône vélo\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
+                </div>
+            </div>
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"";
+        // line 105
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/footing.png"), "html", null, true);
+        echo "\" alt=\"Icône footing\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
+                </div>
+            </div>
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"";
+        // line 113
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marche.png"), "html", null, true);
+        echo "\" alt=\"Icône marche\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+    </div>
+
+
+
+
+
+    <select name=\"modeSuivi\" id=\"selectModeSuivi\">
+        <option value=\"DRIVING\" selected disabled=true>Mode de suivi des routes</option>
+        <option value=\"BICYCLING\" title=\"Les itinéraires essayerons au maximum de passer par des pistes cyclables\">Vélo</option>
+        <option value=\"WALKING\" title=\"Privilégie les voies piétonnes et les rues avec trottoir\">Marche et course à pied</option>
+        <option value=\"DRIVING\" title=\"N'emprunte que le réseau routier\">Voiture ou vélo de route</option>
+    </select>
+
+    <button id=\"savePath\" class=\"saveButton\" name=\"button4\" value=\"\" title=\"Sauvegardez ou publiez votre parcours\">
+        <img src=\"";
         // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/share.png"), "html", null, true);
         echo "\" alt='Icône sauvegarder' class=\"saveImgHover\">
-            </button>
-            <div class=\"saveContainer\" id=\"saveContainer\">
-                <div class=\"save-messageContainer\">
-                    <div id=\"save-message\">
-                        <p>Commencez par tracer votre parcours</p>
-                    </div>
-                </div>
-                <div id=\"formFilter\"></div>
-                <div class=\"formContainer\">
-                    <div class=\"formPopUp\" id=\"formPopUp\">
-                        <p class=\"form-facultatif\">* À part pour le titre, tous les champs sont facultatifs</p>
-                        ";
+    </button>
+    <div class=\"saveContainer\" id=\"saveContainer\">
+        <div class=\"save-messageContainer\">
+            <div id=\"save-message\">
+                <p>Commencez par tracer votre parcours</p>
+            </div>
+        </div>
+        <div id=\"formFilter\"></div>
+        <div class=\"formContainer\">
+            <div class=\"formPopUp\" id=\"formPopUp\">
+                <p class=\"form-facultatif\">* À part pour le titre, tous les champs sont facultatifs</p>
+                ";
         // line 146
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 146, $this->getSourceContext()); })()), 'form_start');
         echo "
-                        ";
+                ";
         // line 147
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 147, $this->getSourceContext()); })()), "titre", array()), 'row');
         echo "
 
-                        <p class=\"typeSport-title\">Pour quel sport ce parcours est il le plus adapté ?</p>
-                        <div class=\"typeSport-container\">
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_0\" name=\"path[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
-                                <label for=\"path_typeSport_0\" class=\"required typeSport-input\"><span></span>Marche</label>
-                            </div>
+                <p class=\"typeSport-title\">Pour quel sport ce parcours est il le plus adapté ?</p>
+                <div class=\"typeSport-container\">
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_0\" name=\"path[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
+                        <label for=\"path_typeSport_0\" class=\"required typeSport-input\"><span></span>Marche</label>
+                    </div>
 
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_1\" name=\"path[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
-                                <label for=\"path_typeSport_1\" class=\"required typeSport-input\"><span></span>Course à pied</label>
-                            </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_1\" name=\"path[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
+                        <label for=\"path_typeSport_1\" class=\"required typeSport-input\"><span></span>Course à pied</label>
+                    </div>
 
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_2\" name=\"path[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
-                                <label for=\"path_typeSport_2\" class=\"required typeSport-input\"><span></span>Vélo de route</label>
-                            </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_2\" name=\"path[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
+                        <label for=\"path_typeSport_2\" class=\"required typeSport-input\"><span></span>Vélo de route</label>
+                    </div>
 
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_3\" name=\"path[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
-                                <label for=\"path_typeSport_3\" class=\"required typeSport-input\"><span></span>VTT</label>
-                            </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_3\" name=\"path[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
+                        <label for=\"path_typeSport_3\" class=\"required typeSport-input\"><span></span>VTT</label>
+                    </div>
 
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_4\" name=\"path[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
-                                <label for=\"path_typeSport_4\" class=\"required typeSport-input\"><span></span>Autre</label>
-                            </div>
-                        </div>
-                        ";
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_4\" name=\"path[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
+                        <label for=\"path_typeSport_4\" class=\"required typeSport-input\"><span></span>Autre</label>
+                    </div>
+                </div>
+                ";
         // line 176
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 176, $this->getSourceContext()); })()), "description", array()), 'row');
         echo "
-                        ";
+                ";
         // line 177
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 177, $this->getSourceContext()); })()), "image", array()), 'row');
         echo "
 
-                        <p class=\"autre_filtre-title\">Pour être encore plus précis</p>
-                        <div class=\"path_autre_filtre\">
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_0\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"detente\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_0\" class=\"autrefiltre-input\"><span></span>Détente</label>
-                            </div>
+                <p class=\"autre_filtre-title\">Pour être encore plus précis</p>
+                <div class=\"path_autre_filtre\">
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_0\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"detente\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_0\" class=\"autrefiltre-input\"><span></span>Détente</label>
+                    </div>
 
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_1\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"sportif\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_1\" class=\"autrefiltre-input\"><span></span>Sportif</label>
-                            </div>
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_1\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"sportif\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_1\" class=\"autrefiltre-input\"><span></span>Sportif</label>
+                    </div>
 
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_2\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"denivele\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_2\" class=\"autrefiltre-input\"><span></span>Dénivelé important</label>
-                            </div>
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_2\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"denivele\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_2\" class=\"autrefiltre-input\"><span></span>Dénivelé important</label>
+                    </div>
 
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_3\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"paysage\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_3\" class=\"autrefiltre-input\"><span></span>Beau paysage</label>
-                            </div>
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_3\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"paysage\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_3\" class=\"autrefiltre-input\"><span></span>Beau paysage</label>
+                    </div>
 
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_4\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"mauvais etat\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_4\" class=\"autrefiltre-input\"><span></span>Mauvais état</label>
-                            </div>
-                        </div>
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_4\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"mauvais etat\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_4\" class=\"autrefiltre-input\"><span></span>Mauvais état</label>
+                    </div>
+                </div>
 
-                        ";
+                ";
         // line 207
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 207, $this->getSourceContext()); })()), "path", array()), 'row');
         echo "
-                        ";
+                ";
         // line 208
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 208, $this->getSourceContext()); })()), "placeId", array()), 'row');
         echo "
-                        <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPath\" name=\"path[path]\"/>
-                        <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPlaceId\" name=\"path[placeId]\"/>
-                        <button id=\"saveFormBtn\" class=\"submit-input\">Partager</button>
-                        ";
+                <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPath\" name=\"path[path]\"/>
+                <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPlaceId\" name=\"path[placeId]\"/>
+                <button id=\"saveFormBtn\" class=\"submit-input\">Partager</button>
+                ";
         // line 212
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 212, $this->getSourceContext()); })()), 'form_end');
         echo "
-                    </div>
-                </div>
-                <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
             </div>
+        </div>
+        <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
+    </div>
+
+    <h3 class=\"topo-title\">Topographie</h3>
+    <button id=\"topo-btn\" title=\"Cela peut prendre un certain temps\">Calculer la topographie</button>
+    <div id=\"elevation_chart\"></div>
 ";
         
-        $__internal_9e6a7883530f083a7b5c6cc491a2f2c7ed25de6e2249864af8b5ef9ac5b56e2d->leave($__internal_9e6a7883530f083a7b5c6cc491a2f2c7ed25de6e2249864af8b5ef9ac5b56e2d_prof);
+        $__internal_35625f71e329354e5b3a338cedec796d31c221cb7fc0ebb4ed815a2e54edc36c->leave($__internal_35625f71e329354e5b3a338cedec796d31c221cb7fc0ebb4ed815a2e54edc36c_prof);
 
         
-        $__internal_118734947d3db0991ef54ff760bea5a097f87eaa15376289345daaadf84b7b90->leave($__internal_118734947d3db0991ef54ff760bea5a097f87eaa15376289345daaadf84b7b90_prof);
+        $__internal_0cd72fa09dae262585ef77994aa7b2370ceebfe26b52644e1e021a7116b70f5c->leave($__internal_0cd72fa09dae262585ef77994aa7b2370ceebfe26b52644e1e021a7116b70f5c_prof);
 
     }
 
-    // line 221
+    // line 225
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_f3386ce648399e0d0bb9283abef8d5a2e0ebcd282b7a0af6bfd6e1270821e12c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f3386ce648399e0d0bb9283abef8d5a2e0ebcd282b7a0af6bfd6e1270821e12c->enter($__internal_f3386ce648399e0d0bb9283abef8d5a2e0ebcd282b7a0af6bfd6e1270821e12c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_7df94fc23cebc9b78273aab1e8132e4e8d653e978ee05d82473199dd885d99be = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7df94fc23cebc9b78273aab1e8132e4e8d653e978ee05d82473199dd885d99be->enter($__internal_7df94fc23cebc9b78273aab1e8132e4e8d653e978ee05d82473199dd885d99be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_35a6d4730373d06a8467c55d02361dc3707906810cf9276cee2d58ec0c9801bc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_35a6d4730373d06a8467c55d02361dc3707906810cf9276cee2d58ec0c9801bc->enter($__internal_35a6d4730373d06a8467c55d02361dc3707906810cf9276cee2d58ec0c9801bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_53d53d615d8092c588b39221400025f6622f6b1b2db8bc296f6cd10345693dd7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_53d53d615d8092c588b39221400025f6622f6b1b2db8bc296f6cd10345693dd7->enter($__internal_53d53d615d8092c588b39221400025f6622f6b1b2db8bc296f6cd10345693dd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 222
+        // line 226
         echo "    ";
-        // line 223
-        echo "    <script src=\" ";
+        // line 227
+        echo "    <script src=\"https://www.google.com/jsapi\"></script>
+    <script src=\" ";
+        // line 228
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("build/mousetrap.js"), "html", null, true);
         echo " \"></script>
     <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.js\"></script>
@@ -376,6 +382,9 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         });
     </script>
     <script>
+        google.load('visualization', '1', {packages: ['columnchart']});
+        var elevator
+
         var globalPoly;   //objet Polyline
         var poly;   //objet Polyline
 
@@ -385,7 +394,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         var geoPos;     //objet
 
         var markerVide = \"";
-        // line 239
+        // line 247
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/empty.png"), "html", null, true);
         echo "\";   //pour ne pas avoir de marqueur pour chaque point (à ameliorer)
 
@@ -560,8 +569,50 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
                 map.fitBounds(bounds);
             });
+
+            elevator = new google.maps.ElevationService;
         }
         /************* FIN INITMAP *************/
+
+
+        function displayPathElevation(path, elevator, map) {
+            elevator.getElevationAlongPath({
+                'path': path,
+                'samples': 256
+            }, plotElevation);
+        }
+
+        // Takes an array of ElevationResult objects, draws the path on the map
+        // and plots the elevation profile on a Visualization API ColumnChart.
+        function plotElevation(elevations, status) {
+            var chartDiv = document.getElementById('elevation_chart');
+            if (status !== 'OK') {
+                // Show the error code inside the chartDiv.
+                chartDiv.innerHTML = 'Cannot show elevation: request failed because ' +
+                    status;
+                return;
+            }
+            // Create a new chart in the elevation_chart DIV.
+            var chart = new google.visualization.ColumnChart(chartDiv);
+
+            // Extract the data from which to populate the chart.
+            // Because the samples are equidistant, the 'Sample'
+            // column here does double duty as distance along the
+            // X axis.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Sample');
+            data.addColumn('number', 'Elevation');
+            for (var i = 0; i < elevations.length; i++) {
+                data.addRow(['', elevations[i].elevation]);
+            }
+
+            // Draw the chart using the data within its DIV.
+            chart.draw(data, {
+                height: 150,
+                legend: 'none',
+                titleY: 'Altitude (m)'
+            });
+        }
 
 
 
@@ -582,12 +633,12 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
             if (mapType == 'hybrid'){
                 markerStart = \"";
-        // line 433
+        // line 483
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
         echo "\";
             } else {
                 markerStart = \"";
-        // line 435
+        // line 485
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\";
             }
@@ -647,6 +698,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             }
 
             updateTempsGlobal(distanceKmFloat);
+
+            hideElevation();
         }
         /************* FIN ADDLATLNG *************/
 
@@ -720,6 +773,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             markers.push(marker);   //on met notre tout nouveau marker dans le tableau markers
 
             lastPoint = event.latLng;
+
+            var pathArray = monPath.getArray();
+
+            hideElevation();
         }
         /************* FIN ADDLATLNGROUTE *************/
 
@@ -1213,8 +1270,6 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                     alert('Le Geocoder a echoué. Raison: ' + status);
                 }
             });
-
-
         });
 
         var mapFilterForm = document.getElementById('mapFilterForm');
@@ -1250,7 +1305,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         function hybridMapStyle(){
             globalPoly.setOptions({strokeColor: '#35f700'});
             firstMarker.setOptions({icon: \"";
-        // line 1095
+        // line 1149
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker_hybrid.png"), "html", null, true);
         echo "\"});
 
@@ -1260,11 +1315,36 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         function planMapStyle(){
             globalPoly.setOptions({strokeColor: '#3BA14C'});
             firstMarker.setOptions({icon: \"";
-        // line 1102
+        // line 1156
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/marker.png"), "html", null, true);
         echo "\"});
 
             textDiv.style.color = \"#000\";
+        }
+
+
+        var topoBtn = document.getElementById('topo-btn');
+        var elevationChart = document.getElementById('elevation_chart');
+
+        topoBtn.onclick = function() {
+            calculateAndDisplayElevation();
+        };
+
+        function calculateAndDisplayElevation(){
+            if(pathArray[1] === undefined) {
+                alert('Commencez par tracer votre parcours !');
+                return;
+            }
+
+            displayPathElevation(pathArray, elevator, map);
+
+            topoBtn.style.display = \"none\";
+            elevationChart.style.display = \"block\";
+        }
+
+        function hideElevation(){
+            topoBtn.style.display = \"block\";
+            elevationChart.style.display = \"none\";
         }
 
 
@@ -1304,10 +1384,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
     </script>
 ";
         
-        $__internal_35a6d4730373d06a8467c55d02361dc3707906810cf9276cee2d58ec0c9801bc->leave($__internal_35a6d4730373d06a8467c55d02361dc3707906810cf9276cee2d58ec0c9801bc_prof);
+        $__internal_53d53d615d8092c588b39221400025f6622f6b1b2db8bc296f6cd10345693dd7->leave($__internal_53d53d615d8092c588b39221400025f6622f6b1b2db8bc296f6cd10345693dd7_prof);
 
         
-        $__internal_f3386ce648399e0d0bb9283abef8d5a2e0ebcd282b7a0af6bfd6e1270821e12c->leave($__internal_f3386ce648399e0d0bb9283abef8d5a2e0ebcd282b7a0af6bfd6e1270821e12c_prof);
+        $__internal_7df94fc23cebc9b78273aab1e8132e4e8d653e978ee05d82473199dd885d99be->leave($__internal_7df94fc23cebc9b78273aab1e8132e4e8d653e978ee05d82473199dd885d99be_prof);
 
     }
 
@@ -1323,7 +1403,7 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
     public function getDebugInfo()
     {
-        return array (  1264 => 1102,  1254 => 1095,  591 => 435,  586 => 433,  389 => 239,  369 => 223,  367 => 222,  358 => 221,  342 => 212,  335 => 208,  331 => 207,  298 => 177,  294 => 176,  262 => 147,  258 => 146,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
+        return array (  1319 => 1156,  1309 => 1149,  642 => 485,  637 => 483,  398 => 247,  376 => 228,  373 => 227,  371 => 226,  362 => 225,  342 => 212,  335 => 208,  331 => 207,  298 => 177,  294 => 176,  262 => 147,  258 => 146,  243 => 134,  219 => 113,  208 => 105,  197 => 97,  173 => 76,  141 => 47,  129 => 38,  113 => 25,  99 => 14,  95 => 12,  92 => 11,  83 => 10,  65 => 7,  46 => 5,  36 => 1,  34 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -1338,218 +1418,223 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
 
 {% block body %}
-        {% include 'flash_messages.html.twig' %}
+    {% include 'flash_messages.html.twig' %}
 
-        <div id=\"loading\">
-            <img id=\"loading-image\" src=\"{{ asset('images/loader.gif') }}\" alt=\"Loading...\" />
+    <div id=\"loading\">
+        <img id=\"loading-image\" src=\"{{ asset('images/loader.gif') }}\" alt=\"Loading...\" />
+    </div>
+
+    <div id=\"map\" oncontextmenu=\"return false\"></div>
+
+    <div id=\"mapFilter\" class=\"mapFilter\"></div>
+
+    <!-- Zone de texte de la distance en bas -->
+
+    <!-- Contrôles présents sur la carte-->
+    <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Entrez votre localisation\">
+    <button type=\"button\" id=\"centerMap\" name=\"bouton4\" title=\"Centrez la carte sur votre localisation\"><img src=\"{{ asset('images/gps.png') }}\" alt=\"Localisez vous\"/></button>
+
+
+    <div class=\"map-bottom\">
+        <div id=\"textDiv\"></div>
+        <input type=\"button\" id=\"deleteAllButton\" class=\"bottomButton\" name=\"bouton2\" value=\"Supprimer tous les points\">
+        <input type=\"button\" id=\"deleteLastButton\" class=\"bottomButton\" name=\"bouton\" value=\"Supprimer le dernier point\">
+        <input type=\"button\" id=\"closeLoopButton\" class=\"bottomButton\" name=\"bouton3\" value=\"Fermer la boucle\" title=\"Reliez votre dernier point avec votre point de départ\">
+    </div>
+
+
+
+
+    <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"{{ asset('images/menu-droite.png') }}\" alt=\"Droite\" id=\"imgBoutonMenuGauche\"></button>
+    <div id=\"menuGauche\">
+        <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
+
+        <div id=\"menuGauche-interieur\">
+            <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
+                <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                <div class=\"temps-necessaire-formcontainer\">
+                    <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
+                    <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
+                </div>
+                <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
+            </div>
+            <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
+                <div class=\"temps-necessaire-resultat-container\">
+                    <p id=\"temps-necessaire-resultat\">
+                        Avec votre allure de
+                        <span id=\"temps-necessaire-resultat-allure\"></span>
+                        km/h, <br/> vous prendrez
+                        <span id=\"temps-necessaire-resultat-temps\"></span>
+                    </p>
+                    <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
+                </div>
+            </div>
+
+
+
+
+            <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"vitesse-moyenne-souscontainer\">
+                        <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
+                        <div class=\"vitesse-moyenne-formcontainer\">
+                            <div class=\"vitesse-moyenne-inputcontainer\">
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
+                                <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
+                            </div>
+                            <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
+                        </div>
+                </div>
+            </div>
+            <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"vitesse-moyenne-resultat-container\">
+                    <p id=\"vitesse-moyenne-resultat\">
+                        Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
+                        <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
+                        km/h
+                    </p>
+                    <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
+                </div>
+            </div>
+
+
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"{{ asset('images/velo.png') }}\" alt=\"Icône vélo\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
+                </div>
+            </div>
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"{{ asset('images/footing.png') }}\" alt=\"Icône footing\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
+                </div>
+            </div>
+
+            <div class=\"menuGauche-partie\">
+                <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
+                <div class=\"menuGauche-partie-container\">
+                    <img src=\"{{ asset('images/marche.png') }}\" alt=\"Icône marche\" class=\"menuGauche-img\">
+                    <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
+                </div>
+            </div>
         </div>
 
-        <div id=\"map\" oncontextmenu=\"return false\"></div>
-
-        <div id=\"mapFilter\" class=\"mapFilter\"></div>
-
-        <!-- Zone de texte de la distance en bas -->
-
-           <!-- Contrôles présents sur la carte-->
-            <input id=\"pac-input\" class=\"controls\" type=\"text\" placeholder=\"Entrez votre localisation\">
-            <button type=\"button\" id=\"centerMap\" name=\"bouton4\" title=\"Centrez la carte sur votre localisation\"><img src=\"{{ asset('images/gps.png') }}\" alt=\"Localisez vous\"/></button>
+        <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+    </div>
 
 
-            <div class=\"map-bottom\">
-                <div id=\"textDiv\"></div>
-                <input type=\"button\" id=\"deleteAllButton\" class=\"bottomButton\" name=\"bouton2\" value=\"Supprimer tous les points\">
-                <input type=\"button\" id=\"deleteLastButton\" class=\"bottomButton\" name=\"bouton\" value=\"Supprimer le dernier point\">
-                <input type=\"button\" id=\"closeLoopButton\" class=\"bottomButton\" name=\"bouton3\" value=\"Fermer la boucle\" title=\"Reliez votre dernier point avec votre point de départ\">
+
+
+
+    <select name=\"modeSuivi\" id=\"selectModeSuivi\">
+        <option value=\"DRIVING\" selected disabled=true>Mode de suivi des routes</option>
+        <option value=\"BICYCLING\" title=\"Les itinéraires essayerons au maximum de passer par des pistes cyclables\">Vélo</option>
+        <option value=\"WALKING\" title=\"Privilégie les voies piétonnes et les rues avec trottoir\">Marche et course à pied</option>
+        <option value=\"DRIVING\" title=\"N'emprunte que le réseau routier\">Voiture ou vélo de route</option>
+    </select>
+
+    <button id=\"savePath\" class=\"saveButton\" name=\"button4\" value=\"\" title=\"Sauvegardez ou publiez votre parcours\">
+        <img src=\"{{ asset('images/share.png') }}\" alt='Icône sauvegarder' class=\"saveImgHover\">
+    </button>
+    <div class=\"saveContainer\" id=\"saveContainer\">
+        <div class=\"save-messageContainer\">
+            <div id=\"save-message\">
+                <p>Commencez par tracer votre parcours</p>
             </div>
+        </div>
+        <div id=\"formFilter\"></div>
+        <div class=\"formContainer\">
+            <div class=\"formPopUp\" id=\"formPopUp\">
+                <p class=\"form-facultatif\">* À part pour le titre, tous les champs sont facultatifs</p>
+                {{ form_start(form) }}
+                {{ form_row(form.titre) }}
 
-
-
-
-            <button id=\"boutonMenuLateral\" class=\"boutonMenuLateralStyle\"><img src=\"{{ asset('images/menu-droite.png') }}\" alt=\"Droite\" id=\"imgBoutonMenuGauche\"></button>
-            <div id=\"menuGauche\">
-                <p id=\"menuGauche-message\">Commencez par tracer votre parcours !</p>
-
-                <div id=\"menuGauche-interieur\">
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-container\">
-                        <p class=\"menuGauche-partie-texte temps-necessaire-texte\">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                        <div class=\"temps-necessaire-formcontainer\">
-                            <input type=\"text\" name=\"vitesse-moyenne\" id=\"temps-necessaire-input\"/>
-                            <button type=\"submit\" id=\"temps-necessaire-submit\" class=\"menuGauche-btn-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
-                        </div>
-                        <p class=\"temps-necessaire-soustexte\">Rentrez votre vitesse moyenne en km/h</p>
-                    </div>
-                    <div class=\"menuGauche-partie\" id=\"temps-necessaire-resultat-partie\">
-                        <div class=\"temps-necessaire-resultat-container\">
-                            <p id=\"temps-necessaire-resultat\">
-                                Avec votre allure de
-                                <span id=\"temps-necessaire-resultat-allure\"></span>
-                                km/h, <br/> vous prendrez
-                                <span id=\"temps-necessaire-resultat-temps\"></span>
-                            </p>
-                            <button id=\"temps-necessaire-resultat-btn\">Calculer à nouveau</button>
-                        </div>
+                <p class=\"typeSport-title\">Pour quel sport ce parcours est il le plus adapté ?</p>
+                <div class=\"typeSport-container\">
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_0\" name=\"path[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
+                        <label for=\"path_typeSport_0\" class=\"required typeSport-input\"><span></span>Marche</label>
                     </div>
 
-
-
-
-                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-container\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"vitesse-moyenne-souscontainer\">
-                                <p class=\"menuGauche-partie-texte vitesse-moyenne-texte\">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
-                                <div class=\"vitesse-moyenne-formcontainer\">
-                                    <div class=\"vitesse-moyenne-inputcontainer\">
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-h\" class=\"vitesse-input\" placeholder=\"h\"/>
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-m\" class=\"vitesse-input\" placeholder=\"m\"/>
-                                        <input type=\"text\" name=\"vitesse-moyenne\" id=\"vitesse-moyenne-input-s\" class=\"vitesse-input\" placeholder=\"s\"/>
-                                    </div>
-                                    <button type=\"submit\" id=\"vitesse-moyenne-submit\" class=\"menuGauche-btn-submit vitesse-moyenne-submit\"><img src=\"{{ asset('images/fleche-tempsnecessaire.png') }}\"></button>
-                                </div>
-                        </div>
-                    </div>
-                    <div class=\"menuGauche-partie\" id=\"vitesse-moyenne-resultat-container\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"vitesse-moyenne-resultat-container\">
-                            <p id=\"vitesse-moyenne-resultat\">
-                                Vous avez parcouru ce parcours avec <br/>une vitesse moyenne de
-                                <span id=\"vitesse-moyenne-resultat-vitesse\"></span>
-                                km/h
-                            </p>
-                            <button id=\"vitesse-moyenne-resultat-btn\">Calculer à nouveau</button>
-                        </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_1\" name=\"path[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
+                        <label for=\"path_typeSport_1\" class=\"required typeSport-input\"><span></span>Course à pied</label>
                     </div>
 
-
-
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"{{ asset('images/velo.png') }}\" alt=\"Icône vélo\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 20 km/h\">En vélo,</span> vous prendrez <span id=\"tempsVelo\"></span></p>
-                        </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_2\" name=\"path[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
+                        <label for=\"path_typeSport_2\" class=\"required typeSport-input\"><span></span>Vélo de route</label>
                     </div>
 
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"{{ asset('images/footing.png') }}\" alt=\"Icône footing\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 13 km/h\">Avec une allure de footing,</span> vous prendrez <span id=\"tempsFooting\"></span></p>
-                        </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_3\" name=\"path[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
+                        <label for=\"path_typeSport_3\" class=\"required typeSport-input\"><span></span>VTT</label>
                     </div>
 
-                    <div class=\"menuGauche-partie\">
-                        <div class=\"sepa-container\"><div class=\"menuGauche-sepa\"></div></div>
-                        <div class=\"menuGauche-partie-container\">
-                            <img src=\"{{ asset('images/marche.png') }}\" alt=\"Icône marche\" class=\"menuGauche-img\">
-                            <p class=\"menuGauche-partie-temps-sport\"><span title=\"Avec une vitesse moyenne de 6 km/h\">En marchant,</span> vous prendrez <span id=\"tempsMarche\"></span></p>
-                        </div>
+                    <div class=\"typeSport-input-container\">
+                        <input id=\"path_typeSport_4\" name=\"path[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
+                        <label for=\"path_typeSport_4\" class=\"required typeSport-input\"><span></span>Autre</label>
+                    </div>
+                </div>
+                {{ form_row(form.description) }}
+                {{ form_row(form.image) }}
+
+                <p class=\"autre_filtre-title\">Pour être encore plus précis</p>
+                <div class=\"path_autre_filtre\">
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_0\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"detente\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_0\" class=\"autrefiltre-input\"><span></span>Détente</label>
+                    </div>
+
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_1\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"sportif\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_1\" class=\"autrefiltre-input\"><span></span>Sportif</label>
+                    </div>
+
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_2\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"denivele\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_2\" class=\"autrefiltre-input\"><span></span>Dénivelé important</label>
+                    </div>
+
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_3\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"paysage\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_3\" class=\"autrefiltre-input\"><span></span>Beau paysage</label>
+                    </div>
+
+                    <div class=\"autrefiltre-input-container\">
+                        <input id=\"path_autre_filtre_4\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"mauvais etat\" type=\"checkbox\">
+                        <label for=\"path_autre_filtre_4\" class=\"autrefiltre-input\"><span></span>Mauvais état</label>
                     </div>
                 </div>
 
-                <!--<button id=\"boutonMenuLateralFermer\" class=\"boutonMenuLateralStyle\"><img src=\"img/menu-gauche.png\" alt=\"Gauche\"></button>-->
+                {{ form_row(form.path) }}
+                {{ form_row(form.placeId) }}
+                <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPath\" name=\"path[path]\"/>
+                <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPlaceId\" name=\"path[placeId]\"/>
+                <button id=\"saveFormBtn\" class=\"submit-input\">Partager</button>
+                {{ form_end(form) }}
             </div>
+        </div>
+        <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
+    </div>
 
-
-
-
-
-            <select name=\"modeSuivi\" id=\"selectModeSuivi\">
-                <option value=\"DRIVING\" selected disabled=true>Mode de suivi des routes</option>
-                <option value=\"BICYCLING\" title=\"Les itinéraires essayerons au maximum de passer par des pistes cyclables\">Vélo</option>
-                <option value=\"WALKING\" title=\"Privilégie les voies piétonnes et les rues avec trottoir\">Marche et course à pied</option>
-                <option value=\"DRIVING\" title=\"N'emprunte que le réseau routier\">Voiture ou vélo de route</option>
-            </select>
-
-            <button id=\"savePath\" class=\"saveButton\" name=\"button4\" value=\"\" title=\"Sauvegardez ou publiez votre parcours\">
-                <img src=\"{{ asset('images/share.png') }}\" alt='Icône sauvegarder' class=\"saveImgHover\">
-            </button>
-            <div class=\"saveContainer\" id=\"saveContainer\">
-                <div class=\"save-messageContainer\">
-                    <div id=\"save-message\">
-                        <p>Commencez par tracer votre parcours</p>
-                    </div>
-                </div>
-                <div id=\"formFilter\"></div>
-                <div class=\"formContainer\">
-                    <div class=\"formPopUp\" id=\"formPopUp\">
-                        <p class=\"form-facultatif\">* À part pour le titre, tous les champs sont facultatifs</p>
-                        {{ form_start(form) }}
-                        {{ form_row(form.titre) }}
-
-                        <p class=\"typeSport-title\">Pour quel sport ce parcours est il le plus adapté ?</p>
-                        <div class=\"typeSport-container\">
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_0\" name=\"path[typeSport]\" required=\"required\" value=\"marche\" type=\"radio\">
-                                <label for=\"path_typeSport_0\" class=\"required typeSport-input\"><span></span>Marche</label>
-                            </div>
-
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_1\" name=\"path[typeSport]\" required=\"required\" value=\"course\" type=\"radio\">
-                                <label for=\"path_typeSport_1\" class=\"required typeSport-input\"><span></span>Course à pied</label>
-                            </div>
-
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_2\" name=\"path[typeSport]\" required=\"required\" value=\"veloroute\" type=\"radio\">
-                                <label for=\"path_typeSport_2\" class=\"required typeSport-input\"><span></span>Vélo de route</label>
-                            </div>
-
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_3\" name=\"path[typeSport]\" required=\"required\" value=\"vtt\" type=\"radio\">
-                                <label for=\"path_typeSport_3\" class=\"required typeSport-input\"><span></span>VTT</label>
-                            </div>
-
-                            <div class=\"typeSport-input-container\">
-                                <input id=\"path_typeSport_4\" name=\"path[typeSport]\" required=\"required\" value=\"autre\" type=\"radio\">
-                                <label for=\"path_typeSport_4\" class=\"required typeSport-input\"><span></span>Autre</label>
-                            </div>
-                        </div>
-                        {{ form_row(form.description) }}
-                        {{ form_row(form.image) }}
-
-                        <p class=\"autre_filtre-title\">Pour être encore plus précis</p>
-                        <div class=\"path_autre_filtre\">
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_0\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"detente\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_0\" class=\"autrefiltre-input\"><span></span>Détente</label>
-                            </div>
-
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_1\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"sportif\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_1\" class=\"autrefiltre-input\"><span></span>Sportif</label>
-                            </div>
-
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_2\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"denivele\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_2\" class=\"autrefiltre-input\"><span></span>Dénivelé important</label>
-                            </div>
-
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_3\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"paysage\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_3\" class=\"autrefiltre-input\"><span></span>Beau paysage</label>
-                            </div>
-
-                            <div class=\"autrefiltre-input-container\">
-                                <input id=\"path_autre_filtre_4\" class=\"form-check-input\" name=\"path[autre_filtre][]\" value=\"mauvais etat\" type=\"checkbox\">
-                                <label for=\"path_autre_filtre_4\" class=\"autrefiltre-input\"><span></span>Mauvais état</label>
-                            </div>
-                        </div>
-
-                        {{ form_row(form.path) }}
-                        {{ form_row(form.placeId) }}
-                        <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPath\" name=\"path[path]\"/>
-                        <input type=\"hidden\" value=\"Caché\" id=\"hiddenInputPlaceId\" name=\"path[placeId]\"/>
-                        <button id=\"saveFormBtn\" class=\"submit-input\">Partager</button>
-                        {{ form_end(form) }}
-                    </div>
-                </div>
-                <div id=\"mapFilterForm\" class=\"mapFilter\"></div>
-            </div>
+    <h3 class=\"topo-title\">Topographie</h3>
+    <button id=\"topo-btn\" title=\"Cela peut prendre un certain temps\">Calculer la topographie</button>
+    <div id=\"elevation_chart\"></div>
 {% endblock %}
 
 
 
 {% block javascripts %}
     {#<script src=\" {{ asset('build/js/main.js') }} \"></script>#}
+    <script src=\"https://www.google.com/jsapi\"></script>
     <script src=\" {{ asset('build/mousetrap.js') }} \"></script>
     <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.js\"></script>
     <script language=\"javascript\" type=\"text/javascript\">
@@ -1558,6 +1643,9 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
         });
     </script>
     <script>
+        google.load('visualization', '1', {packages: ['columnchart']});
+        var elevator
+
         var globalPoly;   //objet Polyline
         var poly;   //objet Polyline
 
@@ -1739,8 +1827,50 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
 
                 map.fitBounds(bounds);
             });
+
+            elevator = new google.maps.ElevationService;
         }
         /************* FIN INITMAP *************/
+
+
+        function displayPathElevation(path, elevator, map) {
+            elevator.getElevationAlongPath({
+                'path': path,
+                'samples': 256
+            }, plotElevation);
+        }
+
+        // Takes an array of ElevationResult objects, draws the path on the map
+        // and plots the elevation profile on a Visualization API ColumnChart.
+        function plotElevation(elevations, status) {
+            var chartDiv = document.getElementById('elevation_chart');
+            if (status !== 'OK') {
+                // Show the error code inside the chartDiv.
+                chartDiv.innerHTML = 'Cannot show elevation: request failed because ' +
+                    status;
+                return;
+            }
+            // Create a new chart in the elevation_chart DIV.
+            var chart = new google.visualization.ColumnChart(chartDiv);
+
+            // Extract the data from which to populate the chart.
+            // Because the samples are equidistant, the 'Sample'
+            // column here does double duty as distance along the
+            // X axis.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Sample');
+            data.addColumn('number', 'Elevation');
+            for (var i = 0; i < elevations.length; i++) {
+                data.addRow(['', elevations[i].elevation]);
+            }
+
+            // Draw the chart using the data within its DIV.
+            chart.draw(data, {
+                height: 150,
+                legend: 'none',
+                titleY: 'Altitude (m)'
+            });
+        }
 
 
 
@@ -1820,6 +1950,8 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             }
 
             updateTempsGlobal(distanceKmFloat);
+
+            hideElevation();
         }
         /************* FIN ADDLATLNG *************/
 
@@ -1893,6 +2025,10 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             markers.push(marker);   //on met notre tout nouveau marker dans le tableau markers
 
             lastPoint = event.latLng;
+
+            var pathArray = monPath.getArray();
+
+            hideElevation();
         }
         /************* FIN ADDLATLNGROUTE *************/
 
@@ -2386,8 +2522,6 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
                     alert('Le Geocoder a echoué. Raison: ' + status);
                 }
             });
-
-
         });
 
         var mapFilterForm = document.getElementById('mapFilterForm');
@@ -2432,6 +2566,31 @@ class __TwigTemplate_8833928235bd785be8411155e6f198145e6368f42b2c1a06c11b07f14de
             firstMarker.setOptions({icon: \"{{ asset('images/marker.png') }}\"});
 
             textDiv.style.color = \"#000\";
+        }
+
+
+        var topoBtn = document.getElementById('topo-btn');
+        var elevationChart = document.getElementById('elevation_chart');
+
+        topoBtn.onclick = function() {
+            calculateAndDisplayElevation();
+        };
+
+        function calculateAndDisplayElevation(){
+            if(pathArray[1] === undefined) {
+                alert('Commencez par tracer votre parcours !');
+                return;
+            }
+
+            displayPathElevation(pathArray, elevator, map);
+
+            topoBtn.style.display = \"none\";
+            elevationChart.style.display = \"block\";
+        }
+
+        function hideElevation(){
+            topoBtn.style.display = \"block\";
+            elevationChart.style.display = \"none\";
         }
 
 
