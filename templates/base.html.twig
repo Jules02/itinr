@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, maximum-scale=1"/>
     <title>{% block title %} | Itin'r{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('build/flash_messages.css') }}">
 </head>
 <body>
-
+    <section class="desktop">
     <header class="header">
         <a href="{{ path("concepteur") }}"><div class="header-logo"><p class="header-logo-txt">Logo</p></div></a> <!-- à remplacer par l'img du logo -->
         <a href="{{ path("concepteur") }}"><h1 class="header-title">Itin'r</h1></a>
@@ -69,6 +69,23 @@
             <p class="footer-date">2018</p>
         </div>
     </footer>
+    </section>
+
+    <section class="mobile">
+        <div class="mobile-header">
+            <div class="header-logo mobile-header-logo">
+                <p class="header-logo-txt">Logo</p>
+            </div> <!-- à remplacer par l'img du logo -->
+            <h1 class="header-title mobile-header-title">Itin'r</h1>
+        </div>
+
+        <div class="mobile-comingsoon">
+            <img src="{{ asset('images/comingsoon.png') }}" alt="Coming soon icône">
+            <p>Coming soon !</p>
+        </div>
+
+        <p class="mobile-unavailable">Itin’r n’est pas disponible<br/>sur mobiles 😕</p>
+    </section>
 
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/header.js') }}"></script>

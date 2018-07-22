@@ -19,6 +19,74 @@ button{
 
 
 
+@media screen and (max-width: 767px) {
+    html {
+        height: 100%;
+    }
+
+    .mobile {
+        display: block !important;
+
+        background: linear-gradient(240.94deg, #3BA14C 0%, #5CF776 101.17%);;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-header {
+        padding-left: 30px;
+        padding-top: 30px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-header-logo {
+        margin: 0 !important;
+    }
+
+    .mobile-header-title {
+        padding-left: 10px;
+    }
+
+    .mobile h1 {
+        margin: 0;
+    }
+
+    .mobile-comingsoon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 100px;
+    }
+
+    .mobile-comingsoon p {
+        color: white;
+        font-weight: 600;
+        font-size: 28px;
+
+        margin: 5px;
+    }
+
+    .mobile-unavailable {
+        color: white;
+        text-align: center;
+        font-size: 24px;
+
+        margin: 30px 0 0 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+.mobile{
+    display: none;
+}
+
+
 
 .header{
     width: 100%;
