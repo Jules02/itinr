@@ -134,12 +134,6 @@
         <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
     </button>
     <div class="saveContainer" id="saveContainer">
-        <div class="save-messageContainer">
-            <div id="save-message">
-                <p>Commencez par tracer votre parcours</p>
-            </div>
-        </div>
-        <div id="formFilter"></div>
         <div class="formContainer">
             <div class="formPopUp" id="formPopUp">
                 <p class="form-facultatif">* À part pour le titre, tous les champs sont facultatifs</p>
@@ -531,12 +525,6 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "none";
-
-                var formPopUp = document.getElementById("formPopUp");
-                formPopUp.style.display = "block";
-
-                var saveMessage = document.getElementById("save-message");
-                saveMessage.style.display = "none";
             }
 
             updateTempsGlobal(distanceKmFloat);
@@ -656,12 +644,6 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "none";
-
-                var formPopUp = document.getElementById("formPopUp");
-                formPopUp.style.display = "block";
-
-                var saveMessage = document.getElementById("save-message");
-                saveMessage.style.display = "none";
             }
 
             updateTempsGlobal(distanceKmFloat);
@@ -818,15 +800,6 @@
 
                 var menuGaucheMessage = document.getElementById("menuGauche-message");
                 menuGaucheMessage.style.display = "block";
-
-                var formPopUp = document.getElementById("formPopUp");
-                formPopUp.style.display = "block";
-
-                var formFilter = document.getElementById("formFilter");
-                formFilter.style.display = "block";
-
-                var saveMessage = document.getElementById("save-message");
-                saveMessage.style.display = "block";
             }
 
             updateRouteLength();
@@ -874,15 +847,6 @@
 
             var menuGaucheMessage = document.getElementById("menuGauche-message");
             menuGaucheMessage.style.display = "block";
-
-            var formPopUp = document.getElementById("formPopUp");
-            formPopUp.style.display = "block";
-
-            var formFilter = document.getElementById("formFilter");
-            formFilter.style.display = "block";
-
-            var saveMessage = document.getElementById("save-message");
-            saveMessage.style.display = "block";
         });
 
 
@@ -1075,6 +1039,7 @@
 
 
         var saveContainer = document.getElementById('saveContainer');
+        var saveMessageContainer = document.getElementById('save-messageContainer');
 
         mapFilter.onclick = function() {
             menuGauche.style.display = "none";
@@ -1085,33 +1050,37 @@
         };
 
         $('#savePath').click(function() {
-            mapFilterForm.style.display = "block";
-            saveContainer.style.display = "block";
+            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
+                alert('Commencez par tracer un parcours !');
+            } else {
+                mapFilterForm.style.display = "block";
+                saveContainer.style.display = "block";
 
-            var monPath = globalPoly.getPath();
-            var encodeString = google.maps.geometry.encoding.encodePath(monPath);
-            var hiddenInputPath = document.getElementById('hiddenInputPath');
-            var hiddenInputPlaceId = document.getElementById('hiddenInputPlaceId');
+                var monPath = globalPoly.getPath();
+                var encodeString = google.maps.geometry.encoding.encodePath(monPath);
+                var hiddenInputPath = document.getElementById('hiddenInputPath');
+                var hiddenInputPlaceId = document.getElementById('hiddenInputPlaceId');
 
-            hiddenInputPath.value = encodeString;
+                hiddenInputPath.value = encodeString;
 
-            var geocoder = new google.maps.Geocoder;
+                var geocoder = new google.maps.Geocoder;
 
-            latitude = firstMarker.getPosition().lat();
-            longitude = firstMarker.getPosition().lng();
-            var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+                latitude = firstMarker.getPosition().lat();
+                longitude = firstMarker.getPosition().lng();
+                var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
 
-            geocoder.geocode({'location': latlng}, function(results, status) {
-                if (status === google.maps.GeocoderStatus.OK) {
-                    if (results[1]) {
-                        hiddenInputPlaceId.value = results[1].place_id;
+                geocoder.geocode({'location': latlng}, function (results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        if (results[1]) {
+                            hiddenInputPlaceId.value = results[1].place_id;
+                        } else {
+                            alert('Aucun résultat trouvé');
+                        }
                     } else {
-                        alert('Aucun résultat trouvé');
+                        alert('Le Geocoder a echoué. Raison: ' + status);
                     }
-                } else {
-                    alert('Le Geocoder a echoué. Raison: ' + status);
-                }
-            });
+                });
+            }
         });
 
         var mapFilterForm = document.getElementById('mapFilterForm');
