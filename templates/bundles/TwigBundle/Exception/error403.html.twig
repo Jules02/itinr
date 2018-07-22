@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur 403{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/erreur.css') }}{% endblock %}
+
+{% block body %}
+    <div class="margin-left">
+        <h1 class="titre">Erreur 403</h1>
+        <div class="titre-separation"></div>
+
+        <div class="container">
+            <p class="p1">Accès refusé</p>
+            <p class="p2">Si ce problème persiste, faites-nous en part via nos réseaux sociaux ou via <a href="{{ path('contact') }}">la page contact</a></p>
+            <iframe src="https://giphy.com/embed/cPKWZB2aaB3rO" width="480" height="408" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cPKWZB2aaB3rO">via GIPHY</a></p>
+        </div>
+    </div>
+{% endblock %}

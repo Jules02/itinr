@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur :({{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/erreur.css') }}{% endblock %}
+
+{% block body %}
+    <div class="margin-left">
+        <h1 class="titre">Erreur</h1>
+        <div class="titre-separation"></div>
+
+        <div class="container">
+            <p class="p1">Il y a une couille dans le pâté.</p>
+            <p class="p2">Si ce problème persiste, faites-nous en part via nos réseaux sociaux ou via <a href="{{ path('contact') }}">la page contact</a></p>
+            <iframe src="https://giphy.com/embed/mq5y2jHRCAqMo" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/windows-vaporwave-error-mq5y2jHRCAqMo">via GIPHY</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -2394,6 +2394,10 @@
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp64\www\mapbox/templates/bundles/TwigBundle</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp64\www\mapbox\vendor\symfony\twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>

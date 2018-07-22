@@ -33,6 +33,7 @@ Encore
     .addEntry('mousetrap', './assets/js/mousetrap.js')
     .addEntry('header', './assets/js/header.js')
     .addEntry('footer', './assets/js/footer.js')
+    .addEntry('erreur', './assets/css/erreur_style.css')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

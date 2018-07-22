@@ -11,6 +11,8 @@
   "build/connexion.js": "/build/connexion.js",
   "build/contact.css": "/build/contact.css",
   "build/contact.js": "/build/contact.js",
+  "build/erreur.css": "/build/erreur.css",
+  "build/erreur.js": "/build/erreur.js",
   "build/flash_messages.css": "/build/flash_messages.css",
   "build/flash_messages.js": "/build/flash_messages.js",
   "build/footer.js": "/build/footer.js",
