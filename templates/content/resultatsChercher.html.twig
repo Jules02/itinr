@@ -11,8 +11,11 @@
 
     <div class="titre-separation margin-left"></div>
 
+    <p class="resultatsNb margin-left">Il y a <span>{{ resultatPathNb }}</span> itinéraires correpondant à votre recherche</p>
+
     <div class="resultats-bigcontainer">
         <div class="resultats-container">
+            {% set presDeId = 1 %}
             {% for path in resultatPath %}
                 <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
                     <p class="resultat-titre">{{ path.titre }}</p>
@@ -35,10 +38,11 @@
                             Autre
                         {% endif %}
                     </p>
-                    <p class="resultat-auteur resultat-margin-left">{{ path.auteur }}</p>
-                    <p id="resultat-placeId" class="resultat-margin-left">
-                        {{ path.placeId }}
+                    <p class="resultat-auteur resultat-margin-left">par <span>{{ path.auteur }}</span></p>
+                    <p class="resultat-presDe resultat-margin-left">
+                        près de <span id="resultat-presDe-span-{{ presDeId }}">{{ path.placeId }}</span>
                     </p>
+                    {% set presDeId = presDeId + 1 %}
                 </a>
             {% endfor %}
         </div>
@@ -48,24 +52,24 @@
 {% block javascripts %}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=init" async defer></script>
     <script>
-
-        var placeIdP = document.getElementById('resultat-placeId');
-
         function init(){
             var geocoder = new google.maps.Geocoder();
 
-            var placeIdValue = placeIdP.textContent;
+            for (i = 0; i < {{ resultatPathNb }}; i++){
+                var idNb = i + 1;
+                var idNb = idNb.toString();
+                var placeIdElement = document.getElementById('resultat-presDe-span-' + idNb);
+                var placeIdValue = placeIdElement.textContent;
 
-            geocoder.geocode({'placeId': placeIdValue}, function(results, status) {
-                if (status !== 'OK') {
-                    alert('Le Geocoder a echoué. Raison: ' + status);
-                    return;
-                }
-                var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
-                var i = '2';
-                document.getElementById('resultat-placeId' + i).textContent = geoLocationResult;
-            });
-
+                geocoder.geocode({'placeId': placeIdValue}, function(results, status) {
+                    if (status !== 'OK') {
+                        alert('Le Geocoder a echoué. Raison: ' + status);
+                        return;
+                    }
+                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
+                    console.log(geoLocationResult);
+                });
+            }
         }
     </script>
 {% endblock %}

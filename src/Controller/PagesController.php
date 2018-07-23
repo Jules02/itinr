@@ -50,6 +50,17 @@ class PagesController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $path = $form->getData();
 
+            $file = $path->getImage();
+
+            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+
+            $file->move(
+                $this->getParameter('images_directory'),
+                $fileName
+            );
+
+            $path->setImage($fileName);
+
             $user = $this->getUser();
 
             if(null === $user){
@@ -84,6 +95,13 @@ class PagesController extends Controller
         return new Response($twig->render('content/concepteur.html.twig', [
             'form' => $form->createView()
         ]));
+    }
+
+    /**
+     * @return string
+     */
+    private function generateUniqueFileName(){
+        return md5(uniqid());
     }
 
     /**
@@ -153,9 +171,10 @@ class PagesController extends Controller
                     'form' => $form->createView()
                 ]));
             }else{
-                $this->addFlash('success', 'Réussite');
+                $resultatPathNb = count($resultatPath);
                 return new Response($twig->render('content/resultatsChercher.html.twig', [
-                    'resultatPath' => $resultatPath
+                    'resultatPath' => $resultatPath,
+                    'resultatPathNb' => $resultatPathNb
                 ]));
             }
         }

@@ -54,10 +54,7 @@ class PathType extends AbstractType
                 'required' => false,
                 'empty_data' => 'g'
             ))
-            ->add('image',       TextType::class, array(
-                'required' => false,
-                'empty_data' => 'g'
-            ))
+            ->add('image', FileType::class, array('label' => 'Image (PNG)'))
             ->add('autre_filtre', ChoiceType::class, array(
                 'label'  => false,
                 'choices'  => array(

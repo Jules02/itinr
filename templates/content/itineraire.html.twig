@@ -127,6 +127,9 @@
     <h3 class="description-titre">Description</h3>
     <p class="description-p">{{ path.description }}</p>
 
+    <h3 class="description-titre">Photo</h3>
+    <img src="{{ asset('uploads/images/' ~ path.image) }}">
+
     <h3 class="description-titre">Autres précisions</h3>
     <p class="description-p">
         {% for filtre in path.autrefiltre %}

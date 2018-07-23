@@ -20,6 +20,10 @@
     background-color: #3ba14c;
 }
 
+.resultatsNb span{
+    font-weight: 600;
+}
+
 .resultats-bigcontainer{
     padding-right: 30px;
     padding-left: 30px;
@@ -73,4 +77,20 @@
     height: 20px;
 
     padding-right: 5px;
+}
+
+.resultat-auteur{
+    font-weight: 300;
+}
+
+.resultat-auteur span{
+    font-weight: 500;
+}
+
+.resultat-presDe{
+    font-weight: 300;
+}
+
+.resultat-presDe span{
+    font-weight: 500;
 }

@@ -45,6 +45,9 @@ class Path
 
     /**
      * @ORM\Column(name="image", type="string")
+     *
+     * @Assert\NotBlank(message="Vous ne pouvez uploader que des images au format png")
+     * @Assert\File(mimeTypes={ "image/png" })
      */
     private $image;
 
@@ -122,9 +125,11 @@ class Path
     /**
      * @param mixed $image
      */
-    public function setImage($image): void
+    public function setImage($image)
     {
         $this->image = $image;
+
+        return $this;
     }
 
     /**
