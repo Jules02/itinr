@@ -50,16 +50,18 @@ class PagesController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $path = $form->getData();
 
-            $file = $path->getImage();
+            if(null !== $path->getImage()){
+                $file = $path->getImage();
 
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+                $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
 
-            $file->move(
-                $this->getParameter('images_directory'),
-                $fileName
-            );
+                $file->move(
+                    $this->getParameter('images_directory'),
+                    $fileName
+                );
 
-            $path->setImage($fileName);
+                $path->setImage($fileName);
+            }
 
             $user = $this->getUser();
 
@@ -118,12 +120,17 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function itinieraire (Request $request, Environment $twig, RegistryInterface $doctrine, $id) {
+    public function itineraire (Environment $twig, RegistryInterface $doctrine, $id) {
         $path = $doctrine->getRepository(Path::class)->find($id);
 
-        return new Response($twig->render('content/itineraire.html.twig', [
-            'path' => $path
-        ]));
+        if($path != null){
+            return new Response($twig->render('content/itineraire.html.twig', [
+                'path' => $path
+            ]));
+        }else{
+            $this->addFlash('error', "Aucun itinéraire ne correspond à cette adresse");
+            return $this->redirectToRoute('concepteur');
+        }
     }
 
     /**
@@ -161,7 +168,7 @@ class PagesController extends Controller
             $resultatPath = $pathRepository->findBy(
                 $criteresArray, // Critere
                 array(),        // Tri
-                9,                              // Limite
+                100,                              // Limite
                 0                               // Offset
             );
 

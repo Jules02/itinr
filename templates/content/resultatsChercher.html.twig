@@ -11,7 +11,7 @@
 
     <div class="titre-separation margin-left"></div>
 
-    <p class="resultatsNb margin-left">Il y a <span>{{ resultatPathNb }}</span> itinéraires correpondant à votre recherche</p>
+    <p class="resultatsNb margin-left">Il y a <span>{{ resultatPathNb }}</span> {% if resultatPathNb == 1 %}itinéraire{% else %}itinéraires{% endif %} correpondant à votre recherche</p>
 
     <div class="resultats-bigcontainer">
         <div class="resultats-container">
@@ -20,6 +20,7 @@
                 <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
                     <p class="resultat-titre">{{ path.titre }}</p>
                     <div class="resultat-titre-sepa"></div>
+                    {% if path.typeSport != null %}
                     <p class="resultat-typeSport resultat-margin-left">
                         {% if path.typeSport == "marche" %}
                             <img src="{{ asset('images/chercher_typeSport3.png') }}"/>
@@ -38,6 +39,7 @@
                             Autre
                         {% endif %}
                     </p>
+                    {% endif %}
                     <p class="resultat-auteur resultat-margin-left">par <span>{{ path.auteur }}</span></p>
                     <p class="resultat-presDe resultat-margin-left">
                         près de <span id="resultat-presDe-span-{{ presDeId }}">{{ path.placeId }}</span>
@@ -68,6 +70,9 @@
                     }
                     var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
                     console.log(geoLocationResult);
+
+                    //La fonction est asynchrone. Elle est executée après la boucle
+                    //Ce console.log affiche pourtant bien tous les résultats
                 });
             }
         }

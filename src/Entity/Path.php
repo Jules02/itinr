@@ -19,40 +19,42 @@ class Path
     private $id;
 
     /**
+     * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
     private $path;
 
     /**
+     * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
     private $placeId;
 
     /**
+     * @Assert\NotNull(message="Vous êtes obligé de remplir au moins ce champ")
      * @ORM\Column(name="titre", type="string")
      */
     private $titre;
 
     /**
-     * @ORM\Column(name="typeSport", type="string")
+     * @ORM\Column(name="typeSport", type="string", nullable=true)
      */
     private $typeSport;
 
     /**
-     * @ORM\Column(name="description", type="string")
+     * @ORM\Column(name="description", type="string", nullable=true)
      */
     private $description;
 
     /**
-     * @ORM\Column(name="image", type="string")
+     * @ORM\Column(name="image", type="string", nullable=true)
      *
-     * @Assert\NotBlank(message="Vous ne pouvez uploader que des images au format png")
-     * @Assert\File(mimeTypes={ "image/png" })
+     * @Assert\File(mimeTypes={ "image/png", "image/jpeg", "image/jpg" })
      */
     private $image;
 
     /**
-     * @ORM\Column(name="autre_filtre", type="json_array")
+     * @ORM\Column(name="autre_filtre", type="json_array", nullable=true)
      */
     private $autre_filtre;
 

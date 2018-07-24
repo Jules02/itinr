@@ -5,9 +5,11 @@
 {% block stylesheets %}{{ asset('build/itineraire.css') }}{% endblock %}
 
 {% block body %}
-    <h1 id="titre"><span>{{ path.titre }}</span> par <a>{{ path.auteur }}</a></h1>
+    <div class="titre">
+        <h1 id="titre"><span>{{ path.titre }}</span> par <a>{{ path.auteur }}</a></h1>
+        <div id="titre-sepa"></div>
+    </div>
 
-    <div id="titre-sepa"></div>
 
     <div id="loading">
         <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
@@ -104,6 +106,7 @@
         <!--<button id="boutonMenuLateralFermer" class="boutonMenuLateralStyle"><img src="img/menu-gauche.png" alt="Gauche"></button>-->
     </div>
 
+    {% if path.typeSport != null %}
     <h3 class="description-titre">Itinéraire pour</h3>
     <p class="description-p">
         {% if path.typeSport == "marche" %}
@@ -123,13 +126,19 @@
             Autre
         {% endif %}
     </p>
+    {% endif %}
 
+    {% if path.description != null %}
     <h3 class="description-titre">Description</h3>
     <p class="description-p">{{ path.description }}</p>
+    {% endif %}
 
+    {% if path.image != null %}
     <h3 class="description-titre">Photo</h3>
     <img src="{{ asset('uploads/images/' ~ path.image) }}">
+    {% endif %}
 
+    {% if path.autrefiltre != [] %}
     <h3 class="description-titre">Autres précisions</h3>
     <p class="description-p">
         {% for filtre in path.autrefiltre %}
@@ -147,6 +156,7 @@
             <br/>
         {% endfor %}
     </p>
+    {% endif %}
 
     <h3 class="description-titre">Topographie</h3>
     <div id="elevation_chart"></div>

@@ -3,6 +3,14 @@
     margin-right: 30px;
 }
 
+.titre{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+
+    z-index: 2;
+}
+
 #titre{
     font-weight: 300;
     font-size: 36px;
@@ -12,12 +20,6 @@
 
     margin: 0;
     max-width: 750px;
-
-    position: absolute;
-    top: 100px;
-    left: 30px;
-
-    z-index: 2;
 }
 
 #titre span{
@@ -36,10 +38,7 @@
     height: 5px;
     background-color: #fff;
 
-    position: absolute;
-    top: 150px;
-    left: 30px;
-    z-index: 2;
+    margin-top: 5px;
 }
 
 button > .gm-fullscreen-control{

@@ -41,7 +41,8 @@ class PathType extends AbstractType
                     ),
                     'expanded' => true,
                     'multiple' => false,
-                    'required' => false
+                    'required' => false,
+                    'empty_data' => "d"
                 )
             )
             ->add('description', TextareaType::class, array(
@@ -51,10 +52,12 @@ class PathType extends AbstractType
                     'placeholder' => 'Ajoutez une description',
                     'rows' => '5'
                 ),
-                'required' => false,
-                'empty_data' => 'g'
+                'required' => false
             ))
-            ->add('image', FileType::class, array('label' => 'Image (PNG)'))
+            ->add('image', FileType::class, array(
+                'label' => false,
+                'required' => false
+            ))
             ->add('autre_filtre', ChoiceType::class, array(
                 'label'  => false,
                 'choices'  => array(

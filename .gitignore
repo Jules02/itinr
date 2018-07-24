@@ -9,4 +9,5 @@
 ###> symfony/webpack-encore-pack ###
 /node_modules/
 /public/build/
+/public/uploads/
 ###< symfony/webpack-encore-pack ###
