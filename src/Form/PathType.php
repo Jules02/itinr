@@ -23,6 +23,7 @@ class PathType extends AbstractType
         $builder
             ->add('path',        HiddenType::class)
             ->add('placeId',     HiddenType::class)
+            ->add('distance',     HiddenType::class)
             ->add('titre',       TextType::class, array(
                 'label'  => false,
                 'attr' => array(
@@ -41,8 +42,7 @@ class PathType extends AbstractType
                     ),
                     'expanded' => true,
                     'multiple' => false,
-                    'required' => false,
-                    'empty_data' => "d"
+                    'required' => false
                 )
             )
             ->add('description', TextareaType::class, array(

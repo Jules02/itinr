@@ -46,6 +46,8 @@
     height: 175px;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 .resultat-margin-left{
@@ -92,5 +94,20 @@
 }
 
 .resultat-presDe span{
+    font-weight: 500;
+}
+
+.resultat-distance{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.resultat-distance span{
     font-weight: 500;
 }

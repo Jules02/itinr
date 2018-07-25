@@ -238,7 +238,7 @@ input[type="radio"]{
     display:none;
 }
 
-input[type="radio"] + label span{
+/*input[type="radio"] + label span{
     display: inline-block;
     width: 21px;
     height: 21px;
@@ -251,7 +251,7 @@ input[type="radio"] + label span{
 
 input[type="radio"]:checked + label span{
     background: url("../images/radio_input.png") 0px top no-repeat;
-}
+}*/
 
 .description-input{
     width: 100%;
@@ -301,7 +301,7 @@ input[type="checkbox"]{
     display:none;
 }
 
-input[type="checkbox"] + label span{
+/*input[type="checkbox"] + label span{
     display: inline-block;
     width: 21px;
     height: 21px;
@@ -314,7 +314,7 @@ input[type="checkbox"] + label span{
 
 input[type="checkbox"]:checked + label span{
     background: url("../images/checkbox_autrefiltre.png") 0px top no-repeat;
-}
+}*/
 
 .submit-input{
     width: 100%;

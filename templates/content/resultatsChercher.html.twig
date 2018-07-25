@@ -45,6 +45,7 @@
                         près de <span id="resultat-presDe-span-{{ presDeId }}">{{ path.placeId }}</span>
                     </p>
                     {% set presDeId = presDeId + 1 %}
+                    <p class="resultat-distance" title="ou {{ path.distance }} mètres"><span>{{ (path.distance / 1000)|round(2, 'floor') }}</span>km</p>
                 </a>
             {% endfor %}
         </div>

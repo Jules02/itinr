@@ -202,8 +202,7 @@
 
                 {{ form_row(form.path) }}
                 {{ form_row(form.placeId) }}
-                <input type="hidden" value="Caché" id="hiddenInputPath" name="path[path]"/>
-                <input type="hidden" value="Caché" id="hiddenInputPlaceId" name="path[placeId]"/>
+                {{ form_row(form.distance) }}
                 <button id="saveFormBtn" class="submit-input">Partager</button>
                 {{ form_end(form) }}
             </div>
@@ -1060,8 +1059,9 @@
 
                 var monPath = globalPoly.getPath();
                 var encodeString = google.maps.geometry.encoding.encodePath(monPath);
-                var hiddenInputPath = document.getElementById('hiddenInputPath');
-                var hiddenInputPlaceId = document.getElementById('hiddenInputPlaceId');
+                var hiddenInputPath = document.getElementById('path_path');
+                var hiddenInputPlaceId = document.getElementById('path_placeId');
+                var hiddenInputDistance = document.getElementById('path_distance');
 
                 hiddenInputPath.value = encodeString;
 
@@ -1082,6 +1082,8 @@
                         alert('Le Geocoder a echoué. Raison: ' + status);
                     }
                 });
+
+                hiddenInputDistance.value = distanceArrondie;
             }
         });
 
@@ -1092,26 +1094,6 @@
         };
 
 
-
-        function getCoordinatesAverage(){
-            var geocoder = new google.maps.Geocoder;
-
-            latitude = firstMarker.getPosition().lat();
-            longitude = firstMarker.getPosition().lng();
-            var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
-
-            geocoder.geocode({'location': latlng}, function(results, status) {
-                if (status === google.maps.GeocoderStatus.OK) {
-                    if (results[1]) {
-                        console.log(results[1].place_id);
-                    } else {
-                        window.alert('No results found');
-                    }
-                } else {
-                    window.alert('Geocoder failed due to: ' + status);
-                }
-            });
-        }
 
         var textDiv = document.getElementById('textDiv');
 

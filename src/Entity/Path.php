@@ -59,6 +59,11 @@ class Path
     private $autre_filtre;
 
     /**
+     * @ORM\Column(name="distance", type="integer", nullable=true)
+     */
+    private $distance;
+
+    /**
      * @ORM\Column(name="auteur", type="string")
      */
     private $auteur;
@@ -197,6 +202,22 @@ class Path
     public function setAutreFiltre($autre_filtre): void
     {
         $this->autre_filtre = $autre_filtre;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDistance()
+    {
+        return $this->distance;
+    }
+
+    /**
+     * @param mixed $distance
+     */
+    public function setDistance($distance): void
+    {
+        $this->distance = $distance;
     }
 
     /**
