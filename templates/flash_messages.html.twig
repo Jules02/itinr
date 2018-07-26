@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('build/flash_messages.css') }}">
+
 {% block flash_messages %}
         {% for type, messages in app.session.flashbag.all() %}
             {% for message in messages %}

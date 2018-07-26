@@ -4,6 +4,8 @@
 
 {% block stylesheets %}{{ asset('build/inscription.css') }}{% endblock %}
 
+{% form_theme form 'form/errors.html.twig' %}
+
 {% block body %}
 
     <h1 class="titre margin-left">Rejoignez-nous</h1>
@@ -19,7 +21,7 @@
         {{ form_row(form.surname) }}
         {{ form_row(form.username) }}
         {{ form_row(form.email) }}
-        <div title="Nous en avons besoin pour votre avatar" class="genre-container">
+        <div title="Nous en avons besoin pour votre avatar" class="genre-container required">
             <div class="genre-input-container">
                 <input id="user_genre_0" name="user[genre]" required="required" value="homme" type="radio">
                 <label for="user_genre_0" class="required"><span></span>Homme</label>

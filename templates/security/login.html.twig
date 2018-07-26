@@ -9,17 +9,17 @@
     <h1 class="titre margin-left">Connexion</h1>
     <div class="titre-separation margin-left"></div>
 
-    {% if error %}
-        <div class="form-error">
-            {{ error.messageKey }}
-        </div>
-    {% endif %}
-
     <div class="form-container">
         <form action="{{ path('security_login') }}" method="post">
             <div class="OAuth-connect facebook-connect"><img src="{{ asset('images/facebook_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Facebook</div>
 
             <div class="OAuth-connect google-connect"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Google</div>
+
+            {% if error %}
+                <div class="error-container">
+                    <p>Aïe, erreur d'authentification: nom d'utilisateur ou mot de passe incorrect</p>
+                </div>
+            {% endif %}
 
             <div class="form-group">
                 <input placeholder="Nom d'utilisateur" type="text" id="username" name="_username" value="{{ last_username }}" class="form-username form-input"/>

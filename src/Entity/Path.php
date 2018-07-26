@@ -49,7 +49,7 @@ class Path
     /**
      * @ORM\Column(name="image", type="string", nullable=true)
      *
-     * @Assert\File(mimeTypes={ "image/png", "image/jpeg", "image/jpg" })
+     * @Assert\File(mimeTypes={ "image/png", "image/jpeg", "image/jpg" }, mimeTypesMessage="Ce format ( {{type}} ) n'est pas supporté. Merci d'entrer une image au format PNG, JPEG ou JPG", maxSize="5M", maxSizeMessage="Le poids de votre image est trop important ({{ size }} {{ suffix }}). Elle peut avoir un poids de {{ limit }} {{ suffix }} au maximum", disallowEmptyMessage="L'image est vide ??", uploadErrorMessage="Erreur lors du téléchargement de votre image, réessayez")
      */
     private $image;
 

@@ -6,6 +6,7 @@
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
 
+{% form_theme form 'form/errors.html.twig' %}
 
 {% block body %}
     {% include 'flash_messages.html.twig' %}

@@ -1,0 +1,16 @@
+{% block form_errors %}
+    {% if errors|length > 0 %}
+        <link rel="stylesheet" href="{{ asset('build/form_errors.css') }}">
+        {% for error in errors %}
+            {% if error.message == "This value is not valid." %}
+                <div class="form_error-container">
+                    <p><span>Erreur</span> Les deux mots de passe ne correspondent pas</p>
+                </div>
+            {% else %}
+                <div class="form_error-container">
+                    <p><span>Erreur</span> {{ error.message }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock form_errors %}
