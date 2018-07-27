@@ -3,11 +3,11 @@
 {% block title %}Inscription{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/inscription.css') }}{% endblock %}
+{% block stylesheets2 %}{{ asset('build/form_theme.css') }}{% endblock %}
 
-{% form_theme form 'form/errors.html.twig' %}
+{% form_theme form 'form/errors.html.twig' 'form/fields.html.twig' %}
 
 {% block body %}
-
     <h1 class="titre margin-left">Rejoignez-nous</h1>
     <div class="titre-separation margin-left"></div>
 
@@ -17,26 +17,12 @@
         <div class="OAuth-connect google-connect"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>S'inscire avec Google</div>
 
 
+
         {{ form_start(form) }}
         {{ form_row(form.surname) }}
         {{ form_row(form.username) }}
         {{ form_row(form.email) }}
-        <div title="Nous en avons besoin pour votre avatar" class="genre-container required">
-            <div class="genre-input-container">
-                <input id="user_genre_0" name="user[genre]" required="required" value="homme" type="radio">
-                <label for="user_genre_0" class="required"><span></span>Homme</label>
-            </div>
-
-            <div class="genre-input-container">
-                <input id="user_genre_1" name="user[genre]" required="required" value="femme" type="radio">
-                <label for="user_genre_1" class="required"><span></span>Femme</label>
-            </div>
-
-            <div class="genre-input-container">
-                <input id="user_genre_2" name="user[genre]" required="required" value="autre" type="radio">
-                <label for="user_genre_2" class="required"><span></span>Autre</label>
-            </div>
-        </div>
+        {{ form_row(form.genre) }}
         {{ form_row(form.password.first) }}
         {{ form_row(form.password.second) }}
         <p class="conditions">En cliquant sur S’inscrire, vous acceptez nos <a href="{{ path('conditions') }}">Conditions générales</a></p>

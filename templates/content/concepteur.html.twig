@@ -5,8 +5,9 @@
 {% block title %}Concepteur{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
+{% block stylesheets2 %}{{ asset('build/form_theme.css') }}{% endblock %}
 
-{% form_theme form 'form/errors.html.twig' %}
+{% form_theme form 'form/errors.html.twig' 'form/fields.html.twig' %}
 
 {% block body %}
     {% include 'flash_messages.html.twig' %}
@@ -142,39 +143,15 @@
                 {{ form_row(form.titre) }}
 
                 <p class="typeSport-title">Pour quel sport ce parcours est il le plus adapté ?</p>
-                <div class="typeSport-container">
-                    <div class="typeSport-input-container">
-                        <input id="path_typeSport_0" name="path[typeSport]" required="required" value="marche" type="radio">
-                        <label for="path_typeSport_0" class="required typeSport-input"><span></span>Marche</label>
-                    </div>
+                {{ form_row(form.typeSport) }}
 
-                    <div class="typeSport-input-container">
-                        <input id="path_typeSport_1" name="path[typeSport]" required="required" value="course" type="radio">
-                        <label for="path_typeSport_1" class="required typeSport-input"><span></span>Course à pied</label>
-                    </div>
-
-                    <div class="typeSport-input-container">
-                        <input id="path_typeSport_2" name="path[typeSport]" required="required" value="veloroute" type="radio">
-                        <label for="path_typeSport_2" class="required typeSport-input"><span></span>Vélo de route</label>
-                    </div>
-
-                    <div class="typeSport-input-container">
-                        <input id="path_typeSport_3" name="path[typeSport]" required="required" value="vtt" type="radio">
-                        <label for="path_typeSport_3" class="required typeSport-input"><span></span>VTT</label>
-                    </div>
-
-                    <div class="typeSport-input-container">
-                        <input id="path_typeSport_4" name="path[typeSport]" required="required" value="autre" type="radio">
-                        <label for="path_typeSport_4" class="required typeSport-input"><span></span>Autre</label>
-                    </div>
-                </div>
                 {{ form_row(form.description) }}
 
                 <p class="image-title">Ajoutez une photo</p>
                 {{ form_row(form.image) }}
 
                 <p class="autre_filtre-title">Pour être encore plus précis</p>
-                <div class="path_autre_filtre">
+                {#<div class="path_autre_filtre">
                     <div class="autrefiltre-input-container">
                         <input id="path_autre_filtre_0" class="form-check-input" name="path[autre_filtre][]" value="detente" type="checkbox">
                         <label for="path_autre_filtre_0" class="autrefiltre-input"><span></span>Détente</label>
@@ -199,7 +176,8 @@
                         <input id="path_autre_filtre_4" class="form-check-input" name="path[autre_filtre][]" value="mauvais etat" type="checkbox">
                         <label for="path_autre_filtre_4" class="autrefiltre-input"><span></span>Mauvais état</label>
                     </div>
-                </div>
+                </div>#}
+                {{ form_row(form.autre_filtre) }}
 
                 {{ form_row(form.path) }}
                 {{ form_row(form.placeId) }}

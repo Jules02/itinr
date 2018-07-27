@@ -33,6 +33,10 @@ class PathType extends AbstractType
             ))
             ->add('typeSport', ChoiceType::class, array(
                     'label'  => false,
+                    'placeholder' => false,
+                    'attr' => array(
+                        'class' => 'radio-container'
+                    ),
                     'choices'  => array(
                         'Marche' => "marche",
                         'Course à pied' => "course",
@@ -60,12 +64,15 @@ class PathType extends AbstractType
             ))
             ->add('autre_filtre', ChoiceType::class, array(
                 'label'  => false,
+                'attr' => array(
+                    'class' => 'checkbox-container'
+                ),
                 'choices'  => array(
                     'Détente' => "detente",
                     'Sportif' => "sportif",
                     'Dénivelé important' => "denivele",
                     'Beau paysage' => "paysage",
-                    'Chemins en mauvais état' => "mauvais etat"
+                    'En mauvais état' => "mauvais etat"
                 ),
                 'expanded' => true,
                 'multiple' => true,

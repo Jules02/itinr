@@ -42,9 +42,9 @@ class UserType extends AbstractType
                 )
             ))
             ->add('genre', ChoiceType::class, array(
-                'label'  => false,
+                'label' => false,
                 'attr' => array(
-                    'class' => 'genre-input',
+                    'class' => 'radio-container',
                     'title' => 'Nous en avons besoin pour votre avatar'
                 ),
                 'choices'  => array(

@@ -1,6 +1,5 @@
 {% block form_errors %}
     {% if errors|length > 0 %}
-        <link rel="stylesheet" href="{{ asset('build/form_errors.css') }}">
         {% for error in errors %}
             {% if error.message == "This value is not valid." %}
                 <div class="form_error-container">

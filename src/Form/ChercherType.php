@@ -30,6 +30,10 @@ class ChercherType extends AbstractType
             ->add('placeId', HiddenType::class)
             ->add('typeSport', ChoiceType::class, array(
                     'label'  => false,
+                    'placeholder' => false,
+                    'attr' => array(
+                        'class' => 'radio-container'
+                    ),
                     'choices'  => array(
                         'Marche' => "marche",
                         'Course à pied' => "course",
