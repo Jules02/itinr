@@ -124,7 +124,7 @@ class PagesController extends Controller
                 return $this->redirectToRoute('concepteur');
             }
         }else{
-            $this->addFlash('notice', "Vous n'êtes pas connecté");
+            $this->addFlash('notice', "Vous n'êtes pas connec");
 
             return $this->redirectToRoute('concepteur');
         }
@@ -205,9 +205,6 @@ class PagesController extends Controller
 
             if(empty($resultatPath)){
                 $this->addFlash('error', 'Aucun itinéraire ne correspond à vos critères');
-                return new Response($twig->render('content/chercher.html.twig', [
-                    'form' => $form->createView()
-                ]));
             }else{
                 $resultatPathNb = count($resultatPath);
                 return new Response($twig->render('content/resultatsChercher.html.twig', [
@@ -355,14 +352,5 @@ class PagesController extends Controller
      */
     public function conditions (Environment $twig) {
         return new Response($twig->render('content/conditions.html.twig'));
-    }
-
-    /**
-     * @Route("/chercher-utilisateur", name="chercher-utilisateur")
-     * @param Environment $twig
-     * @return Response
-     */
-    public function chercherUtilisateur (Environment $twig, Request $request) {
-        return new Response($twig->render('content/chercher_utilisateur.html.twig'));
     }
 }

@@ -35,6 +35,7 @@ Encore
     .addEntry('footer', './assets/js/footer.js')
     .addEntry('erreur', './assets/css/erreur_style.css')
     .addEntry('form_theme', './assets/css/form_theme_style.css')
+    .addEntry('chercher_utilisateur', './assets/css/chercher_utilisateur_style.css')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

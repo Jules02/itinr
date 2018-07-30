@@ -32,6 +32,7 @@
 .sous-titre-form-part1{
     font-weight: 600;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .lieu-input-container, .form-part1-container, .form-part2-container{
@@ -102,56 +103,6 @@
 
     background-color: #3ba14c;
 }
-
-#chercher_typeSport{
-    display: none;
-}
-
-.typeSport-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-bottom: 10px;
-}
-
-.typeSport-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 15px;
-}
-
-.typeSport-input img{
-    width: 32px;
-    height: 32px;
-
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.typeSport-input-container{
-    margin: 10px 20px 15px 20px;
-    width: 20%;
-}
-
-/*input[type="radio"]{
-    display:none;
-}
-
-input[type="radio"] + label span{
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    vertical-align: middle;
-    background: url("../images/radio_input.png") -21px top no-repeat;
-    cursor: pointer;
-}
-
-input[type="radio"]:checked + label span{
-    background: url("../images/radio_input.png") 0px top no-repeat;
-}*/
 
 
 .form-part2-container h2{
