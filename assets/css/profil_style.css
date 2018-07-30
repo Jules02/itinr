@@ -196,6 +196,10 @@ h2{
 }
 
 
+.itineraires-container{
+    margin-bottom: 25px;
+}
+
 .itineraires-null{
     margin-bottom: 5px;
     margin-top: 10px;
@@ -205,4 +209,40 @@ h2{
 
 .itineraires-null-a{
     font-weight: 300;
+}
+
+.delete-container{
+    background-color: rgba(231, 76, 60, 0.1);
+    border: solid 1px rgba(231, 76, 60,1.0);
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    padding: 7px 15px 7px 20px;
+
+    color: rgba(231, 76, 60,1.0);
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+}
+
+#deleteNotice{
+    display: none;
+}
+
+#deleteNotice p{
+    margin: 5px 0;
+}
+
+.deleteNotice-btn{
+    background-color: rgba(231, 76, 60,1.0);
+    border-radius: 3px;
+
+    color: white;
+    font-weight: 500;
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    box-sizing: border-box;
 }

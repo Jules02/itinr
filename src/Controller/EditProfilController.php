@@ -8,13 +8,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class EditProfilController extends Controller
 {
     /**
-     * @Route("/profil/modifier", name="modifier_profil")
+     * @Route("/profil/modifier_profil", name="modifier_profil")
      */
-    public function modifier (Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+    public function modifier_profil (Request $request, UserPasswordEncoderInterface $passwordEncoder) {
         $user = $this->getUser();
         $form = $this->createForm(UserType::class, $user);
 
@@ -43,5 +45,27 @@ class EditProfilController extends Controller
                 'genre' => $genre
             )
         );
+    }
+
+    /**
+     * @Route("/profil/delete", name="delete_profil")
+     */
+    public function delete_profil (RegistryInterface $doctrine) {
+        $userId = $this->getUser()->getId();
+
+        $session = $this->get('session');
+        $session = new Session();
+        $session->invalidate();
+
+        $userRepository = $doctrine->getRepository(User::class);
+        $userEntity = $userRepository->find($userId);
+
+        $em = $doctrine->getEntityManager();
+        $em->remove($userEntity);
+        $em->flush();
+
+        $this->addFlash('deleted', 'Votre compte et vos itinéraires ont bien été supprimés :(');
+
+        return $this->redirectToRoute('concepteur');
     }
 }

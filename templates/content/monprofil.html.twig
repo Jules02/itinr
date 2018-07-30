@@ -63,7 +63,30 @@
             <a class="itineraires-null-a" href="{{ path('aide') }}">Découvrez comment</a>
         {% endif %}
     </div>
+
+    <button class="delete-container margin-left" id="deleteBtn">Supprimer mon compte et mes itinéraires</button>
+
+    <div class="delete-container margin-left" id="deleteNotice">
+        <p>Voulez-vous vraiment supprimer votre compte et vos itinéraires ? Cette action est irréversible et nous rendra très triste :(</p>
+        <button class="deleteNotice-btn" id="deleteClose">Annuler</button>
+        <a class="deleteNotice-btn" id="deleteConfirme" href="{{ path('delete_profil') }}">Supprimer</a>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
+    <script>
+        var deleteBtn = document.getElementById('deleteBtn');
+        var deleteNotice = document.getElementById('deleteNotice');
+        var deleteClose = document.getElementById('deleteClose');
+
+        deleteBtn.onclick = function() {
+            deleteBtn.style.display = "none";
+            deleteNotice.style.display = "block";
+        };
+
+        deleteClose.onclick = function() {
+            deleteBtn.style.display = "block";
+            deleteNotice.style.display = "none";
+        }
+    </script>
 {% endblock %}
