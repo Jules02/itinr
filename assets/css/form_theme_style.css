@@ -63,6 +63,9 @@ input[type="radio"]:checked + label span{
 .checkbox-container div{
     margin: 10px 0 15px 0;
     width: 20%;
+
+    display: flex;
+    justify-content: center;
 }
 
 .checkbox-label{
@@ -73,8 +76,7 @@ input[type="checkbox"]{
     display:none;
 }
 
-/*
-input[type="checkbox"] + label span{
+/*input[type="checkbox"] + label span{
     display: inline-block;
     width: 21px;
     height: 21px;
@@ -82,7 +84,7 @@ input[type="checkbox"] + label span{
     background: url("../images/checkbox_autrefiltre.png") -21px top no-repeat;
     cursor: pointer;
 
-    margin-right: 10px;
+    margin: -2px 10px 1px 0;
 }
 
 input[type="checkbox"]:checked + label span{

@@ -18,7 +18,8 @@
     font-size: 18px;
     line-height: 18px;
 
-    margin-bottom: 22px;
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .titre-separation{
@@ -106,7 +107,7 @@
     height: 45px;
     width: 100%;
 
-    background-color: #228A31;
+    background-color: #3ba14c;
     border-radius: 3px;
 
     color: white;
