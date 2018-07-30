@@ -51,21 +51,27 @@ class EditProfilController extends Controller
      * @Route("/profil/delete", name="delete_profil")
      */
     public function delete_profil (RegistryInterface $doctrine) {
-        $userId = $this->getUser()->getId();
+        if($this->getUser()){
+            $userId = $this->getUser()->getId();
 
-        $session = $this->get('session');
-        $session = new Session();
-        $session->invalidate();
+            $session = $this->get('session');
+            $session = new Session();
+            $session->invalidate();
 
-        $userRepository = $doctrine->getRepository(User::class);
-        $userEntity = $userRepository->find($userId);
+            $userRepository = $doctrine->getRepository(User::class);
+            $userEntity = $userRepository->find($userId);
 
-        $em = $doctrine->getEntityManager();
-        $em->remove($userEntity);
-        $em->flush();
+            $em = $doctrine->getEntityManager();
+            $em->remove($userEntity);
+            $em->flush();
 
-        $this->addFlash('deleted', 'Votre compte et vos itinéraires ont bien été supprimés :(');
+            $this->addFlash('deleted', 'Votre compte et vos itinéraires ont bien été supprimés :(');
 
-        return $this->redirectToRoute('concepteur');
+            return $this->redirectToRoute('concepteur');
+        }else{
+            $this->addFlash('notice', 'Nope petit malin ;)');
+
+            return $this->redirectToRoute('concepteur');
+        }
     }
 }

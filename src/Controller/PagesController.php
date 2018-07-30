@@ -100,6 +100,37 @@ class PagesController extends Controller
     }
 
     /**
+     * @Route("/delete_path/{id}", name="delete_path")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function delete_path (RegistryInterface $doctrine, $id) {
+        if($this->getUser()){
+            $path = $doctrine->getRepository(Path::class)->find($id);
+
+            $pathAuteur = $path->getAuteur();
+
+            if($pathAuteur == $this->getUser()->getUsername()){
+                $em = $doctrine->getEntityManager();
+                $em->remove($path);
+                $em->flush();
+
+                $this->addFlash('deleted', 'Votre itinéraire a bien été supprimé');
+
+                return $this->redirectToRoute('concepteur');
+            }else{
+                $this->addFlash('notice', "Ce n'est pas votre itinéraire");
+
+                return $this->redirectToRoute('concepteur');
+            }
+        }else{
+            $this->addFlash('notice', "Vous n'êtes pas connecté");
+
+            return $this->redirectToRoute('concepteur');
+        }
+    }
+
+    /**
      * @return string
      */
     private function generateUniqueFileName(){
