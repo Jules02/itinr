@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, maximum-scale=1"/>
     <title>{% block title %} | Itin'r{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
     <link rel="stylesheet" href="{% block stylesheets2 %}{% endblock %}">
@@ -11,7 +12,7 @@
     <section class="desktop">
     <header class="header">
         <a href="{{ path("concepteur") }}" class="header-itinr">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Itin'r">
+            <img src="{{ asset('images/logo32.png') }}" alt="Logo Itin'r">
             <h1 class="header-title">Itin'r</h1>
         </a>
 
@@ -74,10 +75,8 @@
 
     <section class="mobile">
         <div class="mobile-header">
-            <div class="header-logo mobile-header-logo">
-                <p class="header-logo-txt">Logo</p>
-            </div> <!-- à remplacer par l'img du logo -->
-            <h1 class="header-title mobile-header-title">Itin'r</h1>
+            <img src="{{ asset('images/logo32.png') }}" alt="Logo Itin'r">
+            <h1 class="mobile-header-title header-title">Itin'r</h1>
         </div>
 
         <div class="mobile-comingsoon">

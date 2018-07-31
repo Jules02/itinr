@@ -95,7 +95,8 @@ button{
     margin: 0;
     padding: 0;
 
-    background: #228A31;
+    background: rgb(76,210,99);
+    background: linear-gradient(38deg, rgba(76,210,99,1) 0%, rgba(59,161,76,1) 42%, rgba(34,138,49,1) 100%);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 
     display: flex;
@@ -105,25 +106,22 @@ button{
     z-index: 30;
 }
 
-.header-logo{
-    width: 50px;
-    height: 50px;
+.header-itinr{
+    margin-left: 25px;
 
-    border: 2px solid white;
-
-    margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
-.header-logo-txt{
-    color: white;
-    text-align: center;
+.header-itinr img{
+    margin-right: 15px;
 }
 
 .header-title{
     color: white;
     font-size: 34px;
 
-    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header-account{
@@ -141,7 +139,7 @@ button{
     font-weight: 500;
     color: white;
 
-    background: #228A31;
+    background: none;
     border: 1px solid white;
     border-radius: 2px;
 
@@ -190,6 +188,8 @@ button{
 .nav_onglets{                    /*barre de navigation*/
     list-style-type: none;
     display: flex;
+
+    padding: 0;
 }
 
 .nav-item{                                         /*effet de grossissement des onglets de la barre de navigation*/
