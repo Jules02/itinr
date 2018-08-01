@@ -9,15 +9,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Twig\Environment;
 
 class RegistrationController extends Controller
 {
     /**
      * @Route("/inscription", name="inscription")
      */
-    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
+    public function registerAction(Environment $twig, Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -46,15 +48,18 @@ class RegistrationController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $subject = "Test";
-            $body = "Inscription réussie";
-
             $message = (new \Swift_Message())
-                ->setSubject($subject)
+                ->setSubject("Inscription réussie !")
                 ->setTo($user->getEmail())
-                ->setFrom('moveetest@gmail.com')
-                ->setBody($body, 'text/html')
+                ->setFrom(['moveetest@gmail.com' => "Itin'r"])
             ;
+
+            $body = $twig->render('emails/registred.html.twig', [
+                'surname' => $user->getSurname(),
+                'username' => $user->getUsername()
+            ]);
+
+            $message->setBody($body, 'text/html');
 
             $mailer->send($message);
 
@@ -63,9 +68,8 @@ class RegistrationController extends Controller
             return $this->redirectToRoute('concepteur');
         }
 
-        return $this->render(
-            'security/inscription.html.twig',
-            array('form' => $form->createView())
-        );
+        return new Response($twig->render('security/inscription.html.twig', [
+            'form' => $form->createView()
+        ]));
     }
 }

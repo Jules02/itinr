@@ -6,6 +6,7 @@
 .titre{
     font-weight: 400;
     font-size: 40px;
+    font-family: 'Montserrat', 'Source Sans Pro';
 
     line-height: 40px;
 
@@ -59,9 +60,6 @@
 }
 
 .newAvatar-avatar-container:hover{
-    -webkit- transition: -webkit- all 0.3s ease-in-out;
-    -moz- transition: -moz- all 0.3s ease-in-out;
-    -o- transition: -o- all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
     background-color: rgba(0, 0, 0, 0.3);

@@ -165,7 +165,7 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/chercher", name="chercher")
+     * @Route("/recherche", name="chercher")
      * @param Environment $twig
      * @return Response
      */
@@ -314,7 +314,9 @@ class PagesController extends Controller
                 }
             }
         }else{
-            $this->addFlash('error', 'Problème');
+            $this->addFlash('error', 'Cette adresse ne correspond à personne');
+
+            return $this->redirectToRoute('chercher-utilisateur');
         }
     }
 

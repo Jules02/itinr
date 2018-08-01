@@ -95,8 +95,8 @@ button{
     margin: 0;
     padding: 0;
 
-    background: rgb(76,210,99);
-    background: linear-gradient(38deg, rgba(76,210,99,1) 0%, rgba(59,161,76,1) 42%, rgba(34,138,49,1) 100%);
+    background: rgb(71,198,93);
+    background: linear-gradient(38deg, rgba(71,198,93,1) 0%, rgba(59,161,76,1) 42%, rgba(34,138,49,1) 100%);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 
     display: flex;
@@ -226,7 +226,7 @@ button{
     top: 80px;
     left: 0;
 
-    background-color: #3ba14c;
+    background-color: rgb(76,210,99);
 
     width: 100%;
 

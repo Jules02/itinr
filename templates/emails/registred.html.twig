@@ -1,5 +1,104 @@
-<h3>Vous êtes inscrit !</h3>
+<html>
+    <head>
+        <style>
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
 
-<a href="{{ url('security_login') }}">Connectez-vous </a>
+            .email-container{
+                font-family: 'Source Sans Pro';
+            }
 
-Merci !
+            .logo{
+                margin: 25px;
+            }
+
+            .header-sepa{
+                background: linear-gradient(240.94deg, #3BA14C 0%, #5CF776 101.17%);
+                width: 100%;
+                height: 5px;
+            }
+
+
+            .title{
+                font-size: 34px;
+
+                margin-bottom: 0;
+            }
+
+            .thx{
+                margin-top: 5px;
+
+                font-size: 18px;
+            }
+
+            .now-title{
+                margin-top: 30px;
+                margin-bottom: 0;
+
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .now-link{
+                font-size: 16px;
+
+                line-height: 30px;
+            }
+
+            .bye{
+                margin-top: 25px;
+            }
+
+
+
+            .footer-content{
+                display: flex;
+                justify-content: center;
+
+                margin-top: 30px;
+            }
+
+            .footer-rs{
+                list-style-type: none;
+                display: flex;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            .footer-rs li{
+                margin: 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="email-container">
+        <img src="https://image.noelshack.com/fichiers/2018/31/3/1533125709-logoemail.png"  class="logo" alt="Logo Itin'r">
+        <div class="header-sepa"></div>
+
+        <h1 class="title">Bienvenue {{ surname }} !</h1>
+        <p class="thx">Merci pour votre inscription ! 😉</p>
+
+        <h3 class="now-title">Que faire maintenant ?</h3>
+        <a class="now-link" href="https://youtube.com">Découvrez nos tutoriels vidéos sur Youtube</a><br/>
+        <a class="now-link" href="{{ absolute_url(path('concepteur')) }}">Tracez votre premier parcours et partagez-le</a><br/>
+        <a class="now-link" href="{{ absolute_url(path('profil', {'username' : username})) }}">Jetez un coup d'oeil à votre profil</a><br/>
+
+        <p class="bye">Merci et à bientôt,<br/>Itin'r</p>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="footer-rs">
+                    <li class="footer-rs-li"><a href="https://facebook.com"><img src="https://image.noelshack.com/fichiers/2018/31/3/1533075327-facebook.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://twitter.com"><img src="https://image.noelshack.com/fichiers/2018/31/3/1533075327-twitter.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://instagram.com"><img src="https://image.noelshack.com/fichiers/2018/31/3/1533075327-instagram.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://snapchat.com"><img src="https://image.noelshack.com/fichiers/2018/31/3/1533075327-snapchat.png" alt="Icône réseau social"></a></li>
+                    <li class="footer-rs-li"><a href="https://youtube.com"><img src="https://image.noelshack.com/fichiers/2018/31/3/1533075327-youtube.png" alt="Icône réseau social"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
