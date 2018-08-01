@@ -21,6 +21,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Twig\Environment;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class PagesController extends Controller
 {
@@ -40,7 +41,9 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function concepteur (Environment $twig, Request $request, FormFactoryInterface $formFactory, RegistryInterface $doctrine) {
+    public function concepteur (Environment $twig, Request $request, RegistryInterface $doctrine) {
+        $cookieTuto = $request->cookies->get('tuto');
+
         $path = new Path();
 
         $form = $this->createForm(PathType::class, $path);
@@ -93,10 +96,23 @@ class PagesController extends Controller
             $this->addFlash('pathSaved', "Parcours enregistré avec succès !");
         }
 
+        if($cookieTuto){
+            $renderArray = [
+                'form' => $form->createView(),
+                'tuto' => false
+            ];
+        }else{
+            $renderArray = [
+                'form' => $form->createView(),
+                'tuto' => true
+            ];
 
-        return new Response($twig->render('content/concepteur.html.twig', [
-            'form' => $form->createView()
-        ]));
+            $response = new Response();
+            $response->headers->setCookie(new Cookie('tuto', 1, strtotime('+10 years' )));
+            $response->sendHeaders();
+        }
+
+        return new Response($twig->render('content/concepteur.html.twig', $renderArray));
     }
 
     /**

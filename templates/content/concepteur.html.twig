@@ -135,7 +135,7 @@
     <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
         <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
     </button>
-    <div class="saveContainer" id="saveContainer">
+    <div class="mapOverlayContainer" id="saveContainer">
         <div class="formContainer">
             <div class="formPopUp" id="formPopUp">
                 <p class="form-facultatif">* À part pour le titre, tous les champs sont facultatifs</p>
@@ -166,6 +166,34 @@
     <h3 class="topo-title">Topographie</h3>
     <button id="topo-btn" title="Cela peut prendre un certain temps">Calculer la topographie</button>
     <div id="elevation_chart"></div>
+
+
+    {% if tuto == true %}
+        <div class="mapOverlayContainer tutoMapOverlayContainer" id="tutoContainer">
+            <div class="tutoBigContainer">
+                <div class="tutoContainer">
+                    <h2 class="tuto-title">Première fois que vous utilisez Itin'r ?</h2>
+                    <div class="tuto-contentContainer">
+                        <div class="tuto-partContainer">
+                            <img src="{{ asset('images/tuto-leftclick.png') }}" alt="Tuto clique gauche" class="tuto-part-img"/>
+                            <img src="{{ asset('images/leftclick.png') }}" class="tuto-part-clickimg"/>
+                            <p>Un simple clique gauche relie votre dernier point avec l’endroit où vous avez cliqué d’une simple droite</p>
+                        </div>
+                        <div class="tuto-sepa"></div>
+                        <div class="tuto-partContainer">
+                            <img src="{{ asset('images/tuto-rightclick.png') }}" alt="Tuto clique gauche" class="tuto-part-img"/>
+                            <img src="{{ asset('images/rightclick.png') }}" class="tuto-part-clickimg"/>
+                            <p title="Choisir le mode de suivi des routes au haut de la carte permettra d’adapter l’itinéraire calculé à votre moyen de transport">Un clique droit relie votre dernier point avec l’endroit où vous avez cliqué en suivant la route ou les chemins</p>
+                        </div>
+                    </div>
+                    <div class="tuto-btnContainer">
+                        <button id="tuto-btn">Compris !</button>
+                    </div>
+                </div>
+            </div>
+            <div id="mapFilterTuto" class="mapFilter mapFilterTuto"></div>
+        </div>
+    {% endif %}
 {% endblock %}
 
 
@@ -218,7 +246,7 @@
             var tailleVoulu = tailleNb + 'px';
             //je calcule pour que ma map fasse hauteur de la fenêtre moins le header
             mapDiv.style.height = tailleVoulu;
-            //c'est comme si je fais en CSS: 'height: tailleVoulu;'
+            //c'est comme si je faisais en CSS: 'height: tailleVoulu;'
 
             //definir taille du menu gauche
             var menuGauche = document.getElementById('menuGauche');
@@ -226,6 +254,9 @@
 
             var saveContainer = document.getElementById('saveContainer');
             saveContainer.style.height = tailleVoulu;
+
+            var tutoContainer = document.getElementById('tutoContainer');
+            tutoContainer.style.height = tailleVoulu;
 
             /*var formPopUp = document.getElementById('formPopUp');
             formPopUp.style.height = (tailleNb - 100) + 'px';*/
@@ -993,7 +1024,6 @@
 
 
         var saveContainer = document.getElementById('saveContainer');
-        var saveMessageContainer = document.getElementById('save-messageContainer');
 
         mapFilter.onclick = function() {
             menuGauche.style.display = "none";
@@ -1044,6 +1074,19 @@
         mapFilterForm.onclick = function() {
             saveContainer.style.display = "none";
             mapFilterForm.style.display = "none";
+        };
+
+        var mapFilterTuto = document.getElementById('mapFilterTuto');
+        var tutoContainer = document.getElementById('tutoContainer');
+        mapFilterTuto.onclick = function() {
+            tutoContainer.style.display = "none";
+            mapFilterTuto.style.display = "none";
+        };
+
+        var tutoBtn = document.getElementById('tuto-btn');
+        tutoBtn.onclick = function() {
+            tutoContainer.style.display = "none";
+            mapFilterTuto.style.display = "none";
         };
 
 

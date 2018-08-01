@@ -129,7 +129,7 @@
     justify-content: center;
 }
 
-.saveContainer{
+.mapOverlayContainer{
     width: 100%;
     height: 100%;
 
@@ -566,4 +566,89 @@ fieldset{
     font-family: 'Source Sans Pro';
     font-size: 16px;
     color: white;
+}
+
+
+
+.tutoMapOverlayContainer{
+    display: block;
+}
+
+.tutoBigContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.tutoContainer{
+    z-index: 3;
+
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.mapFilterTuto{
+    display: block;
+}
+
+.tuto-title{
+    font-family: 'Montserrat', 'Source Sans Pro';
+    font-size: 20px;
+
+    margin: 20px 30px;
+}
+
+.tuto-contentContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.tuto-partContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 50px;
+}
+
+.tuto-sepa{
+    width: 1px;
+    height: 75px;
+    background-color: #000;
+
+    margin-top: 15px;
+}
+
+.tuto-part-clickimg{
+    margin-top: 10px;
+}
+
+.tuto-partContainer p{
+    width: 225px;
+
+    text-align: center;
+    font-size: 18px;
+
+    margin-top: 10px;
+}
+
+.tuto-btnContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#tuto-btn{
+    background-color: #3ba14c;
+    width: 90%;
+    height: 40px;
+
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    color: white;
+
+    border-radius: 3px;
+
+    margin-bottom: 15px;
 }
