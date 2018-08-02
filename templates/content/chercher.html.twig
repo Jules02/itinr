@@ -86,6 +86,8 @@
                         }, function(results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             if (results[1]) {
+                                var placeIdInput = document.getElementById('chercher_placeId');
+                                placeIdInput.value = results[1].place_id;
                                 geocoder.geocode({'placeId': results[1].place_id}, function(results, status) {
                                     if (status !== 'OK') {
                                         alert('Le Geocoder a echoué. Raison: ' + status);
@@ -93,8 +95,6 @@
                                     }
                                     var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);   //Un peu à l'arrache, mais on passe de 02880, Bucy-le-Long, France à Bucy-le-Long, France
                                     document.getElementById('chercher_lieu').value = geoLocationResult;
-                                    var placeIdInput = document.getElementById('chercher_placeId');
-                                    placeIdInput.value = place.place_id;
                                 });
                             } else {
                                 alert('Aucun résultat trouvé');

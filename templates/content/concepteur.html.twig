@@ -194,6 +194,8 @@
             <div id="mapFilterTuto" class="mapFilter mapFilterTuto"></div>
         </div>
     {% endif %}
+
+    <p style="display: none;" id="tuto">{{ tuto }}</p>
 {% endblock %}
 
 
@@ -255,8 +257,11 @@
             var saveContainer = document.getElementById('saveContainer');
             saveContainer.style.height = tailleVoulu;
 
-            var tutoContainer = document.getElementById('tutoContainer');
-            tutoContainer.style.height = tailleVoulu;
+            var tuto = document.getElementById('tuto').textContent;
+            if(tuto){
+                var tutoContainer = document.getElementById('tutoContainer');
+                tutoContainer.style.height = tailleVoulu;
+            }
 
             /*var formPopUp = document.getElementById('formPopUp');
             formPopUp.style.height = (tailleNb - 100) + 'px';*/
@@ -1076,18 +1081,21 @@
             mapFilterForm.style.display = "none";
         };
 
-        var mapFilterTuto = document.getElementById('mapFilterTuto');
-        var tutoContainer = document.getElementById('tutoContainer');
-        mapFilterTuto.onclick = function() {
-            tutoContainer.style.display = "none";
-            mapFilterTuto.style.display = "none";
-        };
+        var tuto = document.getElementById('tuto').textContent;
+        if(tuto){
+            var mapFilterTuto = document.getElementById('mapFilterTuto');
+            var tutoContainer = document.getElementById('tutoContainer');
+            mapFilterTuto.onclick = function() {
+                tutoContainer.style.display = "none";
+                mapFilterTuto.style.display = "none";
+            };
 
-        var tutoBtn = document.getElementById('tuto-btn');
-        tutoBtn.onclick = function() {
-            tutoContainer.style.display = "none";
-            mapFilterTuto.style.display = "none";
-        };
+            var tutoBtn = document.getElementById('tuto-btn');
+            tutoBtn.onclick = function() {
+                tutoContainer.style.display = "none";
+                mapFilterTuto.style.display = "none";
+            };
+        }
 
 
 

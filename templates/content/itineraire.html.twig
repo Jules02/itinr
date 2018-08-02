@@ -161,14 +161,16 @@
     <h3 class="description-titre">Topographie</h3>
     <div id="elevation_chart"></div>
 
-    {% if path.auteur == app.user.username %}
-        <button class="delete-container" id="deleteBtn">Supprimer mon parcours</button>
+    {% if app.user %}
+        {% if path.auteur == app.user.username %}
+            <button class="delete-container" id="deleteBtn">Supprimer mon parcours</button>
 
-        <div class="delete-container" id="deleteNotice">
-            <p>Voulez-vous vraiment supprimer votre itinéraire ? Cette action est irréversible</p>
-            <button class="deleteNotice-btn" id="deleteClose">Annuler</button>
-            <a class="deleteNotice-btn" id="deleteConfirme" href="{{ path('delete_path', {'id': path.id}) }}">Supprimer</a>
-        </div>
+            <div class="delete-container" id="deleteNotice">
+                <p>Voulez-vous vraiment supprimer votre itinéraire ? Cette action est irréversible</p>
+                <button class="deleteNotice-btn" id="deleteClose">Annuler</button>
+                <a class="deleteNotice-btn" id="deleteConfirme" href="{{ path('delete_path', {'id': path.id}) }}">Supprimer</a>
+            </div>
+        {% endif %}
     {% endif %}
 {% endblock %}
 
