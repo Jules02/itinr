@@ -185,18 +185,20 @@
         });
     </script>
     <script>
-        var deleteBtn = document.getElementById('deleteBtn');
-        var deleteNotice = document.getElementById('deleteNotice');
-        var deleteClose = document.getElementById('deleteClose');
+        if(document.getElementById('deleteBtn')){
+            var deleteBtn = document.getElementById('deleteBtn');
+            var deleteNotice = document.getElementById('deleteNotice');
+            var deleteClose = document.getElementById('deleteClose');
 
-        deleteBtn.onclick = function() {
-            deleteBtn.style.display = "none";
-            deleteNotice.style.display = "block";
-        };
+            deleteBtn.onclick = function() {
+                deleteBtn.style.display = "none";
+                deleteNotice.style.display = "block";
+            };
 
-        deleteClose.onclick = function() {
-            deleteBtn.style.display = "block";
-            deleteNotice.style.display = "none";
+            deleteClose.onclick = function() {
+                deleteBtn.style.display = "block";
+                deleteNotice.style.display = "none";
+            };
         }
     </script>
     <script>

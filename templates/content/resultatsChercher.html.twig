@@ -15,7 +15,6 @@
 
     <div class="resultats-bigcontainer">
         <div class="resultats-container">
-            {% set presDeId = 1 %}
             {% for path in resultatPath %}
                 <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
                     <p class="resultat-titre">{{ path.titre }}</p>
@@ -42,9 +41,8 @@
                     {% endif %}
                     <p class="resultat-auteur resultat-margin-left">par <span>{{ path.auteur }}</span></p>
                     <p class="resultat-presDe resultat-margin-left">
-                        près de <span id="resultat-presDe-span-{{ presDeId }}">{{ path.placeId }}</span>
+                        près de <span id="resultat-presDe-span">{{ path.pathLocation }}</span>
                     </p>
-                    {% set presDeId = presDeId + 1 %}
                     <p class="resultat-distance" title="ou {{ path.distance }} mètres"><span>{{ (path.distance / 1000)|round(2, 'floor') }}</span>km</p>
                 </a>
             {% endfor %}
@@ -53,29 +51,4 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=init" async defer></script>
-    <script>
-        function init(){
-            var geocoder = new google.maps.Geocoder();
-
-            for (i = 0; i < {{ resultatPathNb }}; i++){
-                var idNb = i + 1;
-                var idNb = idNb.toString();
-                var placeIdElement = document.getElementById('resultat-presDe-span-' + idNb);
-                var placeIdValue = placeIdElement.textContent;
-
-                geocoder.geocode({'placeId': placeIdValue}, function(results, status) {
-                    if (status !== 'OK') {
-                        alert('Le Geocoder a echoué. Raison: ' + status);
-                        return;
-                    }
-                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
-                    console.log(geoLocationResult);
-
-                    //La fonction est asynchrone. Elle est executée après la boucle
-                    //Ce console.log affiche pourtant bien tous les résultats
-                });
-            }
-        }
-    </script>
 {% endblock %}

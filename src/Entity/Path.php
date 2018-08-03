@@ -31,6 +31,12 @@ class Path
     private $placeId;
 
     /**
+     * @Assert\NotNull()
+     * @ORM\Column(type="text")
+     */
+    private $pathLocation;
+
+    /**
      * @Assert\NotNull(message="Vous êtes obligé de remplir au moins ce champ")
      * @ORM\Column(name="titre", type="string")
      */
@@ -186,6 +192,22 @@ class Path
     public function setPlaceId($placeId): void
     {
         $this->placeId = $placeId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPathLocation()
+    {
+        return $this->pathLocation;
+    }
+
+    /**
+     * @param mixed $pathLocation
+     */
+    public function setPathLocation($pathLocation): void
+    {
+        $this->pathLocation = $pathLocation;
     }
 
     /**

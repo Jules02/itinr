@@ -49,21 +49,14 @@
         //Autocompletion de l'adresse
         function initAutocomplete() {
             geocoder = new google.maps.Geocoder();
+            var options = {
+                types: ['(regions)']
+            };
             autocomplete = new google.maps.places.Autocomplete(
                 (document.getElementById('chercher_lieu')),
-                {types: ['(cities)']});
+                options);
 
             autocomplete.addListener('place_changed', fillInAddress);
-        }
-
-        function codeAddress(address) {
-            geocoder.geocode( { 'address': address}, function(results, status) {
-                if (status == 'OK') {
-                    alert(results[0].geometry.location);
-                } else {
-                    alert('Le Geocoder a echoué. Raison: ' + status);
-                }
-            });
         }
 
         function fillInAddress() {
