@@ -337,38 +337,20 @@ class PagesController extends Controller
     }
 
     /**
-     * @Route("/newAvatar", name="newAvatar")
-     * @return Response
-     */
-    public function newAvatar ()
-    {
-        $user = $this->getUser();
-
-        $genre = $user->getGenre();
-        if ($genre === "homme") {
-            $avatarNb = rand(1, 27);
-        } elseif ($genre === "femme") {
-            $avatarNb = rand(1, 19);
-        } else {
-            $avatarNb = rand(1, 4);
-        }
-        $user->setImage("images/avatar/" . $genre . "/avatar (" . $avatarNb . ").png");
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($user);
-        $em->flush();
-
-        $this->addFlash('success', 'Vous avez un nouvel avatar ;)');
-
-        return $this->redirectToRoute('profil');
-    }
-
-    /**
      * @Route("/conditions-generales", name="conditions")
      * @param Environment $twig
      * @return Response
      */
     public function conditions (Environment $twig) {
         return new Response($twig->render('content/conditions.html.twig'));
+    }
+
+    /**
+     * @Route("/licences", name="licences")
+     * @param Environment $twig
+     * @return Response
+     */
+    public function licences (Environment $twig) {
+        return new Response($twig->render('content/licences.html.twig'));
     }
 }

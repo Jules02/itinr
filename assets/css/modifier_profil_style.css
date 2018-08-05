@@ -4,13 +4,13 @@
 }
 
 .titre{
-    font-size: 40px;
+    font-size: 36px;
     font-family: 'Montserrat', 'Source Sans Pro';
 
     line-height: 40px;
 
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .titre-separation{
@@ -46,27 +46,22 @@
 
 .newAvatar-avatar-container{
     border: solid 1px #3ba14c;
-    border-radius: 20px;
+    border-radius: 25px;
 
-    width: 40px;
-    height: 40px;
+    width: 51px;
+    height: 51px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     margin-right: 10px;
-}
 
-.newAvatar-avatar-container:hover{
-    transition: all 0.3s ease-in-out;
-
-    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 .newAvatar-avatar{
-    width: 24px;
-    height: 24px;
+    padding-left: 1px;
 }
 
 .newAvatar-container p{
@@ -88,10 +83,6 @@
     margin-bottom: 10px;
 
     border-radius: 3px;
-}
-
-.email-input{
-    margin-bottom:0;
 }
 
 .conditions{

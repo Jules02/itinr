@@ -20,8 +20,6 @@ class EditProfilController extends Controller
         $user = $this->getUser();
         $form = $this->createForm(UserType::class, $user);
 
-        $genre = $user->getGenre();
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -41,10 +39,29 @@ class EditProfilController extends Controller
         return $this->render(
             'content/modifier_profil.html.twig',
             array(
-                'form' => $form->createView(),
-                'genre' => $genre
+                'form' => $form->createView()
             )
         );
+    }
+
+    /**
+     * @Route("/newAvatar", name="newAvatar")
+     */
+    public function newAvatar ()
+    {
+        $user = $this->getUser();
+        $username = $user->getUsername();
+
+        $avatarNb = rand(1, 22);
+        $user->setImage("images/avatar/avatar (" . $avatarNb . ").png");
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+
+        $this->addFlash('success', 'Vous avez un nouvel avatar ;)');
+
+        return $this->redirectToRoute('profil', array('username' => $username));
     }
 
     /**

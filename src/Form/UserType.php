@@ -41,22 +41,6 @@ class UserType extends AbstractType
                     'title' => 'Nous vous enverrons un email sur cette adresse'
                 )
             ))
-            ->add('genre', ChoiceType::class, array(
-                'label' => false,
-                'attr' => array(
-                    'class' => 'radio-container',
-                    'title' => 'Nous en avons besoin pour votre avatar'
-                ),
-                'choices'  => array(
-                    'Homme' => "homme",
-                    'Femme' => "femme",
-                    'Autre' => "autre"
-                ),
-                'data' => '',
-                'expanded' => true,
-                'multiple' => false
-                )
-            )
             ->add('password', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'first_options'  => array(

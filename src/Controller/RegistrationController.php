@@ -33,15 +33,8 @@ class RegistrationController extends Controller
             // Par defaut l'utilisateur aura toujours le rôle ROLE_USER
             $user->setRoles(['ROLE_USER']);
 
-            $genre = $user->getGenre();
-            if($genre === "homme"){
-                $avatarNb = rand(1, 27);
-            }elseif($genre === "femme"){
-                $avatarNb = rand(1, 19);
-            }else{
-                $avatarNb = rand(1, 4);
-            }
-            $user->setImage("images/avatar/" . $genre . "/avatar (" . $avatarNb . ").png");
+            $avatarNb = rand(1, 22);
+            $user->setImage("images/avatar/avatar (" . $avatarNb . ").png");
 
             // On enregistre l'utilisateur dans la base
             $em = $this->getDoctrine()->getManager();

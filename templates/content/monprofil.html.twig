@@ -11,7 +11,9 @@
     <div class="titre-separation margin-left"></div>
 
     <div class="section1-container">
-        <div class="bonjour-container margin-left"><div class="avatar-container mon-avatar-container"><a href="{{ path('newAvatar') }}"><img src="{{ asset(app.user.image) }}" class="avatar"/></a></div><p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
+        <div class="bonjour-container margin-left">
+            <div class="avatar-container mon-avatar-container"><img src="{{ asset(app.user.image) }}" class="avatar"/></div>
+            <p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
         <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/modifier_profil.png') }}"/></a>
     </div>
 
