@@ -4,7 +4,6 @@
 }
 
 .titre{
-    font-weight: 400;
     font-size: 36px;
     font-family: 'Montserrat', 'Source Sans Pro';
 
@@ -163,6 +162,10 @@ h2{
     border-radius: 3px;
 
     height: 150px;
+
+    overflow: hidden;
+
+    position: relative;
 }
 
 .resultat-margin-left{
@@ -194,6 +197,37 @@ h2{
     height: 20px;
 
     padding-right: 5px;
+}
+
+.resultat-auteur{
+    font-weight: 300;
+}
+
+.resultat-auteur span{
+    font-weight: 500;
+}
+
+.resultat-presDe{
+    font-weight: 300;
+}
+
+.resultat-presDe span{
+    font-weight: 500;
+}
+
+.resultat-distance{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.resultat-distance span{
+    font-weight: 500;
 }
 
 

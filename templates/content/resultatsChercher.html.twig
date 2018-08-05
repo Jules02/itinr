@@ -40,9 +40,7 @@
                     </p>
                     {% endif %}
                     <p class="resultat-auteur resultat-margin-left">par <span>{{ path.auteur }}</span></p>
-                    <p class="resultat-presDe resultat-margin-left">
-                        près de <span id="resultat-presDe-span">{{ path.pathLocation }}</span>
-                    </p>
+                    <p class="resultat-presDe resultat-margin-left">près de <span>{{ path.pathLocation }}</span></p>
                     <p class="resultat-distance" title="ou {{ path.distance }} mètres"><span>{{ (path.distance / 1000)|round(2, 'floor') }}</span>km</p>
                 </a>
             {% endfor %}

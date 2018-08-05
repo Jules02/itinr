@@ -4,7 +4,6 @@
 }
 
 .titre{
-    font-weight: 400;
     font-size: 40px;
     font-family: 'Montserrat', 'Source Sans Pro';
 
@@ -94,48 +93,6 @@
 .email-input{
     margin-bottom:0;
 }
-
-#user_genre{
-    display: none;
-}
-
-.genre-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.genre-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.genre-input-container{
-    margin: 20px 100px;
-}
-
-input{
-    font-family: 'Source Sans Pro';
-}
-
-input[type="radio"]{
-    display:none;
-}
-
-/*input[type="radio"] + label span{
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    margin: -2px 10px 0 0;
-    vertical-align: middle;
-    background: url("../images/radio_input.png") -21px top no-repeat;
-    cursor: pointer;
-}
-
-input[type="radio"]:checked + label span{
-    background: url("../images/radio_input.png") 0px top no-repeat;
-}*/
 
 .conditions{
     font-weight: 300;

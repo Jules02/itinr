@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ asset('build/cookies_consent.css') }}">
+
+{% block cookies_consent %}
+    <div id="cookies" class="cookies-container">
+        <p class="cookies-p">En naviguant sur Itin’r, vous acceptez que nous utilisions des cookies pour mesurer notre audience (Google Analytics). <a href="{{ path('conditions') }}">En savoir plus</a></p>
+        <button id="close" class="cookies-close">Ok !</button>
+    </div>
+{% endblock %}
+
+<script>
+   var closeBtn = document.getElementById('close');
+   var cookiesContainer = document.getElementById('cookies');
+
+   closeBtn.onclick = function() {
+       var expiryDate = new Date();
+       expiryDate.setMonth(expiryDate.getMonth() + 13);
+       var expires = "expires="+expiryDate.toUTCString();
+
+       document.cookie = "cookies_consent=1; " + expires;
+
+       cookiesContainer.style.display = "none";
+   }
+</script>

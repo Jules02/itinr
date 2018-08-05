@@ -6,7 +6,13 @@
 
 {% block body %}
     <div class="titre">
-        <h1 id="titre"><span>{{ path.titre }}</span> par <a href="{{ path('profil', {'username' : path.auteur}) }}">{{ path.auteur }}</a></h1>
+        <h1 id="titre"><span>{{ path.titre }}</span> par
+            {% if path.auteur ends with ' (anonyme)' %}
+                <a>{{ path.auteur }}</a>
+            {% else %}
+                <a href="{{ path('profil', {'username' : path.auteur}) }}">{{ path.auteur }}</a>
+            {% endif %}
+        </h1>
         <div id="titre-sepa"></div>
     </div>
 

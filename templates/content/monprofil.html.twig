@@ -31,28 +31,28 @@
                         <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
                             <p class="resultat-titre">{{ path.titre }}</p>
                             <div class="resultat-titre-sepa"></div>
-                            <p class="resultat-typeSport resultat-margin-left">
-                                {% if path.typeSport == "marche" %}
-                                    <img src="{{ asset('images/chercher_typeSport3.png') }}"/>
-                                    Marche
-                                {% elseif path.typeSport == "course" %}
-                                    <img src="{{ asset('images/chercher_typeSport2.png') }}"/>
-                                    Course à pied
-                                {% elseif path.typeSport == "veloroute" %}
-                                    <img src="{{ asset('images/chercher_typeSport4.png') }}"/>
-                                    Vélo de route
-                                {% elseif path.typeSport == "vtt" %}
-                                    <img src="{{ asset('images/chercher_typeSport5.png') }}"/>
-                                    VTT
-                                {% elseif path.typeSport == "autre" %}
-                                    <img src="{{ asset('images/chercher_typeSport1.png') }}"/>
-                                    Autre
-                                {% endif %}
-                            </p>
-                            <p class="resultat-auteur resultat-margin-left">{{ path.auteur }}</p>
-                            <p id="resultat-placeId" class="resultat-margin-left">
-                                {{ path.placeId }}
-                            </p>
+                            {% if path.typeSport != null %}
+                                <p class="resultat-typeSport resultat-margin-left">
+                                    {% if path.typeSport == "marche" %}
+                                        <img src="{{ asset('images/chercher_typeSport3.png') }}"/>
+                                        Marche
+                                    {% elseif path.typeSport == "course" %}
+                                        <img src="{{ asset('images/chercher_typeSport2.png') }}"/>
+                                        Course à pied
+                                    {% elseif path.typeSport == "veloroute" %}
+                                        <img src="{{ asset('images/chercher_typeSport4.png') }}"/>
+                                        Vélo de route
+                                    {% elseif path.typeSport == "vtt" %}
+                                        <img src="{{ asset('images/chercher_typeSport5.png') }}"/>
+                                        VTT
+                                    {% elseif path.typeSport == "autre" %}
+                                        <img src="{{ asset('images/chercher_typeSport1.png') }}"/>
+                                        Autre
+                                    {% endif %}
+                                </p>
+                            {% endif %}
+                            <p class="resultat-presDe resultat-margin-left">près de <span>{{ path.pathLocation }}</span></p>
+                            <p class="resultat-distance" title="ou {{ path.distance }} mètres"><span>{{ (path.distance / 1000)|round(2, 'floor') }}</span>km</p>
                         </a>
                     {% endfor %}
                 </div>

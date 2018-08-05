@@ -15,6 +15,7 @@ a{
 button{
     border: none;
     cursor: pointer;
+    font-family: 'Source Sans Pro';
 }
 
 
@@ -27,7 +28,7 @@ button{
     .mobile {
         display: block !important;
 
-        background: linear-gradient(240.94deg, #3BA14C 0%, #5CF776 101.17%);;
+        background: linear-gradient(240.94deg, #3BA14C 0%, #5CF776 101.17%);
         width: 100%;
         height: 100%;
     }
@@ -119,9 +120,20 @@ button{
 
 .header-title{
     color: white;
-    font-size: 34px;
+    font-size: 38px;
 
     font-family: 'Montserrat', sans-serif;
+}
+
+.header-beta{
+    background-color: white;
+    border-radius: 3px;
+
+    padding: 2px 5px;
+    margin: 0 0 -8px 5px;
+
+    color: #3ba14c;
+    font-size: 12px;
 }
 
 .header-account{
@@ -303,6 +315,11 @@ button{
     .nav_onglets{
         font-size: 14px;
     }
+}
+
+
+.titre{
+    font-weight: 600 !important;
 }
 
 

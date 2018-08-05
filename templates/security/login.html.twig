@@ -11,9 +11,9 @@
 
     <div class="form-container">
         <form action="{{ path('security_login') }}" method="post">
-            <div class="OAuth-connect facebook-connect"><img src="{{ asset('images/facebook_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Facebook</div>
+            <div class="OAuth-connect facebook-connect" title="Prochainement"><img src="{{ asset('images/facebook_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Facebook</div>
 
-            <div class="OAuth-connect google-connect"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Google</div>
+            <div class="OAuth-connect google-connect" title="Prochainement"><img src="{{ asset('images/google_login.png') }}" alt="Icône Google" class="OAuth-connect-img"/>Se connecter avec Google</div>
 
             {% if error %}
                 <div class="error-container">
@@ -34,8 +34,6 @@
                     <input type="checkbox" class="form-rememberme" id="remember_me" name="_remember_me" checked />
                     <label for="remember_me"><span></span>Se souvenir de moi</label>
                 </div>
-
-                <a class="form-forgottenpassword" href="{{ path('forgotten_password') }}">Mot de passe oublié ?</a>
             </div>
 
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>

@@ -14,7 +14,7 @@
     <header class="header">
         <a href="{{ path("concepteur") }}" class="header-itinr">
             <img src="{{ asset('images/logo32.png') }}" alt="Logo Itin'r">
-            <h1 class="header-title">Itin'r</h1>
+            <h1 class="header-title">Itin'r</h1><p class="header-beta">Bêta</p>
         </a>
 
         <div class="header-navbar">
@@ -55,6 +55,10 @@
 {% block body %}
 {% endblock %}
     </section>
+
+    {% if app.request.cookies.get('cookies_consent') == "" %}
+        {% include 'cookies_consent.html.twig' %}
+    {% endif %}
 
     <footer class="footer" id="footer">
         <div class="footer-content">

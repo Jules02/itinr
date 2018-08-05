@@ -36,6 +36,7 @@ Encore
     .addEntry('erreur', './assets/css/erreur_style.css')
     .addEntry('form_theme', './assets/css/form_theme_style.css')
     .addEntry('chercher_utilisateur', './assets/css/chercher_utilisateur_style.css')
+    .addEntry('cookies_consent', './assets/css/cookies_consent_style.css')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()
