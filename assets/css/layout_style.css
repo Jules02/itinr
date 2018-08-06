@@ -361,6 +361,21 @@ button{
     background-color: #228A31;
 }
 
+.footer-link-container{
+    font-weight: 300;
+    font-size: 15px;
+
+    margin: 10px;
+}
+
+.footer-link-container span{
+    padding: 5px;
+}
+
+.footer-author{
+    margin-top: 0;
+}
+
 .footer-date{
     font-weight: 300;
 

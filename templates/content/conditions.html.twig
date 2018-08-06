@@ -5,5 +5,33 @@
 {% block stylesheets %}{{ asset('build/conditions.css') }}{% endblock %}
 
 {% block body %}
-    <p>Conditions générales</p>
+    <div class="margin-left">
+        <h1 class="titre">Informations légales</h1>
+        <div class="titre-separation"></div>
+
+        <p>Conformément aux dispositions des articles 6-III et 19 de la loi pour la Confiance dans l'Économie Numérique, nous vous informons que :</p>
+        <p>
+            Le site itinr.fr - "Itin'r" est édité par:<br/>
+            Jules DUPONT, dont l'adresse est:<br/>
+            17 rue de Broyon, 02880 Bucy-le-Long, France<br/>
+            Adresse email: contact@itinr.fr
+        </p>
+
+        <p>
+            Le prestataire assurant l'hébergement est:<br/>
+            <a href="https://www.o2switch.fr" class="hoster-a">o2switch</a><br/>
+            222-224 Boulevard Gustave Flaubert<br/>
+            63000 Clermont-Ferrand<br/>
+            France
+        </p>
+
+        <h2 id="data">Données utilisées</h2>
+        <p class="data-p">Lors de l'inscription, nous vous demandons votre adresse email pour vous envoyer un email de bienvenue, et pour éviter les comptes multiples.</p>
+
+        <h3>Cookies</h3>
+        <p class="cookies-rappel">Rappel: <a href="https://fr.wikipedia.org/wiki/Cookie_%28informatique%29">Un cookie</a> est une information conservée sur votre ordinateur par un site web que vous visitez.</p>
+        <p class="cookies-p">Itin'r utilise des cookies afin de mesurer son audience (Google Analytics)</p>
+
+        <p class="contact-p">N'hésitez pas à nous contacter pour toute demande sur la page <a href="{{ path('contact') }}">Contact</a></p>
+    </div>
 {% endblock %}

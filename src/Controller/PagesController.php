@@ -70,18 +70,25 @@ class PagesController extends Controller
 
             if(null === $user){
                 $noms = array(
-                    1 => "Superman",
-                    2 => "Batman",
-                    3 => "Black Panther",
-                    4 => "Antman",
-                    5 => "Ironman",
-                    6 => "Wonder Woman",
-                    7 => "Deadpool",
-                    8 => "Dr Strange",
-                    9 => "Batgirl",
+                    1 => "Rey",
+                    2 => "Dark Vador",
+                    3 => "Luke",
+                    4 => "Boba Fett",
+                    5 => "Chewbi",
+                    6 => "Dark Maul",
+                    7 => "Palpatine",
+                    8 => "Han Solo",
+                    9 => "JarJar Binks",
+                    10 => "Obi-Wan Kenobi",
+                    11 => "Leia",
+                    12 => "Yoda",
+                    13 => "Jabba le Hutt",
+                    14 => "Kylo Ren",
+                    15 => "R2-D2",
+                    16 => "C-3PO"
                 );
 
-                $nbNom = rand(1, 9);
+                $nbNom = rand(1, 16);
                 $nom = $noms[$nbNom];
 
                 $path->setAuteur($nom . " (anonyme)");

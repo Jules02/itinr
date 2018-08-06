@@ -38,6 +38,7 @@ Encore
     .addEntry('chercher_utilisateur', './assets/css/chercher_utilisateur_style.css')
     .addEntry('cookies_consent', './assets/css/cookies_consent_style.css')
     .addEntry('licences', './assets/css/licences_style.css')
+    .addEntry('conditions', './assets/css/conditions_style.css')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()
