@@ -166,7 +166,14 @@
 
     <h3 class="topo-title">Topographie</h3>
     <button id="topo-btn" title="Cela peut prendre un certain temps">Calculer la topographie</button>
-    <div id="elevation_chart"></div>
+    <div id="topo-container">
+        <p class="deniveles-container">
+            Denivelé cumulé: <span id="deniveleCumule"></span><span class="denivele-padding"></span>
+            Denivelé positif: <span id="denivelePositif"></span><span class="denivele-padding"></span>
+            Denivelé négatif: <span id="deniveleNegatif"></span>
+        </p>
+        <div id="elevation_chart"></div>
+    </div>
 
 
     {% if tuto == true %}
@@ -407,45 +414,6 @@
         }
         /************* FIN INITMAP *************/
 
-
-        function displayPathElevation(path, elevator, map) {
-            elevator.getElevationAlongPath({
-                'path': path,
-                'samples': 256
-            }, plotElevation);
-        }
-
-        // Takes an array of ElevationResult objects, draws the path on the map
-        // and plots the elevation profile on a Visualization API ColumnChart.
-        function plotElevation(elevations, status) {
-            var chartDiv = document.getElementById('elevation_chart');
-            if (status !== 'OK') {
-                // Show the error code inside the chartDiv.
-                chartDiv.innerHTML = 'Cannot show elevation: request failed because ' +
-                    status;
-                return;
-            }
-            // Create a new chart in the elevation_chart DIV.
-            var chart = new google.visualization.ColumnChart(chartDiv);
-
-            // Extract the data from which to populate the chart.
-            // Because the samples are equidistant, the 'Sample'
-            // column here does double duty as distance along the
-            // X axis.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Sample');
-            data.addColumn('number', 'Elevation');
-            for (var i = 0; i < elevations.length; i++) {
-                data.addRow(['', elevations[i].elevation]);
-            }
-
-            // Draw the chart using the data within its DIV.
-            chart.draw(data, {
-                height: 150,
-                legend: 'none',
-                titleY: 'Altitude (m)'
-            });
-        }
 
 
 
@@ -1133,8 +1101,73 @@
         }
 
 
+
+        function displayPathElevation(path, elevator, map) {
+            elevator.getElevationAlongPath({
+                'path': path,
+                'samples': 256
+            }, plotElevation);
+        }
+
+        // Takes an array of ElevationResult objects, draws the path on the map
+        // and plots the elevation profile on a Visualization API ColumnChart.
+        function plotElevation(elevations, status) {
+            var chartDiv = document.getElementById('elevation_chart');
+            if (status !== 'OK') {
+                // Show the error code inside the chartDiv.
+                chartDiv.innerHTML = 'Cannot show elevation: request failed because ' +
+                    status;
+                return;
+            }
+            // Create a new chart in the elevation_chart DIV.
+            var chart = new google.visualization.ColumnChart(chartDiv);
+
+            // Extract the data from which to populate the chart.
+            // Because the samples are equidistant, the 'Sample'
+            // column here does double duty as distance along the
+            // X axis.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Sample');
+            data.addColumn('number', 'Elevation');
+            var elevationPath = [];
+            for (var i = 0; i < elevations.length; i++) {
+                data.addRow(['', elevations[i].elevation]);
+                elevationPath.push(elevations[i].elevation)
+            }
+            var lastPointElevation = elevationPath[elevationPath.length - 1];
+            var deniveleGlobal = lastPointElevation - elevationPath[0];
+
+            var denivelePositif = 0;
+            var deniveleNegatif = 0;
+            var deniveleCumule = 0;
+            for (var b = 0; b < elevationPath.length - 1; b++) {
+                var resultDenivele = elevationPath[b + 1] - elevationPath[b];
+                if(Math.sign(resultDenivele) === 1){
+                    denivelePositif = denivelePositif + resultDenivele;
+                }else if(Math.sign(resultDenivele) === -1){
+                    deniveleNegatif = deniveleNegatif + resultDenivele;
+                }
+
+                deniveleCumule = deniveleCumule + (elevationPath[b + 1] - elevationPath[b]);
+            }
+            var deniveleCumulespan = document.getElementById('deniveleCumule');
+            var denivelePositifspan = document.getElementById('denivelePositif');
+            var deniveleNegatifspan = document.getElementById('deniveleNegatif');
+
+            deniveleCumulespan.textContent = Math.round(deniveleCumule) + "m";
+            denivelePositifspan.textContent = "+" + Math.round(denivelePositif) + "m";
+            deniveleNegatifspan.textContent = Math.round(deniveleNegatif) + "m";
+
+            // Draw the chart using the data within its DIV.
+            chart.draw(data, {
+                height: 150,
+                legend: 'none',
+                titleY: 'Altitude (m)'
+            });
+        }
+
         var topoBtn = document.getElementById('topo-btn');
-        var elevationChart = document.getElementById('elevation_chart');
+        var topoContainer = document.getElementById('topo-container');
 
         topoBtn.onclick = function() {
             calculateAndDisplayElevation();
@@ -1149,12 +1182,12 @@
             displayPathElevation(pathArray, elevator, map);
 
             topoBtn.style.display = "none";
-            elevationChart.style.display = "block";
+            topoContainer.style.display = "block";
         }
 
         function hideElevation(){
             topoBtn.style.display = "block";
-            elevationChart.style.display = "none";
+            topoContainer.style.display = "none";
         }
 
 

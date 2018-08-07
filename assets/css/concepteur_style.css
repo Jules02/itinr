@@ -551,7 +551,7 @@ fieldset{
     margin: 25px 0 10px 15px;
 }
 
-#elevation_chart{
+#topo-container{
     display: none;
 }
 
@@ -566,6 +566,18 @@ fieldset{
     font-family: 'Source Sans Pro';
     font-size: 16px;
     color: white;
+}
+
+.deniveles-container{
+    text-align: center;
+}
+
+.deniveles-container span{
+    font-weight: 600;
+}
+
+.denivele-padding{
+    padding: 15px;
 }
 
 
