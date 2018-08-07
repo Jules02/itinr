@@ -49,12 +49,14 @@
 
         <div id="menuGauche-interieur">
             <div class="menuGauche-partie" id="temps-necessaire-container">
-                <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
-                <div class="temps-necessaire-formcontainer">
-                    <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
-                    <button type="submit" id="temps-necessaire-submit" class="menuGauche-btn-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                <div class="temps-necessaire">
+                    <p class="menuGauche-partie-texte temps-necessaire-texte">Connaître le temps nécessaire pour parcourir votre<br/>itinéraire en donnant votre vitesse moyenne</p>
+                    <div class="temps-necessaire-formcontainer">
+                        <input type="text" name="vitesse-moyenne" id="temps-necessaire-input"/>
+                        <button type="submit" id="temps-necessaire-submit" class="menuGauche-btn-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
+                    </div>
+                    <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
                 </div>
-                <p class="temps-necessaire-soustexte">Rentrez votre vitesse moyenne en km/h</p>
             </div>
             <div class="menuGauche-partie" id="temps-necessaire-resultat-partie">
                 <div class="temps-necessaire-resultat-container">
@@ -74,6 +76,7 @@
             <div class="menuGauche-partie" id="vitesse-moyenne-container">
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                 <div class="vitesse-moyenne-souscontainer">
+                    <div class="vitesse-moyenne">
                         <p class="menuGauche-partie-texte vitesse-moyenne-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
                         <div class="vitesse-moyenne-formcontainer">
                             <div class="vitesse-moyenne-inputcontainer">
@@ -83,6 +86,7 @@
                             </div>
                             <button type="submit" id="vitesse-moyenne-submit" class="menuGauche-btn-submit vitesse-moyenne-submit"><img src="{{ asset('images/fleche-tempsnecessaire.png') }}"></button>
                         </div>
+                    </div>
                 </div>
             </div>
             <div class="menuGauche-partie" id="vitesse-moyenne-resultat-container">
@@ -995,7 +999,7 @@
 
         function displayDefaultInterfaceVitesseMoyenne(){
             var vitesseMoyenneContainer = document.getElementById("vitesse-moyenne-container");
-            vitesseMoyenneContainer.style.display = "block";
+            vitesseMoyenneContainer.style.display = "flex";
             var vitesseMoyenneResultatContainer = document.getElementById("vitesse-moyenne-resultat-container");
             vitesseMoyenneResultatContainer.style.display = "none";
             document.getElementById("vitesse-moyenne-input-h").value = "";

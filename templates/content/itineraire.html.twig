@@ -18,7 +18,13 @@
 
 
     <div id="loading">
-        <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+        <div class="cssload-container" id="loader-container">
+            <ul class="cssload-flex-container">
+                <li>
+                    <span class="cssload-loading"></span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div id="map" oncontextmenu="return false"></div>
@@ -243,6 +249,9 @@
             //definir taille du menu gauche
             var menuGauche = document.getElementById('menuGauche');
             menuGauche.style.height = tailleVoulu;
+
+            var loading = document.getElementById('loading');
+            loading.style.height = tailleVoulu;
 
 
             var ancienPath ='{{ path.path }}';

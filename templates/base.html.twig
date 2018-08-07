@@ -41,7 +41,7 @@
                     {{ app.user.surname }}
                     <div class="user-image-container"><img src="{{ asset(app.user.image) }}" class="header-account-user-image"/></div>
                 </a>
-                <a href="{{ path('security_logout') }}" class="header-account-signout btn-account">Déconnexion</a>
+                <a href="{{ path('security_logout') }}" class="header-account-signout btn-account btn-account-droite">Déconnexion</a>
             </div>
             {% else %}
                 <div class="header-account">
@@ -82,7 +82,7 @@
     <section class="mobile">
         <div class="mobile-header">
             <img src="{{ asset('images/logo32.png') }}" alt="Logo Itin'r">
-            <h1 class="mobile-header-title header-title">Itin'r</h1>
+            <h1 class="mobile-header-title header-title">Itin'r</h1><p class="header-beta">Bêta</p>
         </div>
 
         <div class="mobile-comingsoon">
