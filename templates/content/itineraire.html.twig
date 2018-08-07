@@ -165,6 +165,11 @@
     {% endif %}
 
     <h3 class="description-titre">Topographie</h3>
+    <p class="deniveles-container">
+        Denivelé cumulé: <span id="deniveleCumule"></span><span class="denivele-padding"></span>
+        Denivelé positif: <span id="denivelePositif"></span><span class="denivele-padding"></span>
+        Denivelé négatif: <span id="deniveleNegatif"></span>
+    </p>
     <div id="elevation_chart"></div>
 
     {% if app.user %}
@@ -341,9 +346,32 @@
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Sample');
             data.addColumn('number', 'Elevation');
+            var elevationPath = [];
             for (var i = 0; i < elevations.length; i++) {
                 data.addRow(['', elevations[i].elevation]);
+                elevationPath.push(elevations[i].elevation);
             }
+
+            var denivelePositif = 0;
+            var deniveleNegatif = 0;
+            var deniveleCumule = 0;
+            for (var b = 0; b < elevationPath.length - 1; b++) {
+                var resultDenivele = elevationPath[b + 1] - elevationPath[b];
+                if(Math.sign(resultDenivele) === 1){
+                    denivelePositif = denivelePositif + resultDenivele;
+                }else if(Math.sign(resultDenivele) === -1){
+                    deniveleNegatif = deniveleNegatif + resultDenivele;
+                }
+
+                deniveleCumule = deniveleCumule + (elevationPath[b + 1] - elevationPath[b]);
+            }
+            var deniveleCumulespan = document.getElementById('deniveleCumule');
+            var denivelePositifspan = document.getElementById('denivelePositif');
+            var deniveleNegatifspan = document.getElementById('deniveleNegatif');
+
+            deniveleCumulespan.textContent = Math.round(deniveleCumule) + "m";
+            denivelePositifspan.textContent = "+" + Math.round(denivelePositif) + "m";
+            deniveleNegatifspan.textContent = Math.round(deniveleNegatif) + "m";
 
             // Draw the chart using the data within its DIV.
             chart.draw(data, {

@@ -13,7 +13,13 @@
     {% include 'flash_messages.html.twig' %}
 
     <div id="loading">
-        <img id="loading-image" src="{{ asset('images/loader.gif') }}" alt="Loading..." />
+        <div class="cssload-container" id="loader-container">
+            <ul class="cssload-flex-container">
+                <li>
+                    <span class="cssload-loading"></span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div id="map" oncontextmenu="return false"></div>
@@ -220,7 +226,7 @@
     </script>
     <script>
         google.load('visualization', '1', {packages: ['columnchart']});
-        var elevator
+        var elevator;
 
         var globalPoly;   //objet Polyline
         var poly;   //objet Polyline
@@ -264,6 +270,9 @@
 
             var saveContainer = document.getElementById('saveContainer');
             saveContainer.style.height = tailleVoulu;
+
+            var loading = document.getElementById('loading');
+            loading.style.height = tailleVoulu;
 
             var tuto = document.getElementById('tuto').textContent;
             if(tuto){
@@ -1132,10 +1141,8 @@
             var elevationPath = [];
             for (var i = 0; i < elevations.length; i++) {
                 data.addRow(['', elevations[i].elevation]);
-                elevationPath.push(elevations[i].elevation)
+                elevationPath.push(elevations[i].elevation);
             }
-            var lastPointElevation = elevationPath[elevationPath.length - 1];
-            var deniveleGlobal = lastPointElevation - elevationPath[0];
 
             var denivelePositif = 0;
             var deniveleNegatif = 0;

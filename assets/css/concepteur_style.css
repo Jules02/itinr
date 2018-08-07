@@ -2,21 +2,203 @@
     width: 100%;
     height: 100%;
     top: 80px;
-    bottom: 143px;
     left: 0;
-    position: fixed;
-    display: block;
-    opacity: 0.7;
-    background-color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
     z-index: 99;
     text-align: center;
 }
 
-#loading-image {
+.cssload-container * {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.cssload-container ul li{
+    list-style: none;
+}
+
+.cssload-flex-container {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    -o-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cssload-flex-container li {
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 0 20px 30px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.cssload-loading, .cssload-loading:after, .cssload-loading:before {
+    display: inline-block;
+    position: relative;
+    width: 7px;
+    height: 100px;
+    background: rgb(59,161,76);
+    margin-top: 5px;
+    border-radius: 1000px;
+    -o-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    animation: cssload-upDown2 1.15s ease infinite;
+    -o-animation: cssload-upDown2 1.15s ease infinite;
+    -ms-animation: cssload-upDown2 1.15s ease infinite;
+    -webkit-animation: cssload-upDown2 1.15s ease infinite;
+    -moz-animation: cssload-upDown2 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-delay: 0.29s;
+    -o-animation-delay: 0.29s;
+    -ms-animation-delay: 0.29s;
+    -webkit-animation-delay: 0.29s;
+    -moz-animation-delay: 0.29s;
+}
+.cssload-loading:after, .cssload-loading:before {
     position: absolute;
-    top: 20%;
-    left: 43%;
-    z-index: 100;
+    content: '';
+    animation: cssload-upDown 1.15s ease infinite;
+    -o-animation: cssload-upDown 1.15s ease infinite;
+    -ms-animation: cssload-upDown 1.15s ease infinite;
+    -webkit-animation: cssload-upDown 1.15s ease infinite;
+    -moz-animation: cssload-upDown 1.15s ease infinite;
+    animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+}
+.cssload-loading:before {
+    left: -15px;
+}
+.cssload-loading:after {
+    left: 15px;
+    animation-delay: 0.58s;
+    -o-animation-delay: 0.58s;
+    -ms-animation-delay: 0.58s;
+    -webkit-animation-delay: 0.58s;
+    -moz-animation-delay: 0.58s;
+}
+
+
+
+
+@keyframes cssload-upDown {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@-o-keyframes cssload-upDown {
+    from {
+        -o-transform: translateY(20px);
+    }
+    to {
+        -o-transform: translateY(-20px);
+    }
+}
+
+@-ms-keyframes cssload-upDown {
+    from {
+        -ms-transform: translateY(20px);
+    }
+    to {
+        -ms-transform: translateY(-20px);
+    }
+}
+
+@-webkit-keyframes cssload-upDown {
+    from {
+        -webkit-transform: translateY(20px);
+    }
+    to {
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@-moz-keyframes cssload-upDown {
+    from {
+        -moz-transform: translateY(20px);
+    }
+    to {
+        -moz-transform: translateY(-20px);
+    }
+}
+
+@keyframes cssload-upDown2 {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@-o-keyframes cssload-upDown2 {
+    from {
+        -o-transform: translateY(30px);
+    }
+    to {
+        -o-transform: translateY(-20px);
+    }
+}
+
+@-ms-keyframes cssload-upDown2 {
+    from {
+        -ms-transform: translateY(30px);
+    }
+    to {
+        -ms-transform: translateY(-20px);
+    }
+}
+
+@-webkit-keyframes cssload-upDown2 {
+    from {
+        -webkit-transform: translateY(30px);
+    }
+    to {
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@-moz-keyframes cssload-upDown2 {
+    from {
+        -moz-transform: translateY(30px);
+    }
+    to {
+        -moz-transform: translateY(-20px);
+    }
 }
 
 #map {

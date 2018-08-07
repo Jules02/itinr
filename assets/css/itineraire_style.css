@@ -479,9 +479,25 @@ button > .gm-fullscreen-control{
     padding-right: 5px;
 }
 
+
+
 #elevation_chart{
     margin-top: 10px;
 }
+
+.deniveles-container{
+    text-align: center;
+}
+
+.deniveles-container span{
+    font-weight: 600;
+}
+
+.denivele-padding{
+    padding: 15px;
+}
+
+
 
 .delete-container{
     background-color: rgba(231, 76, 60, 0.1);
