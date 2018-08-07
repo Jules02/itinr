@@ -5,6 +5,8 @@
 {% block stylesheets %}{{ asset('build/itineraire.css') }}{% endblock %}
 
 {% block body %}
+    {% include 'flash_messages.html.twig' %}
+
     <div class="titre">
         <h1 id="titre"><span>{{ path.titre }}</span> par
             {% if path.auteur ends with ' (anonyme)' %}

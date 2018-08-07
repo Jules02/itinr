@@ -101,6 +101,8 @@ class PagesController extends Controller
             $em->flush();
 
             $this->addFlash('pathSaved', "Parcours enregistré avec succès !");
+
+            return $this->redirectToRoute('itineraire', array('id' => $path->getId()));
         }
 
         if($cookieTuto){
@@ -307,7 +309,7 @@ class PagesController extends Controller
         $resultatPath = $pathRepository->findByAuteur(
             $username,
             array(),
-            9,
+            100,
             0
         );
 
