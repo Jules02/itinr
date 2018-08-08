@@ -44,7 +44,7 @@ class RegistrationController extends Controller
             $message = (new \Swift_Message())
                 ->setSubject("Inscription réussie !")
                 ->setTo($user->getEmail())
-                ->setFrom(['moveetest@gmail.com' => "Itin'r"])
+                ->setFrom(['moveetest@gmail.com' => "itin'R"])
             ;
 
             $body = $twig->render('emails/registred.html.twig', [
@@ -58,7 +58,7 @@ class RegistrationController extends Controller
 
             $this->addFlash('registred', 'Inscription réussie. Nous vous avons envoyé un email de bienvenue');
 
-            return $this->redirectToRoute('concepteur');
+            return $this->redirectToRoute('security_login');
         }
 
         return new Response($twig->render('security/inscription.html.twig', [

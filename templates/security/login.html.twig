@@ -5,6 +5,7 @@
 {% block stylesheets %}{{ asset('build/connexion.css') }}{% endblock %}
 
 {% block body %}
+    {% include 'flash_messages.html.twig' %}
 
     <h1 class="titre margin-left">Connexion</h1>
     <div class="titre-separation margin-left"></div>
