@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, maximum-scale=1"/>
     <title>{% block title %} | Itin'r{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
     <link rel="stylesheet" href="{% block stylesheets2 %}{% endblock %}">
+
+    {# Google Analytics #}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124064209-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124064209-1');
+    </script>
+
 </head>
 <body>
     <section class="desktop">
@@ -67,8 +78,6 @@
                     <li class="footer-rs-li"><a href="https://facebook.com"><img src="{{ asset('images/facebook.png') }}" alt="Icône réseau social"></a></li>
                     <li class="footer-rs-li"><a href="https://twitter.com"><img src="{{ asset('images/twitter.png') }}" alt="Icône réseau social"></a></li>
                     <li class="footer-rs-li"><a href="https://instagram.com"><img src="{{ asset('images/instagram.png') }}" alt="Icône réseau social"></a></li>
-                    <li class="footer-rs-li"><a href="https://snapchat.com"><img src="{{ asset('images/snapchat.png') }}" alt="Icône réseau social"></a></li>
-                    <li class="footer-rs-li"><a href="https://youtube.com"><img src="{{ asset('images/youtube.png') }}" alt="Icône réseau social"></a></li>
                 </ul>
             </div>
             <div class="footer-contentseparation"></div>
@@ -95,7 +104,6 @@
 
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/header.js') }}"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
     var content = document.getElementById("content");
 

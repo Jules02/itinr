@@ -1,5 +1,33 @@
 {% extends 'base.html.twig' %}
 
+{% block metakeywords %}
+    itinéraire running,
+    itinéraire vtt,
+    parcours running,
+    trajet vélo,
+    trouver itinéraires randonnée,
+    itinéraire course à pied,
+    itinéraire marche à pied,
+    parcours randonnée,
+    trouver itinéraires vélo,
+    trouver itinéraires rando,
+    itinéraire randonnée,
+    itinéraire sportif,
+    parcours rando,
+    trouver itinéraires vtt,
+    itinéraires sport,
+    itinéraire vélo,
+    parcours vélo,
+    parcours footing,
+    trouver itinéraires course à pied,
+    itinéraires sportifs,
+    itinéraire rando,
+    parcours vtt,
+    parcours course à pied,
+    trouver itinéraires marche,
+    trouver un itinéraire
+{% endblock %}
+{% block metadescription %}Avec itin'R, trouvez l'itinéraire parfait pour votre sortie en vélo, VTT, course à pied, ou encore pour votre randonnée.{% endblock %}
 {% block title %}Chercher{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/chercher.css') }}{% endblock %}
@@ -9,6 +37,10 @@
 
 {% block body %}
     {% include 'flash_messages.html.twig' %}
+    <div class="ref">
+        <h2>Trouver un itinéraire de vélo, de VTT, de course à pied ou une randonnée</h2>
+        <p>itin'R vous permet de <strong>trouver une randonnée</strong>, un <strong>itinéraire de vélo</strong>, de <strong>VTT</strong>, ou encore de <strong>course à pied</strong></p>
+    </div>
 
     <h1 class="titre margin-left">Vous prévoyez une séance de course à pied, une sortie vélo, une randonnée ou autre ? Trouvez l’itinéraire qu’il vous faut grâçe à Itin'r.</h1>
     <p class="sous-titre margin-left">Nouvelle, nouveau ? <a href="{{ path('aide') }}" class="sous-titre-aide">Découvrez nos tutoriaux </a>ou lisez <a href="{{ path('aide') }}" class="sous-titre-tuto">Comment trouver un itinéraire</a></p>

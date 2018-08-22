@@ -38,7 +38,7 @@ class UserType extends AbstractType
                 'attr' => array(
                     'class' => 'form-input email-input',
                     'placeholder' => 'Adresse email',
-                    'title' => 'Nous vous enverrons un email sur cette adresse'
+                    'title' => 'Pour éviter les comptes multiples'
                 )
             ))
             ->add('password', RepeatedType::class, array(

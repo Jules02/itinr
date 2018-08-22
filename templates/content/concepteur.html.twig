@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
-
 {% block title %}Concepteur{{ parent() }}{% endblock %}
 
 {% block stylesheets %}{{ asset('build/concepteur.css') }}{% endblock %}
@@ -11,6 +9,11 @@
 
 {% block body %}
     {% include 'flash_messages.html.twig' %}
+
+    <div class="ref">
+        <h1>Concepteur d'itinéraires sportifs</h1>
+        <p>itin'R vous permet, grâce à Google Maps, de <strong>calculer vos randonnées</strong>, vos itinéraires à vélo, à VTT ou encore à course à pied pour avoir des informations dessus, comme la <strong>distance</strong>, le <strong>denivelé</strong> ou encore la <strong>vitesse</strong>. Ensuite, vous pourrez également partager ce <strong>parcours</strong> avec notre communauté.</p>
+    </div>
 
     <div id="loading">
         <div class="cssload-container" id="loader-container">
@@ -75,7 +78,7 @@
 
             <div class="menuGauche-partie" id="vitesse-moyenne-container">
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
-                <div class="vitesse-moyenne-souscontainer">
+                <div class="vitesse-moyenne-souscontainer" id="vitesse-moyenne-souscontainer">
                     <div class="vitesse-moyenne">
                         <p class="menuGauche-partie-texte vitesse-moyenne-texte">Calculez à quelle vitesse en moyenne vous avez<br/>parcouru cet itinéraire en rentrant combien<br/>de temps vous avez mis </p>
                         <div class="vitesse-moyenne-formcontainer">
@@ -204,6 +207,7 @@
                             <p title="Choisir le mode de suivi des routes au haut de la carte permettra d’adapter l’itinéraire calculé à votre moyen de transport">Un clique droit relie votre dernier point avec l’endroit où vous avez cliqué en suivant la route ou les chemins</p>
                         </div>
                     </div>
+                    <a class="tuto-link" href="https://docs.google.com/document/d/1omZfzJSy1GheaosDvWLdeU4M9GXp8b6lVAJmelHpH0o/edit?usp=sharing">En savoir plus</a>
                     <div class="tuto-btnContainer">
                         <button id="tuto-btn">Compris !</button>
                     </div>
@@ -219,16 +223,14 @@
 
 
 {% block javascripts %}
-    {#<script src=" {{ asset('build/js/main.js') }} "></script>#}
     <script src="https://www.google.com/jsapi"></script>
     <script src=" {{ asset('build/mousetrap.js') }} "></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script language="javascript" type="text/javascript">
-        $(window).load(function() {
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $(window).on("load", function() {
             $('#loading').hide();
         });
-    </script>
-    <script>
+
         google.load('visualization', '1', {packages: ['columnchart']});
         var elevator;
 
@@ -257,7 +259,6 @@
 
 
         function initMap() {
-
             var mapDiv = document.getElementById("map");
             //je récupére mon element avec l'id map
             var windowHeight = window.innerHeight;
@@ -355,8 +356,6 @@
             //listeners qui vont écouter les événements click et rightcick pour y lancer des fonctions
             map.addListener('click', addLatLng);     //quand on clique sur un endroit de la carte on lance la fonction addLatLng
             map.addListener('rightclick', addLatLngRoute);    //quand on clique droit sur un endroit on lance la fonction addLatLngRoute
-
-
 
 
             //Ici, on va transformer nos champs HTML (que l'on va recupérer avec getElementById) en "contrôles" de la map. Pour l'API, un contrôle est par exemple le bouton plein écran en haut à droite. C'est le seul moyen potable de faire passer des boutons sur une carte.
@@ -916,7 +915,7 @@
 
         function displayDefaultInterfaceTempsNecessaire(){
             var tempsNecessaireDiv = document.getElementById('temps-necessaire-container');
-            tempsNecessaireDiv.style.display = "block";
+            tempsNecessaireDiv.style.display = "flex";
             var tempsNecessaireResultatDiv = document.getElementById('temps-necessaire-resultat-partie');
             tempsNecessaireResultatDiv.style.display = "none";
             var inputTempsNecessaire = document.getElementById('temps-necessaire-input');
@@ -976,15 +975,19 @@
                             vitesseMoyenneResultatSpan.textContent = vitesseMoyenne;
                         }else{
                             alert('Vous avez rentré une valeur supérieure à 59 dans le champ secondes');
+                            return false;
                         }
                     }else{
                         alert('Vous avez rentré une valeur supérieure à 59 dans le champ minutes');
+                        return false;
                     }
                 }else{
                     alert('Vous avez rentré une valeur trop haute dans le champ heures');
+                    return false;
                 }
             }else{
                 alert("Vous n'avez rien rentré");
+                return false;
             }
 
             var vitesseMoyenneContainer = document.getElementById("vitesse-moyenne-container");
@@ -999,7 +1002,7 @@
 
         function displayDefaultInterfaceVitesseMoyenne(){
             var vitesseMoyenneContainer = document.getElementById("vitesse-moyenne-container");
-            vitesseMoyenneContainer.style.display = "flex";
+            vitesseMoyenneContainer.style.display = "block";
             var vitesseMoyenneResultatContainer = document.getElementById("vitesse-moyenne-resultat-container");
             vitesseMoyenneResultatContainer.style.display = "none";
             document.getElementById("vitesse-moyenne-input-h").value = "";
@@ -1234,6 +1237,6 @@
         });
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry,places&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry,places&callback=initMap&v=3.33">
     </script>
 {% endblock %}

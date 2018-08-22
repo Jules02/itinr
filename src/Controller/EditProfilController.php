@@ -33,7 +33,7 @@ class EditProfilController extends Controller
 
             $this->addFlash('edited', 'Vos modifications ont bien été appliquées');
 
-            return $this->redirectToRoute('profil');
+            return $this->redirectToRoute('profil', array('username' => $user->getUsername()));
         }
 
         return $this->render(

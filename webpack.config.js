@@ -15,10 +15,7 @@ Encore
         './assets/js/layout.js',
         './assets/css/layout_style.css'
     ])
-    .addEntry('concepteur', [
-        './assets/js/concepteur.js',
-        './assets/css/concepteur_style.css'
-    ])
+    .addEntry('concepteur', './assets/css/concepteur_style.css')
     .addEntry('chercher', './assets/css/chercher_style.css')
     .addEntry('resultatsChercher', './assets/css/resultatsChercher_style.css')
     .addEntry('itineraire', './assets/css/itineraire_style.css')

@@ -28,11 +28,9 @@ class PagesController extends Controller
 
     /**
      * @Route("/")
-     * @param Environment $twig
-     * @return Response
      */
-    public function index (Environment $twig) {
-        return new Response($twig->render('content/welcome.html.twig'));
+    public function index () {
+        return $this->redirectToRoute('concepteur');
     }
 
     /**
@@ -149,7 +147,7 @@ class PagesController extends Controller
                 return $this->redirectToRoute('concepteur');
             }
         }else{
-            $this->addFlash('notice', "Vous n'êtes pas connec");
+            $this->addFlash('notice', "Vous n'êtes pas connecté");
 
             return $this->redirectToRoute('concepteur');
         }
@@ -258,7 +256,7 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function contact (Request $request, Environment $twig, \Swift_Mailer $mailer, FormFactoryInterface $formFactory) {
+    public function contact (Request $request, Environment $twig, \Swift_Mailer $mailer) {
         $form = $this->createForm(ContactType::class);
 
         $form->handleRequest($request);

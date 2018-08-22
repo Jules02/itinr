@@ -2,12 +2,9 @@
 
 namespace App\Controller;
 
-use App\Events;
 use App\Form\UserType;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,7 +16,7 @@ class RegistrationController extends Controller
     /**
      * @Route("/inscription", name="inscription")
      */
-    public function registerAction(Environment $twig, Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
+    public function registerAction(Environment $twig, Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -41,22 +38,7 @@ class RegistrationController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $message = (new \Swift_Message())
-                ->setSubject("Inscription réussie !")
-                ->setTo($user->getEmail())
-                ->setFrom(['moveetest@gmail.com' => "itin'R"])
-            ;
-
-            $body = $twig->render('emails/registred.html.twig', [
-                'surname' => $user->getSurname(),
-                'username' => $user->getUsername()
-            ]);
-
-            $message->setBody($body, 'text/html');
-
-            $mailer->send($message);
-
-            $this->addFlash('registred', 'Inscription réussie. Nous vous avons envoyé un email de bienvenue');
+            $this->addFlash('registred', 'Inscription réussie. Bienvenue !');
 
             return $this->redirectToRoute('security_login');
         }
