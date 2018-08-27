@@ -2,31 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, maximum-scale=1"/>
-    <title>{% block title %} | Itin'r{% endblock %}</title>
+    <title>{% block title %} | itin'R{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon3.ico') }}">
     <link rel="stylesheet" href="{{ asset('build/layout.css') }}">
     <link rel="stylesheet" href="{% block stylesheets %}{% endblock %}">
     <link rel="stylesheet" href="{% block stylesheets2 %}{% endblock %}">
-
-    {# Google Analytics #}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124064209-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-124064209-1');
-    </script>
-
 </head>
 <body>
     <section class="desktop">
     <header class="header">
         <a href="{{ path("concepteur") }}" class="header-itinr">
-            <img src="{{ asset('images/logo32.png') }}" alt="Logo itin'R">
+            <img src="{{ asset('images/logo32b.png') }}" alt="Logo itin'R">
             <h1 class="header-title">itin'R</h1><p class="header-beta">Bêta</p>
         </a>
+
 
         <div class="header-navbar">
             <ul class="nav_onglets">
@@ -60,11 +50,48 @@
                     <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
                 </div>
         {% endif %}
+
+        <div class="header-hamburgermenu">
+            <div class="header-hamburgermenu-hamburger-container">
+                <div class="menuEight">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
 
+    <div id="hamburger-menu" class="hamburger-menu">
+        <div class="hamburger-menu-content">
+            {% if app.user %}
+                <div class="hamburger-menu-header-account">
+                    <a href="{{ path('profil', {'username': app.user.username}) }}" class="header-account-signed btn-account btn-account-gauche profil-container">
+                        {{ app.user.surname }}
+                        <div class="user-image-container"><img src="{{ asset(app.user.image) }}" class="header-account-user-image"/></div>
+                    </a>
+                    <a href="{{ path('security_logout') }}" class="header-account-signout btn-account btn-account-droite">Déconnexion</a>
+                </div>
+            {% else %}
+                <div class="hamburger-menu-header-account">
+                    <a class="header-account-signup btn-account btn-account-gauche" href="{{ path("inscription") }}">Inscription</a>
+                    <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
+                </div>
+            {% endif %}
+
+            <ul class="hamburger-menu-nav-onglets">
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("concepteur") }}">Concepteur d'itinéraires</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("chercher") }}">Trouver un itinéraire</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("chercher-utilisateur") }}">Trouver un utilisateur</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("contact") }}">Contact</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("aide") }}">Aide</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("apropos") }}">À propos</a></li>
+            </ul>
+        </div>
+    </div>
+
     <section id="content">
-{% block body %}
-{% endblock %}
+        {% block body %}{% endblock %}
     </section>
 
     {% if app.request.cookies.get('cookies_consent') == "" %}
@@ -90,7 +117,7 @@
 
     <section class="mobile">
         <div class="mobile-header">
-            <img src="{{ asset('images/logo32.png') }}" alt="Logo itin'R">
+            <img src="{{ asset('images/logo32b.png') }}" alt="Logo itin'R">
             <h1 class="mobile-header-title header-title">itin'R</h1><p class="header-beta">Bêta</p>
         </div>
 
@@ -102,16 +129,27 @@
         <p class="mobile-unavailable">itin’R n’est pas disponible<br/>sur mobiles 😕</p>
     </section>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('build/header.js') }}"></script>
 <script>
     var content = document.getElementById("content");
+    var hamburgerMenu = document.getElementById("hamburger-menu");
 
     var tailleVoulu = window.innerHeight - 80 - 30;
 
     if (content.offsetHeight < tailleVoulu){
         content.style.height = tailleVoulu + 'px';
     }
+
+    var tailleSansHeader = window.innerHeight - 80;
+    hamburgerMenu.style.height = tailleSansHeader + 'px';
+
+    $('.menuEight').click(function () {
+        $(this).toggleClass('clickMenuEight');
+
+        $(hamburgerMenu).toggleClass('hamburger-menu-display');
+    });
 </script>
 </body>
 </html>

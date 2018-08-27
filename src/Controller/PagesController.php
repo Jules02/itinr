@@ -94,13 +94,15 @@ class PagesController extends Controller
                 $path->setAuteur($user->getUsername());
             }
 
+            $path->setSlug($path->getTitre());
+
             $em = $doctrine->getEntityManager();
             $em->persist($path);
             $em->flush();
 
             $this->addFlash('pathSaved', "Parcours enregistré avec succès !");
 
-            return $this->redirectToRoute('itineraire', array('id' => $path->getId()));
+            return $this->redirectToRoute('itineraire', array('slug' => $path->getSlug()));
         }
 
         if($cookieTuto){
@@ -165,17 +167,17 @@ class PagesController extends Controller
      * @param Environment $twig
      * @return Response
      */
-    public function apropos (Request $request, Environment $twig, RegistryInterface $doctrine, FormFactoryInterface $formFactory) {
+    public function apropos (Environment $twig) {
         return new Response($twig->render('content/apropos.html.twig'));
     }
 
     /**
-     * @Route("/itineraire/{id}", name="itineraire")
+     * @Route("/itineraire/{slug}", name="itineraire")
      * @param Environment $twig
      * @return Response
      */
-    public function itineraire (Environment $twig, RegistryInterface $doctrine, $id) {
-        $path = $doctrine->getRepository(Path::class)->find($id);
+    public function itineraire (Environment $twig, RegistryInterface $doctrine, $slug) {
+        $path = $doctrine->getRepository(Path::class)->findOneBySlug($slug);
 
         if($path != null){
             return new Response($twig->render('content/itineraire.html.twig', [

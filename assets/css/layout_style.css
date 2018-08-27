@@ -20,7 +20,7 @@ button{
 
 
 
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 640px) {
     html {
         height: 100%;
     }
@@ -89,6 +89,125 @@ button{
 
 .mobile{
     display: none;
+}
+
+
+.header-hamburgermenu{
+    display: none;
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+}
+
+.header-hamburgermenu-hamburger-container{
+    position: absolute;
+    right: 30px;
+}
+
+.hamburger-menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+
+    background-color: rgba(59, 161, 76, 0.9);
+    width: 100%;
+}
+
+.hamburger-menu-display{
+    display: flex;
+}
+
+.hamburger-menu-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger-menu-header-account a{
+    font-size: 16px !important;
+    padding: 10px 45px !important;
+}
+
+.hamburger-menu-nav-onglets{
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-menu-nav-item{
+    margin: 15px 0 !important;
+    font-size: 18px;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 1060px) {
+    .header-navbar, .header-account{
+        display: none !important;
+    }
+
+    .header-hamburgermenu{
+        display: block !important;
+    }
+
+    .hamburger-menu-header-account{
+        display: flex !important;
+    }
+}
+
+.menuEight{
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.menuEight span{
+    background-color:#FFF;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+}
+.menuEight span:nth-child(1){
+    top:0px;
+    left: 0px;
+}
+.menuEight span:nth-child(2){
+    top:13px;
+    left: 0px;
+}
+.menuEight span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+}
+.menuEight:not(.clickMenuEight):hover span:nth-child(1){
+    transform: scaleX(.8);
+}
+.menuEight:not(.clickMenuEight):hover span:nth-child(2){
+    transform: scaleX(.5);
+}
+.menuEight:not(.clickMenuEight):hover span:nth-child(3){
+    transform: scaleX(.8);
+}
+.clickMenuEight span:nth-child(1){
+    top: 13PX;
+
+}
+.clickMenuEight span:nth-child(2){
+
+}
+.clickMenuEight span:nth-child(3){
+    top: 13PX;
 }
 
 
@@ -320,7 +439,7 @@ button{
         font-size: 15px;
     }
 
-    .header-account-signed, .header-account-signout{
+    .header-account-signed, .header-account-signout, .header-account-signin, .header-account-signup{
         padding: 7px 30px;
     }
 
@@ -350,7 +469,7 @@ button{
 }
 
 @media screen and (max-width: 1030px){
-    .header-account-signed, .header-account-signout{
+    .header-account-signed, .header-account-signout, .header-account-signin, .header-account-signup{
         padding: 7px 15px;
     }
 
@@ -385,7 +504,7 @@ button{
 }
 
 @media screen and (max-width: 875px) {
-    .header-account-signed, .header-account-signout{
+    .header-account-signed, .header-account-signout, .header-account-signin, .header-account-signup{
         padding: 7px 10px;
     }
 

@@ -79,6 +79,7 @@ class PathType extends AbstractType
                 'multiple' => true,
                 'required' => false
             ))
+            ->add('slug',        HiddenType::class)
         ;
     }
 

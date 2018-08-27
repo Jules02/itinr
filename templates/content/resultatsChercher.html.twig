@@ -16,7 +16,7 @@
     <div class="resultats-bigcontainer">
         <div class="resultats-container">
             {% for path in resultatPath %}
-                <a class="resultat-container" href="{{ path('itineraire', {'id': path.id}) }}">
+                <a class="resultat-container" href="{{ path('itineraire', {'slug': path.slug}) }}">
                     <p class="resultat-titre">{{ path.titre }}</p>
                     <div class="resultat-titre-sepa"></div>
                     {% if path.typeSport != null %}
