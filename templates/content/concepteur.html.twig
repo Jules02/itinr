@@ -255,6 +255,9 @@
         var vitesseFooting = 11;
         var vitesseMarche = 6;
 
+        var beforeNewPointIndex;
+        var lastPointRightClick;
+
 
 
         function initMap() {
@@ -435,6 +438,8 @@
 
         // Fonction qui sera executée lors du clique d'un endroit de la carte
         function addLatLng(event) {
+            lastPointRightClick = false;
+
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
             monPath.push(event.latLng);
@@ -552,15 +557,17 @@
 
 
 
-
         //lorsque l'on right click sur un endroit on va ralier le dernier point créé à ce tout nouveau point mais en affichant l'itinéraire en passant par la route ou les chemins (pas en créant une ligne droite)
         function addLatLngRoute(event){
+            var monPath = globalPoly.getPath();
+            var pathArray = monPath.getArray();
+
+            lastPointRightClick = true;
+            beforeNewPointIndex = pathArray.length;
 
             newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
 
             calculateRoute(directionsService, lastPoint, newPoint);  //fonction qui calcule et affiche l'itinéraire
-
-            var monPath = globalPoly.getPath();
 
             marker = new google.maps.Marker({
                 position: event.latLng,
@@ -573,8 +580,6 @@
             markers.push(marker);   //on met notre tout nouveau marker dans le tableau markers
 
             lastPoint = event.latLng;
-
-            var pathArray = monPath.getArray();
 
             hideElevation();
         }
@@ -750,36 +755,7 @@
 
         //Fonctions des contrôles
 
-        function deleteLastPoint(){
-            var monPath = globalPoly.getPath();
-
-            monPath.pop();   //on supprime le dernier élément du tableau path
-
-            var pathArray = monPath.getArray();
-            lastPoint = dernierElem(pathArray);
-
-            var pathLength = monPath.getLength();
-
-            if(pathLength === 0){
-                deletePoints();
-            }
-
-            if(pathLength === 1){
-                var menuGaucheInterieur = document.getElementById("menuGauche-interieur");
-                menuGaucheInterieur.style.display = "none";
-
-                var menuGaucheMessage = document.getElementById("menuGauche-message");
-                menuGaucheMessage.style.display = "block";
-            }
-
-            updateRouteLength();
-
-            updateTempsGlobal(distanceKmFloat);
-        }
-
-        $('#deleteLastButton').click(deleteLastPoint);
-
-        $('#deleteAllButton').click(function() {
+        function deleteAllPoints(){
             firstMarker.setMap(null);
             setMapOnAll(null);
             markers = [];
@@ -817,7 +793,47 @@
 
             var menuGaucheMessage = document.getElementById("menuGauche-message");
             menuGaucheMessage.style.display = "block";
-        });
+        }
+
+        function deleteLastPoint(){
+            var monPath = globalPoly.getPath();
+            var pathArray = monPath.getArray();
+
+            if(lastPointRightClick){
+                var indexToRemove = pathArray.length;
+                var diff = pathArray.length - beforeNewPointIndex;
+                for (var i = 0; i < diff; i++) {
+                    indexToRemove = indexToRemove - 1;
+                    monPath.removeAt(indexToRemove);
+                }
+            }else{
+                monPath.pop();   //on supprime le dernier élément du tableau path
+            }
+
+            lastPoint = dernierElem(pathArray);
+
+            var pathLength = monPath.getLength();
+
+            if(pathLength === 0){
+                deleteAllPoints();
+            }
+
+            if(pathLength === 1){
+                var menuGaucheInterieur = document.getElementById("menuGauche-interieur");
+                menuGaucheInterieur.style.display = "none";
+
+                var menuGaucheMessage = document.getElementById("menuGauche-message");
+                menuGaucheMessage.style.display = "block";
+            }
+
+            updateRouteLength();
+
+            updateTempsGlobal(distanceKmFloat);
+        }
+
+        $('#deleteLastButton').click(deleteLastPoint);
+
+        $('#deleteAllButton').click(deleteAllPoints);
 
 
         //Calcule et affiche la route entre le dernier point et le point de départ pour fermer la boucle
