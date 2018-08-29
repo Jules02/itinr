@@ -248,8 +248,8 @@
         var marker;
         var markers = [];    //array contenant l'ensemble des marqueurs
         var firstMarker;   //premier marqueur (à ne pas confondre avec firstPoint qui contient les coords de notre premier point)
-        var distanceKmFloat;     //distance en km et au millième près (ex. 3.564 pour 3km et 564 mètres)
-        var distanceArrondie;    //distance en mètres
+        var distanceKmFloat = null;     //distance en km et au millième près (ex. 3.564 pour 3km et 564 mètres)
+        var distanceArrondie = null;    //distance en mètres
 
         var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
         var vitesseFooting = 11;
@@ -257,6 +257,7 @@
 
         var beforeNewPointIndex;
         var lastPointRightClick;
+        var clicksArray = [];
 
 
 
@@ -442,6 +443,8 @@
 
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
+            clicksArray.push(monPath.getLength());
+
             monPath.push(event.latLng);
 
 
@@ -488,8 +491,8 @@
             }
 
             var div = document.getElementById("textDiv");    //recupere la div textDiv
-            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
-                div.textContent = "Vous n'avez placé qu'un seul marqueur"
+            if (!distanceArrondie) {   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
+                div.textContent = "";
             } else {
                 div.textContent = "Il y a " + distanceKmFloat + " kilomètres entre le premier et le dernier point" ;
                 //on affiche la distance arrondie et au km dans la div textDiv
@@ -546,6 +549,8 @@
                         }
 
                         updateRouteLength();
+
+                        clicksArray.push(monPath.getLength());
                     } else {
                         alert("Il n'y a pas de chemin pour aller à cet endroit");
                     }
@@ -607,8 +612,8 @@
 
 
             var div = document.getElementById("textDiv");    //recupere la div textDiv
-            if ((distanceArrondie == undefined) || (distanceArrondie == 0)){   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
-                div.textContent = "Vous n'avez placé qu'un seul marqueur";
+            if (!distanceArrondie) {   //si aucun parcours n'est présent ou s'il n'y a qu'un marqueur
+                div.textContent = "";
             } else {
                 div.textContent = "Il y a " + distanceKmFloat + " kilomètres entre le premier et le dernier point" ;
                 //on affiche la distance arrondie et au km dans la div textDiv
@@ -760,6 +765,7 @@
             setMapOnAll(null);
             markers = [];
             globalPoly.setMap(null);
+            clicksArray = [];
 
             monPath = globalPoly.getPath();
             monPath = [];
@@ -768,10 +774,10 @@
             pathArray = [];
 
             var div = document.getElementById("textDiv");
-            div.textContent = "Vous n'avez pas placé de marqueur";
+            div.textContent = "";
 
-            distanceArrondie = 0;
-            distanceKmFloat = 0;
+            distanceArrondie = null;
+            distanceKmFloat = null;
 
             var mapType = map.getMapTypeId();
 
@@ -799,24 +805,25 @@
             var monPath = globalPoly.getPath();
             var pathArray = monPath.getArray();
 
-            if(lastPointRightClick){
-                var indexToRemove = pathArray.length;
-                var diff = pathArray.length - beforeNewPointIndex;
-                for (var i = 0; i < diff; i++) {
-                    indexToRemove = indexToRemove - 1;
-                    monPath.removeAt(indexToRemove);
-                }
-            }else{
-                monPath.pop();   //on supprime le dernier élément du tableau path
+            if(clicksArray.length === 1){
+                deleteAllPoints();
             }
+
+            var lastClickIndex = clicksArray[clicksArray.length - 2];
+            if(lastClickIndex === clicksArray[clicksArray.length - 1]){
+                monPath.pop();
+            }
+
+            var indexToRemove = clicksArray[clicksArray.length - 1];
+            for (var i = indexToRemove; i > lastClickIndex; i--) {
+                monPath.removeAt(i);
+            }
+
+            clicksArray.pop();
 
             lastPoint = dernierElem(pathArray);
 
             var pathLength = monPath.getLength();
-
-            if(pathLength === 0){
-                deleteAllPoints();
-            }
 
             if(pathLength === 1){
                 var menuGaucheInterieur = document.getElementById("menuGauche-interieur");
