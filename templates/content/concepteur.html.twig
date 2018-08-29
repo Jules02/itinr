@@ -255,8 +255,6 @@
         var vitesseFooting = 11;
         var vitesseMarche = 6;
 
-        var beforeNewPointIndex;
-        var lastPointRightClick;
         var clicksArray = [];
 
 
@@ -439,8 +437,6 @@
 
         // Fonction qui sera executée lors du clique d'un endroit de la carte
         function addLatLng(event) {
-            lastPointRightClick = false;
-
             var monPath = globalPoly.getPath();   //on récupére le parcours (si ce n'est pas le premier point)
 
             clicksArray.push(monPath.getLength());
@@ -567,7 +563,6 @@
             var monPath = globalPoly.getPath();
             var pathArray = monPath.getArray();
 
-            lastPointRightClick = true;
             beforeNewPointIndex = pathArray.length;
 
             newPoint = event.latLng;   // Coords du point qui vient d'etre rightclické
