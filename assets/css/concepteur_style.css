@@ -825,6 +825,47 @@ fieldset{
     align-items: center;
 
     height: 100%;
+
+    position: relative;
+}
+
+.fakeBtn{
+    position: absolute;
+    z-index: 5;
+}
+
+.fakeBtn1{
+    left: 0;
+}
+
+.fakeBtn2{
+    right: 0;
+    top: 45px;
+}
+
+.tuto-btns{
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+
+    color: white;
+    font-size: 18px;
+
+    margin: 0;
+}
+
+.tuto-menuGauche{
+    top: 40%;
+    left: 30px;
+
+    width: 115px;
+}
+
+.tuto-savePath{
+    top: 90px;
+    right: 50px;
+
+    text-align: right;
 }
 
 .tutoContainer{
@@ -877,6 +918,20 @@ fieldset{
     font-size: 18px;
 
     margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.tuto-shortcuts-container{
+    display: flex;
+    justify-content: center;
+}
+
+.tuto-shortcut{
+    margin: 0 10px;
+}
+
+.tuto-shortcut span{
+    font-weight: bold;
 }
 
 .tuto-link{
@@ -904,4 +959,100 @@ fieldset{
     border-radius: 3px;
 
     margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px){
+    .tuto-btns{
+        font-size: 16px;
+    }
+
+    .tuto-savePath{
+        top: 106px;
+    }
+
+    .tuto-menuGauche{
+        top: 40.5%;
+    }
+
+    .tuto-partContainer{
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .tuto-menuGauche{
+        width: 100px;
+        top: 39%;
+    }
+
+    .tuto-partContainer{
+        margin: 0;
+    }
+
+    .tuto-shortcut{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .tuto-partContainer p{
+        width: 200px;
+
+        font-size: 16px;
+    }
+
+    .tuto-shortcut{
+        font-size: 12px;
+    }
+
+    .tuto-btnContainer{
+        padding: 10px 10px 0 10px;
+    }
+
+    #tuto-btn{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .tuto-btns{
+        width: 75px;
+
+        font-size: 14px;
+    }
+
+    .tuto-menuGauche{
+        width: 75px;
+
+        top: 39%;
+    }
+
+    .tuto-savePath{
+        top: 106px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .tuto-title{
+        font-size: 18px;
+    }
+
+    .tuto-partContainer p{
+        width: 175px;
+        font-size: 14px;
+    }
+
+    .tuto-shortcut{
+        font-size: 10px;
+    }
+
+    .tuto-menuGauche{
+        width: 60px;
+        top: 35.5%;
+    }
+
+    .tuto-savePath{
+        width: 50px;
+        top: 88px;
+    }
 }

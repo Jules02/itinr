@@ -191,7 +191,11 @@
 
     {% if tuto == true %}
         <div class="mapOverlayContainer tutoMapOverlayContainer" id="tutoContainer">
-            <div class="tutoBigContainer">
+            <div class="tutoBigContainer" id="tutoBigContainer">
+                <button class="boutonMenuLateralStyle fakeBtn fakeBtn1"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+                <p class="tuto-menuGauche tuto-btns">Ce bouton permet d’ouvrir un menu avec des informations sur la vitesse</p>
+                <button class="saveButton fakeBtn fakeBtn2" name="button4" value="" title="Sauvegardez ou publiez votre parcours"><img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover"></button>
+                <p class="tuto-savePath tuto-btns">Celui-ci permet d’ouvrir un menu pour partager votre itinéraire</p>
                 <div class="tutoContainer">
                     <h2 class="tuto-title">Première fois que vous utilisez Itin'r ?</h2>
                     <div class="tuto-contentContainer">
@@ -205,6 +209,17 @@
                             <img src="{{ asset('images/tuto-rightclick.png') }}" alt="Tuto clique gauche" class="tuto-part-img"/>
                             <img src="{{ asset('images/rightclick.png') }}" class="tuto-part-clickimg"/>
                             <p title="Choisir le mode de suivi des routes au haut de la carte permettra d’adapter l’itinéraire calculé à votre moyen de transport">Un clique droit relie votre dernier point avec l’endroit où vous avez cliqué en suivant la route ou les chemins</p>
+                        </div>
+                    </div>
+                    <div class="tuto-shortcuts-container">
+                        <div class="tuto-shortcut">
+                            <p><span>Ctrl + z</span><br/>Supprime le dernier point</p>
+                        </div>
+                        <div class="tuto-shortcut">
+                            <p><span>Ctrl + + | Ctrl + Alt + +</span><br/>Zoom sur la carte</p>
+                        </div>
+                        <div class="tuto-shortcut">
+                            <p><span>Ctrl + - | Ctrl + Alt + -</span><br/>Dezoom</p>
                         </div>
                     </div>
                     <a class="tuto-link" href="http://bit.ly/2MRPnzP">En savoir plus</a>
@@ -280,9 +295,8 @@
             var loading = document.getElementById('loading');
             loading.style.height = tailleVoulu;
 
-            var tuto = document.getElementById('tuto').textContent;
-            if(tuto){
-                var tutoContainer = document.getElementById('tutoContainer');
+            var tutoContainer = document.getElementById('tutoContainer');
+            if(tutoContainer){
                 tutoContainer.style.height = tailleVoulu;
             }
 
