@@ -1,7 +1,6 @@
 ###> symfony/framework-bundle ###
 /.idea/
 .env
-.env.dist
 /ftptest/
 /public/bundles/
 /var/
