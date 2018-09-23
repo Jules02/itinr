@@ -46,7 +46,7 @@
 
 
 
-    <button id="boutonMenuLateral" class="boutonMenuLateralStyle"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
+    <button id="boutonMenuLateral" class="boutonMenuLateralStyle rightButton"><span>Allures</span><img src="{{ asset('images/timer.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
     <div id="menuGauche">
         <p id="menuGauche-message">Commencez par tracer votre parcours !</p>
 
@@ -145,8 +145,9 @@
         <option value="DRIVING" title="N'emprunte que le réseau routier">Voiture ou vélo de route</option>
     </select>
 
-    <button id="savePath" class="saveButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
+    <button id="savePath" class="saveButton rightButton" name="button4" value="" title="Sauvegardez ou publiez votre parcours">
         <img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover">
+        <span>Partager</span>
     </button>
     <div class="mapOverlayContainer" id="saveContainer">
         <div class="formContainer">
@@ -192,10 +193,6 @@
     {% if tuto == true %}
         <div class="mapOverlayContainer tutoMapOverlayContainer" id="tutoContainer">
             <div class="tutoBigContainer" id="tutoBigContainer">
-                <button class="boutonMenuLateralStyle fakeBtn fakeBtn1"><img src="{{ asset('images/menu-droite.png') }}" alt="Droite" id="imgBoutonMenuGauche"></button>
-                <p class="tuto-menuGauche tuto-btns">Ce bouton permet d’ouvrir un menu avec des informations sur la vitesse</p>
-                <button class="saveButton fakeBtn fakeBtn2" name="button4" value="" title="Sauvegardez ou publiez votre parcours"><img src="{{ asset('images/share.png') }}" alt='Icône sauvegarder' class="saveImgHover"></button>
-                <p class="tuto-savePath tuto-btns">Celui-ci permet d’ouvrir un menu pour partager votre itinéraire</p>
                 <div class="tutoContainer">
                     <h2 class="tuto-title">Première fois que vous utilisez Itin'r ?</h2>
                     <div class="tuto-contentContainer">
@@ -397,11 +394,11 @@
             var selectModeSuivi = document.getElementById('selectModeSuivi');
             map.controls[google.maps.ControlPosition.TOP_LEFT].push(selectModeSuivi);
 
-            var savePath = document.getElementById('savePath');
-            map.controls[google.maps.ControlPosition.RIGHT].push(savePath);
-
             var boutonMenuLateral = document.getElementById('boutonMenuLateral');
             map.controls[google.maps.ControlPosition.LEFT].push(boutonMenuLateral);
+
+            var savePath = document.getElementById('savePath');
+            map.controls[google.maps.ControlPosition.LEFT].push(savePath);
 
 
 
