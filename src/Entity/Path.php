@@ -43,9 +43,29 @@ class Path
     private $titre;
 
     /**
-     * @ORM\Column(name="typeSport", type="string", nullable=true)
+     * @ORM\Column(name="typeSportMarche", type="boolean", nullable=true)
      */
-    private $typeSport;
+    private $typeSportMarche;
+
+    /**
+     * @ORM\Column(name="typeSportCourse", type="boolean", nullable=true)
+     */
+    private $typeSportCourse;
+
+    /**
+     * @ORM\Column(name="typeSportVelo", type="boolean", nullable=true)
+     */
+    private $typeSportVelo;
+
+    /**
+     * @ORM\Column(name="typeSportVTT", type="boolean", nullable=true)
+     */
+    private $typeSportVTT;
+
+    /**
+     * @ORM\Column(name="typeSportAutre", type="boolean", nullable=true)
+     */
+    private $typeSportAutre;
 
     /**
      * @ORM\Column(name="description", type="string", nullable=true)
@@ -103,17 +123,81 @@ class Path
     /**
      * @return mixed
      */
-    public function getTypeSport()
+    public function getTypeSportMarche()
     {
-        return $this->typeSport;
+        return $this->typeSportMarche;
     }
 
     /**
-     * @param mixed $typeSport
+     * @param mixed $typeSportMarche
      */
-    public function setTypeSport($typeSport): void
+    public function setTypeSportMarche($typeSportMarche): void
     {
-        $this->typeSport = $typeSport;
+        $this->typeSportMarche = $typeSportMarche;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeSportCourse()
+    {
+        return $this->typeSportCourse;
+    }
+
+    /**
+     * @param mixed $typeSportCourse
+     */
+    public function setTypeSportCourse($typeSportCourse): void
+    {
+        $this->typeSportCourse = $typeSportCourse;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeSportVelo()
+    {
+        return $this->typeSportVelo;
+    }
+
+    /**
+     * @param mixed $typeSportVelo
+     */
+    public function setTypeSportVelo($typeSportVelo): void
+    {
+        $this->typeSportVelo = $typeSportVelo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeSportVTT()
+    {
+        return $this->typeSportVTT;
+    }
+
+    /**
+     * @param mixed $typeSportVTT
+     */
+    public function setTypeSportVTT($typeSportVTT): void
+    {
+        $this->typeSportVTT = $typeSportVTT;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeSportAutre()
+    {
+        return $this->typeSportAutre;
+    }
+
+    /**
+     * @param mixed $typeSportAutre
+     */
+    public function setTypeSportAutre($typeSportAutre): void
+    {
+        $this->typeSportAutre = $typeSportAutre;
     }
 
     /**

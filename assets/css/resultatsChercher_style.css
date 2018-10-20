@@ -74,6 +74,12 @@
     display: flex;
 }
 
+.resultat-typeSport span{
+    margin-right: 15px;
+
+    display: flex;
+}
+
 .resultat-typeSport img{
     width: 20px;
     height: 20px;

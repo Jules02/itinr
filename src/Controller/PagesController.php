@@ -206,19 +206,23 @@ class PagesController extends Controller
 
             $criteresArray = [
                 'placeId' => $valeurs["placeId"],
-                'typeSport' => $valeurs['typeSport'],
+                'typeSportMarche' => $valeurs['typeSportMarche'],
+                'typeSportCourse' => $valeurs['typeSportCourse'],
+                'typeSportVelo' => $valeurs['typeSportVelo'],
+                'typeSportVTT' => $valeurs['typeSportVTT'],
+                'typeSportAutre' => $valeurs['typeSportAutre'],
                 'auteur' => $recherchePreciseArray['parAuteur'],
                 'titre' => $recherchePreciseArray['parTitre']
             ];
 
-            if(empty($valeurs["lieu"]) && empty($valeurs["placeId"]) && empty($valeurs["typeSport"]) && empty($recherchePreciseArray['parAuteur']) && empty($recherchePreciseArray['parTitre'])){
+            $criteresArray = array_filter($criteresArray);
+
+            if(empty($criteresArray)){
                 $this->addFlash('error', "Vous n'avez rien rentré");
                 return new Response($twig->render('content/chercher.html.twig', [
                     'form' => $form->createView()
                 ]));
             }
-
-            $criteresArray = array_filter($criteresArray);
 
             $pathRepository = $doctrine->getRepository(Path::class);
             $resultatPath = $pathRepository->findBy(

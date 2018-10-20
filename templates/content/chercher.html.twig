@@ -58,7 +58,13 @@
             <div class="titre-form-part-separation"></div>
 
             <h3 class="sous-titre-form-part1">Quel type d’itinéraire cherchez-vous ?</h3>
-            {{ form_row(form.typeSport) }}
+            <div class="form-part1-typeSportContainer">
+                {{ form_row(form.typeSportMarche) }}
+                {{ form_row(form.typeSportCourse) }}
+                {{ form_row(form.typeSportVelo) }}
+                {{ form_row(form.typeSportVTT) }}
+                {{ form_row(form.typeSportAutre) }}
+            </div>
         </div>
 
         <div class="form-part2-container">

@@ -650,12 +650,22 @@ button > .gm-fullscreen-control{
 
 .description-p{
     display: flex;
-    align-items: center;
 
     font-size: 19px;
 
     margin-top: 0;
     margin-left: 15px;
+}
+
+.description-p-typeSport span{
+    margin-top: 5px;
+    margin-right: 15px;
+
+    display: flex;
+}
+
+.description-p-autrefiltre{
+    align-items: center;
 }
 
 .description-p img {

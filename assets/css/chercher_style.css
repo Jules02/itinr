@@ -114,6 +114,21 @@
     background-color: #3ba14c;
 }
 
+.form-part1-typeSportContainer{
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 25px 0;
+}
+
+.form-part1-container label{
+    display: none;
+
+}
+.checkbox-label{
+    display: block !important;
+}
+
 
 .form-part2-container h2{
     margin-top: 10px;

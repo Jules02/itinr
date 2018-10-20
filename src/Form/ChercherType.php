@@ -28,21 +28,43 @@ class ChercherType extends AbstractType
                     'required' => false
             ))
             ->add('placeId', HiddenType::class)
-            ->add('typeSport', ChoiceType::class, array(
-                    'label'  => false,
-                    'placeholder' => false,
+            ->add('typeSportMarche', CheckboxType::class, array(
+                    'label'  => "Marche",
                     'attr' => array(
-                        'class' => 'radio-container'
+                        'class' => 'checkbox-container'
                     ),
-                    'choices'  => array(
-                        'Marche' => "marche",
-                        'Course à pied' => "course",
-                        'Vélo de route' => "veloroute",
-                        'VTT' => "vtt",
-                        'Autre' => "autre"
+                    'required' => false
+                )
+            )
+            ->add('typeSportCourse', CheckboxType::class, array(
+                    'label'  => "Course à pied",
+                    'attr' => array(
+                        'class' => 'checkbox-container'
                     ),
-                    'expanded' => true,
-                    'multiple' => false,
+                    'required' => false
+                )
+            )
+            ->add('typeSportVelo', CheckboxType::class, array(
+                    'label'  => "Vélo de route",
+                    'attr' => array(
+                        'class' => 'checkbox-container'
+                    ),
+                    'required' => false
+                )
+            )
+            ->add('typeSportVTT', CheckboxType::class, array(
+                    'label'  => "VTT",
+                    'attr' => array(
+                        'class' => 'checkbox-container'
+                    ),
+                    'required' => false
+                )
+            )
+            ->add('typeSportAutre', CheckboxType::class, array(
+                    'label'  => "Autre",
+                    'attr' => array(
+                        'class' => 'checkbox-container'
+                    ),
                     'required' => false
                 )
             )

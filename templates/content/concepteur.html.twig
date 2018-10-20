@@ -118,7 +118,7 @@
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                 <div class="menuGauche-partie-container">
                     <img src="{{ asset('images/footing.png') }}" alt="Icône footing" class="menuGauche-img">
-                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 13 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 10 km/h">Avec une allure de footing,</span> vous prendrez <span id="tempsFooting"></span></p>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                 <div class="sepa-container"><div class="menuGauche-sepa"></div></div>
                 <div class="menuGauche-partie-container">
                     <img src="{{ asset('images/marche.png') }}" alt="Icône marche" class="menuGauche-img">
-                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 6 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
+                    <p class="menuGauche-partie-temps-sport"><span title="Avec une vitesse moyenne de 5 km/h">En marchant,</span> vous prendrez <span id="tempsMarche"></span></p>
                 </div>
             </div>
         </div>
@@ -157,7 +157,13 @@
                 {{ form_row(form.titre) }}
 
                 <p class="typeSport-title">Pour quel sport ce parcours est il le plus adapté ?</p>
-                {{ form_row(form.typeSport) }}
+                <div class="typeSport-container">
+                    {{ form_row(form.typeSportMarche) }}
+                    {{ form_row(form.typeSportCourse) }}
+                    {{ form_row(form.typeSportVelo) }}
+                    {{ form_row(form.typeSportVTT) }}
+                    {{ form_row(form.typeSportAutre) }}
+                </div>
 
                 {{ form_row(form.description) }}
 
@@ -264,8 +270,8 @@
         var distanceArrondie = null;    //distance en mètres
 
         var vitesseVelo = 20;     // Vitesses (en km/h) pour les calculs du menu de gauche
-        var vitesseFooting = 11;
-        var vitesseMarche = 6;
+        var vitesseFooting = 10;
+        var vitesseMarche = 5;
 
         var clicksArray = [];
 
