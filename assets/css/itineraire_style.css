@@ -377,21 +377,52 @@ button > .gm-fullscreen-control{
     cursor: pointer;
 }
 
-.boutonMenuLateralStyle{
-    width: 20px;
-    height: 30px;
 
+.rightButton{
+    width: 75px;
     padding: 0;
-
     background-color: #fff;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 50px 25px 0;
 
-    top: 48% !important;
+    transition: all 0.1s ease-in-out;
+
+    display: flex;
 }
 
-.boutonMenuLateralStyle img{
-    padding-left: 3px;
+.rightButton span{
+    color: #3ba14c;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding-right: 5px;
+}
+
+.boutonMenuLateralStyle span{
+    display: none;
+}
+
+.boutonMenuLateralStyle:hover{
+    width: 150px;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.boutonMenuLateralStyle:hover span{
+    display: block;
+}
+
+.rightButton img{
+    padding-right: 5px;
     padding-top: 3px;
+}
+
+.boutonMenuLateralStyle{
+    top: 100px !important;
+
+    height: 75px;
+
+    justify-content: center;
+    align-items: center;
 }
 
 #menuGauche-message{
@@ -433,12 +464,6 @@ button > .gm-fullscreen-control{
 }
 
 
-
-#boutonMenuLateralFermer{
-    position: absolute;
-    top: 48%;
-    right: 10px;
-}
 
 .menuGauche-partie{
     height: 20%;

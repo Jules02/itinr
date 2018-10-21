@@ -72,7 +72,7 @@
             <div class="titre-form-part-separation"></div>
             {{ form_row(form.recherchePrecise) }}
         </div>
-        <div class="submit-container"><button type="submit" class="submit-input">Rechercher</button></div>
+        <div class="submit-container"><button type="submit" id="submit" class="submit-input">Rechercher</button></div>
         {{ form_end(form) }}
 
     </div>
@@ -142,6 +142,14 @@
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
                 handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        var submitBtn = document.getElementById("submit");
+        submitBtn.onclick = function(){
+            if(document.getElementById('chercher_lieu').value == ""){
+                var placeIdInput = document.getElementById('chercher_placeId');
+                placeIdInput.value = "";
             }
         }
     </script>

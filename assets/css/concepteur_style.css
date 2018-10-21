@@ -586,13 +586,6 @@ fieldset{
 }
 
 
-
-#boutonMenuLateralFermer{
-    position: absolute;
-    top: 48%;
-    right: 10px;
-}
-
 .menuGauche-partie{
     height: 20%;
 }
