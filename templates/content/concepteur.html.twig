@@ -172,7 +172,6 @@
                 {{ form_row(form.autre_filtre) }}
 
                 {{ form_row(form.path) }}
-                {{ form_row(form.placeId) }}
                 {{ form_row(form.pathLocation) }}
                 {{ form_row(form.distance) }}
                 <button id="saveFormBtn" class="submit-input">Partager</button>
@@ -1065,7 +1064,6 @@
                 var monPath = globalPoly.getPath();
                 var encodeString = google.maps.geometry.encoding.encodePath(monPath).replace(/\\/g,"\\\\");
                 var hiddenInputPath = document.getElementById('path_path');
-                var hiddenInputPlaceId = document.getElementById('path_placeId');
                 var hiddenInputPathLocation = document.getElementById('path_pathLocation');
                 var hiddenInputDistance = document.getElementById('path_distance');
 
@@ -1077,25 +1075,18 @@
                 longitude = firstMarker.getPosition().lng();
                 var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
 
-                geocoder.geocode({'location': latlng}, function (results, status) {
+                geocoder.geocode({
+                    'location': latlng
+                }, function (results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
-                        if (results[1]) {
-                            var placeId = results[1].place_id;
-                            hiddenInputPlaceId.value = placeId;
-
-                            geocoder.geocode({'placeId': placeId}, function(results, status) {
-                                if (status === 'OK') {
-                                    if (results[0]) {
-                                        var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);
-                                        hiddenInputPathLocation.value = geoLocationResult;
-                                    } else {
-                                        window.alert('Aucun résultat trouvé');
-                                    }
-                                } else {
-                                    window.alert('Le Geocoder a echoué. Raison: ' + status);
+                        if (results[0]) {
+                            var address = results[0].address_components;
+                            for (var p = address.length-1; p >= 0; p--) {
+                                if (address[p].types.indexOf("locality") != -1) {
+                                    var cityNameResult = address[p].long_name;
+                                    hiddenInputPathLocation.value = cityNameResult;
                                 }
-                            });
-
+                            }
                         } else {
                             alert('Aucun résultat trouvé');
                         }

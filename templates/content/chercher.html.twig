@@ -88,19 +88,12 @@
         function initAutocomplete() {
             geocoder = new google.maps.Geocoder();
             var options = {
-                types: ['(regions)']
+                types: ['(regions)'],
+                componentRestrictions: {country: ["fr", "be"]}
             };
             autocomplete = new google.maps.places.Autocomplete(
                 (document.getElementById('chercher_lieu')),
                 options);
-
-            autocomplete.addListener('place_changed', fillInAddress);
-        }
-
-        function fillInAddress() {
-            var place = autocomplete.getPlace();
-            var placeIdInput = document.getElementById('chercher_placeId');
-            placeIdInput.value = place.place_id;   //On met le placeId du lieu qui vient d'être rentré dans l'hidden input placeId
         }
 
         //Rempli la searchbox de notre localisation lorsqu'on appuye sur le bouton géolocalisation
@@ -117,16 +110,8 @@
                         }, function(results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             if (results[1]) {
-                                var placeIdInput = document.getElementById('chercher_placeId');
-                                placeIdInput.value = results[1].place_id;
-                                geocoder.geocode({'placeId': results[1].place_id}, function(results, status) {
-                                    if (status !== 'OK') {
-                                        alert('Le Geocoder a echoué. Raison: ' + status);
-                                        return;
-                                    }
-                                    var geoLocationResult = results[0].formatted_address.substring(6 , results[0].formatted_address.length);   //Un peu à l'arrache, mais on passe de 02880, Bucy-le-Long, France à Bucy-le-Long, France
-                                    document.getElementById('chercher_lieu').value = geoLocationResult;
-                                });
+                                var geoLocationResult = results[2].formatted_address;
+                                document.getElementById('chercher_lieu').value = geoLocationResult.substr(6);
                             } else {
                                 alert('Aucun résultat trouvé');
                             }
@@ -142,14 +127,6 @@
             } else {
                 // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
                 handleLocationError(false, infoWindow, map.getCenter());
-            }
-        }
-
-        var submitBtn = document.getElementById("submit");
-        submitBtn.onclick = function(){
-            if(document.getElementById('chercher_lieu').value == ""){
-                var placeIdInput = document.getElementById('chercher_placeId');
-                placeIdInput.value = "";
             }
         }
     </script>

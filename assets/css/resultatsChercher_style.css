@@ -59,6 +59,8 @@
 
     font-size: 18px;
     font-weight: 600;
+
+    max-width: 350px;
 }
 
 .resultat-titre-sepa{

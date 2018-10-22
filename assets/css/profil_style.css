@@ -110,8 +110,8 @@ h2{
 
 
 .itineraires-titre{
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .itineraires-titre span{
@@ -169,6 +169,8 @@ h2{
 
     font-size: 18px;
     font-weight: 600;
+
+    max-width: 350px;
 }
 
 .resultat-titre-sepa{
@@ -181,6 +183,12 @@ h2{
 }
 
 .resultat-typeSport{
+    display: flex;
+}
+
+.resultat-typeSport span{
+    margin-right: 15px;
+
     display: flex;
 }
 

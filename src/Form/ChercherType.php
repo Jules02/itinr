@@ -27,7 +27,6 @@ class ChercherType extends AbstractType
                     ),
                     'required' => false
             ))
-            ->add('placeId', HiddenType::class)
             ->add('typeSportMarche', CheckboxType::class, array(
                     'label'  => "Marche",
                     'attr' => array(

@@ -22,7 +22,6 @@ class PathType extends AbstractType
     {
         $builder
             ->add('path',        HiddenType::class)
-            ->add('placeId',     HiddenType::class)
             ->add('pathLocation',HiddenType::class)
             ->add('distance',    HiddenType::class)
             ->add('titre',       TextType::class, array(

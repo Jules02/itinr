@@ -205,7 +205,7 @@ class PagesController extends Controller
             $recherchePreciseArray = $valeurs["recherchePrecise"];
 
             $criteresArray = [
-                'placeId' => $valeurs["placeId"],
+                'pathLocation' => $valeurs['lieu'],
                 'typeSportMarche' => $valeurs['typeSportMarche'],
                 'typeSportCourse' => $valeurs['typeSportCourse'],
                 'typeSportVelo' => $valeurs['typeSportVelo'],
@@ -214,6 +214,8 @@ class PagesController extends Controller
                 'auteur' => $recherchePreciseArray['parAuteur'],
                 'titre' => $recherchePreciseArray['parTitre']
             ];
+
+            $criteresArray['pathLocation'] = substr($criteresArray['pathLocation'], 0, strpos($criteresArray['pathLocation'], ","));
 
             $criteresArray = array_filter($criteresArray);
 

@@ -28,12 +28,6 @@ class Path
      * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
-    private $placeId;
-
-    /**
-     * @Assert\NotNull()
-     * @ORM\Column(type="text")
-     */
     private $pathLocation;
 
     /**
@@ -265,22 +259,6 @@ class Path
     public function setPath($path): void
     {
         $this->path = $path;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPlaceId()
-    {
-        return $this->placeId;
-    }
-
-    /**
-     * @param mixed $placeId
-     */
-    public function setPlaceId($placeId): void
-    {
-        $this->placeId = $placeId;
     }
 
     /**
