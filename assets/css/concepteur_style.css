@@ -313,7 +313,7 @@
     height: 32px;
 
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 #centerMap:hover{
@@ -364,6 +364,13 @@
 
     flex-direction: column;
     align-items: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+.saveButton img{
+    padding-top: 0px;
 }
 
 .saveButton span{
@@ -506,8 +513,6 @@ fieldset{
     border-radius: 0 50px 25px 0;
 
     transition: all 0.1s ease-in-out;
-
-    display: flex;
 }
 
 .rightButton span{

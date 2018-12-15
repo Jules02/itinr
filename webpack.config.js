@@ -36,6 +36,7 @@ Encore
     .addEntry('cookies_consent', './assets/css/cookies_consent_style.css')
     .addEntry('licences', './assets/css/licences_style.css')
     .addEntry('conditions', './assets/css/conditions_style.css')
+    .addEntry('gpxviewer', './assets/js/gpxviewer.js')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()

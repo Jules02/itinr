@@ -15,11 +15,9 @@ use App\Form\ContactType;
 use App\Form\PathType;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Twig\Environment;
 use Symfony\Component\HttpFoundation\Cookie;
 
@@ -35,7 +33,6 @@ class PagesController extends Controller
 
     /**
      * @Route("/concepteur", name="concepteur")
-     * @Method({"GET", "POST"})
      * @param Environment $twig
      * @return Response
      */
@@ -228,10 +225,7 @@ class PagesController extends Controller
 
             $pathRepository = $doctrine->getRepository(Path::class);
             $resultatPath = $pathRepository->findBy(
-                $criteresArray, // Critere
-                array(),        // Tri
-                100,                              // Limite
-                0                               // Offset
+                $criteresArray
             );
 
             if(empty($resultatPath)){
