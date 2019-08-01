@@ -241,6 +241,12 @@
     <script src="https://www.google.com/jsapi"></script>
     <script src=" {{ asset('build/mousetrap.js') }} "></script>
     <script>
+        window.onbeforeunload = function() {
+            if (pathArray.length > 0) {
+                return "Sûr de vouloir quitter ? Vous n'avez pas sauvegardé votre parcours";
+            }
+        };
+
         $(window).on("load", function() {
             $('#loading').hide();
         });
