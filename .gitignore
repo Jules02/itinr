@@ -5,6 +5,8 @@
 /public/bundles/
 /var/
 /vendor/
+package.json
+package-lock.json
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-pack ###
