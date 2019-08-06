@@ -15,3 +15,6 @@ itin'R est toujours au stade de bêta et il reste beaucoup de choses à ajouter/
 
 ## Auteur
 - Jules Dupont - *Lycéen - julesdupont02@gmail.com*
+
+## Licence
+itin'R est sous une licence MIT. Voir `LICENSE` pour plus d'informations.
