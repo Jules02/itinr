@@ -13,5 +13,4 @@
 /public/uploads/
 ###< symfony/webpack-encore-pack ###
 
-package.json
-package-lock.json
+.DS_Store
