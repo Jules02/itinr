@@ -6,7 +6,7 @@ Ce projet est un projet [Symfony 4](https://symfony.com "Symfony 4"), et la cart
 
 ## Contribuer à ce projet
 itin'R est toujours au stade de bêta et il reste beaucoup de choses à ajouter/améliorer mais je n'ai plus beaucoup de temps. Toute contribution est la bienvenue
-#### Comment contribuer
+### Comment contribuer
 1. Forkez le projet
 2. Créez votre branche (`git checkout -b feature/MaFeature`)
 3. Commitez vos changements (`git commit -m "Ajout de ma feature"`)
