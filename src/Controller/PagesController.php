@@ -21,7 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 use Symfony\Component\HttpFoundation\Cookie;
 
-class PagesController extends Controller
+class ePagesController extends Controller
 {
 
     /**
