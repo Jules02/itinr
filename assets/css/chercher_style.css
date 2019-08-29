@@ -60,7 +60,7 @@
     margin-right: 17px;
 }
 
-#chercher_lieu{
+#recherche_lieu{
     height: 50px;
     width: 100%;
     border: solid 1px #999;
@@ -70,7 +70,7 @@
     font-size: 15px;
 }
 
-#chercher_lieu::placeholder{
+#recherche_lieu::placeholder{
     color: #333;
     font-family: 'Source Sans Pro';
 }
@@ -134,7 +134,7 @@
     margin-top: 10px;
 }
 
-#chercher_recherchePrecise_parAuteur, #chercher_recherchePrecise_parTitre{
+#recherche_recherchePrecise_parAuteur, #recherche_recherchePrecise_parTitre{
     flex: 1;
     height: 35px;
     border: solid 1px #999;

@@ -14,7 +14,7 @@
         <div class="bonjour-container margin-left">
             <div class="avatar-container mon-avatar-container"><img src="{{ asset(app.user.image) }}" class="avatar"/></div>
             <p>Bonjour <span class="bonjour-nom">{{ app.user.surname }}</span></p></div>
-        <a href="{{ path('modifier_profil') }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/modifier_profil.png') }}"/></a>
+        <a href="{{ path('modifier_profil', {'username': app.user.username}) }}" class="modifier margin-left">Modifier mes informations<img src="{{ asset('images/modifier_profil.png') }}"/></a>
     </div>
 
     <div class="informations-container margin-left">
@@ -111,11 +111,12 @@
     <div class="delete-container margin-left" id="deleteNotice">
         <p>Voulez-vous vraiment supprimer votre compte et vos itinéraires ? Cette action est irréversible et nous rendra très triste :(</p>
         <button class="deleteNotice-btn" id="deleteClose">Annuler</button>
-        <a class="deleteNotice-btn" id="deleteConfirme" href="{{ path('delete_profil') }}">Supprimer</a>
+        <a class="deleteNotice-btn" id="deleteConfirme" href="{{ path('delete_profil', {'username': app.user.username}) }}">Supprimer</a>
     </div>
 {% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
     <script>
         var deleteBtn = document.getElementById('deleteBtn');
         var deleteNotice = document.getElementById('deleteNotice');

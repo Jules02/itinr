@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{% block stylesheets2 %}{% endblock %}">
 </head>
 <body>
-    <section class="desktop">
+<section class="desktop">
     <header class="header">
         <a href="{{ path("concepteur") }}" class="header-itinr">
             <img src="{{ asset('images/logo32b.png') }}" alt="Logo itin'R">
@@ -26,14 +26,14 @@
         <div class="header-navbar">
             <ul class="nav_onglets">
                 <li class="nav-item"><a href="{{ path("concepteur") }}">Concepteur d'itinéraires</a></li>
-                <li class="nav-item"><a href="{{ path("chercher") }}">Trouver un itinéraire</a></li>
+                <li class="nav-item"><a href="{{ path("recherche") }}">Trouver un itinéraire</a></li>
                 <li class="nav-item nav-item-plus" id="plus">
                     <a>Plus <img src="{{ asset('images/caretdown.png') }}" alt="Déroulant" class="caretdown" id="caret"/></a>
                 </li>
             </ul>
             <div class="sub-nav" id="accordeon">
                 <ul class="sub-nav-ul">
-                    <li class="sub-nav-item"><a href="{{ path("chercher-utilisateur") }}">Trouver un utilisateur</a></li>
+                    <li class="sub-nav-item"><a href="{{ path("recherche-utilisateur") }}">Trouver un utilisateur</a></li>
                     <li class="sub-nav-item"><a href="{{ path("contact") }}">Contact</a></li>
                     <li class="sub-nav-item"><a href="{{ path("aide") }}">Aide</a></li>
                     <li class="sub-nav-item"><a href="{{ path("apropos") }}">À propos</a></li>
@@ -49,11 +49,11 @@
                 </a>
                 <a href="{{ path('security_logout') }}" class="header-account-signout btn-account btn-account-droite">Déconnexion</a>
             </div>
-            {% else %}
-                <div class="header-account">
-                    <a class="header-account-signup btn-account btn-account-gauche" href="{{ path("inscription") }}">Inscription</a>
-                    <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
-                </div>
+        {% else %}
+            <div class="header-account">
+                <a class="header-account-signup btn-account btn-account-gauche" href="{{ path("inscription") }}">Inscription</a>
+                <a class="header-account-signin btn-account" href="{{ path("security_login") }}">Connexion</a>
+            </div>
         {% endif %}
 
         <div class="header-hamburgermenu">
@@ -87,8 +87,8 @@
 
             <ul class="hamburger-menu-nav-onglets">
                 <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("concepteur") }}">Concepteur d'itinéraires</a></li>
-                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("chercher") }}">Trouver un itinéraire</a></li>
-                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("chercher-utilisateur") }}">Trouver un utilisateur</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("recherche") }}">Trouver un itinéraire</a></li>
+                <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("recherche-utilisateur") }}">Trouver un utilisateur</a></li>
                 <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("contact") }}">Contact</a></li>
                 <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("aide") }}">Aide</a></li>
                 <li class="hamburger-menu-nav-item nav-item"><a href="{{ path("apropos") }}">À propos</a></li>
@@ -119,43 +119,60 @@
             <p class="footer-date">2018</p>
         </div>
     </footer>
-    </section>
+</section>
 
-    <section class="mobile">
-        <div class="mobile-header">
-            <img src="{{ asset('images/logo32b.png') }}" alt="Logo itin'R">
-            <h1 class="mobile-header-title header-title">itin'R</h1><p class="header-beta">Bêta</p>
-        </div>
+<section class="mobile">
+    <div class="mobile-header">
+        <img src="{{ asset('images/logo32b.png') }}" alt="Logo itin'R">
+        <h1 class="mobile-header-title header-title">itin'R</h1><p class="header-beta">Bêta</p>
+    </div>
 
-        <div class="mobile-comingsoon">
-            <img src="{{ asset('images/comingsoon.png') }}" alt="Coming soon icône">
-            <p>Coming soon !</p>
-        </div>
+    <div class="mobile-comingsoon">
+        <img src="{{ asset('images/comingsoon.png') }}" alt="Coming soon icône">
+        <p>Coming soon !</p>
+    </div>
 
-        <p class="mobile-unavailable">itin’R n’est pas disponible<br/>sur mobiles 😕</p>
-    </section>
+    <p class="mobile-unavailable">itin’R n’est pas disponible<br/>sur mobiles 😕</p>
+</section>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-{% block javascripts %}{% endblock %}
-<script src="{{ asset('build/header.js') }}"></script>
-<script>
-    var content = document.getElementById("content");
-    var hamburgerMenu = document.getElementById("hamburger-menu");
+{% block javascripts %}
+    <script>
+        var plus = document.getElementById("plus");
+        var accordeon = document.getElementById("accordeon");
+        var caret = document.getElementById("caret");
 
-    var tailleVoulu = window.innerHeight - 80 - 30;
+        plus.onclick = function () {
+            var classCaret = caret.className;
 
-    if (content.offsetHeight < tailleVoulu){
-        content.style.height = tailleVoulu + 'px';
-    }
+            if (classCaret == "caretdown") {
+                caret.className = "caretup";
+                accordeon.style.display = "block";
+            } else {
+                caret.className = "caretdown";
+                accordeon.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        var content = document.getElementById("content");
+        var hamburgerMenu = document.getElementById("hamburger-menu");
 
-    var tailleSansHeader = window.innerHeight - 80;
-    hamburgerMenu.style.height = tailleSansHeader + 'px';
+        var tailleVoulu = window.innerHeight - 80 - 30;
 
-    $('.menuEight').click(function () {
-        $(this).toggleClass('clickMenuEight');
+        if (content.offsetHeight < tailleVoulu){
+            content.style.height = tailleVoulu + 'px';
+        }
 
-        $(hamburgerMenu).toggleClass('hamburger-menu-display');
-    });
-</script>
+        var tailleSansHeader = window.innerHeight - 80;
+        hamburgerMenu.style.height = tailleSansHeader + 'px';
+
+        $('.menuEight').click(function () {
+            $(this).toggleClass('clickMenuEight');
+
+            $(hamburgerMenu).toggleClass('hamburger-menu-display');
+        });
+    </script>
+{% endblock %}
 </body>
 </html>

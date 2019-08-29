@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chercher un utilisateur{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/chercher_utilisateur.css') }}{% endblock %}
+
+{% block body %}
+    {% include 'flash_messages.html.twig' %}
+
+    <h1 class="titre margin-left">Trouver un utilisateur</h1>
+    <div class="titre-separation margin-left"></div>
+
+    <div class="form-container">
+        {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        <button type="submit" ><img src="{{ asset('images/chercher_utilisateur.png') }}" alt="Chercher">Chercher</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche d'itinéraires{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/resultatsChercher.css') }}{% endblock %}
+
+{% block body %}
+    {% include 'flash_messages.html.twig' %}
+
+    <h1 class="titre margin-left">Résultats de votre recherche d'itinéraires</h1>
+
+    <div class="titre-separation margin-left"></div>
+
+    <p class="resultatsNb margin-left">Il y a <span>{{ resultatPathNb }}</span> {% if resultatPathNb == 1 %}itinéraire{% else %}itinéraires{% endif %} correpondant à votre recherche</p>
+
+    <div class="resultats-bigcontainer">
+        <div class="resultats-container">
+            {% for path in resultatPath %}
+                <a class="resultat-container" href="{{ path('itineraire', {'slug': path.slug}) }}">
+                    <p class="resultat-titre">{{ path.titre }}</p>
+                    <div class="resultat-titre-sepa"></div>
+                    {% set nbSport = 0 %}
+                    {% if path.typeSportMarche %}
+                        {% set nbSport = nbSport + 1 %}
+                    {% endif %}
+                    {% if path.typeSportCourse %}
+                        {% set nbSport = nbSport + 1 %}
+                    {% endif %}
+                    {% if path.typeSportVelo %}
+                        {% set nbSport = nbSport + 1 %}
+                    {% endif %}
+                    {% if path.typeSportVTT %}
+                        {% set nbSport = nbSport + 1 %}
+                    {% endif %}
+                    {% if path.typeSportAutre %}
+                        {% set nbSport = nbSport + 1 %}
+                    {% endif %}
+                    {% if nbSport != 0 %}
+                    <p class="resultat-typeSport resultat-margin-left">
+                        {% if path.typeSportMarche %}
+                            <span>
+                                <img src="{{ asset('images/chercher_typeSport3.png') }}"/>
+                                {% if nbSport <= 3 %}
+                                    Marche
+                                {% endif %}
+                            </span>
+                        {% endif %}
+                        {% if path.typeSportCourse %}
+                            <span>
+                                <img src="{{ asset('images/chercher_typeSport2.png') }}"/>
+                                {% if nbSport <= 3 %}
+                                    Course à pied
+                                {% endif %}
+                            </span>
+                        {% endif %}
+                        {% if path.typeSportVelo %}
+                            <span>
+                                <img src="{{ asset('images/chercher_typeSport4.png') }}"/>
+                                {% if nbSport <= 3 %}
+                                    Vélo de route
+                                {% endif %}
+                            </span>
+                        {% endif %}
+                        {% if path.typeSportVTT %}
+                            <span>
+                                <img src="{{ asset('images/chercher_typeSport5.png') }}"/>
+                                {% if nbSport <= 3 %}
+                                    VTT
+                                {% endif %}
+                            </span>
+                        {% endif %}
+                        {% if path.typeSportAutre %}
+                            <span>
+                                <img src="{{ asset('images/chercher_typeSport1.png') }}"/>
+                                {% if nbSport <= 3 %}
+                                    Autre
+                                {% endif %}
+                            </span>
+                        {% endif %}
+                    </p>
+                    {% endif %}
+                    <p class="resultat-auteur resultat-margin-left">par <span>{{ path.auteur }}</span></p>
+                    <p class="resultat-presDe resultat-margin-left">près de <span>{{ path.pathLocation }}</span></p>
+                    <p class="resultat-distance" title="ou {{ path.distance }} mètres"><span>{{ (path.distance / 1000)|round(2, 'floor') }}</span>km</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

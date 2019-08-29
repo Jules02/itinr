@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block metakeywords %}
+    itinéraire running,
+    itinéraire vtt,
+    parcours running,
+    trajet vélo,
+    trouver itinéraires randonnée,
+    itinéraire course à pied,
+    itinéraire marche à pied,
+    parcours randonnée,
+    trouver itinéraires vélo,
+    trouver itinéraires rando,
+    itinéraire randonnée,
+    itinéraire sportif,
+    parcours rando,
+    trouver itinéraires vtt,
+    itinéraires sport,
+    itinéraire vélo,
+    parcours vélo,
+    parcours footing,
+    trouver itinéraires course à pied,
+    itinéraires sportifs,
+    itinéraire rando,
+    parcours vtt,
+    parcours course à pied,
+    trouver itinéraires marche,
+    trouver un itinéraire
+{% endblock %}
+{% block metadescription %}Avec itin'R, trouvez l'itinéraire parfait pour votre sortie en vélo, VTT, course à pied, ou encore pour votre randonnée.{% endblock %}
+{% block title %}Chercher{{ parent() }}{% endblock %}
+
+{% block stylesheets %}{{ asset('build/chercher.css') }}{% endblock %}
+{% block stylesheets2 %}{{ asset('build/form_theme.css') }}{% endblock %}
+
+{% form_theme form 'form/fields.html.twig' %}
+
+{% block body %}
+    {% include 'flash_messages.html.twig' %}
+    <div class="ref">
+        <h2>Trouver un itinéraire de vélo, de VTT, de course à pied ou une randonnée</h2>
+        <p>itin'R vous permet de <strong>trouver une randonnée</strong>, un <strong>itinéraire de vélo</strong>, de <strong>VTT</strong>, ou encore de <strong>course à pied</strong></p>
+    </div>
+
+    <h1 class="titre margin-left">Vous prévoyez une séance de course à pied, une sortie vélo, une randonnée ou autre ? Trouvez l’itinéraire qu’il vous faut grâçe à Itin'r.</h1>
+    <p class="sous-titre margin-left">Nouvelle, nouveau ? <a href="{{ path('aide') }}" class="sous-titre-aide">Découvrez nos tutoriaux </a>ou lisez <a href="{{ path('aide') }}" class="sous-titre-tuto">Comment trouver un itinéraire</a></p>
+
+    <div class="titre-separation margin-left"></div>
+
+    <div class="form-container">
+        {{ form_start(form) }}
+        <div class="lieu-input-container">
+            {{ form_row(form.lieu) }}
+            <button id="lieu_gps_btn" name="chercher[gps]" type="button" onclick="fillInAdressGeolocation()"><img src="{{ asset('images/chercher_gps.png') }}" alt="Icône gps" class="lieu-gps-btn-img"/></button>
+        </div>
+        <div class="form-part1-container">
+            <h2 class="titre-form-part">Affinez votre recherche</h2>
+            <div class="titre-form-part-separation"></div>
+
+            <h3 class="sous-titre-form-part1">Quel type d’itinéraire cherchez-vous ?</h3>
+            <div class="form-part1-typeSportContainer">
+                {{ form_row(form.typeSportMarche) }}
+                {{ form_row(form.typeSportCourse) }}
+                {{ form_row(form.typeSportVelo) }}
+                {{ form_row(form.typeSportVTT) }}
+                {{ form_row(form.typeSportAutre) }}
+            </div>
+        </div>
+
+        <div class="form-part2-container">
+            <h2 class="titre-form-part">Ou recherchez un parcours précis</h2>
+            <div class="titre-form-part-separation"></div>
+            {{ form_row(form.recherchePrecise) }}
+        </div>
+        <div class="submit-container"><button type="submit" id="submit" class="submit-input">Rechercher</button></div>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=places&callback=initAutocomplete" async defer></script>
+    <script>
+        var placeSearch, autocomplete, geocoder;
+
+        //Autocompletion de l'adresse
+        function initAutocomplete() {
+            geocoder = new google.maps.Geocoder();
+            var options = {
+                types: ['(regions)'],
+                componentRestrictions: {country: ["fr", "be"]}
+            };
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('recherche_lieu')),
+                options);
+        }
+
+        //Rempli la searchbox de notre localisation lorsqu'on appuye sur le bouton géolocalisation
+        function fillInAdressGeolocation(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position){   //recupère notre position
+                    geoPos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    geocoder.geocode({
+                            'location': geoPos
+                        }, function(results, status) {
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            if (results[0]) {
+                                var address = results[0].address_components;
+                                for (var p = address.length - 1; p >= 0; p--) {
+                                    if (address[p].types.indexOf("locality") != -1) {
+                                        var cityNameResult = address[p].long_name;
+                                        document.getElementById('recherche_lieu').value = cityNameResult
+                                    }
+                                }
+                            } else {
+                                alert('Aucun résultat trouvé');
+                            }
+                        } else {
+                            alert('Le Geocoder a echoué. Raison: ' + status);
+                        }
+                    });
+
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+
+            } else {
+                // Le navigateur ne supporte pas la géolocalisation ou elle a été refusé
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+    </script>
+{% endblock %}

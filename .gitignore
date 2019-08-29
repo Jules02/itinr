@@ -1,16 +1,26 @@
+
 ###> symfony/framework-bundle ###
-/.idea/
-.env
-/ftptest/
+/.env.local
+/.env.local.php
+/.env.*.local
 /public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
 
-###> symfony/webpack-encore-pack ###
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
+
+###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
-/public/uploads/
-###< symfony/webpack-encore-pack ###
-
-.DS_Store
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###

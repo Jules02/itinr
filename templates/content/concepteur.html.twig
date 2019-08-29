@@ -238,8 +238,8 @@
 
 
 {% block javascripts %}
+    {{ parent() }}
     <script src="https://www.google.com/jsapi"></script>
-    <script src=" {{ asset('build/mousetrap.js') }} "></script>
     <script>
         $(window).on("load", function() {
             $('#loading').hide();
@@ -532,7 +532,7 @@
 
 
 
-        //Fonction pour le clique droit qui permet de calculer la route entre deux points, passés en paramètres
+            //Fonction pour le clique droit qui permet de calculer la route entre deux points, passés en paramètres
 
         var directionsService;
 
@@ -1259,6 +1259,7 @@
             }
         });
     </script>
+    <script src=" {{ asset('build/mousetrap.js') }} "></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxvWmkG3pYY6DaFxUzvRiyvttqYjdX15Q&libraries=geometry,places&callback=initMap">
     </script>

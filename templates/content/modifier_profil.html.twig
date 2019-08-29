@@ -8,7 +8,6 @@
 {% form_theme form 'form/errors.html.twig' 'form/fields.html.twig' %}
 
 {% block body %}
-
     <h1 class="titre margin-left">Modifiez votre profil</h1>
     <div class="titre-separation margin-left"></div>
 
@@ -24,5 +23,8 @@
         <button type="submit" class="submit-input">Appliquer les modifications</button>
         {{ form_end(form) }}
     </div>
+{% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}
